@@ -2,6 +2,8 @@
 
 ### The repair manual belongs to the people holding the wrench.
 
+Started by **Cj Racki** ([XSV Development](https://github.com/xsvdevelopment)). Built in the open by everyone who adds to it.
+
 > *In a world where the knowledge to fix what we own is slipping through our fingers, locked behind subscriptions, licenses and login screens, we rise to put it back in the hands of the willing.*
 
 Every vehicle on the road was built from documented engineering. Firing orders. Torque values. Fluid capacities. The order the parts come off and the order they go back on. None of it is secret. It has been written down since the first one rolled off the line, and there is more of it on record today than ever before.

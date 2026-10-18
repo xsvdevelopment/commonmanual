@@ -49,6 +49,7 @@ export default function App() {
       <main>{body}</main>
       <footer className="foot">
         Free and open source. Facts only, every one footnoted. <a href="#/add">Add what you know</a>.
+        <br />Started by Cj Racki · <a href="https://github.com/xsvdevelopment" target="_blank" rel="noreferrer">XSV Development</a>
       </footer>
     </>
   );
