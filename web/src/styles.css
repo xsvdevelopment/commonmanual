@@ -186,7 +186,7 @@ table.spec.makes th { width: 26%; font-family: var(--head); font-weight: 700; co
 .contribute label { display: block; font-size: 0.85rem; color: var(--muted); margin-bottom: 10px; }
 .contribute label input, .contribute label select, .contribute label textarea { margin-top: 4px; }
 .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0 14px; }
-.grid5 { display: grid; grid-template-columns: 1fr 1.6fr 0.6fr 0.6fr 1fr auto; gap: 0 10px; align-items: end; }
+.grid5 { display: grid; grid-template-columns: 1fr 1.4fr 1fr 0.6fr 0.6fr 1fr auto; gap: 0 10px; align-items: end; }
 .grid-src { display: grid; grid-template-columns: auto 1fr 2fr 1.2fr 1fr 1.4fr auto; gap: 0 10px; align-items: end; }
 .src-num { font: 700 1rem var(--mono); color: var(--amber); padding-bottom: 20px; }
 .grid-spec { display: grid; grid-template-columns: 2fr 1fr 0.7fr 2fr 0.6fr auto; gap: 8px; margin-bottom: 8px; }

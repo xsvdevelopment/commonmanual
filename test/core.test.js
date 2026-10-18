@@ -44,6 +44,13 @@ test('vehicle matching respects make, year range and model', () => {
   assert.equal(applies(cited, { year: 1970, make: 'CHEVROLET', model: 'CAMARO' }), false);
 });
 
+test('exclude carves sibling models out of a model match', () => {
+  const rogue = { applies: [{ make: 'NISSAN', models: ['ROGUE'], exclude: ['ROGUE SPORT'], years: [2014, 2018] }] };
+  assert.equal(applies(rogue, { year: 2017, make: 'NISSAN', model: 'ROGUE' }), true);
+  assert.equal(applies(rogue, { year: 2017, make: 'NISSAN', model: 'ROGUE SPORT' }), false);
+  assert.ok(validateEntry({ ...cited, applies: [{ make: 'NISSAN', exclude: 'ROGUE SPORT', years: [2014, 2018] }] }).some((e) => e.includes('exclude')));
+});
+
 test('published procedure steps must each be footnoted', () => {
   const proc = { ...cited, type: 'procedure', specs: undefined, steps: [{ text: 'Do a thing', src: [1] }, 'Do another thing'] };
   assert.ok(validateEntry(proc).some((e) => e.startsWith('steps[1]')));

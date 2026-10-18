@@ -11,7 +11,7 @@ export const STATUS = {
 export const StatusBadge = ({ s }) => <span className={'badge ' + STATUS[s][1]}>{STATUS[s][0]}</span>;
 
 const appliesText = (a) =>
-  `${a.years[0]}–${a.years[1]} ${a.make === '*' ? 'most makes' : a.make}${a.models?.length ? ' ' + a.models.join(', ') : ''}${a.engine ? ' · ' + a.engine : ''}`;
+  `${a.years[0]}–${a.years[1]} ${a.make === '*' ? 'most makes' : a.make}${a.models?.length ? ' ' + a.models.join(', ') : ''}${a.exclude?.length ? ' (not ' + a.exclude.join(', ') + ')' : ''}${a.engine ? ' · ' + a.engine : ''}`;
 
 export function EntryCard({ e }) {
   return (

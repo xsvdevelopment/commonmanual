@@ -28,6 +28,7 @@ export function validateEntry(e) {
     const [from, to] = a.years || [];
     if (!(from >= 1900 && to <= THIS_YEAR && from <= to)) errs.push(`applies[${i}].years: [from, to] between 1900 and ${THIS_YEAR}`);
     if (a.models && !Array.isArray(a.models)) errs.push(`applies[${i}].models: list of model names`);
+    if (a.exclude && !Array.isArray(a.exclude)) errs.push(`applies[${i}].exclude: list of model names to leave out`);
   }
   if (e.type === 'procedure' && !(e.steps || []).length) errs.push('steps: a procedure needs steps');
   if (e.type === 'spec' && !(e.specs || []).length) errs.push('specs: a spec sheet needs specs');
@@ -80,6 +81,8 @@ export function applies(entry, { year, make, model }) {
     if (a.make !== '*' && norm(a.make) !== norm(make)) return false;
     if (y < a.years[0] || y > a.years[1]) return false;
     if (a.models?.length && model && !a.models.some((m) => norm(model).includes(norm(m)))) return false;
+    // "ROGUE" also matches "ROGUE SPORT"; exclude carves those out.
+    if (a.exclude?.length && model && a.exclude.some((m) => norm(model).includes(norm(m)))) return false;
     return true;
   });
 }

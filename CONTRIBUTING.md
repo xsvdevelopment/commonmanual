@@ -74,6 +74,7 @@ One JSON file per entry: `data/kb/<folder>/<id>.json`. The file name must match 
 - `type`: `procedure`, `spec`, `known-issue` or `source`.
 - `applies[].make`: as NHTSA writes it (`CHEVROLET`, `MERCEDES-BENZ`), or `"*"` for anything (generic procedures).
 - `applies[].models`: optional. Matches any NHTSA model name that contains it, so `"F-150"` matches `F-150 SUPER CREW`.
+- `applies[].exclude`: optional. Model names to leave out of that match, so `"models": ["ROGUE"], "exclude": ["ROGUE SPORT"]` skips the Rogue Sport.
 
 The **Add knowledge** form in the app builds this for you.
 
