@@ -1,0 +1,123 @@
+{
+  "id": "ford-f150-27-ecoboost-p0420-p0430-catalyst-drive",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "2018-2020 F-150 2.7 EcoBoost: P0420 / P0430, catalyst stabilization drive cycle before replacing cats",
+  "summary": "Ford TSB 24-2184: P0420/P0430 on the 2.7 can come from calibration and controls sensitivity. Before replacing converters, run a specific drive cycle once and compare Mode 6 oxygen storage values; only replace the cat on a bank that's still above 0.5.",
+  "applies": [
+    {
+      "make": "FORD",
+      "models": [
+        "F-150"
+      ],
+      "years": [
+        2018,
+        2020
+      ],
+      "engine": "2.7L EcoBoost"
+    }
+  ],
+  "tags": [
+    "p0420",
+    "p0430",
+    "catalytic converter",
+    "catalyst efficiency",
+    "mode 6",
+    "drive cycle",
+    "2.7 ecoboost",
+    "f-150"
+  ],
+  "specs": [
+    {
+      "name": "Drive cycle",
+      "value": "Warm engine; from 30 mph or slower, WOT to 65 mph; transmission in manual 4th; then at least 45 minutes of repeated 25-50% throttle accelerations and closed-pedal decels between 60 and 70 mph",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Then",
+      "value": "15 minutes of normal driving at 55-65 mph out of manual mode",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Pass",
+      "value": "Mode 6 oxygen storage values lower than before the drive and under 0.5 on both banks",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Left / right catalytic converter",
+      "value": "JL3Z-5E212-C / JL3Z-5E212-K (confirm by VIN)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Converter gasket",
+      "value": "FL3Z-5C226-A",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Supersedes",
+      "value": "TSB 24-2115",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Run pinpoint tests HF1-HF6 in the PC/ED manual. Concern gone: the bulletin doesn't apply.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Pull Mode 6 data with FDRS and record the oxygen storage values for both banks.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Drive cycle, once only: warm up, then on a road where 70 mph is possible, go from 30 mph or less at wide open throttle to 65 mph. Put the transmission in manual, 4th gear, and for at least 45 minutes do repeated 25-50% throttle accelerations and foot-off decelerations between 60 and 70 mph.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Take it out of manual and drive normally at 55-65 mph for 15 minutes.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Clear P0420/P0430 (this zeroes Mode 6), then run the catalyst monitor drive cycle (pinpoint test HF11).",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Re-read Mode 6. If the storage values dropped from the step 2 readings and are under 0.5 on both banks, it's fixed. If not, replace the converter on the affected bank. If the codes come back later, replace the converter; don't repeat the drive cycle.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "TSB 24-2184: 2.7L EcoBoost - Illuminated MIL With DTC P0420 And/Or P0430",
+      "publisher": "Ford Motor Company, June 6, 2024 (supersedes 24-2115)",
+      "citation": "Issue and parts p. 1, service procedure p. 2; NHTSA ID 11001582",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-11001582-0001.pdf"
+    }
+  ],
+  "body": "The PDF's text layer is an unreadable embedded font, so the citation checker reports it as \"check by hand\". Every value here was read from the rendered pages.",
+  "author": "OpenBay (AI-assisted)",
+  "updated": "2026-10-18"
+}

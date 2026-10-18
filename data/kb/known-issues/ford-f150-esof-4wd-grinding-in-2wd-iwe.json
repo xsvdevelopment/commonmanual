@@ -1,0 +1,156 @@
+{
+  "id": "ford-f150-esof-4wd-grinding-in-2wd-iwe",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "2013-2018 F-150 with shift-on-the-fly 4WD: grinding noise in 2WD on acceleration, IWE vacuum or hub wear",
+  "summary": "Ford TSB 21-2076: an intermittent grind in 2WD, mostly under acceleration, on trucks whose 4WD knob has no 4A position. Lost vacuum to the integrated wheel end (IWE) actuators or worn IWE parts let the front hubs drag. The bulletin gives vacuum leak-down tests to find which part.",
+  "applies": [
+    {
+      "make": "FORD",
+      "models": [
+        "F-150"
+      ],
+      "years": [
+        2013,
+        2018
+      ],
+      "engine": "Electronic shift-on-the-fly 4WD (selector has 2H, 4H, 4L; no 4A)"
+    }
+  ],
+  "tags": [
+    "grinding",
+    "4wd",
+    "2wd",
+    "iwe",
+    "integrated wheel end",
+    "vacuum",
+    "hub",
+    "front end noise",
+    "esof",
+    "f-150"
+  ],
+  "specs": [
+    {
+      "name": "Applies to",
+      "value": "Mode selector switch with only 2H, 4H, 4L (no 4A position)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Supply line leak-down test",
+      "value": "Apply 508 mm (20 in) Hg; fails if it drops more than 12.5 mm (0.5 in) Hg per minute",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Each IWE leak-down test",
+      "value": "Apply 508 mm (20 in) Hg to each IWE; fails if it drops more than 12 mm (0.5 in) Hg per minute",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Vacuum at each IWE supply line (engine idling, solenoid commanded)",
+      "value": "More than 254 mm (10 in) Hg",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Engine idle before the supply test",
+      "value": "5 minutes to build vacuum",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "2017-2018 TCCM reflash behaviour",
+      "value": "Above 0 °C (32 °F), IWEs stay engaged for about 0.8 km (0.5 mi) after startup, once per key cycle",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Labor",
+      "value": "1.1-2.6 hr depending on which parts fail; +0.3 hr scan tool vacuum test, +0.5 hr vacuum harness, +0.2 hr TCCM reprogram",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Confirm the selector only has 2H, 4H and 4L. If it has 4A, the bulletin doesn't apply.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "2017-2018 only: reprogram the transfer case control module (TCCM) with the latest calibration.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Inspect the IWE vacuum hoses (WSM 308-07A) and reconnect or replace any that are off or damaged.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Replace the vacuum check valve near the vacuum reservoir.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Disconnect the IWE line at the vacuum solenoid, put a hand vacuum pump on the IWE supply line and pull 20 in Hg. If it holds (drops no more than 0.5 in Hg a minute), reconnect it and skip to the supply-line test.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "If the supply line leaks, test each IWE on its own at 20 in Hg. If neither IWE leaks, replace the vacuum lines between the solenoid and the IWEs.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "If an IWE leaks, remove it and check the wheel bearing splines. Damaged or worn splines: replace the IWE and the wheel bearing. Splines OK: replace the IWE.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Supply-line test: put a vacuum gauge on the left or right IWE supply line, idle 5 minutes, enter the TCCM data logger and command the vacuum solenoid (IWE_OS# to No). Repeat on the other side. Under 10 in Hg on either side: replace the lines between the solenoid and IWEs.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Road test with hard acceleration in 2WD, then engage 4WD to check engagement. Remember the IWEs stay engaged for the first half mile above 32 °F.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Still grinding in 2WD but not in 4WD: remove the IWE on that side and check the bearing splines. Damaged: replace the IWE clutch ring and wheel bearing. Not damaged: replace the IWE clutch ring.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "TSB 21-2076: Electronic Shift On-The-Fly (ESOF) 4WD - Intermittent Grinding Noise While Driving",
+      "publisher": "Ford Motor Company, March 17, 2021 (supersedes 20-2278)",
+      "citation": "Issue p. 1, labor pp. 2-3, service procedure steps 1-15 pp. 4-9; NHTSA ID 10189784",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10189784-0001.pdf"
+    }
+  ],
+  "body": "The PDF's text layer is an unreadable embedded font, so the citation checker reports it as \"check by hand\". Every value here was read from the rendered pages.",
+  "author": "OpenBay (AI-assisted)",
+  "updated": "2026-10-18"
+}

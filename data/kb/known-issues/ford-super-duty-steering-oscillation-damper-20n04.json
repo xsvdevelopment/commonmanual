@@ -1,0 +1,126 @@
+{
+  "id": "ford-super-duty-steering-oscillation-damper-20n04",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "2017-2019 Super Duty (F-250/350 4x4, F-450/550): steering wheel oscillation after bumps, redesigned steering damper (20N04)",
+  "summary": "Ford Customer Satisfaction Program 20N04: sustained steering wheel oscillation after hitting rough pavement or an expansion joint, usually above 45 mph. Fix is a redesigned steering linkage damper, covered for 7 years / 100,000 miles. Small vertical play in the drag link and tie rod ends is normal by design.",
+  "applies": [
+    {
+      "make": "FORD",
+      "models": [
+        "F-250",
+        "F-350"
+      ],
+      "years": [
+        2017,
+        2019
+      ],
+      "engine": "4x4"
+    },
+    {
+      "make": "FORD",
+      "models": [
+        "F-450",
+        "F-550"
+      ],
+      "years": [
+        2017,
+        2019
+      ]
+    }
+  ],
+  "tags": [
+    "death wobble",
+    "steering oscillation",
+    "steering shimmy",
+    "steering damper",
+    "steering stabilizer",
+    "super duty",
+    "f-250",
+    "f-350",
+    "f-450",
+    "f-550"
+  ],
+  "specs": [
+    {
+      "name": "Symptom",
+      "value": "Sustained steering wheel oscillation after rough pavement or an expansion joint, typically above 45 mph (72 km/h)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Extended coverage",
+      "value": "Steering linkage damper, 7 years or 100,000 miles from warranty start; vehicles already past that were covered through October 31, 2020",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Redesigned steering linkage damper",
+      "value": "KC3Z-3E651-B",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Labor",
+      "value": "0.4 hr (20N04B)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Normal drag link / tie rod end movement",
+      "value": "1-2 mm vertical when pushed or rotated (internal spring design; not a reason to replace)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Built",
+      "value": "Kentucky Truck October 8, 2015 through November 3, 2019; Ohio February 5, 2016 through November 13, 2019",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Related TSB",
+      "value": "19-2392",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Customer reports the steering wheel oscillating after a bump or expansion joint at highway speed.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Replace the steering linkage damper with the redesigned part per Workshop Manual section 211-03, torquing fasteners to the WSM spec. Suspension fasteners are critical; use the same or equivalent parts.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "If you inspect the drag link and tie rods, expect 1-2 mm of vertical movement at the ends when pushing or rotating them. That's normal for their internal spring design; don't replace them for it.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "Ford's term is \"sustained steering wheel oscillation\"; \"death wobble\" is only here as a search tag because that's what owners call it. The program covers vehicles that show the condition; it isn't a recall, and Ford had no rental cars approved for it.",
+  "sources": [
+    {
+      "title": "Customer Satisfaction Program 20N04: Certain 2017 through 2019 F250/350 4x4 and F450/550, Steering Linkage Damper Extended Coverage",
+      "publisher": "Ford Motor Company, April 30, 2020",
+      "citation": "Program terms, vehicles and reason p. 1; Attachment II (labor, part); Attachment III (service procedure); NHTSA ID 10174720",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2020/MC-10174720-0001.pdf"
+    }
+  ],
+  "author": "OpenBay (AI-assisted)",
+  "updated": "2026-10-18"
+}
