@@ -1,0 +1,137 @@
+{
+  "id": "ford-35-ecoboost-ho-oil-consumption-20-2423",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "3.5 EcoBoost High-Output (2018-20 Raptor, 2019-20 F-150 Limited, Navigator): oil consumption, PCM update and valve covers",
+  "summary": "Ford TSB 20-2423: excessive oil consumption with no visible leak, with or without P0365/P0369, on the high-output 3.5 built on or before 11-Sept-2020. Fix is a PCM reprogram and, on early trucks, both valve covers.",
+  "applies": [
+    {
+      "make": "FORD",
+      "models": [
+        "F-150"
+      ],
+      "years": [
+        2018,
+        2020
+      ],
+      "engine": "3.5L EcoBoost High-Output (Raptor 2018-2020, Limited 2019-2020)"
+    },
+    {
+      "make": "LINCOLN",
+      "models": [
+        "NAVIGATOR"
+      ],
+      "years": [
+        2018,
+        2020
+      ],
+      "engine": "3.5L EcoBoost High-Output"
+    }
+  ],
+  "tags": [
+    "oil consumption",
+    "3.5 ecoboost",
+    "high output",
+    "raptor",
+    "valve cover",
+    "pcv",
+    "p0365",
+    "p0369",
+    "f-150",
+    "navigator"
+  ],
+  "specs": [
+    {
+      "name": "Built",
+      "value": "On or before 11-Sept-2020",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Vehicles",
+      "value": "2018-2020 F-150 Raptor, 2019-2020 F-150 Limited, 2018-2020 Navigator",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "DTCs (may or may not be present)",
+      "value": "P0365, P0369",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Oil level check",
+      "value": "Level ground and a full 15-minute drain-back before reading the dipstick",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Valve covers",
+      "value": "Left HL3Z-6582-E, right HL3Z-6582-C",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Skip valve covers if any of",
+      "value": "Built on or after 1-Apr-2019; both valve covers already replaced; over 6500 km (4000 mi)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Labor",
+      "value": "0.7 hr reflash + oil change (4.5 hr with valve covers); Raptor 0.9 hr (4.7 hr)",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Park on level ground and wait the full 15 minutes for oil to drain back before checking the level, or the reading will be wrong.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Look for visible oil leaks. Any found: this bulletin doesn't apply; diagnose per WSM 303-01.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Reprogram the PCM to the latest software.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "If the truck was built before 1-Apr-2019, hasn't had both valve covers replaced, and has 4000 miles (6500 km) or less, replace both valve covers (WSM 303-01).",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Change the engine oil and filter.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "The bulletin words the valve cover decision as a yes/no on the three criteria in the specs: meeting any one of them skips the valve covers, meeting none means replace both.\n\nThe PDF's text layer is an unreadable embedded font, so the citation checker reports it as \"check by hand\". Every value here was read from the rendered pages.",
+  "sources": [
+    {
+      "title": "TSB 20-2423: 3.5L EcoBoost High-Output - Excessive Oil Consumption With Or Without DTC P0365/P0369 - Built On Or Before 11-Sept-2020",
+      "publisher": "Ford Motor Company, December 14, 2020 (supersedes 20-2294)",
+      "citation": "Issue and parts pp. 1-2, labor p. 2, service procedure p. 3; NHTSA ID 10184643",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2020/MC-10184643-0001.pdf"
+    }
+  ],
+  "author": "OpenBay (AI-assisted)",
+  "updated": "2026-10-18"
+}

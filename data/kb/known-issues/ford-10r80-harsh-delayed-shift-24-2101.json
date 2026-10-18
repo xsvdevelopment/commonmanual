@@ -1,0 +1,168 @@
+{
+  "id": "ford-10r80-harsh-delayed-shift-24-2101",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "Ford 10R80 10-speed (2017-20 F-150, Expedition, Navigator, Mustang, Ranger): harsh or delayed engagement and shifts",
+  "summary": "Ford TSB 24-2101: harsh or delayed engagement or shifts, sometimes with a MIL and a long list of shift and solenoid codes, from the solenoid ID strategy, sticking main control valves, or the CDF clutch cylinder sleeve moving. The bulletin's order: reflash and adaptive drive, then valve body overhaul, then a new CDF cylinder.",
+  "applies": [
+    {
+      "make": "FORD",
+      "models": [
+        "F-150"
+      ],
+      "years": [
+        2017,
+        2020
+      ],
+      "engine": "10R80 automatic"
+    },
+    {
+      "make": "FORD",
+      "models": [
+        "EXPEDITION"
+      ],
+      "years": [
+        2018,
+        2021
+      ],
+      "engine": "10R80 automatic"
+    },
+    {
+      "make": "FORD",
+      "models": [
+        "MUSTANG"
+      ],
+      "exclude": [
+        "MACH-E"
+      ],
+      "years": [
+        2018,
+        2021
+      ],
+      "engine": "10R80 automatic"
+    },
+    {
+      "make": "FORD",
+      "models": [
+        "RANGER"
+      ],
+      "years": [
+        2019,
+        2023
+      ],
+      "engine": "10R80 automatic"
+    },
+    {
+      "make": "LINCOLN",
+      "models": [
+        "NAVIGATOR"
+      ],
+      "years": [
+        2018,
+        2021
+      ],
+      "engine": "10R80 automatic"
+    }
+  ],
+  "tags": [
+    "10r80",
+    "10-speed",
+    "harsh shift",
+    "delayed engagement",
+    "slam shift",
+    "cdf clutch",
+    "valve body",
+    "adaptive learning",
+    "f-150",
+    "expedition",
+    "mustang",
+    "ranger",
+    "navigator"
+  ],
+  "specs": [
+    {
+      "name": "DTCs",
+      "value": "P0751, P0752, P0756, P0757, P0761, P0762, P0766, P0767, P0771, P0772, P2700, P2701, P2702, P2703, P2704, P2705, P2707, P2708, P0729, P0731, P0732, P0733, P0734, P0735, P0736, P076F, P07D9, P07F6, P07F7",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "CDF clutch cylinder",
+      "value": "7H351",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Main control valve body",
+      "value": "Not break-in capable on these vehicles",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "CDF cylinder step applies to",
+      "value": "Vehicles built on or before 15-Aug-2022",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Supersedes",
+      "value": "TSB 24-2046",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Scan for DTCs with the latest Ford scan tool software. Any of the listed shift/solenoid codes: go straight to the valve body step. None: start with the solenoid strategy.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Solenoid strategy: reprogram the existing transmission strategy into the PCM/TCM with no hardware replaced (FDRS: \"Transmission hardware was not replaced - Reprogram TRID\"; IDS: \"Reprogram Only - No Hardware Replaced\"), then do the adaptive learning drive cycle (WSM 307-01). Fixed: done.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Sticking valves: overhaul (clean and inspect) the main control valve body and do the adaptive learning drive. Fixed: done. Still there on a truck built on or after 16-Aug-2022: back to normal diagnostics.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Still there on a truck built on or before 15-Aug-2022: replace the CDF clutch cylinder. Ford lets eligible low-time-in-service vehicles get a transmission under LTIS instead.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "CDF cylinder job: pull the transmission, remove the clutch and planetary assembly, swap the C, D and F clutch packs into the new CDF cylinder, check C, D and F clutch pack endplay, replace the No. 3 sun gear shaft seals (4), input shaft-to-sun gear seals (5), input shaft seal and input shaft front seals (5), set front end clearance with the T3 thrust bearing measurement and selective shim, reassemble and reinstall.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Finish with an adaptive learning drive cycle, and warn the owner that shifts can be firmer than normal for several days while it relearns.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "Selective parts listed for the CDF repair include T-3 shims in 0.15 mm steps from 3.35 to 4.35 mm, and selective snap rings for the C, D and F clutches. Look them up in the bulletin's parts tables by measured clearance.\n\nThe PDF's text layer is an unreadable embedded font, so the citation checker reports it as \"check by hand\". Every value here was read from the rendered pages.",
+  "sources": [
+    {
+      "title": "TSB 24-2101: 10R80 Automatic Transmission - Harsh/Delayed Engagement And/Or Harsh/Delayed Shift - Non-Main Control Break-In Capable",
+      "publisher": "Ford Motor Company, March 28, 2024 (supersedes 24-2046)",
+      "citation": "Model and issue p. 1, parts pp. 1-8, service procedure pp. 9-10; NHTSA ID 10252674",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10252674-0001.pdf"
+    }
+  ],
+  "author": "OpenBay (AI-assisted)",
+  "updated": "2026-10-18"
+}
