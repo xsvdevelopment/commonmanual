@@ -1,0 +1,50 @@
+{
+  "id": "toyota-flow-shutoff-valve-coolant-leak-24te04",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "Toyota 2018-2021 (Camry, RAV4, Corolla, Highlander and more): small coolant leak at the flow shut-off valve, program 24TE04",
+  "summary": "Toyota Customer Support Program 24TE04: a small coolant leak from the flow shut-off valve can drip onto other parts and bring up \"Engine Maintenance Required\" or make the A/C act up. Once verified, the valve (or the water by-pass hose assembly it's part of) is replaced; secondary coverage runs 10 years / 100,000 miles.",
+  "applies": [
+    { "make": "TOYOTA", "models": ["AVALON"], "years": [2019, 2021] },
+    { "make": "TOYOTA", "models": ["CAMRY"], "years": [2018, 2021] },
+    { "make": "TOYOTA", "models": ["COROLLA"], "exclude": ["CROSS"], "years": [2019, 2021] },
+    { "make": "TOYOTA", "models": ["HIGHLANDER"], "years": [2020, 2021] },
+    { "make": "TOYOTA", "models": ["RAV4"], "years": [2019, 2021] },
+    { "make": "TOYOTA", "models": ["SIENNA"], "years": [2021, 2021] },
+    { "make": "TOYOTA", "models": ["VENZA"], "years": [2021, 2021] }
+  ],
+  "tags": ["coolant leak", "flow shut-off valve", "water valve", "water by-pass hose", "engine maintenance required", "a/c", "customer support program", "24te04", "camry", "rav4", "corolla", "highlander", "avalon"],
+  "specs": [
+    { "name": "Program", "value": "Customer Support Program 24TE04, announced to dealers December 5, 2024", "src": [1] },
+    { "name": "Primary coverage", "value": "Until November 30, 2025, regardless of mileage", "src": [1] },
+    { "name": "Secondary coverage", "value": "10 years from date of first use or 100,000 miles, whichever first", "src": [1] },
+    { "name": "Vehicles", "value": "Certain 2019-2021 Avalon / Avalon HV, 2018-2021 Camry / Camry HV, 2020-2021 Corolla, 2019-2021 Corolla HB, 2020-2021 Highlander, 2019-2021 RAV4 / RAV4 HV, 2021 RAV4 PHV, 2021 Sienna HV, 2021 Venza", "src": [2] },
+    { "name": "Approximate vehicles covered", "value": "2,384,700", "src": [1] },
+    { "name": "Corolla and Corolla HB repair", "value": "Replace the water valve", "src": [1] },
+    { "name": "Other models' repair", "value": "Replace the water by-pass hose assembly", "src": [1] },
+    { "name": "Salvage / branded title", "value": "Still eligible: the program is emission related", "src": [1] }
+  ],
+  "steps": [
+    { "text": "Symptoms: \"Engine Maintenance Required\" on the cluster, A/C not working normally, or coolant dripping onto nearby parts.", "src": [1] },
+    { "text": "Verify the leak is coming from the flow shut-off valve. The program only pays for verified cases.", "src": [1] },
+    { "text": "Repair with the new countermeasure valve (Corolla, Corolla HB) or water by-pass hose assembly (the other models). Look the part up by VIN; Toyota added newer countermeasure part numbers in August 2026.", "src": [1] },
+    { "text": "Technical instructions are in the TSB named in the dealer letter (example given: 24-TMS-0044-T). Owners who already paid may be reimbursed per the owner letter.", "src": [1] }
+  ],
+  "body": "The dealer letter's model table is laid out in columns that don't all line up in the PDF text; the model list here follows the program memo (source 2), which names every model and year range in plain text. Hybrid versions match by name here (CAMRY matches CAMRY HYBRID); the program covers both.",
+  "sources": [
+    {
+      "title": "Customer Support Program 24TE04: Coverage for Flow Shut-off Valve Coolant Leak (dealer letter, updated August 11, 2026)",
+      "publisher": "Toyota Motor Sales, USA, original publication December 5, 2024",
+      "citation": "Program details p. 2, parts p. 4, reimbursement p. 5; NHTSA ID 11037186",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2026/MC-11037186-0001.pdf"
+    },
+    {
+      "title": "Customer Support Program 24TE04: Flow Shut-off Valve Coolant Leak (region memo)",
+      "publisher": "Toyota Motor Sales, USA, December 4, 2024",
+      "citation": "Condition paragraph; NHTSA ID 11012726",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2025/MC-11012726-0001.pdf"
+    }
+  ],
+  "author": "OpenBay (AI-assisted)",
+  "updated": "2026-10-18"
+}

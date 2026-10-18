@@ -1,0 +1,43 @@
+{
+  "id": "toyota-tacoma-6at-decel-driveline-vibration",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "2016-2023 Tacoma automatic: driveline vibration coasting or braking from 30 to 10 mph",
+  "summary": "Toyota T-SB-0124-20 Rev1: a vibration in the seat, floor or steering wheel while slowing from 30 to 10 mph on 6-speed automatic Tacomas. Fix is a steering wheel damper, then measuring the rear pinion joint angle and, if it's out of spec, new rear leaf springs.",
+  "applies": [
+    { "make": "TOYOTA", "models": ["TACOMA"], "years": [2016, 2023], "engine": "6-speed automatic (6AT)" }
+  ],
+  "tags": ["vibration", "deceleration", "coasting", "braking", "driveshaft", "propeller shaft", "pinion angle", "leaf spring", "steering wheel damper", "tacoma"],
+  "specs": [
+    { "name": "Speed range", "value": "30 down to 10 mph, coasting or braking", "src": [1] },
+    { "name": "Steering wheel damper", "value": "45713-35040, with two new screws 90080-15079", "src": [1] },
+    { "name": "Damper screw torque", "value": "2.35 N·m (24 kgf·cm, 20.8 in-lbf)", "src": [1] },
+    { "name": "Rear leaf springs, Double Cab", "value": "RH 48210-04841, LH 48220-04481", "src": [1] },
+    { "name": "Rear leaf springs, Access Cab", "value": "RH 48210-04832, LH 48220-04472", "src": [1] },
+    { "name": "U-bolt nut torque", "value": "60 N·m (610 kgf·cm, 44 ft-lbf)", "src": [1] },
+    { "name": "Firm-ride suspension option codes", "value": "CW, OF, OC, PT, PY", "src": [1] },
+    { "name": "Joint angle", "value": "Pinion flange angle minus propeller shaft angle", "src": [1] },
+    { "name": "Special tool", "value": "Digital angle gauge 01815-00102", "src": [1] },
+    { "name": "Labor", "value": "1.1 hr damper and joint angle; plus 1.0 hr to R&R leaf springs", "src": [1] }
+  ],
+  "steps": [
+    { "text": "Doesn't apply to manual-transmission trucks (don't use these springs on them), trucks with a lift or leveling kit, or 4WD TRD Off-Road trucks built after the 2016 production change VINs listed in the bulletin.", "src": [1] },
+    { "text": "Confirm the vibration slowing from 30 to 10 mph. 4WD: remove the rear driveshaft, shift to 4WD HI and test drive; if it still vibrates, the bulletin doesn't apply. 2WD: shift to neutral while slowing; if the vibration doesn't change, the bulletin doesn't apply.", "src": [1] },
+    { "text": "Disconnect the battery negative and wait at least 90 seconds, remove the steering wheel pad, and install the damper with two new screws at 2.35 N·m (20.8 in-lbf). Keep the switch and airbag wiring clear and reinstall the pad.", "src": [1] },
+    { "text": "Put the truck on a drive-on lift or alignment rack so the suspension is at ride height.", "src": [1] },
+    { "text": "With the digital angle gauge in absolute mode and its screen facing the passenger side, measure the pinion flange angle (small-flange trucks need the propeller shaft off first) and the angle of the rear section of the propeller shaft.", "src": [1] },
+    { "text": "Joint angle = pinion flange angle minus propeller shaft angle; it can be negative. Note whether the truck has firm-ride suspension (option codes CW, OF, OC, PT or PY) and its model code from the door jamb label, then compare with Table 2 in the bulletin.", "src": [1] },
+    { "text": "In spec: test drive 10-30 mph and confirm it's better. Out of spec: replace the rear leaf springs, U-bolt nuts at 60 N·m (44 ft-lbf), with shock and spring-bushing fasteners final-torqued on the ground. Test drive again.", "src": [1] }
+  ],
+  "body": "The joint-angle spec table (Table 2) is split by drivetrain, model code, cab, grade and suspension, and its layout doesn't survive text extraction cleanly, so the ranges aren't copied here. Read them from page 15 of the bulletin.",
+  "sources": [
+    {
+      "title": "T-SB-0124-20 Rev1: Driveline Vibration Under Deceleration Between 30 - 10 mph",
+      "publisher": "Toyota Motor Sales, USA, December 15, 2020 (Rev1 November 28, 2022)",
+      "citation": "Introduction p. 2, parts p. 4, repair procedure pp. 5-16; NHTSA ID 10227899",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10227899-9999.pdf"
+    }
+  ],
+  "author": "OpenBay (AI-assisted)",
+  "updated": "2026-10-18"
+}
