@@ -1,0 +1,38 @@
+{
+  "id": "nissan-rogue-awd-coupling-turn-judder",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "Nissan Rogue / Rogue Sport AWD: rear judder on low-speed turns, electric coupling",
+  "summary": "Nissan bulletin NTB20-069: a vibration or judder from the rear on slow, dry-road turns that goes away with the electric controlled coupling unplugged. Fix is a new coupling (rear final drive stays in the car), possibly a new AWD control unit, then Unit Characteristics Writing.",
+  "applies": [
+    { "make": "NISSAN", "models": ["ROGUE"], "exclude": ["ROGUE SPORT"], "years": [2014, 2020], "engine": "AWD" },
+    { "make": "NISSAN", "models": ["ROGUE SPORT"], "years": [2017, 2019], "engine": "AWD" }
+  ],
+  "tags": ["awd", "judder", "vibration", "turning", "rear differential", "electric controlled coupling", "rear final drive", "rogue", "rogue sport"],
+  "specs": [
+    { "name": "Rogue (Kyushu built) affected", "value": "Built before VIN JN8(******)LW100385 / June 5, 2019", "src": [1] },
+    { "name": "Rogue (Smyrna built) affected", "value": "Built before VIN 5N1(******)LC775180 / January 13, 2020", "src": [1] },
+    { "name": "Rogue Sport affected", "value": "Built before VIN JN1(******)KW348891 / August 20, 2019", "src": [1] },
+    { "name": "AWD control unit to replace", "value": "Only if it reads 41650-4BA3A (Rogue) or 41650-6MA1A (Rogue Sport)", "src": [1] },
+    { "name": "Symptom speed", "value": "Under 40 mph, turning, dry pavement", "src": [1] }
+  ],
+  "steps": [
+    { "text": "Confirm the complaint: vibration or judder from the rear while turning, on dry roads, under 40 mph.", "src": [1] },
+    { "text": "Unplug the electric controlled coupling and retest. If the judder stops, the bulletin applies. If unplugging doesn't change it, remove the rear propeller shaft and retest; no judder with the shaft out also confirms it.", "src": [1] },
+    { "text": "Rule out tires first: mismatched sizes, brands or tread patterns cause the same symptom. Nissan recommends replacing all four together with matching tires.", "src": [1] },
+    { "text": "Read the part number on the AWD control unit. Replace it only if it is 41650-4BA3A (Rogue) or 41650-6MA1A (Rogue Sport).", "src": [1] },
+    { "text": "Replace the electric controlled coupling with the rear final drive left in the vehicle. Don't replace the whole rear final drive for this.", "src": [1] },
+    { "text": "Perform Unit Characteristics Writing for the new coupling with CONSULT-III plus. It is required whenever the coupling is replaced.", "src": [1] }
+  ],
+  "body": "Service manual paths for each step are listed in the bulletin; 2018-2019 Rogue Sport uses a different ESM layout from the Rogue and 2017 Rogue Sport.\n\nNissan's general AWD bulletin NTB10-029 series covers the same symptom on other Nissan AWD models.",
+  "sources": [
+    {
+      "title": "NTB20-069: Rogue and Rogue Sport; vibration and/or noise when making low speed turns",
+      "publisher": "Nissan North America, September 23, 2020",
+      "citation": "Classification RA20-003, pp. 1-3; NHTSA ID 10181002",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2020/MC-10181002-0001.pdf"
+    }
+  ],
+  "author": "OpenBay (AI-assisted)",
+  "updated": "2026-10-18"
+}

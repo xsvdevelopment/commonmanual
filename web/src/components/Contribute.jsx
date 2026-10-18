@@ -24,7 +24,7 @@ const stepLine = (s) => (typeof s === 'string' ? s
 function fromEntry(e) {
   return {
     id: e.id, type: e.type, title: e.title, summary: e.summary || '', status: e.status,
-    applies: e.applies.map((a) => ({ make: a.make, models: (a.models || []).join(', '), from: a.years[0], to: a.years[1], engine: a.engine || '' })),
+    applies: e.applies.map((a) => ({ make: a.make, models: (a.models || []).join(', '), exclude: (a.exclude || []).join(', '), from: a.years[0], to: a.years[1], engine: a.engine || '' })),
     specs: (e.specs || []).map((s) => ({ ...blankSpec, ...s, src: (s.src || []).join(',') })),
     steps: (e.steps || []).map(stepLine).join('\n'),
     tools: (e.tools || []).join('\n'), parts: (e.parts || []).join('\n'), warnings: (e.warnings || []).join('\n'),
@@ -138,7 +138,7 @@ export default function Contribute({ query, readOnly, repo }) {
   const id = query.get('id');
   const [f, setF] = useState(() => ({
     id: '', type: 'procedure', title: '', summary: '', status: 'cited',
-    applies: [{ make: query.get('make') || '', models: query.get('model') || '', from: query.get('year') || 1960, to: query.get('year') || THIS_YEAR - 1, engine: '' }],
+    applies: [{ make: query.get('make') || '', models: query.get('model') || '', exclude: '', from: query.get('year') || 1960, to: query.get('year') || THIS_YEAR - 1, engine: '' }],
     specs: [{ ...blankSpec }], steps: '', tools: '', parts: '', warnings: '', tags: '', body: '',
     sources: [{ ...blankSrc }], photos: [], author: '', verifiedBy: '',
   }));
@@ -188,13 +188,14 @@ export default function Contribute({ query, readOnly, repo }) {
           <div key={i} className="grid5">
             <label>Make<input value={a.make} onChange={setIn('applies', i, 'make')} placeholder="CHEVROLET or * for any" /></label>
             <label>Models (comma list, blank = all)<input value={a.models} onChange={setIn('applies', i, 'models')} placeholder="SILVERADO, TAHOE" /></label>
+            <label>Except models (comma list)<input value={a.exclude} onChange={setIn('applies', i, 'exclude')} placeholder="ROGUE SPORT" /></label>
             <label>From year<input type="number" value={a.from} onChange={setIn('applies', i, 'from')} /></label>
             <label>To year<input type="number" value={a.to} onChange={setIn('applies', i, 'to')} /></label>
             <label>Engine<input value={a.engine} onChange={setIn('applies', i, 'engine')} placeholder="5.3L V8" /></label>
             {f.applies.length > 1 && <button type="button" className="link" onClick={() => del('applies', i)}>remove</button>}
           </div>
         ))}
-        <button type="button" className="btn small" onClick={() => add('applies', { make: '', models: '', from: 1960, to: THIS_YEAR - 1, engine: '' })}>+ Another vehicle range</button>
+        <button type="button" className="btn small" onClick={() => add('applies', { make: '', models: '', exclude: '', from: 1960, to: THIS_YEAR - 1, engine: '' })}>+ Another vehicle range</button>
       </fieldset>
 
       <fieldset>
