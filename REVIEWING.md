@@ -22,4 +22,4 @@ OpenBay's promise is that every fact is backed by a source. The automated checks
 
 ## Merging
 
-Squash-merge with a plain message. The preview site redeploys from `main` automatically.
+Squash-merge with a plain message. The preview site is deployed by hand: from an up-to-date `main`, run `netlify deploy --build --prod` (the folder must be linked to the `openbay` Netlify project). It does not redeploy on merge until the site is connected to this repo in Netlify.
