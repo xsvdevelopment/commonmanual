@@ -214,4 +214,11 @@ table.spec.makes th { width: 26%; font-family: var(--head); font-weight: 700; co
   .bar { grid-template-columns: 1fr auto; }
   .bar-track { grid-column: 1 / -1; order: 3; }
   .row { flex-wrap: wrap; }
+  .row input { flex: 1 1 100%; min-width: 0; }
+  .row .btn { flex: 1 1 auto; }
+  .top { position: static; padding: 10px 16px; gap: 8px 16px; }
+  .top nav { flex-basis: 100%; order: 3; gap: 4px 14px; }
+  .top nav a { font-size: 0.95rem; }
+  .draft-toggle { margin-left: auto; font-size: 0.75rem; }
+  .hero h1 { font-size: 2.6rem; }
 }

@@ -16,6 +16,8 @@ OpenBay is a free, open-source repair database for every car and truck from **19
 
 It isn't for sale and it never will be.
 
+**Try it now: [openbay.netlify.app](https://openbay.netlify.app)**. Type a car and what it's doing, e.g. *"2013 Ford F-150 rattles on cold start"*.
+
 ---
 
 ## The Code
@@ -50,6 +52,10 @@ Facts can't be owned, but someone else's exact words and diagrams can. We write 
 **Put this in the consumer's hands. Help us build it.**
 
 ---
+
+## Describe the problem, get the records
+
+Type the vehicle and the symptom in plain words: *"2010 Chevy Equinox burning oil"*, *"2005 F-250 no start"*, *"rattles on cold start, P0016"*. OpenBay searches every factory bulletin, recall, defect investigation, owner complaint and cited repair entry on file for that vehicle, using shop vocabulary (rattle, tick, tap and knock all match), and ranks what it finds. It's a search of documented records: it shows you the factory TSB and the PDF, not a guess.
 
 ## What's inside
 

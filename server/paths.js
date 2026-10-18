@@ -5,8 +5,9 @@ import { fileURLToPath } from 'node:url';
 
 // The repo root is next to this file when run from source; in a bundled serverless
 // function the data files sit in the task root (the working directory) instead.
+const here = typeof import.meta.url === 'string' ? path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..') : null;
 const candidates = [
-  path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..'),
+  here,
   process.env.LAMBDA_TASK_ROOT,
   process.cwd(),
 ].filter(Boolean);
