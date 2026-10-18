@@ -43,7 +43,15 @@ export function validateEntry(e) {
   if (!Array.isArray(e.sources)) errs.push('sources: list of citations');
   for (const [i, s] of (e.sources || []).entries()) {
     if (!s.title) errs.push(`sources[${i}].title: required`);
+    if (s.type === 'video' && (!s.url || !s.creator)) errs.push(`sources[${i}]: a video source needs url and creator (channel name)`);
   }
+  const isVideo = (k) => e.sources?.[k - 1]?.type === 'video';
+  for (const [i, s] of (e.steps || []).entries()) {
+    if (typeof s !== 'object' || s.t === undefined) continue;
+    if (!/^(\d+:)?\d{1,2}:\d{2}$/.test(s.t)) errs.push(`steps[${i}].t: timestamp like 4:32 or 1:04:32`);
+    if (!(s.src || []).some(isVideo)) errs.push(`steps[${i}].t: a timestamp needs a video source in src`);
+  }
+  if (e.status === 'factory-sourced' && (e.sources || []).some((s) => s.type === 'video')) errs.push('status: entries citing videos are "cited", not "factory-sourced"');
   if (e.status !== 'draft') errs.push(...citationErrors(e));
   return errs;
 }

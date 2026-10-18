@@ -40,6 +40,7 @@ code, .mono { font-family: var(--mono); }
 .draft-toggle { font-size: 0.85rem; color: var(--muted); display: flex; align-items: center; gap: 6px; cursor: pointer; padding: 4px 10px; border: 1px solid var(--line); border-radius: 20px; }
 .draft-toggle.on { color: var(--red); border-color: var(--red); background: var(--red-dim); }
 
+.preview-bar { background: var(--amber-dim); border-bottom: 1px solid var(--amber); color: var(--text); text-align: center; padding: 8px 16px; font-size: 0.9rem; }
 main { max-width: 1180px; margin: 0 auto; padding: 24px 16px 60px; }
 .foot { text-align: center; color: var(--muted); padding: 24px 16px; border-top: 1px solid var(--line); font-size: 0.9rem; }
 
@@ -64,6 +65,14 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--amber); out
 .hero h1 { font-size: clamp(2.6rem, 8vw, 5rem); margin-bottom: 0.15em; }
 .lede { font-size: 1.2rem; color: var(--muted); max-width: 46em; margin: 0; }
 .lede-sm { color: var(--muted); max-width: 60em; }
+.big-input { font-size: 1.15rem; min-height: 56px; padding: 12px 16px; }
+.ask { margin-top: 22px; max-width: 900px; }
+.examples { display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: baseline; }
+.examples .link { font-size: 0.85rem; }
+.diagnose .row { margin-bottom: 6px; }
+.understood { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 16px 0; }
+.understood .chip { cursor: default; min-height: 30px; }
+.code-hit { margin: 10px 0; max-width: 700px; }
 
 /* picker */
 .picker { display: grid; grid-template-columns: 1fr 1.2fr 1.6fr; gap: 20px; }
@@ -148,6 +157,7 @@ table.spec .note { font-family: var(--body); font-size: 0.85rem; color: var(--mu
 .steps { padding-left: 0; counter-reset: s; list-style: none; }
 .steps li { counter-increment: s; position: relative; padding: 10px 0 10px 52px; border-bottom: 1px solid var(--line); }
 .steps li::before { content: counter(s); position: absolute; left: 0; top: 8px; width: 36px; height: 36px; display: grid; place-items: center; background: var(--bg3); border: 1px solid var(--amber); color: var(--amber); font: 800 1.1rem var(--head); border-radius: 50%; }
+.video-at { display: inline-block; margin-left: 8px; font: 600 0.8rem var(--mono); text-decoration: none; padding: 1px 8px; border-radius: 10px; background: var(--red-dim); color: var(--red); }
 .step-warn { color: var(--amber); margin: 4px 0 0; }
 .body p { max-width: 50em; }
 .sources li { margin-bottom: 6px; }
@@ -177,7 +187,7 @@ table.spec.makes th { width: 26%; font-family: var(--head); font-weight: 700; co
 .contribute label input, .contribute label select, .contribute label textarea { margin-top: 4px; }
 .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0 14px; }
 .grid5 { display: grid; grid-template-columns: 1fr 1.6fr 0.6fr 0.6fr 1fr auto; gap: 0 10px; align-items: end; }
-.grid-src { display: grid; grid-template-columns: auto 2fr 1.2fr 1fr 1.4fr auto; gap: 0 10px; align-items: end; }
+.grid-src { display: grid; grid-template-columns: auto 1fr 2fr 1.2fr 1fr 1.4fr auto; gap: 0 10px; align-items: end; }
 .src-num { font: 700 1rem var(--mono); color: var(--amber); padding-bottom: 20px; }
 .grid-spec { display: grid; grid-template-columns: 2fr 1fr 0.7fr 2fr 0.6fr auto; gap: 8px; margin-bottom: 8px; }
 .warn-box, .ok-box { border-radius: 8px; padding: 14px 18px; margin-top: 18px; }

@@ -4,17 +4,22 @@ import { STATUS } from './Entry.jsx';
 
 const THIS_YEAR = new Date().getFullYear() + 1;
 const blankSpec = { name: '', value: '', unit: '', note: '', src: '' };
-const blankSrc = { title: '', publisher: '', citation: '', url: '' };
+const blankSrc = { type: '', title: '', creator: '', publisher: '', citation: '', url: '' };
 const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 80);
 const lines = (s) => s.split('\n').map((x) => x.trim()).filter(Boolean);
 const refs = (s) => String(s).split(/[^0-9]+/).filter(Boolean).map(Number);
 
-// A step line can end in footnotes like "Torque to spec [2]".
+// A step line ends in footnotes: "Torque to spec [2]", or for a video "[3@4:32]".
 function parseStep(line) {
-  const m = line.match(/^(.*?)\s*((?:\[\d+\])+)\s*$/);
-  return m ? { text: m[1], src: refs(m[2]) } : line;
+  const m = line.match(/^(.*?)\s*((?:\[\d+(?:@[\d:]+)?\])+)\s*$/);
+  if (!m) return line;
+  const step = { text: m[1], src: refs(m[2].replace(/@[\d:]+/g, '')) };
+  const t = m[2].match(/@([\d:]+)/);
+  if (t) step.t = t[1];
+  return step;
 }
-const stepLine = (s) => (typeof s === 'string' ? s : s.text + (s.src ? s.src.map((k) => `[${k}]`).join('') : ''));
+const stepLine = (s) => (typeof s === 'string' ? s
+  : s.text + (s.src || []).map((k, i) => `[${k}${i === 0 && s.t ? '@' + s.t : ''}]`).join(''));
 
 function fromEntry(e) {
   return {
@@ -129,7 +134,7 @@ function Photos({ f, setF, entryId }) {
   );
 }
 
-export default function Contribute({ query }) {
+export default function Contribute({ query, readOnly, repo }) {
   const id = query.get('id');
   const [f, setF] = useState(() => ({
     id: '', type: 'procedure', title: '', summary: '', status: 'cited',
@@ -158,6 +163,11 @@ export default function Contribute({ query }) {
   return (
     <form className="contribute" onSubmit={submit}>
       <h1>{id ? 'Improve entry' : 'Add knowledge'}</h1>
+      {readOnly && (
+        <div className="draft-banner">
+          <strong>This is the public preview, so saving is off here.</strong> You can still fill this in and use it as a guide. To actually add knowledge: download OpenBay from <a href={repo} target="_blank" rel="noreferrer">GitHub</a> and run it (Windows: double-click OpenBay.bat), or open a pull request with your entry file. Got an AI agent? Point it at the repo and say "work on OpenBay".
+        </div>
+      )}
       <p className="lede-sm">Facts only. Every spec gets a footnote number pointing at a source below: a factory manual (with page), a public-domain manual, a TSB number, a parts maker's published spec. If you can't cite it yet, save it as a <strong>draft</strong>; it stays hidden until someone does.</p>
 
       <fieldset>
@@ -192,9 +202,12 @@ export default function Contribute({ query }) {
         {f.sources.map((s, i) => (
           <div key={i} className="grid-src">
             <span className="src-num">[{i + 1}]</span>
-            <label>Title<input value={s.title} onChange={setIn('sources', i, 'title')} placeholder="1972 Chevrolet Light Duty Truck Service Manual" /></label>
-            <label>Publisher<input value={s.publisher} onChange={setIn('sources', i, 'publisher')} placeholder="Chevrolet Motor Division" /></label>
-            <label>Page / section / TSB #<input value={s.citation} onChange={setIn('sources', i, 'citation')} placeholder="Sec. 6, p. 6-24" /></label>
+            <label>Kind<select value={s.type} onChange={setIn('sources', i, 'type')}><option value="">Document / manual / bulletin</option><option value="video">Video</option></select></label>
+            <label>Title<input value={s.title} onChange={setIn('sources', i, 'title')} placeholder={s.type === 'video' ? 'Video title' : '1972 Chevrolet Light Duty Truck Service Manual'} /></label>
+            {s.type === 'video'
+              ? <label>Channel / creator<input value={s.creator} onChange={setIn('sources', i, 'creator')} placeholder="Channel name" /></label>
+              : <label>Publisher<input value={s.publisher} onChange={setIn('sources', i, 'publisher')} placeholder="Chevrolet Motor Division" /></label>}
+            <label>{s.type === 'video' ? 'Upload date' : 'Page / section / TSB #'}<input value={s.citation} onChange={setIn('sources', i, 'citation')} placeholder={s.type === 'video' ? '2021-03-14' : 'Sec. 6, p. 6-24'} /></label>
             <label>Link<input value={s.url} onChange={setIn('sources', i, 'url')} placeholder="https://…" /></label>
             {f.sources.length > 1 && <button type="button" className="link" onClick={() => del('sources', i)}>remove</button>}
           </div>
@@ -219,7 +232,7 @@ export default function Contribute({ query }) {
 
       <fieldset>
         <legend>The job</legend>
-        <label>Steps, one per line. Every step needs a footnote: end the line with [1] (or [1][2]).<textarea rows={8} value={f.steps} onChange={set('steps')} /></label>
+        <label>Steps, one per line. Every step needs a footnote: end the line with [1] (or [1][2]). From a video, add the timestamp: [2@4:32].<textarea rows={8} value={f.steps} onChange={set('steps')} /></label>
         <div className="grid3">
           <label>Tools (one per line)<textarea rows={4} value={f.tools} onChange={set('tools')} /></label>
           <label>Parts (one per line)<textarea rows={4} value={f.parts} onChange={set('parts')} /></label>

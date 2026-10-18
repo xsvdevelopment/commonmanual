@@ -3,13 +3,13 @@ import { api, useApi, qs, vehicleHref } from '../api.js';
 import { EntryCard, SourceNote } from './Entry.jsx';
 
 const TABS = [
-  ['knowledge', 'Shop knowledge'], ['bulletins', 'TSBs'], ['problems', 'Known problems'], ['recalls', 'Recalls'],
+  ['diagnose', 'Diagnose'], ['knowledge', 'Shop knowledge'], ['bulletins', 'TSBs'], ['problems', 'Known problems'], ['recalls', 'Recalls'],
   ['specs', 'Vehicle specs'], ['factory', 'Factory info'], ['jobs', 'Job lookup'],
 ];
 const norm = (s) => String(s || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
 
-export default function Vehicle({ year, make, model, vin, drafts }) {
-  const [tab, setTab] = useState('knowledge');
+export default function Vehicle({ year, make, model, vin, q, drafts }) {
+  const [tab, setTab] = useState('diagnose');
   const decoded = useApi(vin ? `/vin/${encodeURIComponent(vin)}` : null);
   const models = useApi(!model ? `/models?${qs({ year, make })}` : null);
 
@@ -51,6 +51,7 @@ export default function Vehicle({ year, make, model, vin, drafts }) {
         ))}
       </div>
 
+      {tab === 'diagnose' && (model ? <Diagnose year={year} make={make} model={model} vin={vin} q={q} /> : <NeedModel />)}
       {tab === 'knowledge' && <Knowledge year={year} make={make} model={model} drafts={drafts} />}
       {tab === 'bulletins' && (model ? <Bulletins year={year} make={make} model={model} /> : <NeedModel />)}
       {tab === 'problems' && (model ? <Problems year={year} make={make} model={model} /> : <NeedModel />)}
@@ -120,6 +121,81 @@ function Problems({ year, make, model }) {
         })}
       </div>
       <SourceNote sources={[{ title: 'NHTSA Office of Defects Investigation, consumer complaints database', url: 'https://www.nhtsa.gov/recalls' }]} note="Owner reports, not verified diagnoses. Repeat reports show patterns." />
+    </div>
+  );
+}
+
+function Diagnose({ year, make, model, vin, q }) {
+  const [input, setInput] = useState(q);
+  useEffect(() => setInput(q), [q]);
+  const { data, error, loading } = useApi(q ? `/diagnose?${qs({ year, make, model, q })}` : null);
+  const submit = (e) => {
+    e.preventDefault();
+    if (input.trim()) location.hash = vehicleHref(year, make, model).slice(1) + '?' + qs({ vin, q: input.trim() });
+  };
+
+  return (
+    <div className="diagnose">
+      <form className="row" onSubmit={submit}>
+        <input className="big-input" value={input} onChange={(e) => setInput(e.target.value)} placeholder="What's it doing? (rattles on cold start, P0016, stalls when warm, shudders at 40…)" autoFocus={!q} />
+        <button className="btn primary">Search</button>
+      </form>
+      <p className="muted small">Searches every factory bulletin, recall, investigation, owner report and cited OpenBay entry for this vehicle. It finds documented records; it doesn't guess. Confirm with testing before replacing parts.</p>
+
+      {loading && <Loading what={`every record for this ${model}`} />}
+      {error && <Err e={error} />}
+      {data && (
+        <>
+          <div className="understood">
+            <span className="muted">Searched {data.counts.tsbs.toLocaleString()} bulletins, {data.counts.complaints.toLocaleString()} owner reports and {data.counts.recalls} recalls{data.vehicle.searched.length > 1 ? ` across ${data.vehicle.searched.join(', ')}` : ''} for:</span>
+            {data.understood.codes.map((c) => <span key={c} className="chip sel">{c}</span>)}
+            {data.understood.concepts.map((c) => <span key={c} className="chip">{c}</span>)}
+          </div>
+
+          {data.codes.filter((c) => c.valid).map((c) => (
+            <a key={c.code} className="card link-card code-hit" href={'#/codes/' + c.code}>
+              <span className="badge">Trouble code</span>
+              <h4><span className="mono">{c.code}</span> {c.definitions[0]?.title || (c.makes.find((m) => m.make === make)?.definitions[0]?.title) || 'Manufacturer-specific code'}</h4>
+            </a>
+          ))}
+
+          {data.knowledge.length > 0 && <><h3 className="sect">OpenBay knowledge</h3><div className="cards">{data.knowledge.map((e) => <EntryCard key={e.id} e={e} />)}</div></>}
+
+          <h3 className="sect">Factory bulletins ({data.tsbs.length})</h3>
+          {!data.tsbs.length && <p className="muted">No matching bulletins. Try other words for the symptom, or check the TSBs tab.</p>}
+          <div className="recalls">
+            {data.tsbs.map((t) => (
+              <article key={t.id} className="recall tsb">
+                <header><code>{t.number || 'Bulletin'}</code><span className="muted">{t.date}</span>{t.components.map((c) => <span key={c} className="badge">{c}</span>)}</header>
+                <p>{t.summary}</p>
+                {t.docs > 0 && <DocLinks kind="tsb" id={t.id} />}
+              </article>
+            ))}
+          </div>
+
+          {data.recalls.length > 0 && (
+            <><h3 className="sect">Recalls</h3><div className="recalls">{data.recalls.map((r) => (
+              <article key={r.campaign} className={'recall' + (r.parkIt ? ' park' : '')}>
+                <header><code>{r.campaign}</code><span className="muted">{r.date}</span>{r.parkIt && <span className="badge red">PARK IT</span>}</header>
+                <h4>{r.component}</h4><p>{r.summary}</p>{r.remedy && <p><strong>Remedy:</strong> {r.remedy}</p>}
+              </article>
+            ))}</div></>
+          )}
+
+          {data.investigations.length > 0 && (
+            <><h3 className="sect">NHTSA investigations</h3><div className="recalls">{data.investigations.map((i) => (
+              <article key={i.id} className="recall"><header><code>{i.id}</code><span className="muted">opened {i.opened}</span></header><h4>{i.subject}</h4><p>{i.summary}</p></article>
+            ))}</div></>
+          )}
+
+          <h3 className="sect">Other owners ({data.owners.matched.toLocaleString()} of {data.owners.total.toLocaleString()} reports match)</h3>
+          {data.owners.matched > 0 ? (
+            <ul className="reports">{data.owners.examples.map((r) => <li key={r.id}><span className="muted mono">{r.filed} · ODI {r.id} · {r.components}</span><p>{r.summary}</p></li>)}</ul>
+          ) : <p className="muted">No owner reports match.</p>}
+
+          <SourceNote sources={[{ title: 'NHTSA bulletins, recalls, investigations and complaints', url: 'https://www.nhtsa.gov/recalls' }, { title: 'OpenBay knowledge base (cited entries)' }]} note="Owner reports are unverified; a large number describing the same thing shows a pattern." />
+        </>
+      )}
     </div>
   );
 }

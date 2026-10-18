@@ -20,8 +20,20 @@ You've been pointed at OpenBay, a free, open-source repair database for vehicles
 | US government technical manuals (TM 9-xxxx, Navy NAVEDTRA, Air Force TOs) | Public domain. Search archive.org (`https://archive.org/advancedsearch.php`); full OCR text is at `https://archive.org/download/<id>/<id>_djvu.txt`. Cite TM number, table/paragraph, and the archive.org item URL. |
 | NHTSA recalls, complaints, investigations; EPA fueleconomy.gov | Already wired into the app. |
 | Published manufacturer or parts-maker spec sheets that are freely available | Cite URL and date accessed. |
+| Repair videos (YouTube and similar) by people who do the job on that vehicle | See "Videos" below. Good for procedures and gotchas; weaker than factory documents for numbers. |
 
 **Never use:** ALLDATA, Mitchell, Identifix, Chilton/Haynes text, paid factory portals, or any site that hosts pirated manuals. No screenshots or diagrams from copyrighted manuals. One takedown could erase everyone's work.
+
+## Videos
+
+Enthusiasts film jobs on the cars they love, and those videos often show what no manual explains. You can turn one into a procedure:
+
+1. **Read the transcript; don't guess from the title.** `yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en --sub-format vtt "<url>"` saves the captions with timestamps. If there are no captions and you can't watch the video, don't use it.
+2. **Cite it** as a source with `"type": "video"`, `"title"`, `"creator"` (channel name), `"url"` and the upload date in `"citation"`.
+3. **Footnote every step with its timestamp**: `{"text": "...", "src": [2], "t": "4:32"}`. The app links straight to that moment. Paraphrase; never paste the transcript.
+4. **Numbers from a video are the creator's claim.** If they show or name the manual ("89 ft-lb per the factory manual"), find and cite the manual too. If you can't, keep the value, cite the video, and say "per the video" in the spec's `note`.
+5. Entries that cite a video are `cited`, never `factory-sourced`. Don't download or re-host video, frames or thumbnails.
+6. Prefer videos where the vehicle and engine are clearly identified on screen, and narrow `applies` to that vehicle.
 
 ## Workflow
 
@@ -33,7 +45,7 @@ You've been pointed at OpenBay, a free, open-source repair database for vehicles
    - `data/kb/known-issues/gm-24-ecotec-oil-consumption.json` (factory TSBs)
 4. **Set the status honestly.** `factory-sourced` if every fact comes from the manufacturer's own documents (TSBs, factory manuals); `cited` for other published sources. Never `shop-verified`: that means a human confirmed it on a real vehicle.
 5. **Disclose.** Set `"author"` to the person running you plus ` (AI-assisted)`, e.g. `"Jane Doe (AI-assisted)"`.
-6. **Check.** `npm run validate && npm test` must pass.
+6. **Check.** `npm run validate && npm test` must pass. Then run `node scripts/check-citations.js <your entry files>`: it opens your sources and confirms every number in your facts appears in them. Fix anything marked `✗`. Reviewers see the same report and will reject the whole PR if a hand spot-check fails (see REVIEWING.md).
 7. **Open a PR** that references the issue and lists every document you opened. One topic per PR, kept small enough for a human to check the citations.
 
 ## Citing a draft

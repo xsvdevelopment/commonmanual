@@ -98,7 +98,7 @@
   "specs": [
     {
       "name": "Covered models",
-      "value": "Certain 2007-09 Camry, 2007-11 Camry Hybrid, 2007-08 Camry Solara, 2009-11 Corolla, 2009-13 Corolla Matrix, 2006-08 RAV4, 2007-10 Scion tC, 2008-15 Scion xB",
+      "value": "Certain 2007-2009 Camry, 2007-2011 Camry Hybrid, 2007-2008 Camry Solara, 2009-2011 Corolla, 2009-2013 Corolla Matrix, 2006-2008 RAV4, 2007-2010 Scion tC, 2008-2015 Scion xB",
       "src": [
         1
       ]

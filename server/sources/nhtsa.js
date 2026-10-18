@@ -43,13 +43,23 @@ export async function recalls(year, make, model) {
   }));
 }
 
-// Owner complaints grouped by component, so repeat failures float to the top.
-export async function complaints(year, make, model) {
+async function complaintRows(year, make, model) {
   const body = await cachedJson(
     `${API}/complaints/complaintsByVehicle?make=${q(make)}&model=${q(model)}&modelYear=${q(year)}`,
     { ttlHours: 72 },
   );
-  const rows = body.results || [];
+  return body.results || [];
+}
+
+export async function complaintsRaw(year, make, model) {
+  return (await complaintRows(year, make, model)).map((r) => ({
+    id: r.odiNumber, filed: r.dateComplaintFiled, summary: r.summary || '', components: r.components || '',
+  }));
+}
+
+// Owner complaints grouped by component, so repeat failures float to the top.
+export async function complaints(year, make, model) {
+  const rows = await complaintRows(year, make, model);
   const groups = new Map();
   for (const r of rows) {
     for (const comp of String(r.components || 'UNKNOWN').split(',').map((s) => s.trim()).filter(Boolean)) {

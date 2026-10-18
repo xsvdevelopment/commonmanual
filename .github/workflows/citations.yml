@@ -1,0 +1,27 @@
+name: Citation spot-check
+
+# Opens the documents cited by changed knowledge-base entries and checks that each
+# fact's numbers really appear in them. Results land in the run summary for the
+# reviewer; see REVIEWING.md.
+on:
+  pull_request:
+    paths: ['data/kb/**']
+
+jobs:
+  spot-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: sudo apt-get install -y poppler-utils
+      - run: npm ci
+      - name: Check cited facts against their sources
+        run: |
+          files=$(git diff --name-only --diff-filter=AM origin/${{ github.base_ref }}...HEAD -- 'data/kb/**/*.json')
+          if [ -z "$files" ]; then echo "No entry files changed."; exit 0; fi
+          node scripts/check-citations.js $files

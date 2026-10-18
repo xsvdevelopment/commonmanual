@@ -17,7 +17,8 @@ Good sources, best first:
 1. **Factory service manual or TSB.** Give the title, publisher, and page/section or bulletin number.
 2. **Public-domain manuals.** US military technical manuals (TM 9-xxxx), government publications.
 3. **Published parts-maker specs.** A gasket or fastener maker's published torque sheet, for example.
-4. **Your own measurements.** Allowed for `shop-verified` entries, but cite what you measured against.
+4. **Repair videos.** Cite the video (`"type": "video"`, title, channel as `creator`, URL, upload date) and give each step its timestamp: `{"text": "...", "src": [2], "t": "4:32"}`. In the app form, end the step line with `[2@4:32]`. Video-backed entries are `cited`, not `factory-sourced`.
+5. **Your own measurements.** Allowed for `shop-verified` entries, but cite what you measured against.
 
 Can't cite it yet? Save it with `"status": "draft"`. Drafts are hidden from normal view and listed in the citation queue for someone else to verify.
 

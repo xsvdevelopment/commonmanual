@@ -1,4 +1,4 @@
-import { useRoute, usePref } from './api.js';
+import { useRoute, usePref, useApi } from './api.js';
 import Home from './components/Home.jsx';
 import Vehicle from './components/Vehicle.jsx';
 import Entry from './components/Entry.jsx';
@@ -10,14 +10,15 @@ import Drafts from './components/Drafts.jsx';
 export default function App() {
   const { parts, query } = useRoute();
   const [drafts, setDrafts] = usePref('openbay.drafts', false);
+  const config = useApi('/config').data;
   const [page, ...rest] = parts;
 
   let body;
-  if (page === 'v') body = <Vehicle year={rest[0]} make={rest[1]} model={rest[2] === '_' ? '' : rest[2]} vin={query.get('vin')} drafts={drafts} />;
+  if (page === 'v') body = <Vehicle year={rest[0]} make={rest[1]} model={rest[2] === '_' ? '' : rest[2]} vin={query.get('vin')} q={query.get('q') || ''} drafts={drafts} />;
   else if (page === 'entry') body = <Entry id={rest[0]} />;
   else if (page === 'codes') body = <Codes code={rest[0]} drafts={drafts} />;
   else if (page === 'search') body = <Search q={query.get('q') || ''} drafts={drafts} />;
-  else if (page === 'add') body = <Contribute query={query} />;
+  else if (page === 'add') body = <Contribute query={query} readOnly={config?.readOnly} repo={config?.repo} />;
   else if (page === 'drafts') body = <Drafts />;
   else body = <Home />;
 
@@ -40,6 +41,11 @@ export default function App() {
           Show unsourced drafts
         </label>
       </header>
+      {config?.readOnly && (
+        <div className="preview-bar">
+          Public preview. Browse everything; to add knowledge, <a href={config.repo} target="_blank" rel="noreferrer">grab it on GitHub</a> and run it yourself.
+        </div>
+      )}
       <main>{body}</main>
       <footer className="foot">
         Free and open source. Facts only, every one footnoted. <a href="#/add">Add what you know</a>.

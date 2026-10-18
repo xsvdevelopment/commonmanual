@@ -3,9 +3,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
-import { ROOT } from './paths.js';
-
-const CACHE_DIR = path.join(ROOT, '.cache');
+import { CACHE_DIR } from './paths.js';
 
 export async function cachedJson(url, { ttlHours = 168, headers = {} } = {}) {
   const key = crypto.createHash('sha1').update(url).digest('hex');
@@ -23,8 +21,8 @@ export async function cachedJson(url, { ttlHours = 168, headers = {} } = {}) {
     const res = await fetch(url, { headers, signal: AbortSignal.timeout(20_000) });
     if (!res.ok) throw new Error(`${res.status} from ${new URL(url).host}`);
     const body = await res.json();
-    await fs.mkdir(CACHE_DIR, { recursive: true });
-    await fs.writeFile(file, JSON.stringify(body));
+    // A cache that can't be written (read-only disk) shouldn't fail the request.
+    await fs.mkdir(CACHE_DIR, { recursive: true }).then(() => fs.writeFile(file, JSON.stringify(body))).catch(() => {});
     return body;
   } catch (err) {
     if (stale) return stale;

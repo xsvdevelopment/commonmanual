@@ -4,6 +4,7 @@ import { validateEntry, applies } from '../server/kb.js';
 import { lookup, isGeneric, search } from '../server/dtc.js';
 import { matchModels } from '../server/sources/epa.js';
 import { classicModels } from '../server/catalog.js';
+import { concepts, codesIn, score, parse } from '../server/diagnose.js';
 
 const cited = {
   id: 'test-entry', type: 'spec', title: 'Test specs', status: 'cited',
@@ -80,6 +81,34 @@ test('DTC generic classification follows SAE J2012 structure', () => {
 test('DTC text search finds codes by words', () => {
   const hits = search('catalyst efficiency');
   assert.ok(hits.some((h) => h.code === 'P0420'));
+});
+
+test('video sources: creator required, timestamps valid and tied to a video, never factory-sourced', () => {
+  const vid = { type: 'video', title: 'Cam phaser swap', creator: 'Some Channel', url: 'https://www.youtube.com/watch?v=abc' };
+  const proc = { ...cited, type: 'procedure', specs: undefined, sources: [vid], steps: [{ text: 'Remove the valve cover', src: [1], t: '4:32' }] };
+  assert.deepEqual(validateEntry(proc), []);
+  assert.ok(validateEntry({ ...proc, sources: [{ ...vid, creator: undefined }] }).some((e) => e.includes('creator')));
+  assert.ok(validateEntry({ ...proc, steps: [{ text: 'x', src: [1], t: '4m32' }] }).some((e) => e.includes('timestamp')));
+  assert.ok(validateEntry({ ...proc, status: 'factory-sourced' }).some((e) => e.includes('factory-sourced')));
+  const doc = { ...proc, sources: [{ title: 'Manual' }] };
+  assert.ok(validateEntry(doc).some((e) => e.includes('needs a video source')));
+});
+
+test('symptom text becomes shop concepts and codes', () => {
+  const c = concepts('rattles for a few seconds on cold start, check engine light P0016').map((x) => x[0]);
+  assert.deepEqual(c, ['rattle', 'check engine', 'cold start']);
+  assert.deepEqual(codesIn('throws p0171 and P0174'), ['P0171', 'P0174']);
+  assert.ok(!concepts('cold start rattle').some((x) => x[0] === 'no start'));
+  assert.ok(score('ENGINE RATTLING ON STARTUP', concepts('rattles on cold start'), []) >= 2);
+});
+
+test('free text parses into year, make, model and problem', async () => {
+  const makes = async () => ['CHEVROLET', 'FORD'];
+  const models = async (y, m) => (m === 'FORD' ? ['F-150 REGULAR CAB', 'F-150 SUPER CREW', 'F-250'] : ['SILVERADO 1500', 'EQUINOX']);
+  assert.deepEqual(await parse('2013 Ford F-150 Super Crew rattles', makes, models), { year: '2013', make: 'FORD', model: 'F-150 SUPER CREW', q: 'rattles' });
+  assert.deepEqual(await parse('2010 chevy equinox burning oil', makes, models), { year: '2010', make: 'CHEVROLET', model: 'EQUINOX', q: 'burning oil' });
+  assert.equal((await parse('2012 Silverado 1500 tick', makes, models)).make, 'CHEVROLET');
+  assert.ok((await parse('it rattles', makes, models)).error);
 });
 
 test('EPA model matching uses the base model token', () => {

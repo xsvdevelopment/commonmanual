@@ -38,6 +38,18 @@ export function SourceNote({ sources, note }) {
   );
 }
 
+// "4:32" -> seconds, for a link that opens the video at that moment.
+const secs = (t) => t.split(':').reduce((a, b) => a * 60 + Number(b), 0);
+export function videoLink(url, t) {
+  const u = new URL(url);
+  u.searchParams.set('t', `${secs(t)}s`);
+  return u.toString();
+}
+function VideoAt({ sources, src, t }) {
+  const v = (src || []).map((k) => sources[k - 1]).find((s) => s?.type === 'video');
+  return v ? <a className="video-at" href={videoLink(v.url, t)} target="_blank" rel="noreferrer">▶ {t} · {v.creator}</a> : null;
+}
+
 const Photo = ({ p }) => (
   <figure className="photo">
     <a href={'/' + p.file} target="_blank" rel="noreferrer"><img src={'/' + p.file} alt={p.caption} loading="lazy" /></a>
@@ -84,7 +96,9 @@ export default function Entry({ id }) {
       {e.steps?.length > 0 && (
         <><h3>Steps</h3><ol className="steps">{e.steps.map(step).map((s, i) => (
           <li key={i}>
-            {s.text}<Refs src={s.src} />{s.warning && <p className="step-warn">⚠ {s.warning}</p>}
+            {s.text}<Refs src={s.src} />
+            {s.t && <VideoAt sources={e.sources} src={s.src} t={s.t} />}
+            {s.warning && <p className="step-warn">⚠ {s.warning}</p>}
             {photos.filter((p) => p.step === i + 1).map((p) => <Photo key={p.file} p={p} />)}
           </li>
         ))}</ol></>
@@ -99,7 +113,9 @@ export default function Entry({ id }) {
         <ol className="sources">
           {e.sources.map((s, i) => (
             <li key={i} id={'src-' + (i + 1)}>
+              {s.type === 'video' && <span className="badge">▶ Video</span>}{' '}
               {s.url ? <a href={s.url} target="_blank" rel="noreferrer">{s.title}</a> : s.title}
+              {s.creator && <span className="muted">, by {s.creator}</span>}
               {s.publisher && <span className="muted">, {s.publisher}</span>}
               {s.citation && <span className="muted">, {s.citation}</span>}
             </li>

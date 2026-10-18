@@ -3,6 +3,7 @@ import { api, useApi, qs, vehicleHref } from '../api.js';
 
 const THIS_YEAR = new Date().getFullYear() + 1;
 const YEARS = Array.from({ length: THIS_YEAR - 1959 }, (_, i) => THIS_YEAR - i);
+const EXAMPLES = ['2013 Ford F-150 rattles on cold start', '2010 Chevy Equinox burning oil', '2005 F-250 no start', '2008 Toyota Camry uses oil'];
 const COMMON = ['CHEVROLET', 'FORD', 'DODGE', 'RAM', 'GMC', 'TOYOTA', 'HONDA', 'NISSAN', 'JEEP', 'CHRYSLER', 'HYUNDAI', 'KIA', 'SUBARU', 'VOLKSWAGEN', 'BUICK', 'CADILLAC', 'PONTIAC', 'PLYMOUTH', 'OLDSMOBILE', 'LINCOLN', 'MERCURY', 'MAZDA', 'BMW', 'MERCEDES-BENZ'];
 
 export default function Home() {
@@ -13,6 +14,22 @@ export default function Home() {
   const [vin, setVin] = useState('');
   const [vinErr, setVinErr] = useState('');
   const [vinBusy, setVinBusy] = useState(false);
+
+  const [problem, setProblem] = useState('');
+  const [askErr, setAskErr] = useState('');
+  const [asking, setAsking] = useState(false);
+
+  async function ask(e) {
+    e.preventDefault();
+    if (!problem.trim()) return;
+    setAsking(true); setAskErr('');
+    try {
+      const p = await api(`/parse?${qs({ text: problem })}`);
+      if (p.error) setAskErr(p.error);
+      else location.hash = vehicleHref(p.year, p.make, p.model).slice(1) + (p.q ? '?' + qs({ q: p.q }) : '');
+    } catch (err) { setAskErr(err.message); }
+    setAsking(false);
+  }
 
   const makes = useApi(year ? `/makes?${qs({ year })}` : null);
   const models = useApi(year && make ? `/models?${qs({ year, make })}` : null);
@@ -40,8 +57,14 @@ export default function Home() {
   return (
     <div className="home">
       <section className="hero">
-        <h1>Pull up the car.</h1>
-        <p className="lede">Recalls, owner-reported failures, factory specs and shop-written repair knowledge, 1960 to now. Free, open, and every fact footnoted.</p>
+        <h1>What's it doing?</h1>
+        <p className="lede">Type the car and the problem. OpenBay searches every factory bulletin, recall, owner report and cited repair entry on record for it. Free, open, every fact footnoted.</p>
+        <form className="row ask" onSubmit={ask}>
+          <input className="big-input" value={problem} onChange={(e) => setProblem(e.target.value)} placeholder="2013 Ford F-150 rattles on cold start" />
+          <button className="btn primary big" disabled={asking}>{asking ? 'Looking…' : 'Diagnose'}</button>
+        </form>
+        {askErr && <p className="warn">{askErr}</p>}
+        <p className="muted small examples">Try: {EXAMPLES.map((x) => <button key={x} className="link" onClick={() => setProblem(x)}>{x}</button>)}</p>
       </section>
 
       <section className="panel">
