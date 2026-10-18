@@ -88,7 +88,11 @@ export default function Entry({ id }) {
 
   return (
     <article className="entry">
-      <div className="badges"><span className="badge">{TYPE_LABEL[e.type]}</span><StatusBadge s={e.status} /></div>
+      <p className="print-only print-head">OpenBay · {location.origin}/#/entry/{e.id} · printed {new Date().toLocaleDateString()}</p>
+      <div className="entry-top">
+        <div className="badges"><span className="badge">{TYPE_LABEL[e.type]}</span><StatusBadge s={e.status} /></div>
+        <button type="button" className="btn small no-print" onClick={() => window.print()}>Print</button>
+      </div>
       <h1>{e.title}</h1>
       {e.status === 'draft' && (
         <div className="draft-banner">
@@ -145,12 +149,14 @@ export default function Entry({ id }) {
               {s.creator && <span className="muted">, by {s.creator}</span>}
               {s.publisher && <span className="muted">, {s.publisher}</span>}
               {s.citation && <span className="muted">, {s.citation}</span>}
+              {s.url && <span className="print-only print-url">{s.url}</span>}
             </li>
           ))}
         </ol>
       ) : <p className="warn">No sources yet.</p>}
 
-      <p className="meta muted">
+      <p className="print-only print-foot">Facts only, every one footnoted. Check the cited source before you torque anything. Code MIT, data CC BY-SA 4.0.</p>
+      <p className="meta muted no-print">
         {e.author && <>By {e.author}. </>}{e.verifiedBy && <>Verified by {e.verifiedBy}. </>}{e.reviewedBy && <>Spot-checked against the sources by {e.reviewedBy}. </>}{e.updated && <>Updated {e.updated}. </>}
         File: <code>data/kb/{e.file}</code> · <a href={'#/add?id=' + e.id}>Improve this entry</a>
       </p>

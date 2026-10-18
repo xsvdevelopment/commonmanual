@@ -225,3 +225,41 @@ table.spec.makes th { width: 26%; font-family: var(--head); font-weight: 700; co
   .draft-toggle { margin-left: auto; font-size: 0.75rem; }
   .hero h1 { font-size: 2.6rem; }
 }
+
+/* print: black on white, sized for a clipboard in the bay */
+.print-only { display: none; }
+.entry-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+@media print {
+  @page { margin: 14mm 12mm; }
+  :root { --text: #000; --muted: #333; --amber: #000; --red: #000; --green: #000; --line: #999; --bg3: #fff; }
+  html, body { background: #fff; color: #000; font-size: 11pt; line-height: 1.4; }
+  .top, .foot, .preview-bar, .no-print, .draft-toggle { display: none !important; }
+  .print-only { display: block; }
+  main { max-width: none; padding: 0; }
+  .entry { max-width: none; }
+  a { color: #000; text-decoration: none; }
+  h1 { font-size: 22pt; margin: 4pt 0 6pt; }
+  h3 { color: #000; font-size: 12pt; margin-top: 14pt; border-bottom: 1.5pt solid #000; padding-bottom: 2pt; break-after: avoid; }
+  .print-head { font: 8pt var(--mono); border-bottom: 1pt solid #000; padding-bottom: 4pt; margin: 0 0 6pt; }
+  .print-foot { font-size: 8pt; border-top: 1pt solid #000; padding-top: 4pt; margin-top: 16pt; }
+  .print-url { font: 8pt var(--mono); word-break: break-all; color: #333; }
+  .badge, .badge.red, .badge.amber, .badge.green { background: none; color: #000; border: 1pt solid #000; }
+  .lede-sm { color: #000; }
+  .applies li { background: none; border: 1pt solid #999; }
+  .warnings, .draft-banner { background: none; border: 2pt solid #000; border-radius: 0; }
+  table.spec th, table.spec td { padding: 4pt 6pt; border-bottom: 0.75pt solid #999; }
+  table.spec th { color: #000; font-weight: 600; }
+  table.spec.big .val { color: #000; font-size: 11pt; font-weight: 700; }
+  table.spec tr, .steps li, .sources li, .photo { break-inside: avoid; }
+  .refs a { color: #000; }
+  .steps li { padding: 6pt 0 6pt 46pt; border-bottom: 0.75pt solid #999; }
+  .steps li::before { background: none; border: 1pt solid #000; color: #000; width: 22pt; height: 22pt; top: 5pt; font-size: 11pt; }
+  /* empty box to tick off each step */
+  .steps li::after { content: ''; position: absolute; left: 28pt; top: 9pt; width: 11pt; height: 11pt; border: 1pt solid #000; }
+  .video-at { background: none; color: #000; border: 0.75pt solid #000; }
+  .step-warn { color: #000; font-weight: 700; }
+  .photo { max-width: 60%; }
+  .photo img { border-radius: 0; background: none; }
+  .photo-grid { grid-template-columns: repeat(3, 1fr); }
+  .split { grid-template-columns: 1fr 1fr; }
+}
