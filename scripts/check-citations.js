@@ -56,14 +56,16 @@ async function fetchText(url) {
     const common = (flat.match(/\b(the|and|to|of|with|for|is|or|be|if|this|on|in)\b/gi) || []).length;
     if (flat.length > 1000 && common / (flat.length / 1000) < 2) { text = null; how += ' (text layer is unreadable, likely an embedded font; read the PDF by eye)'; }
   }
-  const out = { text: text && text.replace(/\s+/g, ' '), how };
+  const out = { text: text && ungroup(text.replace(/\s+/g, ' ')), how };
   docCache.set(url, out);
   return out;
 }
 
 // Numbers in a fact: "50, then 95" -> 50, 95; "0.009 in" -> 0.009. Dashed identifiers
 // like bulletin "07-21-2" stay whole, and also match their undashed form ("07212").
-const numbers = (s) => [...new Set(String(s).match(/\d+(?:-\d+){2,}|\d+(?:\.\d+)?/g) || [])];
+// Thousands separators are dropped on both sides, so "1,600 rpm" matches a source's "1600 rpm".
+const ungroup = (s) => String(s).replace(/(\d),(?=\d{3}(?!\d))/g, '$1');
+const numbers = (s) => [...new Set(ungroup(s).match(/\d+(?:-\d+){2,}|\d+(?:\.\d+)?/g) || [])];
 function found(n, text) {
   const forms = [n];
   if (n.startsWith('0.')) forms.push(n.slice(1));

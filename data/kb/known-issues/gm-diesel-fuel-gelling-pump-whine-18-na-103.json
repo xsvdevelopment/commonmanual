@@ -1,0 +1,118 @@
+{
+  "id": "gm-diesel-fuel-gelling-pump-whine-18-na-103",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "GM diesels in cold weather: fuel pump whine, hard start or stall, P0087 / P2635, gelled fuel (don't replace the pump)",
+  "summary": "GM bulletin 18-NA-103: winter-incompatible diesel blends gel or form solids that block the in-tank pump pickup, causing pump whine, hard starts, stalls and fuel pressure codes. Warm the vehicle above 32 °F (0 °C); if it starts and the whine is gone, it's the fuel, not the pump.",
+  "applies": [
+    {
+      "make": "CHEVROLET",
+      "years": [
+        2015,
+        2025
+      ],
+      "engine": "Diesel"
+    },
+    {
+      "make": "GMC",
+      "years": [
+        2015,
+        2025
+      ],
+      "engine": "Diesel"
+    },
+    {
+      "make": "BUICK",
+      "years": [
+        2015,
+        2025
+      ],
+      "engine": "Diesel"
+    },
+    {
+      "make": "CADILLAC",
+      "years": [
+        2015,
+        2025
+      ],
+      "engine": "Diesel"
+    }
+  ],
+  "tags": [
+    "diesel",
+    "gelling",
+    "cold weather",
+    "fuel pump whine",
+    "hard start",
+    "stall",
+    "p0087",
+    "p018b",
+    "p228a",
+    "p228b",
+    "p2635",
+    "duramax",
+    "silverado",
+    "sierra"
+  ],
+  "specs": [
+    {
+      "name": "DTCs (K20 ECM)",
+      "value": "P0087 fuel rail low pressure; P018B fuel pressure sensor performance; P228A / P228B fuel pressure regulator 1/2 control forced engine shutdown; P2635 fuel pump flow performance",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Thaw target",
+      "value": "Fuel above 0 °C (32 °F); can take as little as 1-2 hours indoors",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Covers",
+      "value": "2015-2025 GM passenger cars and trucks with diesel engines (not Chevrolet Low Cab Forward medium duty); 2017-2025 Silverado / Sierra 2500/3500",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Winter additives",
+      "value": "Must not contain metal-based additives, alcohol or other water emulsifiers",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Bring the vehicle inside and let the fuel warm above 32 °F (watch fuel temperature on the scan tool). Once it starts, warm return fuel helps thaw the tank.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Confirm it starts and the pump whine is gone, then drain the water separator at the bottom of the fuel filter.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Don't replace the in-tank fuel pump for this. If warming the fuel cured it, the fuel blend didn't suit the weather; buying from high-volume stations helps keep fuel fresh.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "GM treats this as a local fuel issue, not a vehicle defect, and says not to submit a warranty claim for it. In Canada, #1 diesel is Type A (winter) and #2 is Type B (summer).",
+  "sources": [
+    {
+      "title": "Service Bulletin 18-NA-103: Information on Diesel Fuel Gelling in Cold Temperatures Causing In-Tank Fuel Pump Whine and Driveability Concerns",
+      "publisher": "General Motors, August 2024 (version 8)",
+      "citation": "Condition, cause, correction and service recommendation pp. 1-2; NHTSA ID 11006604",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-11006604-0001.pdf"
+    }
+  ],
+  "author": "OpenBay (AI-assisted)",
+  "updated": "2026-10-18"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "gm-8-speed-transmission-adaptive-learn",
+  "type": "procedure",
+  "status": "factory-sourced",
+  "title": "GM 8-speed automatic (8L45 / 8L90): Service Fast Learn and clutch-by-clutch adaptive learn for harsh shifts, slips or flares",
+  "summary": "GM bulletin 16-NA-019: how the 8-speed adapts, when to reset with Service Fast Learn, and the drive procedure to teach each of the five clutches (C1-C5) plus power-downshift and garage-shift learns.",
+  "applies": [
+    { "make": "CHEVROLET", "models": ["SILVERADO", "COLORADO", "CAMARO", "CORVETTE", "EXPRESS"], "years": [2015, 2025], "engine": "8-speed automatic (RPO M5U, M5T, M5N, M5X, MQD, MQE, MFC, N8R)" },
+    { "make": "GMC", "models": ["SIERRA", "YUKON", "CANYON", "SAVANA"], "years": [2015, 2025], "engine": "8-speed automatic (RPO M5U, M5T, M5N, M5X, MQD, MQE, MFC, N8R)" },
+    { "make": "CADILLAC", "models": ["ESCALADE", "ATS", "CTS", "CT6", "CT4"], "years": [2015, 2024], "engine": "8-speed automatic (RPO M5U, M5T, M5N, M5X, MQD, MQE, MFC, N8R)" }
+  ],
+  "tools": ["GDS2 scan tool"],
+  "tags": ["8l90", "8l45", "8-speed", "transmission", "harsh shift", "slip", "flare", "adaptive learn", "relearn", "service fast learn", "tcm", "silverado", "sierra", "yukon", "escalade"],
+  "warnings": ["Adaptive learn is meant for transmissions with about 5,000 miles or less, or within about 5,000 miles of a valve body, clutch or transmission job. On high-mileage units GM says it may help only for a while."],
+  "specs": [
+    { "name": "Low mileage, per GM", "value": "About 5,000 mi (8,050 km) or less, or within that distance of a valve body, clutch repair or transmission replacement", "src": [1] },
+    { "name": "Fluid temperature for learning", "value": "95-203 °F (35-95 °C); outside that the clutches won't learn", "src": [1] },
+    { "name": "Service Fast Learn availability", "value": "2015-2021 trucks, cars and SUVs with 8L45 / 8L90 (RPO M5U, M5T, M5N, M5X, MQD, MQE)", "src": [1] },
+    { "name": "GDS2 path", "value": "Module diagnostics > Transmission Control Module > Configuration / Reset Function > Transmission Service Fast Learn", "src": [1] },
+    { "name": "Clutches", "value": "5 (C1-C5)", "src": [1] }
+  ],
+  "steps": [
+    { "text": "First compare ECM/TCM software against what's in the vehicle. If an update describes the complaint, install it before any learns; the update clears clutch adapts, so a Service Fast Learn and adaptive learning may follow.", "src": [1] },
+    { "text": "After a valve body, clutch repair/overhaul or transmission replacement: reset adapts with Service Fast Learn (done in the stall, no driving), then test drive and note soft or harsh shifts.", "src": [1] },
+    { "text": "For a specific shift complaint with no repair done, skip Service Fast Learn and go straight to the adaptive learn for the clutch involved.", "src": [1] },
+    { "text": "Warm the fluid to 95-203 °F (35-95 °C) and use a smooth, level, quiet road. GDS2's clutch-learned \"Yes\" only means learn conditions were met twice, not that the learn is finished.", "src": [1] },
+    { "text": "C1 (6-7 or 3-1 shift): on a 30-45 mph road, manual 6th at 1,000-1,600 rpm for about 5 miles (cruise control helps), then 15 light-throttle 6-7 upshifts at about 15% throttle.", "src": [1] },
+    { "text": "C2 (6-5 shift): on a 40-45 mph road, 10 normal-mode 6-5 coast-down shifts with zero or light brake, then manual 8th at 1,000-1,750 rpm for about 5 miles.", "src": [1] },
+    { "text": "C3 (2-3, 4-5 or N-D shift): 10 normal-mode 8-7 coast-downs with zero or light brake, then 15 light-throttle 2-3 upshifts at about 15% throttle. On M5X eAssist trucks, do a ~15% throttle 7-8 upshift before each 8-7 coast-down.", "src": [1] },
+    { "text": "C4 (1-2, 5-6 or 7-8 shift): on a 40-45 mph road, manual 7th at 1,000-1,750 rpm for about 5 miles, then 15 light-throttle 1-2 upshifts at about 15% throttle. Express/Savana vans: use 10 normal-mode 7-6 coast-downs for the pressure learn.", "src": [1] },
+    { "text": "C5 (3-4 or N-R shift): somewhere safe at 5-25 mph, manual 3rd, accelerate very slowly from about 1,000 to 2,500 rpm, slow back to 1,000, ten times; then 15 light-throttle 3-4 upshifts at about 15% throttle.", "src": [1] },
+    { "text": "Power downshifts: from 8th, slowly add throttle until it downshifts; repeat in each gear 8 down to 2.", "src": [1] },
+    { "text": "Garage shifts, after the clutches above are learned: foot on brake, shift N to D (or N to R), release the brake once in gear and let it roll 5-10 feet. Repeat until the engagement feels right.", "src": [1] }
+  ],
+  "body": "On 2015-2016 Silverado, Sierra, Yukon and Escalade, GM says to make sure bulletin 16-NA-411 or 16-NA-412 is done before this procedure; on the 2015 Corvette use the latest 14-07-30-001.\n\nThe bulletin's model/year/RPO table doesn't survive text extraction cleanly, so the applies ranges here are the outer bounds by brand. Check the RPO on the vehicle against page 1 of the bulletin. Its shift-to-clutch table is also left out for the same reason; the clutch for each shift above comes from the procedure headings.",
+  "sources": [
+    {
+      "title": "Service Bulletin 16-NA-019: Information on Transmission Adaptive Functions and Correcting Low Mileage Harsh Shifts, Slips, or Flares",
+      "publisher": "General Motors, February 2025 (version 13)",
+      "citation": "Condition and Correction pp. 2-3; clutch learn procedures pp. 4-5; NHTSA ID 11014353",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2025/MC-11014353-0001.pdf"
+    }
+  ],
+  "author": "OpenBay (AI-assisted)",
+  "updated": "2026-10-18"
+}

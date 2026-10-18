@@ -1,0 +1,190 @@
+{
+  "id": "gm-oil-consumption-test-01-06-01-011",
+  "type": "procedure",
+  "status": "factory-sourced",
+  "title": "GM oil consumption test: what's normal, what skews the reading, and how to measure it",
+  "summary": "GM bulletin 01-06-01-011P: GM's accepted oil consumption is 1 quart per 2,000 miles for personal-use vehicles driven normally. The bulletin lists what makes consumption look worse than it is (dipstick reading errors, short trips, idling, towing, aggressive driving) and the step-by-step test with a data sheet.",
+  "applies": [
+    {
+      "make": "CHEVROLET",
+      "years": [
+        1960,
+        2025
+      ],
+      "engine": "Gasoline, passenger cars and light-duty trucks under 8,500 lb GVW"
+    },
+    {
+      "make": "GMC",
+      "years": [
+        1960,
+        2025
+      ],
+      "engine": "Gasoline, passenger cars and light-duty trucks under 8,500 lb GVW"
+    },
+    {
+      "make": "BUICK",
+      "years": [
+        1960,
+        2025
+      ],
+      "engine": "Gasoline, passenger cars and light-duty trucks under 8,500 lb GVW"
+    },
+    {
+      "make": "CADILLAC",
+      "years": [
+        1960,
+        2025
+      ],
+      "engine": "Gasoline, passenger cars and light-duty trucks under 8,500 lb GVW"
+    },
+    {
+      "make": "PONTIAC",
+      "years": [
+        1960,
+        2025
+      ],
+      "engine": "Gasoline, passenger cars and light-duty trucks under 8,500 lb GVW"
+    },
+    {
+      "make": "OLDSMOBILE",
+      "years": [
+        1960,
+        2025
+      ],
+      "engine": "Gasoline, passenger cars and light-duty trucks under 8,500 lb GVW"
+    },
+    {
+      "make": "SATURN",
+      "years": [
+        1960,
+        2025
+      ],
+      "engine": "Gasoline, passenger cars and light-duty trucks under 8,500 lb GVW"
+    },
+    {
+      "make": "HUMMER",
+      "years": [
+        1960,
+        2025
+      ],
+      "engine": "Gasoline, passenger cars and light-duty trucks under 8,500 lb GVW"
+    }
+  ],
+  "tags": [
+    "oil consumption",
+    "burning oil",
+    "using oil",
+    "oil consumption test",
+    "dipstick",
+    "oil dilution",
+    "idle hours",
+    "gm"
+  ],
+  "specs": [
+    {
+      "name": "Accepted rate",
+      "value": "1 qt (0.946 L) per 2,000 mi (3,200 km)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "That rate applies to",
+      "value": "Personal-use vehicles under warranty, driven non-aggressively, maintained per schedule, under 36,000 mi (58,000 km), at legal speeds, unloaded (trucks)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Aggressive driving",
+      "value": "Up to 1 qt (0.946 L) per 500 mi (805 km) can be normal (e.g. manual transmissions driven at 3,000 rpm to redline with frequent engine braking)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Don't test before",
+      "value": "4,000 mi (6,400 km) break-in, unless it's using more than 1 qt per 1,000 mi (1,600 km)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Drain-back wait before reading the dipstick",
+      "value": "At least 15 minutes after shut-off",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Idle-hours check",
+      "value": "Engine hours x 33 = equivalent miles (x 53 for km); compare with the odometer",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Short-trip oil dilution",
+      "value": "Trips under 5 mi (8 km), especially in cold weather, can leave fuel and water in the oil and read over-full",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Excluded from the dipstick method",
+      "value": "Dry-sump engines: 2006-2009 Corvette Z06 (LS7), 2009 Corvette ZR1 (LS9), 2020-2024 Corvette (LT2); use the Owner Manual",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Before testing, rule out the things that fake high consumption: external leaks (pan, covers, lines), a dipstick tube not fully seated or the wrong dipstick, reading too soon after shut-off, a wrong fill at the last oil change, a blocked or damaged PCV system, overheating, towing, and lots of idling.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Idle check: read total engine hours from the DIC, multiply by 33 (miles) or 53 (km). If that's more than the odometer, the vehicle idles a lot, which matters for diagnosis (the bulletin's examples: 1,812.3 hr x 33 = 59,806 vs. 60,837 mi on the odometer is normal; 626.9 hr x 33 = 20,688 vs. 7,269 mi is heavy idling).",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Start the test: no external leaks, engine at operating temperature, parked level, wait at least 15 minutes, and confirm the level is at (not above) the full mark with the correct viscosity and quality oil.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Record mileage, date and exact oil level on the bulletin's data sheet.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Have the owner check the level the same way at every fill-up, and come back if it reaches the add mark (1 qt low). Otherwise keep going until 2,000 miles (3,200 km) have passed.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Final evaluation: more than 1 qt in 2,000 miles, follow the service manual's symptom diagnostics. Less than that, the engine is within GM's guideline.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "The bulletin covers \"2025 and prior\" GM passenger cars and gasoline light-duty trucks without stating a first model year; the range here starts at 1960 only because that's where OpenBay starts. It also notes engine wear (piston scuffing, worn guides, seals and rings) as a cause once everything above is ruled out.",
+  "sources": [
+    {
+      "title": "Service Bulletin 01-06-01-011P: Information on Engine Oil Consumption Guidelines",
+      "publisher": "General Motors, August 2024",
+      "citation": "pp. 1-4, including Measurement of Oil Consumption steps 1-8 and the Oil Economy Test data sheet; NHTSA ID 11007091",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-11007091-0001.pdf"
+    }
+  ],
+  "author": "OpenBay (AI-assisted)",
+  "updated": "2026-10-18"
+}
