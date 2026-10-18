@@ -1,0 +1,48 @@
+{
+  "id": "brake-bleed-manual",
+  "type": "procedure",
+  "title": "Bleed brakes (two-person or one-person method)",
+  "applies": [
+    {
+      "make": "*",
+      "years": [
+        1960,
+        2027
+      ]
+    }
+  ],
+  "tags": [
+    "brakes",
+    "bleed",
+    "air in lines",
+    "soft pedal",
+    "fluid"
+  ],
+  "tools": [
+    "Line wrench for bleeder",
+    "Clear hose and catch bottle",
+    "Helper or one-way bleeder/vacuum bleeder"
+  ],
+  "parts": [
+    "Correct brake fluid (DOT 3/4/5.1 per cap; DOT 5 silicone only if system already uses it)"
+  ],
+  "warnings": [
+    "Never let the master cylinder run dry during bleeding",
+    "Brake fluid strips paint. Rinse spills with water right away.",
+    "Many ABS units trap air in the modulator and need a scan-tool \"automated bleed\". Check the vehicle before chasing a soft pedal forever.",
+    "Don't mix DOT 5 (silicone) with DOT 3/4/5.1"
+  ],
+  "steps": [
+    "Fill the master cylinder with fresh fluid.",
+    "Typical order is farthest wheel first: RR, LR, RF, LF. Some vehicles (diagonal split, some imports) differ, so check.",
+    "Put the hose on the bleeder, other end submerged in fluid in the bottle.",
+    "Helper presses the pedal slowly and holds it down. Open the bleeder about 1/4 turn, let fluid and air out, close the bleeder, then helper releases the pedal.",
+    "Repeat until fluid runs clear with no bubbles. Top off the master every few pumps.",
+    "Move to the next wheel.",
+    "Check pedal: should be firm and high with the engine running. If it sinks slowly, look for a leak or a bypassing master cylinder."
+  ],
+  "sources": [],
+  "status": "draft",
+  "author": "OpenBay seed (unsourced, needs citations)",
+  "updated": "2026-10-18"
+}

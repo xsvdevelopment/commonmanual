@@ -1,0 +1,90 @@
+{
+  "id": "mopar-la-small-block-specs",
+  "type": "spec",
+  "title": "Mopar LA/Magnum small-block V8 (273/318/340/360) core specs",
+  "applies": [
+    {
+      "make": "DODGE",
+      "years": [
+        1964,
+        2003
+      ],
+      "engine": "LA / Magnum small-block V8"
+    },
+    {
+      "make": "PLYMOUTH",
+      "years": [
+        1964,
+        2003
+      ],
+      "engine": "LA / Magnum small-block V8"
+    },
+    {
+      "make": "CHRYSLER",
+      "years": [
+        1964,
+        2003
+      ],
+      "engine": "LA / Magnum small-block V8"
+    },
+    {
+      "make": "JEEP",
+      "years": [
+        1964,
+        2003
+      ],
+      "engine": "LA / Magnum small-block V8"
+    }
+  ],
+  "tags": [
+    "mopar",
+    "318",
+    "360",
+    "340",
+    "la",
+    "magnum",
+    "5.2",
+    "5.9",
+    "firing order",
+    "torque"
+  ],
+  "specs": [
+    {
+      "name": "Firing order",
+      "value": "1-8-4-3-6-5-7-2"
+    },
+    {
+      "name": "Cylinder numbering",
+      "value": "Driver side 1-3-5-7, passenger side 2-4-6-8, front to rear"
+    },
+    {
+      "name": "Distributor rotation",
+      "value": "Clockwise (viewed from above)"
+    },
+    {
+      "name": "Cylinder head bolts: LA",
+      "value": "50 then 95",
+      "unit": "ft-lb",
+      "note": "Two steps, in sequence"
+    },
+    {
+      "name": "Cylinder head bolts: Magnum 5.2/5.9 (1992+)",
+      "value": "50 then 105",
+      "unit": "ft-lb"
+    },
+    {
+      "name": "Connecting rod nuts",
+      "value": "45",
+      "unit": "ft-lb"
+    },
+    {
+      "name": "Main cap bolts",
+      "value": "85",
+      "unit": "ft-lb"
+    }
+  ],
+  "sources": [],
+  "status": "draft",
+  "author": "OpenBay seed (unsourced, needs citations)",
+  "updated": "2026-10-18"
+}

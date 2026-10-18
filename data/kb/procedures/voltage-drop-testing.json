@@ -1,0 +1,40 @@
+{
+  "id": "voltage-drop-testing",
+  "type": "procedure",
+  "title": "Voltage-drop test: starter and charging circuits",
+  "summary": "Finds bad cables, grounds and connections that a continuity test misses.",
+  "applies": [
+    {
+      "make": "*",
+      "years": [
+        1960,
+        2027
+      ]
+    }
+  ],
+  "tags": [
+    "electrical",
+    "starter",
+    "slow crank",
+    "charging",
+    "ground",
+    "cables"
+  ],
+  "tools": [
+    "Digital multimeter",
+    "Remote starter switch or helper"
+  ],
+  "steps": [
+    "Battery fully charged. Disable fuel or ignition so the engine cranks but doesn't start.",
+    "Positive side: one lead on the battery POST (not the clamp), the other on the starter B+ stud. Crank. Reading should be under 0.5 V.",
+    "Ground side: one lead on the battery negative POST, the other on the engine block. Crank. Under 0.5 V (0.2 V is better).",
+    "Check each connection: across post-to-clamp, should read near 0 V while cranking. Any reading there means a bad connection.",
+    "Charging side: engine running at about 2000 rpm with loads on, alternator output stud to battery positive post. Under 0.5 V.",
+    "Alternator case to battery negative post, same conditions. Under 0.2 V.",
+    "Any high reading: clean, tighten or replace that cable or ground strap, then retest."
+  ],
+  "sources": [],
+  "status": "draft",
+  "author": "OpenBay seed (unsourced, needs citations)",
+  "updated": "2026-10-18"
+}

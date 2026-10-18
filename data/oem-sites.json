@@ -1,0 +1,27 @@
+{
+  "note": "Factory service-information sites. Most sell short-term access (a day or a few days), which is often cheaper than a yearly third-party plan for a one-off job. US right-to-repair agreements require automakers to offer this to independent shops. Prices change; check the site.",
+  "directory": { "title": "NASTF: directory of every automaker's service info site", "url": "https://www.nastf.org" },
+  "sites": [
+    { "makes": ["FORD", "LINCOLN", "MERCURY"], "name": "Motorcraft Service", "url": "https://www.motorcraftservice.com" },
+    { "makes": ["CHEVROLET", "GMC", "BUICK", "CADILLAC", "PONTIAC", "OLDSMOBILE", "SATURN", "HUMMER"], "name": "ACDelco TDS (GM Service Information)", "url": "https://www.acdelcotds.com" },
+    { "makes": ["CHRYSLER", "DODGE", "JEEP", "RAM", "PLYMOUTH", "FIAT", "ALFA ROMEO"], "name": "Stellantis TechAuthority", "url": "https://www.techauthority.com" },
+    { "makes": ["TOYOTA", "LEXUS", "SCION"], "name": "Toyota TIS", "url": "https://techinfo.toyota.com" },
+    { "makes": ["HONDA", "ACURA"], "name": "Honda Service Express", "url": "https://techinfo.honda.com" },
+    { "makes": ["NISSAN", "INFINITI", "DATSUN"], "name": "Nissan TechInfo", "url": "https://www.nissan-techinfo.com" },
+    { "makes": ["HYUNDAI", "GENESIS"], "name": "Hyundai TechInfo", "url": "https://www.hyundaitechinfo.com" },
+    { "makes": ["KIA"], "name": "Kia TechInfo", "url": "https://www.kiatechinfo.com" },
+    { "makes": ["SUBARU"], "name": "Subaru STIS", "url": "https://techinfo.subaru.com" },
+    { "makes": ["MAZDA"], "name": "Mazda Service Info", "url": "https://www.mazdaserviceinfo.com" },
+    { "makes": ["MITSUBISHI"], "name": "Mitsubishi TechInfo", "url": "https://www.mitsubishitechinfo.com" },
+    { "makes": ["VOLKSWAGEN"], "name": "VW erWin", "url": "https://erwin.vw.com" },
+    { "makes": ["AUDI"], "name": "Audi erWin", "url": "https://erwin.audiusa.com" },
+    { "makes": ["MERCEDES-BENZ", "MERCEDES BENZ", "SMART"], "name": "Mercedes StarTekInfo", "url": "https://www.startekinfo.com" },
+    { "makes": ["VOLVO"], "name": "Volvo TechInfo", "url": "https://www.volvotechinfo.com" },
+    { "makes": ["MINI"], "name": "MINI TechInfo", "url": "https://www.minitechinfo.com" },
+    { "makes": ["TESLA"], "name": "Tesla Service", "url": "https://service.tesla.com" }
+  ],
+  "publicDomain": [
+    { "title": "US Army technical manuals (public domain)", "detail": "Factory-level service manuals for military versions of civilian trucks: CUCV (1984-87 Chevy/GMC K-series), M880 (1976-77 Dodge W-series), Jeeps, HMMWV and more. US government works, free to copy.", "url": "https://archive.org/search?query=%22TM+9-2320%22" },
+    { "title": "Internet Archive: service manual collections", "detail": "Scanned manuals, parts books and dealer literature. Check each item's rights note.", "url": "https://archive.org/search?query=shop+manual+service+manual" }
+  ]
+}

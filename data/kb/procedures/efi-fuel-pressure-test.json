@@ -1,0 +1,44 @@
+{
+  "id": "efi-fuel-pressure-test",
+  "type": "procedure",
+  "title": "Fuel pressure and leak-down test (fuel injected)",
+  "applies": [
+    {
+      "make": "*",
+      "years": [
+        1983,
+        2027
+      ]
+    }
+  ],
+  "tags": [
+    "fuel",
+    "fuel pump",
+    "fuel pressure",
+    "lean",
+    "hard start",
+    "no start"
+  ],
+  "tools": [
+    "Fuel pressure gauge kit with Schrader adapter",
+    "Rags",
+    "Safety glasses"
+  ],
+  "warnings": [
+    "Fire risk: no sparks, have an extinguisher close",
+    "Direct-injection high-pressure systems (thousands of psi) cannot be tested with a standard gauge. Use scan-tool data."
+  ],
+  "steps": [
+    "Find the test port (Schrader valve on the fuel rail). If there is none, an inline adapter is needed.",
+    "Wrap the port with a rag and connect the gauge.",
+    "Key on (engine off) to prime. Read pressure and compare to spec for the system (port-injected systems commonly run about 35-65 psi; throttle-body systems much lower).",
+    "Start and idle. On return-style systems, pulling the regulator vacuum hose should raise pressure roughly 5-10 psi.",
+    "Snap the throttle; pressure should hold steady, not drop away.",
+    "Shut off and watch the gauge. It should hold most of its pressure for several minutes. Fast drop = leaking injector, regulator or pump check valve.",
+    "Low pressure: check the filter, then pump voltage and ground at the pump connector under load before condemning the pump."
+  ],
+  "sources": [],
+  "status": "draft",
+  "author": "OpenBay seed (unsourced, needs citations)",
+  "updated": "2026-10-18"
+}

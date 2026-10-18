@@ -1,0 +1,57 @@
+{
+  "id": "points-tune-up-dwell-timing",
+  "type": "procedure",
+  "title": "Breaker-points tune-up: points, dwell and timing",
+  "applies": [
+    {
+      "make": "*",
+      "years": [
+        1960,
+        1980
+      ]
+    }
+  ],
+  "tags": [
+    "points",
+    "dwell",
+    "timing",
+    "tune-up",
+    "vintage",
+    "distributor",
+    "carb era"
+  ],
+  "tools": [
+    "Feeler gauges",
+    "Dwell/tach meter",
+    "Inductive timing light",
+    "Distributor wrench",
+    "1/8 in Allen (GM window-type distributors)",
+    "Points file or new points"
+  ],
+  "parts": [
+    "Points and condenser",
+    "Rotor and cap",
+    "Spark plugs",
+    "Point cam lube"
+  ],
+  "warnings": [
+    "Always set dwell before timing. Changing dwell moves the timing.",
+    "Disconnect and plug the vacuum advance hose when setting base timing (unless the spec says otherwise)."
+  ],
+  "steps": [
+    "Remove the cap and rotor. Inspect the cap for carbon tracking and cracks, and the rotor tip for burning.",
+    "Replace points and condenser. Put a small dab of cam lube on the distributor cam.",
+    "Bump the engine until the point rubbing block sits on a cam lobe peak. Set the gap with a feeler gauge (see spec for the engine).",
+    "Install rotor and cap. Connect the dwell meter (one lead to the coil negative/distributor side, one to ground).",
+    "Crank or idle and read dwell. Adjust (GM window distributors: Allen key through the window while running; others: adjust the gap). Smaller gap = more dwell.",
+    "Warm the engine to operating temperature. Disconnect and plug the vacuum advance hose.",
+    "Hook up the timing light to the #1 plug wire. Loosen the distributor hold-down just enough to turn it.",
+    "Set base timing to the underhood label/spec at the specified idle rpm. Tighten the hold-down and recheck.",
+    "Reconnect the vacuum advance. Rev the engine and confirm the timing advances smoothly.",
+    "Re-adjust idle speed and mixture as needed."
+  ],
+  "sources": [],
+  "status": "draft",
+  "author": "OpenBay seed (unsourced, needs citations)",
+  "updated": "2026-10-18"
+}

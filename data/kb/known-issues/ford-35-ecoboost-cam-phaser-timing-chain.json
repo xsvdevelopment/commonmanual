@@ -1,0 +1,49 @@
+{
+  "id": "ford-35-ecoboost-cam-phaser-timing-chain",
+  "type": "known-issue",
+  "title": "3.5 EcoBoost: startup rattle (cam phasers / timing chain)",
+  "summary": "A loud rattle for a second or two on cold start after sitting is the classic sign. Shows up as one of the top complaint categories for these years.",
+  "applies": [
+    {
+      "make": "FORD",
+      "models": [
+        "F-150",
+        "F150",
+        "EXPEDITION"
+      ],
+      "years": [
+        2011,
+        2017
+      ],
+      "engine": "3.5L EcoBoost V6"
+    },
+    {
+      "make": "LINCOLN",
+      "models": [
+        "NAVIGATOR"
+      ],
+      "years": [
+        2015,
+        2017
+      ],
+      "engine": "3.5L EcoBoost V6"
+    }
+  ],
+  "tags": [
+    "ecoboost",
+    "cam phaser",
+    "timing chain",
+    "rattle",
+    "P0016",
+    "P0017"
+  ],
+  "body": "Symptoms: brief loud rattle on cold start, sometimes with P0016/P0017/P0018/P0019 (cam/crank correlation). The fix usually involves cam phasers and often timing chains, guides and tensioners. Ford released service bulletins and updated parts over this period, so check bulletins for the VIN before quoting.\n\nAlso on early (2011-2013) trucks: stumble or limp mode under hard acceleration in humid weather from condensation in the intercooler. Ford issued a bulletin and an updated air deflector for this.\n\nOil matters: these engines are hard on oil, and long oil-change intervals make chain wear worse.",
+  "sources": [
+    {
+      "title": "Owner complaints: open this vehicle's Problems tab in OpenBay (NHTSA data)"
+    }
+  ],
+  "status": "draft",
+  "author": "OpenBay seed (unsourced, needs citations)",
+  "updated": "2026-10-18"
+}

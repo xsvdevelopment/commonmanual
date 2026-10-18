@@ -1,0 +1,46 @@
+{
+  "id": "compression-and-leakdown-test",
+  "type": "procedure",
+  "title": "Compression test and cylinder leak-down test",
+  "applies": [
+    {
+      "make": "*",
+      "years": [
+        1960,
+        2027
+      ]
+    }
+  ],
+  "tags": [
+    "engine",
+    "compression",
+    "leakdown",
+    "misfire",
+    "head gasket",
+    "rings",
+    "valves"
+  ],
+  "tools": [
+    "Compression gauge with adapters",
+    "Leak-down tester and air compressor",
+    "Socket to turn the crankshaft"
+  ],
+  "warnings": [
+    "Disable fuel and ignition before cranking",
+    "During leak-down the engine can spin hard when air goes in. Keep hands clear and hold the crank."
+  ],
+  "steps": [
+    "Warm engine if possible. Remove all spark plugs. Disable fuel and ignition. Block the throttle wide open.",
+    "Thread the gauge in one cylinder, crank 4-6 compression strokes, record the reading. Repeat for all cylinders.",
+    "Healthy engines read within about 10-15% of each other. The absolute number varies by engine.",
+    "A low cylinder: squirt a teaspoon of oil in and retest. Number comes up = rings. Stays low = valves or head gasket.",
+    "Two adjacent cylinders both low = likely head gasket between them.",
+    "For a leak-down, bring the low cylinder to TDC on compression, connect the tester and apply regulated air.",
+    "Listen for where the air escapes: intake (throttle body/carb) = intake valve, tailpipe = exhaust valve, oil fill/dipstick = rings, bubbles in radiator = head gasket or cracked head.",
+    "Under 10% leakage is good; 10-20% fair; over 20-30% needs attention."
+  ],
+  "sources": [],
+  "status": "draft",
+  "author": "OpenBay seed (unsourced, needs citations)",
+  "updated": "2026-10-18"
+}

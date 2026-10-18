@@ -1,0 +1,86 @@
+{
+  "id": "gm-points-ignition-specs",
+  "type": "spec",
+  "title": "GM V8 breaker-points ignition specs (pre-HEI)",
+  "applies": [
+    {
+      "make": "CHEVROLET",
+      "years": [
+        1960,
+        1974
+      ],
+      "engine": "V8 with breaker points"
+    },
+    {
+      "make": "GMC",
+      "years": [
+        1960,
+        1974
+      ],
+      "engine": "V8 with breaker points"
+    },
+    {
+      "make": "PONTIAC",
+      "years": [
+        1960,
+        1974
+      ],
+      "engine": "V8 with breaker points"
+    },
+    {
+      "make": "OLDSMOBILE",
+      "years": [
+        1960,
+        1974
+      ],
+      "engine": "V8 with breaker points"
+    },
+    {
+      "make": "BUICK",
+      "years": [
+        1960,
+        1974
+      ],
+      "engine": "V8 with breaker points"
+    },
+    {
+      "make": "CADILLAC",
+      "years": [
+        1960,
+        1974
+      ],
+      "engine": "V8 with breaker points"
+    }
+  ],
+  "tags": [
+    "points",
+    "dwell",
+    "tune-up",
+    "vintage",
+    "ignition"
+  ],
+  "specs": [
+    {
+      "name": "Dwell",
+      "value": "28-32 degrees (30 nominal)",
+      "note": "Set dwell before timing. Changing dwell changes timing."
+    },
+    {
+      "name": "Point gap (new points)",
+      "value": "0.019 in",
+      "note": "0.016 in on used points"
+    },
+    {
+      "name": "Spark plug gap",
+      "value": "0.035 in"
+    },
+    {
+      "name": "Condenser",
+      "value": "Replace with the points"
+    }
+  ],
+  "sources": [],
+  "status": "draft",
+  "author": "OpenBay seed (unsourced, needs citations)",
+  "updated": "2026-10-18"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "gm-24-ecotec-oil-consumption",
+  "type": "known-issue",
+  "title": "GM 2.4 Ecotec (LEA): excessive oil consumption",
+  "applies": [
+    {
+      "make": "CHEVROLET",
+      "models": [
+        "EQUINOX"
+      ],
+      "years": [
+        2010,
+        2017
+      ],
+      "engine": "2.4L I4"
+    },
+    {
+      "make": "GMC",
+      "models": [
+        "TERRAIN"
+      ],
+      "years": [
+        2010,
+        2017
+      ],
+      "engine": "2.4L I4"
+    }
+  ],
+  "tags": [
+    "ecotec",
+    "2.4",
+    "oil consumption",
+    "piston rings",
+    "timing chain"
+  ],
+  "body": "Rings stick from coking and the engine burns oil, sometimes a quart per 1000 miles or worse. Running low on oil then wears the timing chain (rattle, P0008/P0016). 2010-2013 are the worst. GM had a special coverage program with updated pistons/rings and a PCV update; check the VIN. Do an oil consumption test before quoting rings.",
+  "sources": [],
+  "status": "draft",
+  "author": "OpenBay seed (unsourced, needs citations)",
+  "updated": "2026-10-18"
+}

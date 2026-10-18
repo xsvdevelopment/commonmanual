@@ -1,0 +1,50 @@
+{
+  "id": "cooling-system-drain-fill-bleed",
+  "type": "procedure",
+  "title": "Cooling system drain, refill and air bleed",
+  "applies": [
+    {
+      "make": "*",
+      "years": [
+        1960,
+        2027
+      ]
+    }
+  ],
+  "tags": [
+    "coolant",
+    "antifreeze",
+    "overheating",
+    "air pocket",
+    "thermostat"
+  ],
+  "tools": [
+    "Drain pan",
+    "Spill-free funnel (highly recommended)",
+    "Pliers for hose clamps"
+  ],
+  "parts": [
+    "Coolant of the correct type for the engine",
+    "Distilled water if using concentrate"
+  ],
+  "warnings": [
+    "Never open a hot radiator cap",
+    "Don't mix coolant chemistries (green IAT, Dexcool OAT, Asian pink/blue, European G-series). Flush fully when switching.",
+    "Coolant is toxic and sweet-tasting to pets. Clean up spills."
+  ],
+  "steps": [
+    "Engine cold. Open the radiator drain (petcock) or pull the lower hose; remove the cap to speed draining.",
+    "Optional flush: close it up, fill with water, run to temperature with heater on high, cool, drain. Repeat until clear.",
+    "Close the drain. Fill with the correct mix (usually 50/50).",
+    "Bolt a spill-free funnel to the radiator/reservoir neck and fill it halfway.",
+    "Open any bleeder screws on the thermostat housing or heater hoses until coolant (not air) comes out, then close.",
+    "Heater on max, start the engine, idle. Squeeze the upper hose to burp bubbles.",
+    "Run until the thermostat opens (upper hose gets hot, level drops in the funnel). Keep it topped up.",
+    "Bump rpm to about 2000 for a minute to push out remaining air. When bubbles stop, plug the funnel, remove it and install the cap.",
+    "Fill the overflow tank to the COLD line. Recheck after the next full cool-down."
+  ],
+  "sources": [],
+  "status": "draft",
+  "author": "OpenBay seed (unsourced, needs citations)",
+  "updated": "2026-10-18"
+}

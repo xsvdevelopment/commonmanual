@@ -1,0 +1,47 @@
+{
+  "id": "toyota-2az-oil-consumption",
+  "type": "known-issue",
+  "title": "Toyota 2.4 (2AZ-FE): oil consumption and head bolt thread pull",
+  "applies": [
+    {
+      "make": "TOYOTA",
+      "models": [
+        "CAMRY",
+        "RAV4",
+        "COROLLA",
+        "HIGHLANDER",
+        "SOLARA"
+      ],
+      "years": [
+        2006,
+        2011
+      ],
+      "engine": "2.4L 2AZ-FE I4"
+    },
+    {
+      "make": "SCION",
+      "models": [
+        "TC",
+        "XB"
+      ],
+      "years": [
+        2007,
+        2010
+      ],
+      "engine": "2.4L 2AZ-FE I4"
+    }
+  ],
+  "tags": [
+    "2az",
+    "oil consumption",
+    "piston rings",
+    "head bolt",
+    "head gasket",
+    "coolant loss"
+  ],
+  "body": "Oil consumption from rings on 2006-2011 vehicles; Toyota ran a warranty enhancement on many of them (piston/ring replacement). Separately, the head bolt threads in the aluminum block can pull, causing a coolant leak/head gasket symptoms. Repair is thread inserts in the block, not a new block.",
+  "sources": [],
+  "status": "draft",
+  "author": "OpenBay seed (unsourced, needs citations)",
+  "updated": "2026-10-18"
+}

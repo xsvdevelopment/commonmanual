@@ -1,0 +1,11 @@
+The OpenBay knowledge base (everything in this data/ directory) is licensed under
+the Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0).
+
+You are free to share and adapt it for any purpose, including commercially, as long as you
+give credit to "OpenBay contributors" and release your changes under the same license.
+
+Full text: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+Vehicle, recall and complaint data fetched at runtime from NHTSA and EPA is a work of the
+US government and is in the public domain. Trouble-code titles paraphrase definitions
+standardized in SAE J2012 / ISO 15031-6; the standards themselves belong to their publishers.

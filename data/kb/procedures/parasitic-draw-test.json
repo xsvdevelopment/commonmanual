@@ -1,0 +1,44 @@
+{
+  "id": "parasitic-draw-test",
+  "type": "procedure",
+  "title": "Battery parasitic draw test (dead battery overnight)",
+  "applies": [
+    {
+      "make": "*",
+      "years": [
+        1960,
+        2027
+      ]
+    }
+  ],
+  "tags": [
+    "electrical",
+    "battery",
+    "drain",
+    "dead battery",
+    "draw"
+  ],
+  "tools": [
+    "Digital multimeter with 10 A range",
+    "Fuse puller",
+    "Optional: low-amp clamp meter"
+  ],
+  "warnings": [
+    "Don't crank the engine or turn on high-draw items with the meter in series. It will blow the meter fuse.",
+    "Modules on modern cars take 20-60+ minutes to go to sleep. Opening a door wakes them back up."
+  ],
+  "steps": [
+    "Charge and load-test the battery first. A bad battery can look like a draw.",
+    "Key off, all doors closed. Defeat hood and door switches (latch the door latches with a screwdriver) so you can work with doors open.",
+    "Meter on 10 A DC. Connect in series between the negative battery post and the negative cable, then remove the cable while keeping the meter connected so modules don't reset.",
+    "Wait for the modules to sleep (watch the reading drop). Then switch to the mA range if the reading is low enough.",
+    "Typical acceptable draw: under 50 mA on most cars (older cars with no modules: near zero).",
+    "If high, pull fuses one at a time and watch for the drop. Or measure millivolts across each fuse (no pulling, so modules stay asleep) and compare with a fuse voltage-drop chart.",
+    "Once the circuit is found, unplug components on it one at a time (common: glovebox/trunk lights, aftermarket stereo, stuck relay, alternator diode).",
+    "Also test the alternator: disconnect its output wire. If the draw disappears, the diode is leaking."
+  ],
+  "sources": [],
+  "status": "draft",
+  "author": "OpenBay seed (unsourced, needs citations)",
+  "updated": "2026-10-18"
+}

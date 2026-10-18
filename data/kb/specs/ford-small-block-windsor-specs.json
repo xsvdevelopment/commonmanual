@@ -1,0 +1,108 @@
+{
+  "id": "ford-small-block-windsor-specs",
+  "type": "spec",
+  "title": "Ford small-block V8 (221/260/289/302/351W) core specs",
+  "summary": "Two different firing orders depending on engine. Getting this wrong is the classic 5.0 mistake.",
+  "applies": [
+    {
+      "make": "FORD",
+      "years": [
+        1962,
+        2001
+      ],
+      "engine": "Windsor small-block V8"
+    },
+    {
+      "make": "MERCURY",
+      "years": [
+        1962,
+        2001
+      ],
+      "engine": "Windsor small-block V8"
+    },
+    {
+      "make": "LINCOLN",
+      "years": [
+        1962,
+        2001
+      ],
+      "engine": "Windsor small-block V8"
+    }
+  ],
+  "tags": [
+    "sbf",
+    "302",
+    "5.0",
+    "351w",
+    "289",
+    "windsor",
+    "firing order",
+    "torque"
+  ],
+  "specs": [
+    {
+      "name": "Firing order: 221/260/289/302",
+      "value": "1-5-4-2-6-3-7-8"
+    },
+    {
+      "name": "Firing order: 351W and 5.0 HO",
+      "value": "1-3-7-2-6-5-4-8",
+      "note": "HO cam engines (most 1982+ Mustang GT 5.0) use the 351W order"
+    },
+    {
+      "name": "Cylinder numbering",
+      "value": "Passenger side 1-2-3-4, driver side 5-6-7-8, front to rear"
+    },
+    {
+      "name": "Distributor rotation",
+      "value": "Counterclockwise (viewed from above)"
+    },
+    {
+      "name": "Cylinder head bolts: 289/302",
+      "value": "65-72",
+      "unit": "ft-lb",
+      "note": "In sequence, 2-3 steps"
+    },
+    {
+      "name": "Cylinder head bolts: 351W",
+      "value": "105-112",
+      "unit": "ft-lb",
+      "note": "In sequence, 3 steps"
+    },
+    {
+      "name": "Connecting rod nuts: 289/302 (5/16 in)",
+      "value": "19-24",
+      "unit": "ft-lb"
+    },
+    {
+      "name": "Connecting rod nuts: 351W (3/8 in)",
+      "value": "40-45",
+      "unit": "ft-lb"
+    },
+    {
+      "name": "Main cap bolts: 289/302",
+      "value": "60-70",
+      "unit": "ft-lb"
+    },
+    {
+      "name": "Main cap bolts: 351W",
+      "value": "95-105",
+      "unit": "ft-lb"
+    },
+    {
+      "name": "Intake manifold bolts",
+      "value": "23-25",
+      "unit": "ft-lb",
+      "note": "In sequence; retorque after warm-up on carbureted engines"
+    },
+    {
+      "name": "Harmonic balancer bolt",
+      "value": "70-90",
+      "unit": "ft-lb"
+    }
+  ],
+  "sources": [],
+  "status": "draft",
+  "author": "OpenBay seed (unsourced, needs citations)",
+  "updated": "2026-10-18"
+}

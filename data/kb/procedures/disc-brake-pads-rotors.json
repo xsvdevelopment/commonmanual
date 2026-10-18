@@ -1,0 +1,62 @@
+{
+  "id": "disc-brake-pads-rotors",
+  "type": "procedure",
+  "title": "Front or rear disc brake pads and rotors",
+  "summary": "Standard floating-caliper pad and rotor job. Rear calipers with integral parking brakes need the piston wound in, not pushed.",
+  "applies": [
+    {
+      "make": "*",
+      "years": [
+        1965,
+        2027
+      ]
+    }
+  ],
+  "tags": [
+    "brakes",
+    "pads",
+    "rotors",
+    "caliper"
+  ],
+  "tools": [
+    "Jack and stands",
+    "Lug wrench / impact",
+    "Caliper bolt sockets (often 13-15 mm or Torx/hex)",
+    "C-clamp or caliper piston tool",
+    "Brake cleaner",
+    "Torque wrench",
+    "Wire brush"
+  ],
+  "parts": [
+    "Pads (axle set)",
+    "Rotors (pair)",
+    "Hardware/abutment clips",
+    "Caliper slide grease"
+  ],
+  "warnings": [
+    "Never let the caliper hang by the brake hose",
+    "Rear calipers with an integral parking brake: wind the piston in with the cube tool, don't clamp it",
+    "Some ABS/electronic parking brake systems need a scan tool to retract. Check before forcing."
+  ],
+  "steps": [
+    "Check master cylinder level. If it is full, pull some fluid out so it won't overflow when the pistons go back.",
+    "Loosen lugs, raise and support the vehicle on stands, remove the wheel.",
+    "Remove the caliper slide bolts; lift the caliper off and hang it with wire or a hook.",
+    "Remove the pads and the caliper bracket (two larger bolts on the back of the knuckle).",
+    "Remove the rotor. If it is stuck, check for a retaining screw, then hit the hat section, not the friction surface. Penetrant on the hub face helps.",
+    "Wire-brush the hub face and the bracket abutments until clean metal. Rust here causes runout and pulsation.",
+    "Clean the new rotor's protective coating off with brake cleaner. Install it and hold it with a lug nut.",
+    "Install the bracket and torque the bracket bolts to spec (they're high, often 80-150 ft-lb, so look it up).",
+    "Clean and grease the slide pins (silicone or synthetic brake grease). Replace the boots if torn.",
+    "Install new hardware clips, then the pads. A thin film of brake grease on the backing-plate contact points stops squeal.",
+    "Compress the piston slowly with a C-clamp using an old pad, watching the master cylinder.",
+    "Install the caliper and torque the slide bolts.",
+    "Install the wheel and torque the lugs in a star pattern to spec.",
+    "Pump the pedal until firm BEFORE moving the vehicle. Top off fluid.",
+    "Bed the pads: several 30-to-5 mph moderate stops, then a few harder ones, without coming to a full stop on hot rotors."
+  ],
+  "sources": [],
+  "status": "draft",
+  "author": "OpenBay seed (unsourced, needs citations)",
+  "updated": "2026-10-18"
+}

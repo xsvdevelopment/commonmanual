@@ -1,0 +1,65 @@
+{
+  "id": "ford-54-3v-cam-phaser-and-spark-plugs",
+  "type": "known-issue",
+  "title": "5.4 3-valve Triton: cam phaser ticking and broken spark plugs",
+  "summary": "Two famous ones on the same engine: phaser/VCT ticking at idle, and two-piece spark plugs that break off in the head on removal.",
+  "applies": [
+    {
+      "make": "FORD",
+      "models": [
+        "F-150",
+        "F150",
+        "EXPEDITION",
+        "F-250",
+        "F-350",
+        "F250",
+        "F350"
+      ],
+      "years": [
+        2004,
+        2010
+      ],
+      "engine": "5.4L 3-valve V8"
+    },
+    {
+      "make": "LINCOLN",
+      "models": [
+        "NAVIGATOR",
+        "MARK LT"
+      ],
+      "years": [
+        2005,
+        2010
+      ],
+      "engine": "5.4L 3-valve V8"
+    }
+  ],
+  "tags": [
+    "triton",
+    "5.4",
+    "3v",
+    "cam phaser",
+    "spark plug",
+    "broken plug",
+    "VCT",
+    "ticking"
+  ],
+  "tools": [
+    "Penetrating carbon solvent",
+    "Long spark plug socket",
+    "Broken plug extractor kit (have it ready before starting)"
+  ],
+  "steps": [
+    "Spark plug removal (2004-2008 two-piece plugs): engine warm, not hot.",
+    "Crack each plug loose no more than about 1/8 to 1/4 turn.",
+    "Fill the plug well with carbon solvent and let it soak, ideally for hours.",
+    "Remove slowly. If it tightens up, stop, add more solvent, work it back and forth.",
+    "If the shell breaks, use the extractor kit to remove the remaining sleeve from the head. Don't drop debris into the cylinder.",
+    "Coat new plug threads lightly with nickel anti-seize on the shell only and torque to spec."
+  ],
+  "body": "Phaser ticking: diesel-like tick at hot idle, P0012/P0022 cam timing codes. Low oil pressure to the phasers (worn oil pump, dirty oil, sticking VCT solenoid) is often part of it. Repair is a timing job: phasers, chains, guides, tensioners, and sometimes the oil pump.",
+  "sources": [],
+  "status": "draft",
+  "author": "OpenBay seed (unsourced, needs citations)",
+  "updated": "2026-10-18"
+}

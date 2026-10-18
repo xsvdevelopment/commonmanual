@@ -1,0 +1,51 @@
+{
+  "id": "honda-v6-automatic-transmission-failure",
+  "type": "known-issue",
+  "title": "Honda/Acura V6 5-speed automatic: slipping and failure",
+  "applies": [
+    {
+      "make": "HONDA",
+      "models": [
+        "ODYSSEY"
+      ],
+      "years": [
+        1999,
+        2004
+      ]
+    },
+    {
+      "make": "HONDA",
+      "models": [
+        "ACCORD"
+      ],
+      "years": [
+        1998,
+        2004
+      ]
+    },
+    {
+      "make": "ACURA",
+      "models": [
+        "TL",
+        "CL",
+        "MDX"
+      ],
+      "years": [
+        1999,
+        2004
+      ]
+    }
+  ],
+  "tags": [
+    "transmission",
+    "slipping",
+    "flashing D",
+    "second gear",
+    "honda"
+  ],
+  "body": "Symptoms: harsh or slipping shifts, flare between gears, flashing \"D\" light with codes. Clutch packs wear (2nd and 3rd most common) and debris plugs the pressure switches and solenoid screens. Honda extended the warranty on many of these at the time. Use only genuine Honda ATF. Universal fluids make it worse. Drain-and-fill several times instead of a pressure flush.",
+  "sources": [],
+  "status": "draft",
+  "author": "OpenBay seed (unsourced, needs citations)",
+  "updated": "2026-10-18"
+}

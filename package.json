@@ -1,0 +1,23 @@
+{
+  "name": "openbay",
+  "version": "0.1.0",
+  "description": "Open-source shop repair database. Free vehicle data plus a repair knowledge base mechanics build together.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node server/index.js --dev",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "validate": "node scripts/validate-data.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "vite": "^6.0.7"
+  }
+}

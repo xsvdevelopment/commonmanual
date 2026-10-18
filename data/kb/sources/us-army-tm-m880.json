@@ -1,0 +1,42 @@
+{
+  "id": "us-army-tm-m880",
+  "type": "source",
+  "title": "US Army manuals for M880 series (military 1976-77 Dodge W-series)",
+  "summary": "Maintenance manuals for the military Dodge W200/D200 pickups. US government works, public domain.",
+  "applies": [
+    {
+      "make": "DODGE",
+      "models": [
+        "W100",
+        "W200",
+        "D100",
+        "D200",
+        "POWER WAGON",
+        "DODGE TRUCK",
+        "RAM"
+      ],
+      "years": [
+        1972,
+        1980
+      ]
+    }
+  ],
+  "tags": [
+    "military",
+    "m880",
+    "dodge",
+    "power wagon",
+    "public domain",
+    "manual"
+  ],
+  "body": "The M880 family were near-stock 1976-77 Dodge W200/D200 trucks with the 318 V8 and A727 automatic. Search the Internet Archive for \"TM 9-2320-266\" (the M880 manual series).",
+  "sources": [
+    {
+      "title": "Internet Archive search: TM 9-2320-266",
+      "url": "https://archive.org/search?query=%22TM+9-2320-266%22"
+    }
+  ],
+  "status": "draft",
+  "author": "OpenBay seed (unsourced, needs citations)",
+  "updated": "2026-10-18"
+}

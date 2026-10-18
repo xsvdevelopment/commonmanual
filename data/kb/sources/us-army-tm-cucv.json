@@ -1,0 +1,67 @@
+{
+  "id": "us-army-tm-cucv",
+  "type": "source",
+  "title": "US Army manuals for CUCV (military 1984-87 Chevy/GMC K-series)",
+  "summary": "Full factory-level maintenance manuals for the military version of the square-body K-series pickup and Blazer. US government works, public domain.",
+  "applies": [
+    {
+      "make": "CHEVROLET",
+      "models": [
+        "K10",
+        "K20",
+        "K30",
+        "C10",
+        "C20",
+        "C30",
+        "BLAZER",
+        "PICK UP",
+        "SUBURBAN",
+        "SILVERADO",
+        "CHEVROLET TRUCK"
+      ],
+      "years": [
+        1981,
+        1987
+      ]
+    },
+    {
+      "make": "GMC",
+      "models": [
+        "K15",
+        "K1500",
+        "K25",
+        "K35",
+        "JIMMY",
+        "PICK UP",
+        "C/K",
+        "1500",
+        "2500",
+        "3500",
+        "SUBURBAN"
+      ],
+      "years": [
+        1981,
+        1987
+      ]
+    }
+  ],
+  "tags": [
+    "military",
+    "cucv",
+    "m1008",
+    "m1009",
+    "square body",
+    "public domain",
+    "manual"
+  ],
+  "body": "CUCV (M1008 pickup, M1009 Blazer, M1010 ambulance and others) were mostly civilian 1984-87 K-series trucks with a 6.2 diesel and 24 V electrics. Engine, transmission, transfer case, axles, brakes, steering and body procedures carry over to the civilian trucks. Search the Internet Archive for \"TM 9-2320-289\" (the CUCV manual series).",
+  "sources": [
+    {
+      "title": "Internet Archive search: TM 9-2320-289",
+      "url": "https://archive.org/search?query=%22TM+9-2320-289%22"
+    }
+  ],
+  "status": "draft",
+  "author": "OpenBay seed (unsourced, needs citations)",
+  "updated": "2026-10-18"
+}
