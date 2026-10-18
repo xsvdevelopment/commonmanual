@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 
 export async function api(path, opts) {
   const res = await fetch('/api' + path, opts);
+  // The service worker marks answers it served from this device's saved copy.
+  if (res.headers.get('X-OpenBay-Offline')) dispatchEvent(new Event('openbay:offline'));
   const body = await res.json().catch(() => ({}));
   if (!res.ok) throw Object.assign(new Error(body.error || `HTTP ${res.status}`), { body });
   return body;
@@ -43,6 +45,27 @@ export function useRoute() {
 export const go = (...parts) => { location.hash = '/' + parts.map(encodeURIComponent).join('/'); };
 export const vehicleHref = (year, make, model) =>
   '#/v/' + [year, make, model || '_'].map(encodeURIComponent).join('/');
+
+// True while the browser is offline or the last answer came from the saved copy.
+export function useOffline() {
+  const [off, setOff] = useState(() => typeof navigator !== 'undefined' && !navigator.onLine);
+  useEffect(() => {
+    const down = () => setOff(true);
+    const up = () => setOff(false);
+    addEventListener('offline', down);
+    addEventListener('openbay:offline', down);
+    addEventListener('online', up);
+    return () => { removeEventListener('offline', down); removeEventListener('openbay:offline', down); removeEventListener('online', up); };
+  }, []);
+  return off;
+}
+
+// Everything a vehicle page can show, fetched once so the service worker keeps a copy.
+export const vehicleEndpoints = ({ year, make, model }) => [
+  `/kb?${qs({ year, make, model })}`,
+  `/oem?${qs({ make })}`,
+  ...(model ? ['recalls', 'complaints', 'bulletins', 'epa'].map((k) => `/vehicle/${k}?${qs({ year, make, model })}`) : [`/models?${qs({ year, make })}`]),
+];
 
 export function usePref(key, initial) {
   const [v, setV] = useState(() => {

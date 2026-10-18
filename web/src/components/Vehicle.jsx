@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { api, useApi, qs, vehicleHref } from '../api.js';
+import { api, useApi, qs, vehicleHref, usePref, vehicleEndpoints } from '../api.js';
 import { EntryCard, SourceNote } from './Entry.jsx';
 
 const TABS = [
@@ -33,7 +33,10 @@ export default function Vehicle({ year, make, model, vin, q, drafts }) {
           <h1>{make} {model || <em className="muted">all models</em>}</h1>
           {vin && <code className="vinchip">{vin}</code>}
         </div>
-        <a className="btn" href={`#/add?${qs({ year, make, model })}`}>+ Add knowledge for this vehicle</a>
+        <div className="vactions">
+          <SaveOffline year={year} make={make} model={model} />
+          <a className="btn" href={`#/add?${qs({ year, make, model })}`}>+ Add knowledge for this vehicle</a>
+        </div>
       </div>
 
       {!model && (
@@ -60,6 +63,28 @@ export default function Vehicle({ year, make, model, vin, q, drafts }) {
       {tab === 'factory' && <Factory make={make} />}
       {tab === 'jobs' && <Jobs year={year} make={make} model={model} />}
     </div>
+  );
+}
+
+// Pulls every tab's data once so the service worker keeps it for use with no signal.
+function SaveOffline({ year, make, model }) {
+  const [saved, setSaved] = usePref('openbay.saved', []);
+  const [busy, setBusy] = useState('');
+  const key = [year, make, model].join('|');
+  const isSaved = saved.some((v) => [v.year, v.make, v.model].join('|') === key);
+  if (!('serviceWorker' in navigator)) return null;
+  async function save() {
+    const urls = vehicleEndpoints({ year, make, model });
+    let done = 0;
+    setBusy(`Saving 0/${urls.length}…`);
+    await Promise.all(urls.map((u) => api(u).catch(() => {}).finally(() => setBusy(`Saving ${++done}/${urls.length}…`))));
+    setSaved([{ year, make, model, at: new Date().toISOString().slice(0, 10) }, ...saved.filter((v) => [v.year, v.make, v.model].join('|') !== key)].slice(0, 30));
+    setBusy('');
+  }
+  return (
+    <button className={'btn' + (isSaved ? ' saved' : '')} onClick={save} disabled={!!busy} title="Keep this vehicle's recalls, bulletins, complaints and shop knowledge on this device">
+      {busy || (isSaved ? '✓ Saved offline · refresh' : 'Save for offline')}
+    </button>
   );
 }
 
