@@ -1,0 +1,200 @@
+{
+  "id": "ford-explorer-rear-axle-bolt-fracture-24n01",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "2020-2022 Explorer: rear axle (RDU) bolt fractures, severe noise, can lose drive and Park (program 24N01)",
+  "summary": "Ford Customer Satisfaction Program 24N01: the rear differential mounting bolt can break, letting the rear axle housing shift with severe noise and vibration. If it goes far enough the driveshaft or halfshafts can disconnect, losing drive to the rear wheels and the ability to hold in Park. Repair is a new differential cover, revised subframe bushing and bolts; covered 6 years / 150,000 miles.",
+  "applies": [
+    {
+      "make": "FORD",
+      "models": [
+        "EXPLORER"
+      ],
+      "years": [
+        2020,
+        2022
+      ],
+      "engine": "Chicago Assembly"
+    }
+  ],
+  "tags": [
+    "rear axle bolt",
+    "rdu",
+    "rear differential",
+    "clunk",
+    "rear noise",
+    "vibration",
+    "won't hold in park",
+    "subframe bushing",
+    "explorer",
+    "24n01"
+  ],
+  "warnings": [
+    "A broken rear axle bolt can disconnect the driveshaft or halfshafts, and the vehicle may not hold in Park. Ford's program has dealers pick up affected vehicles."
+  ],
+  "specs": [
+    {
+      "name": "Coverage",
+      "value": "One-time repair, 6 years or 150,000 miles from warranty start; vehicles past that were covered through July 31, 2025",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Built",
+      "value": "2020: Oct 19, 2018-Sep 27, 2020; 2021: Jun 4, 2020-Nov 10, 2021; 2022: Jun 29, 2021-Jun 4, 2022 (Chicago)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Revised rear subframe bushing",
+      "value": "L1MZ-4B425-D",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Rear wheel hub nut (new)",
+      "value": "221 lb-ft (300 N·m)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Caliper anchor plate bolts",
+      "value": "122 lb-ft (165 N·m)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Rear shock absorber lower nut (new)",
+      "value": "59 lb-ft (80 N·m)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Brake hose bracket bolt and wheel speed sensor bolt",
+      "value": "133 lb-in (15 N·m)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Rear lower arm vertical link lower nut and bolt",
+      "value": "258 lb-ft (350 N·m)",
+      "note": "Reuse the bolt with LOCTITE 263 if the threads are undamaged; new nut.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Rear toe link-to-knuckle bolt and nut (new)",
+      "value": "129 lb-ft (175 N·m)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Front rear-axle housing support bolts (new)",
+      "value": "129 lb-ft (175 N·m)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Rear rear-axle housing support bolt (new)",
+      "value": "74 lb-ft (100 N·m), then an additional 100 degrees",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Subframe bushing bolt hole drill",
+      "value": "11/16 in (18 mm) or larger",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Vehicle in NEUTRAL on a hoist. Look at the RDU for a broken or missing bolt at the axle cover bushing boss. Not broken or missing: the program doesn't apply. Broken: photograph it (with VIN plate and odometer) and get SSSC approval first.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Measure center of rear hub to the quarter panel lip at curb height, then drain the rear differential.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "LH side only: remove the wheel, jack the suspension back to the curb-height measurement, then remove and discard the hub nut. Remove the brake disc, shock lower nut, wheel speed sensor bolt and brake hose bracket bolt, the vertical link lower nut (clean and inspect the bolt), and the toe link-to-knuckle bolt and nut.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Swing the LH knuckle up, pry the LH halfshaft out of the axle, and pry the RH inner circlip loose (the RH shaft stays in the vehicle).",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Strap the rear axle to a transmission jack. Remove the muffler, tailpipe and underbody shields, then the rear driveshaft, and set the axle vent hose aside.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Heat the two front axle housing support bolts with a flameless induction heater (e.g. Mini-Ductor II), break them loose and discard them. Remove and discard the rear support bolt. Lower the axle out, working the RH halfshaft free.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Install a new differential housing cover with the axle out.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Drill out the axle subframe bushing bolt hole with an 11/16 in (18 mm) or larger bit (corded drill, sharp bit, cutting oil), then press the old bushing out toward the rear with the listed forcing screw and remover/installer tools.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Press the new bushing in from the rear with its tabs horizontal to the subframe and the silver metal sleeve flush with the rear of the subframe.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Replace both rear halfshaft seals and both inner halfshaft circlips (circlip openings at 6 o'clock).",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Reinstall in reverse order with new bolts and nuts as listed, setting ride height on a jack stand before torquing any suspension fastener. Top off the rear differential.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Customer Satisfaction Program 24N01, Supplement #1: Certain 2020-2022 Explorer Vehicles, Rear Axle Bolt Fractures",
+      "publisher": "Ford Motor Company, October 15, 2024",
+      "citation": "Program terms, vehicles and reason p. 1; parts, Labor Allowances p. 1; Technical Instructions steps 1-31; NHTSA ID 11009831",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-11009831-0001.pdf"
+    }
+  ],
+  "author": "OpenBay (AI-assisted)",
+  "updated": "2026-10-18"
+}

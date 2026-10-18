@@ -1,0 +1,96 @@
+{
+  "id": "ford-explorer-strut-mount-click-steering-25-2213",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "2020-2025 Explorer: click or pop turning the wheel to full lock at low speed, front upper strut mount",
+  "summary": "Ford TSB 25-2213: a click/pop when turning from straight ahead to full lock at low speed, from the front upper strut mount washer moving under steering load. Confirm it on the ground with the engine running, then replace the upper strut mount(s).",
+  "applies": [
+    {
+      "make": "FORD",
+      "models": [
+        "EXPLORER"
+      ],
+      "years": [
+        2020,
+        2025
+      ],
+      "engine": "Built on or before 28-Jan-2025"
+    }
+  ],
+  "tags": [
+    "click",
+    "pop",
+    "steering noise",
+    "full lock",
+    "strut mount",
+    "front suspension",
+    "explorer"
+  ],
+  "specs": [
+    {
+      "name": "Built",
+      "value": "On or before 28-Jan-2025",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Upper strut mount",
+      "value": "LB5Z-3A197-A, one per affected side",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Lower strut-to-knuckle bolts",
+      "value": "W715932-S439 standard, or W715295-S439 with eccentric cam (camber)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Labor",
+      "value": "1.5 hr one side, 2.1 hr both; +1.4 hr alignment (1.6 hr with lane departure)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Supersedes",
+      "value": "TSB 25-2121",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Vehicle on the ground, engine running: turn from straight ahead to full lock both ways and watch and listen at the upper strut mounts. No movement or noise there: diagnose per WSM 204-01B instead.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Remove and disassemble the front strut and spring assembly on the affected side(s), replace the upper strut mount, and reassemble and install per WSM 204-01B.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Check and adjust front camber, caster and toe.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "TSB 25-2213: Click/Pop Noise While Turning The Steering Wheel From Straight Ahead To Full Lock During Low Speed Turning Events",
+      "publisher": "Ford Motor Company, May 20, 2025 (supersedes 25-2121)",
+      "citation": "Model, issue, parts, labor and service procedure; NHTSA ID 11018597",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2025/MC-11018597-0001.pdf"
+    }
+  ],
+  "author": "OpenBay (AI-assisted)",
+  "updated": "2026-10-18"
+}
