@@ -40,7 +40,18 @@ function draftFamily(code) {
   return drafts.families.find((f) => num >= f.from && num <= f.to) || null;
 }
 
-const shape = (list) => list.map(([title, src]) => ({ title, src }));
+// Datasets that word most shared codes identically almost certainly copy one upstream,
+// so they count once toward agreement. Measured on shared codes, normalized text:
+// dtcdb / OBDIICodes 75% identical; every other pair 2-36% (see issue #12).
+const SAME_UPSTREAM = [['https://github.com/todrobbins/dtcdb', 'https://github.com/fabiovila/OBDIICodes']];
+const lineageOf = (k) => {
+  const url = defs.sources[k - 1]?.url;
+  const group = SAME_UPSTREAM.findIndex((g) => g.includes(url));
+  return group >= 0 ? `group${group}` : `src${k}`;
+};
+export const lineages = (src) => new Set(src.map(lineageOf)).size;
+
+const shape = (list) => list.map(([title, src]) => ({ title, src, lineages: lineages(src) }));
 
 export function lookup(input) {
   const code = String(input).trim().toUpperCase();
@@ -52,7 +63,7 @@ export function lookup(input) {
     code, valid: true, ...explain(code),
     definitions: g ? shape(g) : [],
     makes: Object.entries(byMake).map(([make, list]) => ({ make, definitions: shape(list) })).sort((a, b) => a.make.localeCompare(b.make)),
-    sources: defs.sources, structureSource: STRUCTURE_SOURCE,
+    sources: defs.sources, sameUpstream: SAME_UPSTREAM, structureSource: STRUCTURE_SOURCE,
     draft: draft ? { causes: draft.causes, checks: draft.checks } : null,
   };
 }
@@ -65,7 +76,7 @@ export function search(q, limit = 200) {
   for (const [code, scopes] of Object.entries(defs.codes)) {
     for (const [scope, list] of Object.entries(scopes)) {
       const hit = list.find(([t]) => terms.every((x) => `${code} ${t}`.toLowerCase().includes(x)));
-      if (hit) { out.push({ code, scope, title: hit[0], n: hit[1].length }); break; }
+      if (hit) { out.push({ code, scope, title: hit[0], n: lineages(hit[1]) }); break; }
     }
     if (out.length >= limit) break;
   }

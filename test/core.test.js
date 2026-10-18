@@ -142,3 +142,10 @@ test('owner corroboration counts complaints matching every term group', async ()
   assert.ok(validateEntry({ ...cited, complaintMatch: [['judder'], []] }).some((e) => e.startsWith('complaintMatch')));
   assert.deepEqual(validateEntry({ ...cited, complaintMatch: rule }), []);
 });
+
+test('datasets that copy one upstream count once toward DTC agreement', async () => {
+  const { lineages } = await import('../server/dtc.js');
+  assert.equal(lineages([3, 4]), 1); // dtcdb + OBDIICodes
+  assert.equal(lineages([1, 3, 4]), 2);
+  assert.equal(lineages([1, 2]), 2);
+});

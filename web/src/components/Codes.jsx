@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import { useApi, qs } from '../api.js';
 
-// "Listed by 3 of 4 public datasets [1][2][4]"
-function Corroboration({ src, sources }) {
-  const n = src.length;
+// "Listed by 3 independent datasets [1][2][4]". Datasets that copy one upstream count once.
+function Corroboration({ src, lineages = src.length }) {
+  const n = lineages;
+  const label = n === 1
+    ? (src.length > 1 ? `${src.length} datasets, likely one upstream` : 'Single source')
+    : `Listed by ${n} independent datasets`;
   return (
-    <span className={'corro ' + (n >= 3 ? 'strong' : n === 2 ? 'ok' : 'weak')}>
-      {n === 1 ? 'Single source' : `Listed by ${n} of ${sources.length} datasets`}
+    <span className={'corro ' + (n >= 3 ? 'strong' : n === 2 ? 'ok' : 'weak')} title={src.length > n ? 'Some of these datasets word most codes identically and likely copy the same upstream list, so they count once.' : undefined}>
+      {label}
       <sup className="refs">{src.map((k) => <a key={k} href={`#code-src-${k}`} onClick={(e) => { e.preventDefault(); document.getElementById('code-src-' + k)?.scrollIntoView({ behavior: 'smooth' }); }}>[{k}]</a>)}</sup>
     </span>
   );
@@ -16,11 +19,11 @@ function Definitions({ list, sources }) {
   const [main, ...others] = list;
   return (
     <>
-      <div className="def-main"><h2>{main.title}</h2><Corroboration src={main.src} sources={sources} /></div>
+      <div className="def-main"><h2>{main.title}</h2><Corroboration src={main.src} lineages={main.lineages} /></div>
       {others.length > 0 && (
         <div className="def-others">
           <span className="badge amber">Other published wordings</span>
-          <ul>{others.map((d) => <li key={d.title}>{d.title} <Corroboration src={d.src} sources={sources} /></li>)}</ul>
+          <ul>{others.map((d) => <li key={d.title}>{d.title} <Corroboration src={d.src} lineages={d.lineages} /></li>)}</ul>
           <p className="muted small">Datasets disagree here. Sometimes SAE renamed the code between revisions, sometimes a dataset has an error. Trust the factory service info for the vehicle when it matters.</p>
         </div>
       )}
@@ -78,7 +81,7 @@ export default function Codes({ code, drafts }) {
               <h3 className="sect">By manufacturer</h3>
               <table className="spec makes"><tbody>
                 {data.makes.map((m) => (
-                  <tr key={m.make}><th>{m.make}</th><td className="plain">{m.definitions.map((d) => <div key={d.title}>{d.title} <Corroboration src={d.src} sources={data.sources} /></div>)}</td></tr>
+                  <tr key={m.make}><th>{m.make}</th><td className="plain">{m.definitions.map((d) => <div key={d.title}>{d.title} <Corroboration src={d.src} lineages={d.lineages} /></div>)}</td></tr>
                 ))}
               </tbody></table>
             </>
