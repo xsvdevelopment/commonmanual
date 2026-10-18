@@ -1,0 +1,37 @@
+{
+  "id": "gm-transfer-case-4hi-howl-fluid-change",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "GM trucks and SUVs: howl, whine, shudder or grinding in 4HI / Auto 4WD, transfer case fluid change",
+  "summary": "GM bulletin 19-NA-136: a noise or shudder in 4HI or Auto mode (often in parking lots) that goes away in 2HI can come from normal transfer case break-in wear contaminating the fluid. Confirm on a road test, then change the transfer case fluid.",
+  "applies": [
+    { "make": "CHEVROLET", "models": ["SILVERADO", "TAHOE", "SUBURBAN", "COLORADO"], "years": [2014, 2025], "engine": "4WD / AWD" },
+    { "make": "GMC", "models": ["SIERRA", "YUKON", "CANYON"], "years": [2014, 2025], "engine": "4WD / AWD" },
+    { "make": "CADILLAC", "models": ["ESCALADE"], "years": [2015, 2025], "engine": "4WD / AWD" }
+  ],
+  "tags": ["4wd", "4x4", "4hi", "auto 4wd", "transfer case", "howl", "whine", "growl", "shudder", "grinding", "parking lot", "fluid change", "silverado", "sierra", "tahoe", "yukon", "suburban"],
+  "specs": [
+    { "name": "Transfer case RPOs", "value": "NP0, NQ6, NQ7, NQF, NQG, NQH", "src": [1] },
+    { "name": "Fluid (US)", "value": "88865601 (19421425 in Canada); capacity per service information", "src": [1] },
+    { "name": "Highway check speed", "value": "About 55 mph (89 km/h), toggling 2HI / 4HI", "src": [1] },
+    { "name": "Labor", "value": "0.3 hr diagnostic test and drive; 0.5 hr fluid drain and fill", "src": [1] }
+  ],
+  "steps": [
+    { "text": "Customer may report howling, whining/whirring, shudder/vibration or grinding in parking-lot maneuvers in AUTO, or at speed in 4HI or AUTO, that goes away in 2HI.", "src": [1] },
+    { "text": "Road test 1: in AUTO, do low-speed parking-lot maneuvers and listen.", "src": [1] },
+    { "text": "Road test 2: in 4HI, accelerate moderately from a stop and listen for growl, howl, whine or whir.", "src": [1] },
+    { "text": "Road test 3: at about 55 mph (89 km/h), switch between 4HI and 2HI and listen for the same noise.", "src": [1] },
+    { "text": "Once the noise is confirmed as the transfer case, replace the transfer case fluid per service information.", "src": [1] }
+  ],
+  "body": "GM's cause statement: normal transfer case break-in and wear can create excess contaminants in the fluid.\n\nThe bulletin's model-year table doesn't extract cleanly from the PDF, so the year ranges here are the outer bounds it lists (Silverado back to 2014, Escalade from 2015, through 2025). Confirm the transfer case RPO.",
+  "sources": [
+    {
+      "title": "Service Bulletin 19-NA-136: Howling, Whining/Whirring, Shudder/Vibration and/or Grinding Noise While in 4HI, 4HI Auto and/or During Parking Lot Maneuvers in Auto Mode",
+      "publisher": "General Motors, May 2024 (version 6)",
+      "citation": "Condition, Cause and Correction pp. 2-3; parts and labor p. 4; NHTSA ID 11001328",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-11001328-0001.pdf"
+    }
+  ],
+  "author": "OpenBay (AI-assisted)",
+  "updated": "2026-10-18"
+}

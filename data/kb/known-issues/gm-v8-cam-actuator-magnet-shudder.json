@@ -1,0 +1,36 @@
+{
+  "id": "gm-v8-cam-actuator-magnet-shudder",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "GM 4.3 / 5.3 / 6.2 / 6.6 gas: shudder or surge at steady speed from a sticking camshaft actuator magnet",
+  "summary": "GM bulletin 22-NA-080: an engine-side shudder or surge at steady speed that's easy to mistake for the transmission. Watch Camshaft Position Variance in GDS2; over 3-4 degrees while it's happening points at the cam actuator magnet.",
+  "applies": [
+    { "make": "CHEVROLET", "models": ["SILVERADO", "TAHOE", "SUBURBAN", "EXPRESS", "CAMARO", "CORVETTE"], "years": [2014, 2025], "engine": "4.3L LV3, 5.3L L82/L83/L84, 6.2L LT1/LT2/LT4/L86/L87, 6.6L L8T" },
+    { "make": "GMC", "models": ["SIERRA", "YUKON", "SAVANA"], "years": [2014, 2025], "engine": "4.3L LV3, 5.3L L82/L83/L84, 6.2L LT1/LT2/LT4/L86/L87, 6.6L L8T" },
+    { "make": "CADILLAC", "models": ["ESCALADE", "CT5"], "years": [2015, 2025], "engine": "4.3L LV3, 5.3L L82/L83/L84, 6.2L LT1/LT2/LT4/L86/L87, 6.6L L8T" }
+  ],
+  "tags": ["shudder", "surge", "steady speed", "cam phaser", "camshaft actuator", "cam magnet", "solenoid", "vvt", "5.3", "6.2", "4.3", "6.6", "silverado", "sierra", "tahoe", "yukon"],
+  "specs": [
+    { "name": "Camshaft Position Variance, normal", "value": "Target 0 degrees; up to 3-4 degrees is not unusual on a good system", "src": [1] },
+    { "name": "Suspect", "value": "Variance over 3-4 degrees while the shudder or surge is happening", "src": [1] },
+    { "name": "Camshaft position actuator magnet", "value": "12675031 or 12670340 (confirm by VIN in EPC)", "src": [1] },
+    { "name": "Engines", "value": "4.3L (LV3), 5.3L (L82, L83, L84), 6.2L (LT1, LT2, LT4, L86, L87), 6.6L (L8T)", "src": [1] }
+  ],
+  "steps": [
+    { "text": "Rule out the transmission first. Customers often describe this as a transmission shudder or surge at steady speed.", "src": [1] },
+    { "text": "Reproduce the shudder while watching \"Camshaft Position Variance\" in GDS2.", "src": [1] },
+    { "text": "If variance goes past 3-4 degrees during the event and the problem is isolated to the cam actuator system, replace the camshaft actuator magnet and re-evaluate.", "src": [1] },
+    { "text": "If it still shudders with variance over 4 degrees after the magnet, go back to GM service information for further diagnosis.", "src": [1] }
+  ],
+  "body": "Replaces PIP5794B. The bulletin's vehicle table (models, year ranges and engines) does not extract cleanly from the PDF, so the ranges here are its outer bounds; confirm the engine RPO against page 1 of the bulletin.",
+  "sources": [
+    {
+      "title": "Service Bulletin 22-NA-080: Diagnostic Tips for Engine Related Shudder Concerns",
+      "publisher": "General Motors, September 2025 (version 4)",
+      "citation": "Condition, Cause and Correction p. 2; parts p. 3; NHTSA ID 11024330",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2025/MC-11024330-0001.pdf"
+    }
+  ],
+  "author": "OpenBay (AI-assisted)",
+  "updated": "2026-10-18"
+}
