@@ -5,38 +5,242 @@
   "title": "3.6 Pentastar (2018-2025): misfire, rough idle, valvetrain tick from worn intake cam lobes and rocker arms",
   "summary": "Stellantis TSB 09-011-25: on 3.6L V6 engines (sales codes ERC, ERG) built through late 2024, misfire codes P0301-P0306, rough idle or valvetrain noise can come from worn intake high-lift cam lobes and rocker-arm sliders, typically at 10,000-60,000 miles. Repair with the intake cam/rocker kit, not a long block.",
   "applies": [
-    { "make": "RAM", "models": ["1500"], "years": [2019, 2025], "engine": "3.6L V6 (ERC/ERG)" },
-    { "make": "JEEP", "models": ["WRANGLER"], "years": [2018, 2025], "engine": "3.6L V6 (ERC/ERG)" },
-    { "make": "JEEP", "models": ["GLADIATOR"], "years": [2020, 2025], "engine": "3.6L V6 (ERC/ERG)" },
-    { "make": "CHRYSLER", "models": ["PACIFICA"], "years": [2018, 2025], "engine": "3.6L V6 (ERC/ERG)" },
-    { "make": "DODGE", "models": ["DURANGO"], "years": [2018, 2025], "engine": "3.6L V6 (ERC/ERG)" },
-    { "make": "JEEP", "models": ["GRAND CHEROKEE"], "years": [2018, 2025], "engine": "3.6L V6 (ERC/ERG)" },
-    { "make": "RAM", "models": ["PROMASTER"], "exclude": ["PROMASTER CITY"], "years": [2022, 2025], "engine": "3.6L V6 (ERC/ERG)" }
+    {
+      "make": "RAM",
+      "models": [
+        "1500"
+      ],
+      "years": [
+        2019,
+        2025
+      ],
+      "engine": "3.6L V6 (ERC/ERG)"
+    },
+    {
+      "make": "JEEP",
+      "models": [
+        "WRANGLER"
+      ],
+      "years": [
+        2018,
+        2025
+      ],
+      "engine": "3.6L V6 (ERC/ERG)"
+    },
+    {
+      "make": "JEEP",
+      "models": [
+        "GLADIATOR"
+      ],
+      "years": [
+        2020,
+        2025
+      ],
+      "engine": "3.6L V6 (ERC/ERG)"
+    },
+    {
+      "make": "CHRYSLER",
+      "models": [
+        "PACIFICA"
+      ],
+      "years": [
+        2018,
+        2025
+      ],
+      "engine": "3.6L V6 (ERC/ERG)"
+    },
+    {
+      "make": "DODGE",
+      "models": [
+        "DURANGO"
+      ],
+      "years": [
+        2018,
+        2025
+      ],
+      "engine": "3.6L V6 (ERC/ERG)"
+    },
+    {
+      "make": "JEEP",
+      "models": [
+        "GRAND CHEROKEE"
+      ],
+      "years": [
+        2018,
+        2025
+      ],
+      "engine": "3.6L V6 (ERC/ERG)"
+    },
+    {
+      "make": "RAM",
+      "models": [
+        "PROMASTER"
+      ],
+      "exclude": [
+        "PROMASTER CITY"
+      ],
+      "years": [
+        2022,
+        2025
+      ],
+      "engine": "3.6L V6 (ERC/ERG)"
+    }
   ],
-  "tags": ["pentastar", "3.6", "misfire", "rough idle", "tick", "valvetrain noise", "camshaft", "rocker arm", "roller finger follower", "p0301", "p0302", "p0303", "p0304", "p0305", "p0306"],
+  "tags": [
+    "pentastar",
+    "3.6",
+    "misfire",
+    "rough idle",
+    "tick",
+    "valvetrain noise",
+    "camshaft",
+    "rocker arm",
+    "roller finger follower",
+    "p0301",
+    "p0302",
+    "p0303",
+    "p0304",
+    "p0305",
+    "p0306"
+  ],
   "specs": [
-    { "name": "Engines", "value": "3.6L V6 24V VVT Upg I w/ESS (sales code ERC) or eTorque Upg I (sales code ERG)", "src": [1] },
-    { "name": "DTCs", "value": "P0301, P0302, P0303, P0304, P0305, P0306 (cylinder 1-6 misfire)", "src": [1] },
-    { "name": "Typical mileage", "value": "10,000-60,000 miles (16,093-96,560 km)", "src": [1, 2] },
-    { "name": "Right intake cam/rocker kit", "value": "68661147AB (TSB); 68661147AA in the STAR case", "src": [1, 2] },
-    { "name": "Left intake cam/rocker kit", "value": "68661146AA", "src": [1, 2] },
-    { "name": "Kit contents", "value": "Intake camshaft, rocker arms, sealer and gaskets", "src": [1, 2] },
-    { "name": "Ram 1500 (DT) affected", "value": "Built on or before November 14, 2024 (MDH 1114XX)", "src": [1] },
-    { "name": "Wrangler (JL) affected", "value": "Built on or before August 15, 2024 (MDH 0815XX)", "src": [1] },
-    { "name": "Gladiator (JT) and Grand Cherokee (WL) affected", "value": "Built on or before August 19, 2024 (MDH 0819XX)", "src": [1] },
-    { "name": "Pacifica (RU) affected", "value": "Built on or before September 30, 2024 (MDH 0930XX)", "src": [1] },
-    { "name": "Durango (WD) affected", "value": "Built on or before August 20, 2024 (MDH 0820XX)", "src": [1] },
-    { "name": "ProMaster (VF) affected", "value": "Built on or before July 19, 2024 (MDH 0719XX)", "src": [1] },
-    { "name": "Grand Cherokee (WK) affected", "value": "2018-2022 model years", "src": [1] }
+    {
+      "name": "Engines",
+      "value": "3.6L V6 24V VVT Upg I w/ESS (sales code ERC) or eTorque Upg I (sales code ERG)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "DTCs",
+      "value": "P0301, P0302, P0303, P0304, P0305, P0306 (cylinder 1-6 misfire)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Typical mileage",
+      "value": "10,000-60,000 miles (16,093-96,560 km)",
+      "src": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Right intake cam/rocker kit",
+      "value": "68661147AB (TSB); 68661147AA in the STAR case",
+      "src": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Left intake cam/rocker kit",
+      "value": "68661146AA",
+      "src": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Kit contents",
+      "value": "Intake camshaft, rocker arms, sealer and gaskets",
+      "src": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Ram 1500 (DT) affected",
+      "value": "Built on or before November 14, 2024 (MDH 1114XX)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Wrangler (JL) affected",
+      "value": "Built on or before August 15, 2024 (MDH 0815XX)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Gladiator (JT) and Grand Cherokee (WL) affected",
+      "value": "Built on or before August 19, 2024 (MDH 0819XX)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Pacifica (RU) affected",
+      "value": "Built on or before September 30, 2024 (MDH 0930XX)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Durango (WD) affected",
+      "value": "Built on or before August 20, 2024 (MDH 0820XX)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "ProMaster (VF) affected",
+      "value": "Built on or before July 19, 2024 (MDH 0719XX)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Grand Cherokee (WK) affected",
+      "value": "2018-2022 model years",
+      "src": [
+        1
+      ]
+    }
   ],
   "steps": [
-    { "text": "Symptoms: MIL with one or more of P0301-P0306, rough idle, and/or valvetrain noise.", "src": [1] },
-    { "text": "Narrow it to a bank with a stethoscope or with which cylinder is setting the misfire code.", "src": [2] },
-    { "text": "Pull the valve cover on that bank and look at the intake high-lift cam lobes and the rocker-arm high-lift sliders for wear.", "src": [2] },
-    { "text": "If the wear is confirmed, repair with the intake cam/rocker kit for that side (68661147 right, 68661146 left) instead of replacing the engine or long block.", "src": [1, 2] },
-    { "text": "Ask the parts department to confirm the correct kit for the vehicle; the STAR case lists 68661147AA \"or equivalent\" while the later TSB lists 68661147AB.", "src": [1, 2] }
+    {
+      "text": "Symptoms: MIL with one or more of P0301-P0306, rough idle, and/or valvetrain noise.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Narrow it to a bank with a stethoscope or with which cylinder is setting the misfire code.",
+      "src": [
+        2
+      ]
+    },
+    {
+      "text": "Pull the valve cover on that bank and look at the intake high-lift cam lobes and the rocker-arm high-lift sliders for wear.",
+      "src": [
+        2
+      ]
+    },
+    {
+      "text": "If the wear is confirmed, repair with the intake cam/rocker kit for that side (68661147 right, 68661146 left) instead of replacing the engine or long block.",
+      "src": [
+        1,
+        2
+      ]
+    },
+    {
+      "text": "Ask the parts department to confirm the correct kit for the vehicle; the STAR case lists 68661147AA \"or equivalent\" while the later TSB lists 68661147AB.",
+      "src": [
+        1,
+        2
+      ]
+    },
+    {
+      "text": "Before releasing the vehicle, confirm it has the latest calibration for oil pump operation mode (high-pressure mode at engine start-up). RU, VF, WL and WD already have it from 2025 model year on; JL and JT got it as a 2024 running change (08/15/24 and 08/19/24); DT from 2025 model year. 2024 vehicles with a service release available should get that update.",
+      "src": [
+        3
+      ]
+    }
   ],
-  "body": "TSB 09-011-25 is information only: it is not an authorization for repair, and the build-date cutoffs above decide whether it applies. Covered vehicles: 2019-2025 Ram 1500 (DT), 2018-2025 Wrangler (JL), 2020-2025 Gladiator (JT), 2018-2025 Pacifica (RU), 2018-2025 Durango (WD), 2018-2022 Grand Cherokee (WK), 2021-2025 Grand Cherokee / Grand Cherokee L (WL) and 2022-2025 ProMaster (VF).\n\nThe Ram 1500 range here does not tell the DT apart from the 2019+ Ram 1500 Classic (DS), which the bulletin does not list. Check the body code before applying it.",
+  "body": "TSB 09-011-25 is information only: it is not an authorization for repair, and the build-date cutoffs above decide whether it applies. Covered vehicles: 2019-2025 Ram 1500 (DT), 2018-2025 Wrangler (JL), 2020-2025 Gladiator (JT), 2018-2025 Pacifica (RU), 2018-2025 Durango (WD), 2018-2022 Grand Cherokee (WK), 2021-2025 Grand Cherokee / Grand Cherokee L (WL) and 2022-2025 ProMaster (VF).\n\nThe Ram 1500 range here does not tell the DT apart from the 2019+ Ram 1500 Classic (DS), which the bulletin does not list. Check the body code before applying it.\n\nSource 3 is an image-only PDF, so the citation checker can't read it; its step was read from the page.",
   "sources": [
     {
       "title": "TSB 09-011-25: Misfire Diagnostic Trouble Codes (DTCs), Rough Idle, Valvetrain Noise",
@@ -49,6 +253,12 @@
       "publisher": "Stellantis US LLC, April 2025",
       "citation": "Diagnosis steps 1-2 and service kit part numbers, pp. 1-2; NHTSA ID 11016439",
       "url": "https://static.nhtsa.gov/odi/tsbs/2025/MC-11016439-0001.pdf"
+    },
+    {
+      "title": "GPOP Issue Review 9100498 (Rev 3): 3.6L PSU Long Block",
+      "publisher": "Stellantis US LLC, May 12, 2025",
+      "citation": "Issue description (single page, image-only PDF read by eye); NHTSA ID 11018451",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2025/MC-11018451-0001.pdf"
     }
   ],
   "author": "OpenBay (AI-assisted)",
