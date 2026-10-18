@@ -16,7 +16,7 @@ You've been pointed at OpenBay, a free, open-source repair database for vehicles
 
 | Good | Notes |
 |---|---|
-| NHTSA manufacturer communications (TSBs) | `node scripts/bulletins.js <year> <MAKE> "<MODEL>" [keyword]` lists them with PDF links. The PDFs on `static.nhtsa.gov` are the manufacturers' own documents, published by NHTSA. Cite them; don't copy them into the repo. |
+| NHTSA manufacturer communications (TSBs) | `node scripts/bulletins.js <year> <MAKE> "<MODEL>" [keyword]` lists them with PDF links. The PDFs on `static.nhtsa.gov` are the manufacturers' own documents, published by NHTSA. Cite them; don't copy them into the repo. Some (Ford's especially) have an unreadable text layer: `pdftotext` returns gibberish. Render the pages to images and read them instead (e.g. `pip install pymupdf`, then `page.get_pixmap(dpi=100).save(...)`); the citation checker reports those sources as `?` so a reviewer checks them by eye. |
 | US government technical manuals (TM 9-xxxx, Navy NAVEDTRA, Air Force TOs) | Public domain. Search archive.org (`https://archive.org/advancedsearch.php`); full OCR text is at `https://archive.org/download/<id>/<id>_djvu.txt`. Cite TM number, table/paragraph, and the archive.org item URL. |
 | NHTSA recalls, complaints, investigations; EPA fueleconomy.gov | Already wired into the app. |
 | Published manufacturer or parts-maker spec sheets that are freely available | Cite URL and date accessed. |

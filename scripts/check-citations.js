@@ -49,6 +49,13 @@ async function fetchText(url) {
       how = 'web page';
     }
   } catch (err) { how = `fetch failed: ${err.message}`; }
+  // Some PDFs (Ford's TSBs, for one) embed fonts whose text layer decodes to gibberish.
+  // Real English runs 20+ common words per 1,000 characters; gibberish is near 0.
+  if (text && how === 'PDF text') {
+    const flat = text.replace(/\s+/g, ' ');
+    const common = (flat.match(/\b(the|and|to|of|with|for|is|or|be|if|this|on|in)\b/gi) || []).length;
+    if (flat.length > 1000 && common / (flat.length / 1000) < 2) { text = null; how += ' (text layer is unreadable, likely an embedded font; read the PDF by eye)'; }
+  }
   const out = { text: text && text.replace(/\s+/g, ' '), how };
   docCache.set(url, out);
   return out;
