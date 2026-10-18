@@ -1,0 +1,178 @@
+{
+  "id": "gm-carbon-on-valves-misfire-decarbon-16-na-383",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "GM gas engines (2000-2025): rough idle, crank no start or misfire from carbon on the valves, top-engine decarbon",
+  "summary": "GM bulletin 16-NA-383: heavy carbon on intake and/or exhaust valves can stick valves and cause rough idle, extended crank, no start and P0300-P0308, usually after 5,000+ miles. Cold compression can read 0 psi on several cylinders. GM's fix is a top-engine cleaner run through the throttle body at 2,000 rpm, plus an oil change and Top Tier fuel.",
+  "applies": [
+    {
+      "make": "BUICK",
+      "years": [
+        2000,
+        2025
+      ],
+      "engine": "Gasoline"
+    },
+    {
+      "make": "CADILLAC",
+      "years": [
+        2000,
+        2025
+      ],
+      "engine": "Gasoline"
+    },
+    {
+      "make": "CHEVROLET",
+      "years": [
+        2000,
+        2025
+      ],
+      "engine": "Gasoline"
+    },
+    {
+      "make": "GMC",
+      "years": [
+        2000,
+        2025
+      ],
+      "engine": "Gasoline"
+    }
+  ],
+  "tags": [
+    "carbon",
+    "intake valve deposits",
+    "sticking valves",
+    "misfire",
+    "rough idle",
+    "crank no start",
+    "extended crank",
+    "p0300",
+    "decarbon",
+    "top engine cleaner",
+    "gdi",
+    "sidi",
+    "top tier"
+  ],
+  "warnings": [
+    "Don't hydro-lock the engine. Inducing too much cleaner, or at too low an rpm, or stalling the engine with it, can bend connecting rods."
+  ],
+  "specs": [
+    {
+      "name": "DTCs",
+      "value": "P0300, P0301, P0302, P0303, P0304, P0305, P0306, P0307, P0308",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Typical onset",
+      "value": "At least 5,000 mi (8,000 km)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Cold compression",
+      "value": "May read 0 kPa (0 psi) on multiple cylinders",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Cleaner",
+      "value": "ACDelco Air Intake, Valve and Combustion Chamber Cleaner, about 650 mL (22 oz, 2 cans)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Tool air pressure",
+      "value": "260 kPa (40 psi) at the service tool (Fuel Injector Cleaner Kit J-35800-A, nozzle EN-35800-20)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Engine speed while inducing",
+      "value": "2,000 rpm commanded with the scan tool",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Induction time",
+      "value": "About 3 minutes, then idle 2 minutes",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Fuel tank additive",
+      "value": "ACDelco Fuel System Cleaner 44K, 19435370 (U.S. and Canada)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Labor",
+      "value": "0.5 hr",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Symptoms: rough idle, crank no start, extended crank or misfire, sometimes popping through the intake or exhaust while cranking and fuel-fouled plugs. Service manual diagnosis may not catch it if the valves aren't sticking at that moment.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Run the normal service information diagnosis. If it points to compression loss from valve sealing and rules out everything external to the engine, check for valve damage or out-of-place cam followers.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "No damage: do the decarbon procedure to free sticking valves. Damage: do the mechanical repair first, then the decarbon procedure to keep it from coming back.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Fill the J-35800-A kit with about 650 mL (2 cans) of the GM cleaner, cap it tight, and set 40 psi (260 kPa) at the tool.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Engine at operating temperature, in a well-ventilated area: command 2,000 rpm with the scan tool and slowly induce the cleaner through the throttle body with the EN-35800-20 nozzle over about 3 minutes. A second application may be needed.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Let it idle 2 minutes after the can is empty, then change the oil and filter.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Test drive with light throttle and clear codes. Tell the owner to use Top Tier gasoline; GM also suggests a bottle of 44K fuel system cleaner at every oil change. GM doesn't approve aftermarket top-engine cleaners.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Service Bulletin 16-NA-383: Information on Rough Idle, Crank No Start, Extended Crank or Misfire Due to Excessive Carbon on Top of Valves or Sticking Valves - DTC P0300-P0308",
+      "publisher": "General Motors, June 2024 (replaces PIP5029H)",
+      "citation": "Condition and cause pp. 1-3, service procedure p. 6, parts and labor p. 7; NHTSA ID 11004761",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-11004761-0001.pdf"
+    }
+  ],
+  "author": "OpenBay (AI-assisted)",
+  "updated": "2026-10-18"
+}
