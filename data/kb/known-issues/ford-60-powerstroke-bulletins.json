@@ -1,0 +1,113 @@
+{
+  "id": "ford-60-powerstroke-bulletins",
+  "type": "known-issue",
+  "status": "cited",
+  "title": "6.0 Power Stroke: Ford bulletins for FICM, EGR codes, turbo deposits and oil leaks",
+  "summary": "Ford service bulletins on the 6.0L diesel, as recorded by NHTSA. Pull the bulletin that matches the symptom.",
+  "applies": [
+    {
+      "make": "FORD",
+      "models": [
+        "F-250",
+        "F-350",
+        "F-450",
+        "F-550",
+        "F250",
+        "F350",
+        "EXCURSION",
+        "E-350",
+        "E-450",
+        "E350",
+        "E450"
+      ],
+      "years": [
+        2003,
+        2008
+      ],
+      "engine": "6.0L Power Stroke diesel"
+    }
+  ],
+  "tags": [
+    "6.0",
+    "powerstroke",
+    "diesel",
+    "ficm",
+    "egr",
+    "P0401",
+    "turbo",
+    "oil cooler",
+    "head gasket"
+  ],
+  "specs": [
+    {
+      "name": "No start or constant misfire",
+      "value": "FICM diagnosis: bulletin 04-11-5",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "MIL with P0401, P0402, P0404, P1335; lack of power or surge",
+      "value": "Bulletin 07-21-9 (2003-2007 F-Super Duty, 2003-2005 Excursion, 2004-2008 E-Series)",
+      "src": [
+        2
+      ]
+    },
+    {
+      "name": "Turbocharger carbon deposits",
+      "value": "Diagnostics and service tips: bulletin 08-2-11",
+      "src": [
+        3
+      ]
+    },
+    {
+      "name": "Oil leak that seems to come from the head gasket area",
+      "value": "Bulletin 17460",
+      "src": [
+        4
+      ]
+    },
+    {
+      "name": "Oil leak at oil cooler / oil filter housing",
+      "value": "O-ring available for service: bulletin 18306",
+      "src": [
+        5
+      ]
+    }
+  ],
+  "body": "The earlier draft of this entry described oil cooler and EGR cooler failure chains and head stud repairs. Those were removed because no source has been cited for them yet. If you have Ford service information or another published source, add it.",
+  "sources": [
+    {
+      "title": "04-11-5: No start or constant engine misfire - FICM diagnosis - 6.0L diesel",
+      "publisher": "Ford Motor Company",
+      "citation": "NHTSA manufacturer communication 10008255, 2004-06-14 (summary record)",
+      "url": "https://api.nhtsa.gov/safetyIssues/byNhtsaId?nhtsaId=10008255&filter=issueType&filterValue=manufacturerCommunications"
+    },
+    {
+      "title": "07-21-9: 6.0L - MIL on - P0401, P0402, P0404, P1335 - lack of power or surge",
+      "publisher": "Ford Motor Company",
+      "citation": "NHTSA manufacturer communication 10023855, 2007-10-01 (summary record)",
+      "url": "https://api.nhtsa.gov/safetyIssues/byNhtsaId?nhtsaId=10023855&filter=issueType&filterValue=manufacturerCommunications"
+    },
+    {
+      "title": "08-2-11: 6.0L turbocharger carbon deposit diagnostics and service tips",
+      "publisher": "Ford Motor Company",
+      "citation": "NHTSA manufacturer communication 10024325, 2008-03-01 (summary record)",
+      "url": "https://api.nhtsa.gov/safetyIssues/byNhtsaId?nhtsaId=10024325&filter=issueType&filterValue=manufacturerCommunications"
+    },
+    {
+      "title": "17460: Oil leak that seems to be coming from head gasket area",
+      "publisher": "Ford Motor Company",
+      "citation": "NHTSA manufacturer communication 10007317, 2004-01-01 (summary record)",
+      "url": "https://api.nhtsa.gov/safetyIssues/byNhtsaId?nhtsaId=10007317&filter=issueType&filterValue=manufacturerCommunications"
+    },
+    {
+      "title": "18306: Oil leak at the engine oil cooler/oil filter housing - O-ring available for service",
+      "publisher": "Ford Motor Company",
+      "citation": "NHTSA manufacturer communication 10013429, 2004-11-01 (summary record)",
+      "url": "https://api.nhtsa.gov/safetyIssues/byNhtsaId?nhtsaId=10013429&filter=issueType&filterValue=manufacturerCommunications"
+    }
+  ],
+  "author": "OpenBay",
+  "updated": "2026-10-18"
+}

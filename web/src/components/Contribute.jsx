@@ -25,8 +25,20 @@ function fromEntry(e) {
     tools: (e.tools || []).join('\n'), parts: (e.parts || []).join('\n'), warnings: (e.warnings || []).join('\n'),
     tags: (e.tags || []).join(', '), body: e.body || '',
     sources: e.sources.length ? e.sources.map((s) => ({ ...blankSrc, ...s })) : [{ ...blankSrc }],
+    photos: (e.photos || []).map((p) => ({ ...p, step: p.step ?? '' })),
     author: e.author || '', verifiedBy: e.verifiedBy || '',
   };
+}
+
+// Shrink a phone photo to at most 1600px on the long side, re-encoded as JPEG.
+async function shrink(file) {
+  const img = await createImageBitmap(file);
+  const scale = Math.min(1, 1600 / Math.max(img.width, img.height));
+  const c = document.createElement('canvas');
+  c.width = Math.round(img.width * scale);
+  c.height = Math.round(img.height * scale);
+  c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+  return new Promise((ok) => c.toBlob(ok, 'image/jpeg', 0.82));
 }
 
 function toEntry(f) {
@@ -54,7 +66,67 @@ function toEntry(f) {
   if (f.body.trim()) e.body = f.body.trim();
   if (f.author.trim()) e.author = f.author.trim();
   if (f.verifiedBy.trim()) e.verifiedBy = f.verifiedBy.trim();
+  if (f.photos.length) {
+    e.photos = f.photos.map((p) => ({
+      file: p.file, caption: p.caption.trim(), credit: p.credit.trim(),
+      ...(String(p.step).trim() && { step: Number(p.step) }),
+    }));
+  }
   return e;
+}
+
+function Photos({ f, setF, entryId }) {
+  const [own, setOwn] = useState(false);
+  const [busy, setBusy] = useState('');
+  const setP = (i, k) => (ev) => setF({ ...f, photos: f.photos.map((p, j) => (j === i ? { ...p, [k]: ev.target.value } : p)) });
+
+  async function upload(ev) {
+    const files = [...ev.target.files];
+    ev.target.value = '';
+    const added = [];
+    for (const [n, file] of files.entries()) {
+      setBusy(`Uploading ${n + 1} of ${files.length}…`);
+      try {
+        const blob = await shrink(file);
+        const res = await fetch(`/api/media/${entryId}`, { method: 'POST', headers: { 'Content-Type': 'image/jpeg' }, body: blob });
+        const out = await res.json();
+        if (!res.ok) throw new Error(out.error);
+        added.push({ file: out.file, caption: '', credit: f.author, step: '' });
+      } catch (err) { setBusy('Upload failed: ' + err.message); return; }
+    }
+    setF((cur) => ({ ...cur, photos: [...cur.photos, ...added] }));
+    setBusy('');
+  }
+
+  return (
+    <fieldset>
+      <legend>Photos</legend>
+      <p className="muted small">Your own photos only. Shots of the actual part, bolt locations, the gotcha. No screenshots from manuals or paid services.</p>
+      <div className="photo-grid">
+        {f.photos.map((p, i) => (
+          <div key={p.file} className="photo-edit">
+            <img src={'/' + p.file} alt={p.caption || 'uploaded photo'} />
+            <input value={p.caption} onChange={setP(i, 'caption')} placeholder="Caption (what am I looking at?)" />
+            <div className="row">
+              <input value={p.credit} onChange={setP(i, 'credit')} placeholder="Photo by" />
+              <input value={p.step} onChange={setP(i, 'step')} placeholder="Step #" className="srcbox" inputMode="numeric" />
+            </div>
+            <button type="button" className="link" onClick={() => setF({ ...f, photos: f.photos.filter((_, j) => j !== i) })}>remove</button>
+          </div>
+        ))}
+      </div>
+      {!entryId ? <p className="muted">Give the entry a title first.</p> : (
+        <>
+          <label className="check"><input type="checkbox" checked={own} onChange={(e) => setOwn(e.target.checked)} /> I took these photos, and I release them under CC BY-SA 4.0 like the rest of OpenBay.</label>
+          <label className={'btn' + (own ? '' : ' disabled')}>
+            + Add photos
+            <input type="file" accept="image/*" multiple hidden disabled={!own} onChange={upload} />
+          </label>
+          {busy && <span className="muted"> {busy}</span>}
+        </>
+      )}
+    </fieldset>
+  );
 }
 
 export default function Contribute({ query }) {
@@ -63,7 +135,7 @@ export default function Contribute({ query }) {
     id: '', type: 'procedure', title: '', summary: '', status: 'cited',
     applies: [{ make: query.get('make') || '', models: query.get('model') || '', from: query.get('year') || 1960, to: query.get('year') || THIS_YEAR - 1, engine: '' }],
     specs: [{ ...blankSpec }], steps: '', tools: '', parts: '', warnings: '', tags: '', body: '',
-    sources: [{ ...blankSrc }], author: '', verifiedBy: '',
+    sources: [{ ...blankSrc }], photos: [], author: '', verifiedBy: '',
   }));
   const [result, setResult] = useState(null);
 
@@ -147,7 +219,7 @@ export default function Contribute({ query }) {
 
       <fieldset>
         <legend>The job</legend>
-        <label>Steps, one per line. End a line with [1] to footnote it.<textarea rows={8} value={f.steps} onChange={set('steps')} /></label>
+        <label>Steps, one per line. Every step needs a footnote: end the line with [1] (or [1][2]).<textarea rows={8} value={f.steps} onChange={set('steps')} /></label>
         <div className="grid3">
           <label>Tools (one per line)<textarea rows={4} value={f.tools} onChange={set('tools')} /></label>
           <label>Parts (one per line)<textarea rows={4} value={f.parts} onChange={set('parts')} /></label>
@@ -156,6 +228,8 @@ export default function Contribute({ query }) {
         <label>Notes<textarea rows={4} value={f.body} onChange={set('body')} /></label>
         <label>Tags (comma list)<input value={f.tags} onChange={set('tags')} placeholder="water pump, cooling, vortec" /></label>
       </fieldset>
+
+      <Photos f={f} setF={setF} entryId={f.id || slug(f.title)} />
 
       <button className="btn primary big">Save entry</button>
 

@@ -6,8 +6,11 @@ Thank you. Every entry you add saves another mechanic an hour.
 
 OpenBay publishes facts, and a fact needs a source. Every published entry needs:
 
-- at least one entry in `sources`, and
-- a footnote (`"src": [1]`) on **every** spec, pointing at the source number it came from.
+- at least one entry in `sources`,
+- a footnote (`"src": [1]`) on **every** spec, pointing at the source number it came from, and
+- a footnote on **every** procedure step (`{"text": "...", "src": [1]}`). In the app form, end the line with `[1]`.
+
+Using an AI agent? Read [AGENTS.md](AGENTS.md). Same rules, plus: agents transcribe from documents they've opened, never from memory, and the entry's `author` says `(AI-assisted)`.
 
 Good sources, best first:
 
@@ -23,7 +26,7 @@ Can't cite it yet? Save it with `"status": "draft"`. Drafts are hidden from norm
 - **Write it in your own words.** Facts (torque values, firing orders, the order of the steps) belong to nobody. A manual's exact wording, its diagrams and its photos belong to the publisher.
 - **Don't paste** text, diagrams or screenshots from ALLDATA, Mitchell, Identifix, factory sites or printed manuals. Cite them and link to them.
 - **No pirated material** of any kind. One DMCA takedown could wipe out everyone's work.
-- **Photos** you take yourself are welcome (support is coming).
+- **Photos** you take yourself are welcome. Add them in the app's editor: they're resized automatically and saved to `data/kb/media/<entry-id>/`. Each needs a caption and a credit, and can be pinned to a step. By adding a photo you release it under CC BY-SA 4.0.
 
 ## Status levels
 

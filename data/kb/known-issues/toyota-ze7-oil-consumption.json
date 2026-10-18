@@ -1,0 +1,139 @@
+{
+  "id": "toyota-ze7-oil-consumption",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "Toyota excessive oil consumption: Warranty Enhancement Program ZE7",
+  "summary": "Toyota warranty policy bulletin POL14-12 extends coverage for excessive oil consumption on certain 2006-2015 Toyota and Scion models, based on a dealer oil consumption test.",
+  "applies": [
+    {
+      "make": "TOYOTA",
+      "models": [
+        "CAMRY"
+      ],
+      "years": [
+        2007,
+        2009
+      ]
+    },
+    {
+      "make": "TOYOTA",
+      "models": [
+        "CAMRY HYBRID"
+      ],
+      "years": [
+        2007,
+        2011
+      ]
+    },
+    {
+      "make": "TOYOTA",
+      "models": [
+        "SOLARA"
+      ],
+      "years": [
+        2007,
+        2008
+      ]
+    },
+    {
+      "make": "TOYOTA",
+      "models": [
+        "COROLLA"
+      ],
+      "years": [
+        2009,
+        2011
+      ]
+    },
+    {
+      "make": "TOYOTA",
+      "models": [
+        "MATRIX"
+      ],
+      "years": [
+        2009,
+        2013
+      ]
+    },
+    {
+      "make": "TOYOTA",
+      "models": [
+        "RAV4"
+      ],
+      "years": [
+        2006,
+        2008
+      ]
+    },
+    {
+      "make": "SCION",
+      "models": [
+        "TC"
+      ],
+      "years": [
+        2007,
+        2010
+      ]
+    },
+    {
+      "make": "SCION",
+      "models": [
+        "XB"
+      ],
+      "years": [
+        2008,
+        2015
+      ]
+    }
+  ],
+  "tags": [
+    "oil consumption",
+    "ze7",
+    "warranty enhancement",
+    "camry",
+    "rav4",
+    "corolla",
+    "scion"
+  ],
+  "specs": [
+    {
+      "name": "Covered models",
+      "value": "Certain 2007-09 Camry, 2007-11 Camry Hybrid, 2007-08 Camry Solara, 2009-11 Corolla, 2009-13 Corolla Matrix, 2006-08 RAV4, 2007-10 Scion tC, 2008-15 Scion xB",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Primary coverage",
+      "value": "Until October 31, 2016, regardless of mileage",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Secondary coverage",
+      "value": "10 years from first use or 150,000 miles, whichever comes first",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Eligibility",
+      "value": "Depends on a dealer-performed engine oil consumption test; maximum of two tests",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "Toyota tells dealers to verify VIN applicability in TIS and to confirm the engine serial number matches the original engine for the VIN. The earlier draft of this entry also claimed head bolt thread problems; that claim was removed because no source has been cited for it.",
+  "sources": [
+    {
+      "title": "ZE7-Toyota POL14: Warranty Enhancement Program ZE7 Phase 2: warranty extension for excessive engine oil consumption (POL14-12)",
+      "publisher": "Toyota Motor Sales, U.S.A., December 2014, revised November 2017",
+      "citation": "NHTSA ID 10146510, 2017-11-09",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10146510-9999.pdf"
+    }
+  ],
+  "author": "OpenBay",
+  "updated": "2026-10-18"
+}

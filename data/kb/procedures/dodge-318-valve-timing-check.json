@@ -1,0 +1,94 @@
+{
+  "id": "dodge-318-valve-timing-check",
+  "type": "procedure",
+  "title": "Valve timing check without pulling the timing cover: Dodge 318 (1976-77 truck)",
+  "summary": "Checks for a stretched or jumped timing chain using a spacer and a dial indicator on the #1 intake valve.",
+  "applies": [
+    {
+      "make": "DODGE",
+      "models": [
+        "W100",
+        "W200",
+        "W300",
+        "D100",
+        "D200",
+        "D300",
+        "PICKUP",
+        "RAM",
+        "POWER WAGON",
+        "DODGE TRUCK"
+      ],
+      "years": [
+        1976,
+        1977
+      ],
+      "engine": "318 cu in (5.2L) V8"
+    }
+  ],
+  "tags": [
+    "318",
+    "valve timing",
+    "timing chain",
+    "jumped timing",
+    "cam timing"
+  ],
+  "tools": [
+    "1/4 in square stock spacer",
+    "Dial indicator with magnetic base"
+  ],
+  "steps": [
+    {
+      "text": "Turn the crankshaft until the number six exhaust valve is closing and the number six intake valve is opening.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Slip a 1/4 in spacer between the rocker arm pad and the valve stem tip of the number one intake valve (the second valve on the left bank).",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Mount a dial indicator so its plunger touches the valve spring retainer as close to perpendicular as you can get.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Let the spring pressure bleed the lifter down so it acts like a solid lifter, then zero the indicator.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Turn the crankshaft clockwise until the valve has lifted 0.010 in. The crankshaft pulley should now read between 10 degrees before TDC and 2 degrees after TDC. Remove the spacer.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Don't keep turning the crank clockwise with the spacer in: the valve spring can bottom out and damage the lifter.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "If the reading is outside that range, check the sprocket index marks, inspect the timing chain for wear, and confirm the TDC mark on the timing indicator is accurate.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "TM 9-2320-266-34: Direct and General Support Maintenance Manual, Truck, Cargo, 1-1/4 Ton, 4x4 (M880 series)",
+      "publisher": "Headquarters, Department of the Army, January 1976 (reprint with Changes 1-7)",
+      "citation": "Paragraph 3-8, Valve Timing; figure 3-6",
+      "url": "https://archive.org/details/micro_IA41152635_0460"
+    }
+  ],
+  "status": "cited",
+  "author": "OpenBay",
+  "updated": "2026-10-18"
+}

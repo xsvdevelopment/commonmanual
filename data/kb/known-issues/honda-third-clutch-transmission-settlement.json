@@ -1,0 +1,82 @@
+{
+  "id": "honda-third-clutch-transmission-settlement",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "Honda \"third clutch\" automatic transmission: class action settlement (2002-2004)",
+  "summary": "Honda service bulletin 21-054 notifies dealers of the Third Clutch Transmission Settlement for 2003-04 Accord V6, 2002-04 Odyssey and 2003-04 Pilot.",
+  "applies": [
+    {
+      "make": "HONDA",
+      "models": [
+        "ACCORD"
+      ],
+      "years": [
+        2003,
+        2004
+      ],
+      "engine": "V6"
+    },
+    {
+      "make": "HONDA",
+      "models": [
+        "ODYSSEY"
+      ],
+      "years": [
+        2002,
+        2004
+      ]
+    },
+    {
+      "make": "HONDA",
+      "models": [
+        "PILOT"
+      ],
+      "years": [
+        2003,
+        2004
+      ]
+    }
+  ],
+  "tags": [
+    "transmission",
+    "third clutch",
+    "settlement",
+    "odyssey",
+    "accord",
+    "pilot"
+  ],
+  "specs": [
+    {
+      "name": "Case",
+      "value": "Case v. American Honda Motor Co., Inc., No. BC 424169",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Benefit options",
+      "value": "Reimbursement of out-of-pocket parts cost for full transmission replacement, or a $25 credit voucher for Honda parts/accessories (labor not covered)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Eligible class members notified",
+      "value": "75,892",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "The earlier draft of this entry listed symptoms and covered Acura models and 1998-2004 Accords. Those claims were removed because no source has been cited for them yet.",
+  "sources": [
+    {
+      "title": "A21-054: Class Action Notification Mailing: Third Clutch Transmission Settlement",
+      "publisher": "American Honda Motor Co., May 2021",
+      "citation": "NHTSA ID 10194971, 2021-05-28",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10194971-0001.pdf"
+    }
+  ],
+  "author": "OpenBay",
+  "updated": "2026-10-18"
+}

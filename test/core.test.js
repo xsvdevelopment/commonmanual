@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { validateEntry, applies } from '../server/kb.js';
-import { lookup } from '../server/dtc.js';
+import { lookup, isGeneric, search } from '../server/dtc.js';
 import { matchModels } from '../server/sources/epa.js';
 import { classicModels } from '../server/catalog.js';
 
@@ -43,14 +43,43 @@ test('vehicle matching respects make, year range and model', () => {
   assert.equal(applies(cited, { year: 1970, make: 'CHEVROLET', model: 'CAMARO' }), false);
 });
 
-test('DTC lookup: exact, family, manufacturer-specific, invalid', () => {
-  assert.match(lookup('p0420').title, /Catalyst/);
-  assert.equal(lookup('P0304').title, 'Cylinder 4 misfire detected');
-  assert.match(lookup('P0353').title, /coil C/);
+test('published procedure steps must each be footnoted', () => {
+  const proc = { ...cited, type: 'procedure', specs: undefined, steps: [{ text: 'Do a thing', src: [1] }, 'Do another thing'] };
+  assert.ok(validateEntry(proc).some((e) => e.startsWith('steps[1]')));
+  assert.deepEqual(validateEntry({ ...proc, steps: [{ text: 'Do a thing', src: [1] }] }), []);
+});
+
+test('photos need a caption, a credit and a path inside media/', () => {
+  const ok = { ...cited, photos: [{ file: 'media/test-entry/abc-1234.jpg', caption: 'Bolt location', credit: 'Shop' }] };
+  assert.deepEqual(validateEntry(ok), []);
+  assert.ok(validateEntry({ ...ok, photos: [{ file: '../../etc/passwd', caption: 'x', credit: 'y' }] }).some((e) => e.includes('photos[0].file')));
+  assert.ok(validateEntry({ ...ok, photos: [{ file: 'media/test-entry/a.jpg' }] }).some((e) => e.includes('caption')));
+});
+
+test('DTC lookup: majority definition first, footnoted, structure from the code', () => {
+  const p0420 = lookup('p0420');
+  assert.match(p0420.definitions[0].title, /Catalyst/i);
+  assert.ok(p0420.definitions[0].src.length >= 2);
+  assert.equal(p0420.generic, true);
   const mfr = lookup('P1131');
-  assert.equal(mfr.known, false);
   assert.equal(mfr.generic, false);
+  assert.ok(mfr.makes.length > 0);
   assert.equal(lookup('XYZ').valid, false);
+});
+
+test('DTC generic classification follows SAE J2012 structure', () => {
+  assert.equal(isGeneric('P0300'), true);
+  assert.equal(isGeneric('P2187'), true);
+  assert.equal(isGeneric('P1000'), false);
+  assert.equal(isGeneric('P3400'), true);
+  assert.equal(isGeneric('P3000'), false);
+  assert.equal(isGeneric('U0100'), true);
+  assert.equal(isGeneric('B1000'), false);
+});
+
+test('DTC text search finds codes by words', () => {
+  const hits = search('catalyst efficiency');
+  assert.ok(hits.some((h) => h.code === 'P0420'));
 });
 
 test('EPA model matching uses the base model token', () => {

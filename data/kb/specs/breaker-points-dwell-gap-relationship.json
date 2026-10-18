@@ -1,0 +1,25 @@
+{
+  "id": "breaker-points-dwell-gap-relationship",
+  "type": "spec",
+  "title": "Breaker-point ignition: reading dwell and when to replace the points",
+  "summary": "Which way to move the point gap when dwell is off, and the wear limit for point contacts. Applies to any breaker-point distributor.",
+  "applies": [{ "make": "*", "years": [1960, 1985], "engine": "Breaker-point (non-electronic) ignition" }],
+  "tags": ["points", "dwell", "point gap", "tune-up", "distributor", "vintage", "ignition"],
+  "specs": [
+    { "name": "Dwell below specification", "value": "Point gap is too large", "note": "Close the gap to raise dwell", "src": [1] },
+    { "name": "Dwell above specification", "value": "Point gap is too small", "note": "Open the gap to lower dwell", "src": [1] },
+    { "name": "Replace the point set when", "value": "Contacts are badly burned, or metal transfer equals or exceeds the gap setting", "src": [1] },
+    { "name": "Point resistance", "value": "Must be within the manufacturer's specification", "src": [1] }
+  ],
+  "sources": [
+    {
+      "title": "Construction Mechanic, Engine Tune-Up I, 8-7 (Military Curriculum Materials for Vocational and Technical Education, ERIC ED 223 904)",
+      "publisher": "Naval Construction Training Center, Port Hueneme, Calif., 1978",
+      "citation": "Outline of Instruction, 'Check and test breaker points', sheet 7 of 15",
+      "url": "https://archive.org/details/micro_IA41153426_0697"
+    }
+  ],
+  "status": "cited",
+  "author": "OpenBay",
+  "updated": "2026-10-18"
+}

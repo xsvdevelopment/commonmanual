@@ -1,0 +1,75 @@
+{
+  "id": "ford-54-3v-spark-plug-removal",
+  "type": "known-issue",
+  "status": "cited",
+  "title": "Ford 5.4 3-valve: spark plug removal has its own factory procedure",
+  "summary": "Ford issued dedicated spark plug removal instructions for the 5.4L 3-valve. Get the bulletin before pulling plugs.",
+  "applies": [
+    {
+      "make": "FORD",
+      "models": [
+        "F-150",
+        "F150",
+        "EXPEDITION"
+      ],
+      "years": [
+        2004,
+        2008
+      ],
+      "engine": "5.4L 3-valve V8"
+    },
+    {
+      "make": "LINCOLN",
+      "models": [
+        "NAVIGATOR",
+        "MARK LT"
+      ],
+      "years": [
+        2005,
+        2008
+      ],
+      "engine": "5.4L 3-valve V8"
+    }
+  ],
+  "tags": [
+    "triton",
+    "5.4",
+    "3v",
+    "spark plug",
+    "broken plug",
+    "plug removal"
+  ],
+  "specs": [
+    {
+      "name": "Factory bulletin",
+      "value": "Ford 06-15-2: Spark plug removal instructions, 5.4 3V",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Remanufactured 2005-2008 5.4L/6.8L 3V engines",
+      "value": "Replace the original black spark plug boots with the longer brown boots supplied",
+      "src": [
+        2
+      ]
+    }
+  ],
+  "body": "NHTSA holds only the summary record of bulletin 06-15-2, not the document itself. The full removal procedure is available from Ford service information (Factory info tab). The earlier draft of this entry also covered cam phaser ticking. No published source for that has been found yet, so it was removed until one is cited.",
+  "sources": [
+    {
+      "title": "06-15-2: Spark plug removal instructions - 5.4 3V",
+      "publisher": "Ford Motor Company",
+      "citation": "NHTSA manufacturer communication 10021048, date not recorded (summary record)",
+      "url": "https://api.nhtsa.gov/safetyIssues/byNhtsaId?nhtsaId=10021048&filter=issueType&filterValue=manufacturerCommunications"
+    },
+    {
+      "title": "SSM 46542: Remanufactured 5.4L/6.8L 3V engines: replace black spark plug boots with brown boots",
+      "publisher": "Ford Motor Company",
+      "citation": "NHTSA manufacturer communication 10109021, 2017-04-24 (summary record)",
+      "url": "https://api.nhtsa.gov/safetyIssues/byNhtsaId?nhtsaId=10109021&filter=issueType&filterValue=manufacturerCommunications"
+    }
+  ],
+  "author": "OpenBay",
+  "updated": "2026-10-18"
+}

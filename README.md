@@ -44,6 +44,7 @@ Facts can't be owned, but someone else's exact words and diagrams can. We write 
 - **Own a factory manual?** Work through the [citation queue](#how-to-contribute). Check a draft against your book, add the page number, and it goes live.
 - **Found a public-domain manual?** Military TMs, pre-1964 publications that were never renewed, government documents. Add it as a source.
 - **Write code?** Issues are open. Offline sync, wiring diagram support, more data sources, a phone layout for under the hood.
+- **Got AI usage to spare?** Clone the repo, open it in Claude Code, Codex, Cursor, Copilot, Gemini or whatever you run, and say *"work on OpenBay."* [AGENTS.md](AGENTS.md) tells it exactly what to do: pick a task from the [agent-task queue](https://github.com/xsvdevelopment/openbay/issues?q=is%3Aopen+label%3Aagent-task), dig the facts out of public-domain manuals and factory bulletins, footnote every one, and open a pull request. Agents transcribe from documents they've opened. They never write from memory, and a human reviews every citation before it merges.
 - **None of the above?** Star the repo and send it to a mechanic.
 
 **Put this in the consumer's hands. Help us build it.**
@@ -58,10 +59,13 @@ Facts can't be owned, but someone else's exact words and diagrams can. We write 
 | NHTSA vPIC | VIN decoding: engine, trans, drive, plant | 1981+ (17-digit VINs) |
 | NHTSA recalls | Every recall campaign, remedy and "park it" warning | All years on file |
 | NHTSA owner complaints | Thousands of owner reports grouped by component, so pattern failures stand out | All years on file |
+| **Factory technical service bulletins** | Every TSB and service message filed with NHTSA, searchable, with a link to the manufacturer's own PDF | All years on file |
+| NHTSA defect investigations | What the government investigated, and which recalls came out of it | All years on file |
 | EPA fueleconomy.gov | Engine, transmission and drivetrain configurations | 1984+ |
-| SAE J2012 / ISO 15031-6 | Generic OBD-II trouble code definitions | 1996+ |
+| **Trouble codes** | 12,000+ codes: every generic OBD-II code plus manufacturer-specific codes for 30+ makes, each definition footnoted with how many public datasets agree | 1996+ |
 | Factory service sites | Direct links to every automaker's own repair-info site; most sell short-term passes | Current |
-| **The OpenBay knowledge base** | Procedures, specs, known issues and sources written by mechanics | Everything we can cite |
+| Public-domain military manuals | Factory-level specs and procedures for the military versions of civilian trucks | 1960s-1980s |
+| **The OpenBay knowledge base** | Procedures, specs, known issues and photos from mechanics, every fact footnoted | Everything we can cite |
 
 Government data is cached on disk, so anything you've looked up keeps working when the shop's internet doesn't.
 

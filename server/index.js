@@ -5,7 +5,7 @@ import { ROOT, DATA } from './paths.js';
 import * as nhtsa from './sources/nhtsa.js';
 import * as epa from './sources/epa.js';
 import * as kb from './kb.js';
-import { lookup as dtcLookup } from './dtc.js';
+import * as dtc from './dtc.js';
 import { classicMakes, classicModels } from './catalog.js';
 
 const PORT = Number(process.env.PORT) || 4747;
@@ -47,6 +47,8 @@ app.get('/api/vin/:vin', h(async (req, res) => {
 }));
 app.get('/api/vehicle/recalls', h(async (req, res) => res.json(await nhtsa.recalls(...need(req, 'year', 'make', 'model')))));
 app.get('/api/vehicle/complaints', h(async (req, res) => res.json(await nhtsa.complaints(...need(req, 'year', 'make', 'model')))));
+app.get('/api/vehicle/bulletins', h(async (req, res) => res.json(await nhtsa.bulletins(...need(req, 'year', 'make', 'model')))));
+app.get('/api/bulletin-docs/:kind/:id', h(async (req, res) => res.json(await nhtsa.bulletinDocs(req.params.kind, req.params.id))));
 app.get('/api/vehicle/epa', h(async (req, res) => res.json(await epa.candidates(...need(req, 'year', 'make', 'model')))));
 app.get('/api/epa/:id', h(async (req, res) => res.json(await epa.details(req.params.id))));
 
@@ -78,7 +80,14 @@ app.post('/api/kb', h(async (req, res) => {
   out.errs ? res.status(400).json(out) : res.json(out);
 }));
 
-app.get('/api/dtc/:code', (req, res) => res.json(dtcLookup(req.params.code)));
+app.post('/api/media/:entryId', express.raw({ type: 'image/*', limit: '6mb' }), h(async (req, res) => {
+  const out = await kb.savePhoto(req.params.entryId, req.body);
+  out.error ? res.status(400).json(out) : res.json(out);
+}));
+app.use('/media', express.static(kb.MEDIA_DIR, { maxAge: '7d' }));
+
+app.get('/api/dtc',(req, res) => res.json(req.query.q ? dtc.search(req.query.q) : dtc.stats()));
+app.get('/api/dtc/:code', (req, res) => res.json(dtc.lookup(req.params.code)));
 app.get('/api/oem', (req, res) => {
   const make = String(req.query.make || '').toUpperCase();
   res.json({ ...oem, sites: make ? oem.sites.filter((s) => s.makes.includes(make)) : oem.sites });

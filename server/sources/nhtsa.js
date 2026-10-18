@@ -73,6 +73,51 @@ export async function complaints(year, make, model) {
   return { total: rows.length, byComponent };
 }
 
+// Manufacturer communications (TSBs, special service messages) and NHTSA defect
+// investigations. One model name can map to several NHTSA vehicle records
+// (trim/drive), so merge them and drop duplicates.
+export async function bulletins(year, make, model) {
+  const body = await cachedJson(
+    `${API}/vehicles/byYmmt?data=manufacturercommunications,investigations&modelYear=${q(year)}&make=${q(make)}&model=${q(model)}&productDetail=minimal&max=100`,
+    { ttlHours: 72 },
+  );
+  const tsbs = new Map();
+  const investigations = new Map();
+  for (const r of body.results || []) {
+    for (const m of r.safetyIssues?.manufacturerCommunications || []) {
+      tsbs.set(m.nhtsaIdNumber, {
+        id: m.nhtsaIdNumber,
+        number: m.manufacturerCommunicationNumber,
+        date: m.communicationDate?.slice(0, 10),
+        summary: m.summary,
+        components: (m.components || []).map((c) => c.name),
+        docs: m.associatedDocumentsCount || 0,
+      });
+    }
+    for (const i of r.safetyIssues?.investigations || []) {
+      investigations.set(i.nhtsaActionNumber, {
+        id: i.nhtsaActionNumber,
+        subject: i.subject,
+        summary: i.summary,
+        opened: i.dateOpened?.slice(0, 10),
+        closed: i.dateClosed?.slice(0, 10),
+        components: (i.components || []).map((c) => c.name),
+        recalls: (i.recalls || []).map((x) => x.nhtsaCampaignNumber),
+      });
+    }
+  }
+  const byDate = (a, b) => String(b.date || b.opened).localeCompare(String(a.date || a.opened));
+  return { tsbs: [...tsbs.values()].sort(byDate), investigations: [...investigations.values()].sort(byDate) };
+}
+
+// The bulletin PDFs themselves, hosted by NHTSA.
+export async function bulletinDocs(kind, id) {
+  const filter = kind === 'investigation' ? 'investigations' : 'manufacturerCommunications';
+  const body = await cachedJson(`${API}/safetyIssues/byNhtsaId?nhtsaId=${q(id)}&filter=issueType&filterValue=${filter}`, { ttlHours: 720 });
+  const item = body.results?.[0]?.[filter]?.[0];
+  return (item?.associatedDocuments || []).map((d) => ({ url: d.url, name: d.fileName, label: d.summary, date: d.loadDate?.slice(0, 10) }));
+}
+
 const VIN_FIELDS = {
   ModelYear: 'Year', Make: 'Make', Model: 'Model', Series: 'Series', Trim: 'Trim',
   BodyClass: 'Body', Doors: 'Doors', DriveType: 'Drive', EngineModel: 'Engine code',

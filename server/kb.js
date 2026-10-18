@@ -34,6 +34,12 @@ export function validateEntry(e) {
   for (const [i, s] of (e.specs || []).entries()) {
     if (!s.name || s.value === undefined || s.value === '') errs.push(`specs[${i}]: name and value required`);
   }
+  for (const [i, p] of (e.photos || []).entries()) {
+    if (!/^media\/[a-z0-9-]+\/[a-z0-9-]+\.(jpg|png|webp)$/.test(p.file || '')) errs.push(`photos[${i}].file: must be media/<entry-id>/<name>.jpg`);
+    if (!p.caption) errs.push(`photos[${i}].caption: required`);
+    if (!p.credit) errs.push(`photos[${i}].credit: who took it (only your own photos)`);
+    if (p.step !== undefined && !(Number.isInteger(p.step) && p.step >= 1 && p.step <= (e.steps || []).length)) errs.push(`photos[${i}].step: must be a step number`);
+  }
   if (!Array.isArray(e.sources)) errs.push('sources: list of citations');
   for (const [i, s] of (e.sources || []).entries()) {
     if (!s.title) errs.push(`sources[${i}].title: required`);
@@ -52,8 +58,9 @@ export function citationErrors(e) {
   for (const [i, s] of (e.specs || []).entries()) {
     if (badRef(s.src)) errs.push(`specs[${i}] "${s.name}": needs src footnote(s) pointing at sources 1-${n}`);
   }
+  // Every published step must be footnoted too; facts in a procedure live in its steps.
   for (const [i, s] of (e.steps || []).entries()) {
-    if (typeof s === 'object' && s.src !== undefined && badRef(s.src)) errs.push(`steps[${i}]: src points at a missing source`);
+    if (typeof s !== 'object' || badRef(s.src)) errs.push(`steps[${i}]: needs src footnote(s) pointing at sources 1-${n} (end the line with [1] in the form)`);
   }
   if (e.status === 'shop-verified' && !e.verifiedBy) errs.push('verifiedBy: name the shop that confirmed it');
   return errs;
@@ -77,7 +84,7 @@ async function readTree(dir) {
   const out = [];
   for (const d of await fs.readdir(dir, { withFileTypes: true })) {
     const p = path.join(dir, d.name);
-    if (d.isDirectory()) out.push(...(await readTree(p)));
+    if (d.isDirectory() && d.name !== 'media') out.push(...(await readTree(p)));
     else if (d.name.endsWith('.json')) out.push(p);
   }
   return out;
@@ -135,6 +142,26 @@ export async function search(text, { drafts = false } = {}) {
 export async function get(id) {
   const { entries } = await loadAll();
   return entries.find((e) => e.id === id) || null;
+}
+
+export const MEDIA_DIR = path.join(KB_DIR, 'media');
+
+const MAGIC = [
+  ['jpg', [0xff, 0xd8, 0xff]],
+  ['png', [0x89, 0x50, 0x4e, 0x47]],
+  ['webp', [0x52, 0x49, 0x46, 0x46]],
+];
+
+// Stores one photo for an entry; returns its path relative to data/kb.
+export async function savePhoto(entryId, buf) {
+  if (!/^[a-z0-9][a-z0-9-]{2,80}$/.test(entryId)) return { error: 'bad entry id' };
+  const ext = MAGIC.find(([, sig]) => sig.every((b, i) => buf[i] === b))?.[0];
+  if (!ext) return { error: 'only JPEG, PNG or WebP images' };
+  const name = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 6)}.${ext}`;
+  const dir = path.join(MEDIA_DIR, entryId);
+  await fs.mkdir(dir, { recursive: true });
+  await fs.writeFile(path.join(dir, name), buf);
+  return { file: `media/${entryId}/${name}` };
 }
 
 // New entries from the shop land in data/kb/shop/ for review before a pull request.

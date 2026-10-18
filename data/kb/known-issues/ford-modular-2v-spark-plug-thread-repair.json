@@ -1,0 +1,77 @@
+{
+  "id": "ford-modular-2v-spark-plug-thread-repair",
+  "type": "known-issue",
+  "status": "cited",
+  "title": "Ford 4.6 / 5.4 / 6.8 2-valve: spark plug thread repair procedure",
+  "summary": "Ford published a cylinder head spark plug thread repair procedure for 1997-2008 2-valve modular engines.",
+  "applies": [
+    {
+      "make": "FORD",
+      "years": [
+        1997,
+        2008
+      ],
+      "engine": "4.6L / 5.4L / 6.8L 2-valve"
+    },
+    {
+      "make": "LINCOLN",
+      "years": [
+        1997,
+        2008
+      ],
+      "engine": "4.6L / 5.4L / 6.8L 2-valve"
+    },
+    {
+      "make": "MERCURY",
+      "years": [
+        1997,
+        2008
+      ],
+      "engine": "4.6L / 5.4L / 6.8L 2-valve"
+    }
+  ],
+  "tags": [
+    "modular",
+    "4.6",
+    "5.4",
+    "6.8",
+    "spark plug",
+    "threads",
+    "thread repair",
+    "blown out plug"
+  ],
+  "specs": [
+    {
+      "name": "Factory bulletin",
+      "value": "Ford 07-21-2: Spark plug thread repair procedure",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Engines and years",
+      "value": "1997-2008 4.6L 2V, 5.4L 2V, 6.8L 2V, including F-53 motorhome chassis",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Warranty",
+      "value": "Not covered under the New Vehicle Limited Warranty",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "NHTSA holds the summary record (updated 2/23/10); the procedure itself is in Ford service information.",
+  "sources": [
+    {
+      "title": "07-21-2: Spark plug thread repair procedure, 4.6L/5.4L/6.8L 2V",
+      "publisher": "Ford Motor Company",
+      "citation": "NHTSA manufacturer communication 10023943, 2007-10-01 (summary record)",
+      "url": "https://api.nhtsa.gov/safetyIssues/byNhtsaId?nhtsaId=10023943&filter=issueType&filterValue=manufacturerCommunications"
+    }
+  ],
+  "author": "OpenBay",
+  "updated": "2026-10-18"
+}

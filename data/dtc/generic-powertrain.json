@@ -1,83 +1,744 @@
 {
-  "note": "Generic OBD-II powertrain codes (P0xxx), 1996+ US vehicles. Titles paraphrase the code definitions standardized in SAE J2012 / ISO 15031-6. The causes and checks lists are unsourced drafts and stay hidden until cited.",
-  "sources": [
-    { "title": "SAE J2012: Diagnostic Trouble Code Definitions", "publisher": "SAE International", "url": "https://www.sae.org/standards/content/j2012_201612/" },
-    { "title": "ISO 15031-6: Road vehicles, communication between vehicle and external equipment for emissions-related diagnostics, Part 6: Diagnostic trouble code definitions", "publisher": "ISO" }
-  ],
-  "causesStatus": "draft",
+  "note": "UNSOURCED DRAFTS: common causes and checks for generic powertrain codes, written from shop experience without citations. Hidden in the app unless Show unsourced drafts is on. Code definitions themselves live in codes.json.",
+  "status": "draft",
   "codes": {
-    "P0010": { "title": "Intake (\"A\") camshaft actuator circuit, bank 1", "causes": ["Open or shorted VVT/oil control solenoid", "Wiring or connector fault to solenoid", "PCM driver fault"], "checks": ["Measure solenoid resistance against spec", "Command solenoid with a scan tool and listen for a click"] },
-    "P0011": { "title": "Intake (\"A\") camshaft timing over-advanced or performance, bank 1", "causes": ["Low or dirty oil, wrong viscosity", "Sticking VVT/oil control solenoid or clogged screen", "Worn cam phaser", "Stretched timing chain"], "checks": ["Check oil level and condition first", "Compare desired vs actual cam angle on the scan tool"] },
-    "P0012": { "title": "Intake (\"A\") camshaft timing over-retarded, bank 1", "causes": ["Low or dirty oil", "Sticking oil control solenoid", "Worn or stuck cam phaser", "Timing chain stretch or jumped tooth"], "checks": ["Check oil", "Look for P0016/P0017 alongside, which points to chain stretch"] },
-    "P0016": { "title": "Crankshaft/camshaft position correlation, bank 1 sensor A", "causes": ["Timing chain stretched or jumped", "Cam phaser stuck", "Faulty cam or crank sensor", "Damaged reluctor/tone wheel"], "checks": ["Check cam/crank correlation values on the scan tool", "Scope cam and crank signals together"] },
-    "P0030": { "title": "O2 sensor heater control circuit, bank 1 sensor 1", "causes": ["Failed heater element in upstream O2 sensor", "Blown heater fuse", "Wiring chafed near exhaust"], "checks": ["Measure heater resistance at the sensor connector", "Check for 12 V feed with key on"] },
-    "P0100": { "title": "Mass air flow (MAF) circuit malfunction", "causes": ["Unplugged or corroded MAF connector", "Failed MAF sensor", "Wiring open/short"], "checks": ["Check power, ground and signal at the MAF"] },
-    "P0101": { "title": "MAF circuit range/performance", "causes": ["Dirty MAF element", "Vacuum leak after the MAF (unmetered air)", "Torn intake boot", "Restricted air filter"], "checks": ["Compare MAF g/s at idle to roughly engine liters x 1 to 1.5", "Smoke test the intake"] },
-    "P0102": { "title": "MAF circuit low input", "causes": ["Unplugged MAF", "Open signal wire", "Failed MAF"], "checks": ["Back-probe signal; check reference and ground"] },
-    "P0103": { "title": "MAF circuit high input", "causes": ["Signal shorted to voltage", "Failed MAF"], "checks": ["Check signal wire for short to power"] },
-    "P0106": { "title": "MAP/barometric pressure circuit range/performance", "causes": ["Cracked or disconnected MAP vacuum hose", "Failed MAP sensor", "Engine mechanical problem affecting vacuum"], "checks": ["Key on engine off, MAP should read close to baro", "Vacuum gauge test"] },
-    "P0107": { "title": "MAP circuit low input", "causes": ["Open 5 V reference or signal", "Failed MAP sensor"], "checks": ["Check 5 V reference at the connector"] },
-    "P0108": { "title": "MAP circuit high input", "causes": ["Signal shorted to voltage", "Open sensor ground", "Failed MAP sensor"], "checks": ["Check sensor ground"] },
-    "P0112": { "title": "Intake air temperature (IAT) circuit low", "causes": ["Shorted IAT sensor", "Signal wire shorted to ground"], "checks": ["Unplug sensor; reading should jump to very cold"] },
-    "P0113": { "title": "Intake air temperature (IAT) circuit high", "causes": ["Unplugged IAT or MAF connector", "Open wiring", "Failed sensor"], "checks": ["Jumper the connector; reading should jump to very hot"] },
-    "P0117": { "title": "Engine coolant temperature (ECT) circuit low", "causes": ["Shorted ECT sensor", "Signal wire shorted to ground"], "checks": ["Compare ECT to IAT on a cold engine"] },
-    "P0118": { "title": "Engine coolant temperature (ECT) circuit high", "causes": ["Unplugged or corroded ECT connector", "Open wiring", "Failed sensor"], "checks": ["Check connector first; these corrode"] },
-    "P0121": { "title": "Throttle position sensor A range/performance", "causes": ["Worn TPS track", "Carbon-fouled throttle body", "Wiring intermittent"], "checks": ["Sweep throttle slowly and graph TPS for dropouts"] },
-    "P0122": { "title": "Throttle position sensor A circuit low", "causes": ["Open 5 V reference", "Signal shorted to ground", "Failed TPS"], "checks": ["Check 5 V reference and ground"] },
-    "P0123": { "title": "Throttle position sensor A circuit high", "causes": ["Open sensor ground", "Signal shorted to voltage", "Failed TPS"], "checks": ["Check sensor ground"] },
-    "P0125": { "title": "Coolant temperature too low for closed-loop fuel control", "causes": ["Thermostat stuck open", "Failed ECT sensor", "Low coolant"], "checks": ["Watch ECT warm-up curve on the scan tool"] },
-    "P0128": { "title": "Coolant below thermostat regulating temperature", "causes": ["Thermostat stuck open or wrong rating", "ECT sensor reading low", "Cooling fan running constantly"], "checks": ["Engine should reach about 180-195 F in 10-15 min of driving on most cars"] },
-    "P0131": { "title": "O2 sensor circuit low voltage, bank 1 sensor 1", "causes": ["Exhaust leak ahead of sensor", "Lean condition", "Failed O2 sensor", "Signal shorted to ground"], "checks": ["Check for exhaust leaks", "Snap throttle; a good sensor swings high"] },
-    "P0132": { "title": "O2 sensor circuit high voltage, bank 1 sensor 1", "causes": ["Signal shorted to voltage", "Rich condition", "Contaminated sensor (coolant, silicone)"], "checks": ["Check for leaking injectors or high fuel pressure"] },
-    "P0133": { "title": "O2 sensor slow response, bank 1 sensor 1", "causes": ["Aged or contaminated O2 sensor", "Exhaust leak", "Oil or coolant contamination"], "checks": ["Graph sensor switching rate at 2500 rpm"] },
-    "P0134": { "title": "O2 sensor no activity, bank 1 sensor 1", "causes": ["Dead O2 sensor", "Heater failure", "Open signal wire"], "checks": ["Check heater circuit and signal wire"] },
-    "P0135": { "title": "O2 sensor heater circuit, bank 1 sensor 1", "causes": ["Failed heater element", "Blown fuse", "Wiring fault"], "checks": ["Measure heater resistance; check fuse"] },
-    "P0137": { "title": "O2 sensor circuit low voltage, bank 1 sensor 2", "causes": ["Exhaust leak near downstream sensor", "Failed sensor", "Wiring short to ground"], "checks": ["Check for exhaust leaks near the cat"] },
-    "P0138": { "title": "O2 sensor circuit high voltage, bank 1 sensor 2", "causes": ["Failed sensor", "Signal shorted to voltage"], "checks": ["Check wiring"] },
-    "P0141": { "title": "O2 sensor heater circuit, bank 1 sensor 2", "causes": ["Failed heater element", "Blown fuse", "Wiring fault"], "checks": ["Measure heater resistance"] },
-    "P0171": { "title": "System too lean, bank 1", "causes": ["Vacuum leak (intake gasket, PCV, brake booster hose)", "Dirty or failing MAF", "Weak fuel pump or clogged filter", "Restricted injectors", "Exhaust leak ahead of upstream O2"], "checks": ["Look at fuel trims: lean at idle but better at 2500 rpm points to a vacuum leak; lean everywhere points to fuel or MAF", "Smoke test", "Fuel pressure test"] },
-    "P0172": { "title": "System too rich, bank 1", "causes": ["Leaking injector", "High fuel pressure / failed regulator", "MAF reading high", "Oil-contaminated fuel (crankcase fuel dilution)", "Stuck purge valve"], "checks": ["Fuel pressure and leak-down test", "Check oil for fuel smell"] },
-    "P0174": { "title": "System too lean, bank 2", "causes": ["Same as P0171; both banks lean together points to MAF, fuel supply or a central vacuum leak"], "checks": ["Compare trims bank to bank"] },
-    "P0175": { "title": "System too rich, bank 2", "causes": ["Same as P0172"], "checks": ["Compare trims bank to bank"] },
-    "P0230": { "title": "Fuel pump primary circuit", "causes": ["Failed fuel pump relay", "Blown fuse", "Wiring/inertia switch", "PCM driver"], "checks": ["Check relay and fuse; listen for prime at key-on"] },
-    "P0300": { "title": "Random/multiple cylinder misfire detected", "causes": ["Vacuum leak or lean condition", "Low fuel pressure", "Worn plugs or plug wires", "Low compression on several cylinders", "Timing chain/belt off"], "checks": ["Check misfire counters by cylinder", "Fuel trims and fuel pressure", "Compression test if mechanical"] },
-    "P0325": { "title": "Knock sensor 1 circuit (bank 1 or single sensor)", "causes": ["Failed knock sensor", "Corroded connector (often under intake)", "Damaged wiring harness"], "checks": ["Check sensor resistance/output and harness continuity"] },
-    "P0335": { "title": "Crankshaft position sensor A circuit", "causes": ["Failed crank sensor", "Damaged wiring or connector", "Damaged reluctor ring"], "checks": ["Check for rpm signal while cranking", "Scope the sensor"] },
-    "P0340": { "title": "Camshaft position sensor A circuit (bank 1 or single sensor)", "causes": ["Failed cam sensor", "Wiring fault", "Timing chain/belt jumped"], "checks": ["Check sensor power, ground and signal", "Verify timing if sensor checks out"] },
-    "P0401": { "title": "EGR flow insufficient", "causes": ["Carbon-clogged EGR passages", "Stuck EGR valve", "Failed DPFE/EGR position sensor", "Cracked vacuum hose"], "checks": ["Command EGR open at idle; engine should stumble", "Clean passages"] },
-    "P0402": { "title": "EGR flow excessive", "causes": ["EGR valve stuck open", "Faulty EGR solenoid/vacuum control"], "checks": ["Check valve seats closed with engine off"] },
-    "P0411": { "title": "Secondary air injection incorrect flow", "causes": ["Failed air pump", "Stuck check/combination valve", "Blown fuse or relay"], "checks": ["Listen for pump at cold start", "Check valves for moisture/corrosion"] },
-    "P0420": { "title": "Catalyst efficiency below threshold, bank 1", "causes": ["Worn-out catalytic converter", "Exhaust leak near the downstream O2", "Lazy downstream O2 sensor", "Engine misfire or oil burning that damaged the cat"], "checks": ["Fix misfires and fuel-trim problems first", "Compare upstream and downstream O2: downstream should be steady, not mirroring upstream"] },
-    "P0430": { "title": "Catalyst efficiency below threshold, bank 2", "causes": ["Same as P0420"], "checks": ["Same as P0420"] },
-    "P0440": { "title": "Evaporative emission (EVAP) system malfunction", "causes": ["Loose or bad gas cap", "Leaking EVAP hose", "Failed purge or vent valve"], "checks": ["Check the gas cap seal", "Smoke test EVAP system"] },
-    "P0441": { "title": "EVAP incorrect purge flow", "causes": ["Stuck or failed purge valve", "Blocked purge line", "Faulty pressure sensor"], "checks": ["Command purge valve and check for vacuum"] },
-    "P0442": { "title": "EVAP small leak detected", "causes": ["Gas cap seal", "Cracked hose at the canister or filler neck", "Vent valve not sealing"], "checks": ["Smoke test with the system sealed"] },
-    "P0443": { "title": "EVAP purge control valve circuit", "causes": ["Open or shorted purge solenoid", "Wiring fault"], "checks": ["Measure solenoid resistance"] },
-    "P0446": { "title": "EVAP vent control circuit", "causes": ["Failed or debris-clogged vent valve", "Clogged canister (often from overfilling at the pump)", "Wiring"], "checks": ["Command vent closed and check it holds"] },
-    "P0449": { "title": "EVAP vent valve/solenoid circuit", "causes": ["Failed vent solenoid", "Wiring or connector corrosion near the tank"], "checks": ["Check power and ground at the vent solenoid"] },
-    "P0455": { "title": "EVAP large leak detected", "causes": ["Gas cap off or loose", "Disconnected or split hose", "Purge valve stuck open", "Cracked filler neck"], "checks": ["Smoke test; large leaks usually show quickly"] },
-    "P0456": { "title": "EVAP very small leak detected", "causes": ["Gas cap seal", "Pinhole in hose or canister", "Filler neck seal"], "checks": ["Smoke test, take your time"] },
-    "P0500": { "title": "Vehicle speed sensor A malfunction", "causes": ["Failed VSS", "Wiring fault", "Damaged tone ring", "ABS wheel speed input fault on vehicles that share it"], "checks": ["Compare scan-tool speed to actual while driving"] },
-    "P0505": { "title": "Idle air control system malfunction", "causes": ["Carbon-clogged IAC valve or throttle body", "Failed IAC motor", "Vacuum leak"], "checks": ["Clean throttle body and IAC passage"] },
-    "P0506": { "title": "Idle rpm lower than expected", "causes": ["Dirty throttle body", "Restricted IAC", "Engine load from accessory"], "checks": ["Clean throttle body; run idle relearn if required"] },
-    "P0507": { "title": "Idle rpm higher than expected", "causes": ["Vacuum leak", "Sticking IAC", "Throttle cable binding"], "checks": ["Smoke test; check throttle return"] },
-    "P0562": { "title": "System voltage low", "causes": ["Failing alternator", "Loose or corroded battery cables", "Weak battery", "Bad ground straps"], "checks": ["Charging-system test; voltage-drop test on cables"] },
-    "P0563": { "title": "System voltage high", "causes": ["Failed voltage regulator/alternator", "Bad PCM sense wire"], "checks": ["Measure charging voltage at the battery"] },
-    "P0601": { "title": "Control module internal memory checksum error", "causes": ["Corrupt PCM programming", "Failed PCM"], "checks": ["Check for PCM reflash updates before replacing"] },
-    "P0700": { "title": "Transmission control system (MIL request)", "causes": ["The TCM has stored its own code"], "checks": ["Read transmission codes with a scan tool that reaches the TCM"] },
-    "P0715": { "title": "Input/turbine speed sensor A circuit", "causes": ["Failed input speed sensor", "Wiring/connector fault", "Debris on sensor"], "checks": ["Check sensor signal; inspect for metal debris"] },
-    "P0720": { "title": "Output speed sensor circuit", "causes": ["Failed output speed sensor", "Wiring fault"], "checks": ["Check sensor signal while driving"] },
-    "P0740": { "title": "Torque converter clutch circuit", "causes": ["Failed TCC solenoid", "Wiring", "Internal harness"], "checks": ["Measure solenoid resistance through the case connector"] },
-    "P0750": { "title": "Shift solenoid A malfunction", "causes": ["Failed solenoid", "Internal harness fault", "Wiring"], "checks": ["Measure solenoid resistance; check fluid level and condition"] },
-    "P0755": { "title": "Shift solenoid B malfunction", "causes": ["Failed solenoid", "Internal harness fault", "Wiring"], "checks": ["Measure solenoid resistance; check fluid level and condition"] },
-    "U0100": { "title": "Lost communication with ECM/PCM A", "causes": ["CAN bus wiring open/short", "PCM not powered (fuse, relay, ground)", "Failed PCM"], "checks": ["Check PCM powers and grounds", "Measure CAN resistance at the DLC: about 60 ohms between pins 6 and 14 with the key off"] },
-    "U0101": { "title": "Lost communication with TCM", "causes": ["TCM power/ground", "CAN wiring", "Failed TCM"], "checks": ["Check TCM powers and grounds"] },
-    "U0121": { "title": "Lost communication with ABS module", "causes": ["ABS module power/ground", "CAN wiring", "Failed ABS module"], "checks": ["Check ABS fuses and grounds"] },
-    "U0140": { "title": "Lost communication with body control module", "causes": ["BCM power/ground", "CAN wiring", "Failed BCM"], "checks": ["Check BCM fuses and grounds"] }
+    "P0010": {
+      "causes": [
+        "Open or shorted VVT/oil control solenoid",
+        "Wiring or connector fault to solenoid",
+        "PCM driver fault"
+      ],
+      "checks": [
+        "Measure solenoid resistance against spec",
+        "Command solenoid with a scan tool and listen for a click"
+      ]
+    },
+    "P0011": {
+      "causes": [
+        "Low or dirty oil, wrong viscosity",
+        "Sticking VVT/oil control solenoid or clogged screen",
+        "Worn cam phaser",
+        "Stretched timing chain"
+      ],
+      "checks": [
+        "Check oil level and condition first",
+        "Compare desired vs actual cam angle on the scan tool"
+      ]
+    },
+    "P0012": {
+      "causes": [
+        "Low or dirty oil",
+        "Sticking oil control solenoid",
+        "Worn or stuck cam phaser",
+        "Timing chain stretch or jumped tooth"
+      ],
+      "checks": [
+        "Check oil",
+        "Look for P0016/P0017 alongside, which points to chain stretch"
+      ]
+    },
+    "P0016": {
+      "causes": [
+        "Timing chain stretched or jumped",
+        "Cam phaser stuck",
+        "Faulty cam or crank sensor",
+        "Damaged reluctor/tone wheel"
+      ],
+      "checks": [
+        "Check cam/crank correlation values on the scan tool",
+        "Scope cam and crank signals together"
+      ]
+    },
+    "P0030": {
+      "causes": [
+        "Failed heater element in upstream O2 sensor",
+        "Blown heater fuse",
+        "Wiring chafed near exhaust"
+      ],
+      "checks": [
+        "Measure heater resistance at the sensor connector",
+        "Check for 12 V feed with key on"
+      ]
+    },
+    "P0100": {
+      "causes": [
+        "Unplugged or corroded MAF connector",
+        "Failed MAF sensor",
+        "Wiring open/short"
+      ],
+      "checks": [
+        "Check power, ground and signal at the MAF"
+      ]
+    },
+    "P0101": {
+      "causes": [
+        "Dirty MAF element",
+        "Vacuum leak after the MAF (unmetered air)",
+        "Torn intake boot",
+        "Restricted air filter"
+      ],
+      "checks": [
+        "Compare MAF g/s at idle to roughly engine liters x 1 to 1.5",
+        "Smoke test the intake"
+      ]
+    },
+    "P0102": {
+      "causes": [
+        "Unplugged MAF",
+        "Open signal wire",
+        "Failed MAF"
+      ],
+      "checks": [
+        "Back-probe signal; check reference and ground"
+      ]
+    },
+    "P0103": {
+      "causes": [
+        "Signal shorted to voltage",
+        "Failed MAF"
+      ],
+      "checks": [
+        "Check signal wire for short to power"
+      ]
+    },
+    "P0106": {
+      "causes": [
+        "Cracked or disconnected MAP vacuum hose",
+        "Failed MAP sensor",
+        "Engine mechanical problem affecting vacuum"
+      ],
+      "checks": [
+        "Key on engine off, MAP should read close to baro",
+        "Vacuum gauge test"
+      ]
+    },
+    "P0107": {
+      "causes": [
+        "Open 5 V reference or signal",
+        "Failed MAP sensor"
+      ],
+      "checks": [
+        "Check 5 V reference at the connector"
+      ]
+    },
+    "P0108": {
+      "causes": [
+        "Signal shorted to voltage",
+        "Open sensor ground",
+        "Failed MAP sensor"
+      ],
+      "checks": [
+        "Check sensor ground"
+      ]
+    },
+    "P0112": {
+      "causes": [
+        "Shorted IAT sensor",
+        "Signal wire shorted to ground"
+      ],
+      "checks": [
+        "Unplug sensor; reading should jump to very cold"
+      ]
+    },
+    "P0113": {
+      "causes": [
+        "Unplugged IAT or MAF connector",
+        "Open wiring",
+        "Failed sensor"
+      ],
+      "checks": [
+        "Jumper the connector; reading should jump to very hot"
+      ]
+    },
+    "P0117": {
+      "causes": [
+        "Shorted ECT sensor",
+        "Signal wire shorted to ground"
+      ],
+      "checks": [
+        "Compare ECT to IAT on a cold engine"
+      ]
+    },
+    "P0118": {
+      "causes": [
+        "Unplugged or corroded ECT connector",
+        "Open wiring",
+        "Failed sensor"
+      ],
+      "checks": [
+        "Check connector first; these corrode"
+      ]
+    },
+    "P0121": {
+      "causes": [
+        "Worn TPS track",
+        "Carbon-fouled throttle body",
+        "Wiring intermittent"
+      ],
+      "checks": [
+        "Sweep throttle slowly and graph TPS for dropouts"
+      ]
+    },
+    "P0122": {
+      "causes": [
+        "Open 5 V reference",
+        "Signal shorted to ground",
+        "Failed TPS"
+      ],
+      "checks": [
+        "Check 5 V reference and ground"
+      ]
+    },
+    "P0123": {
+      "causes": [
+        "Open sensor ground",
+        "Signal shorted to voltage",
+        "Failed TPS"
+      ],
+      "checks": [
+        "Check sensor ground"
+      ]
+    },
+    "P0125": {
+      "causes": [
+        "Thermostat stuck open",
+        "Failed ECT sensor",
+        "Low coolant"
+      ],
+      "checks": [
+        "Watch ECT warm-up curve on the scan tool"
+      ]
+    },
+    "P0128": {
+      "causes": [
+        "Thermostat stuck open or wrong rating",
+        "ECT sensor reading low",
+        "Cooling fan running constantly"
+      ],
+      "checks": [
+        "Engine should reach about 180-195 F in 10-15 min of driving on most cars"
+      ]
+    },
+    "P0131": {
+      "causes": [
+        "Exhaust leak ahead of sensor",
+        "Lean condition",
+        "Failed O2 sensor",
+        "Signal shorted to ground"
+      ],
+      "checks": [
+        "Check for exhaust leaks",
+        "Snap throttle; a good sensor swings high"
+      ]
+    },
+    "P0132": {
+      "causes": [
+        "Signal shorted to voltage",
+        "Rich condition",
+        "Contaminated sensor (coolant, silicone)"
+      ],
+      "checks": [
+        "Check for leaking injectors or high fuel pressure"
+      ]
+    },
+    "P0133": {
+      "causes": [
+        "Aged or contaminated O2 sensor",
+        "Exhaust leak",
+        "Oil or coolant contamination"
+      ],
+      "checks": [
+        "Graph sensor switching rate at 2500 rpm"
+      ]
+    },
+    "P0134": {
+      "causes": [
+        "Dead O2 sensor",
+        "Heater failure",
+        "Open signal wire"
+      ],
+      "checks": [
+        "Check heater circuit and signal wire"
+      ]
+    },
+    "P0135": {
+      "causes": [
+        "Failed heater element",
+        "Blown fuse",
+        "Wiring fault"
+      ],
+      "checks": [
+        "Measure heater resistance; check fuse"
+      ]
+    },
+    "P0137": {
+      "causes": [
+        "Exhaust leak near downstream sensor",
+        "Failed sensor",
+        "Wiring short to ground"
+      ],
+      "checks": [
+        "Check for exhaust leaks near the cat"
+      ]
+    },
+    "P0138": {
+      "causes": [
+        "Failed sensor",
+        "Signal shorted to voltage"
+      ],
+      "checks": [
+        "Check wiring"
+      ]
+    },
+    "P0141": {
+      "causes": [
+        "Failed heater element",
+        "Blown fuse",
+        "Wiring fault"
+      ],
+      "checks": [
+        "Measure heater resistance"
+      ]
+    },
+    "P0171": {
+      "causes": [
+        "Vacuum leak (intake gasket, PCV, brake booster hose)",
+        "Dirty or failing MAF",
+        "Weak fuel pump or clogged filter",
+        "Restricted injectors",
+        "Exhaust leak ahead of upstream O2"
+      ],
+      "checks": [
+        "Look at fuel trims: lean at idle but better at 2500 rpm points to a vacuum leak; lean everywhere points to fuel or MAF",
+        "Smoke test",
+        "Fuel pressure test"
+      ]
+    },
+    "P0172": {
+      "causes": [
+        "Leaking injector",
+        "High fuel pressure / failed regulator",
+        "MAF reading high",
+        "Oil-contaminated fuel (crankcase fuel dilution)",
+        "Stuck purge valve"
+      ],
+      "checks": [
+        "Fuel pressure and leak-down test",
+        "Check oil for fuel smell"
+      ]
+    },
+    "P0174": {
+      "causes": [
+        "Same as P0171; both banks lean together points to MAF, fuel supply or a central vacuum leak"
+      ],
+      "checks": [
+        "Compare trims bank to bank"
+      ]
+    },
+    "P0175": {
+      "causes": [
+        "Same as P0172"
+      ],
+      "checks": [
+        "Compare trims bank to bank"
+      ]
+    },
+    "P0230": {
+      "causes": [
+        "Failed fuel pump relay",
+        "Blown fuse",
+        "Wiring/inertia switch",
+        "PCM driver"
+      ],
+      "checks": [
+        "Check relay and fuse; listen for prime at key-on"
+      ]
+    },
+    "P0300": {
+      "causes": [
+        "Vacuum leak or lean condition",
+        "Low fuel pressure",
+        "Worn plugs or plug wires",
+        "Low compression on several cylinders",
+        "Timing chain/belt off"
+      ],
+      "checks": [
+        "Check misfire counters by cylinder",
+        "Fuel trims and fuel pressure",
+        "Compression test if mechanical"
+      ]
+    },
+    "P0325": {
+      "causes": [
+        "Failed knock sensor",
+        "Corroded connector (often under intake)",
+        "Damaged wiring harness"
+      ],
+      "checks": [
+        "Check sensor resistance/output and harness continuity"
+      ]
+    },
+    "P0335": {
+      "causes": [
+        "Failed crank sensor",
+        "Damaged wiring or connector",
+        "Damaged reluctor ring"
+      ],
+      "checks": [
+        "Check for rpm signal while cranking",
+        "Scope the sensor"
+      ]
+    },
+    "P0340": {
+      "causes": [
+        "Failed cam sensor",
+        "Wiring fault",
+        "Timing chain/belt jumped"
+      ],
+      "checks": [
+        "Check sensor power, ground and signal",
+        "Verify timing if sensor checks out"
+      ]
+    },
+    "P0401": {
+      "causes": [
+        "Carbon-clogged EGR passages",
+        "Stuck EGR valve",
+        "Failed DPFE/EGR position sensor",
+        "Cracked vacuum hose"
+      ],
+      "checks": [
+        "Command EGR open at idle; engine should stumble",
+        "Clean passages"
+      ]
+    },
+    "P0402": {
+      "causes": [
+        "EGR valve stuck open",
+        "Faulty EGR solenoid/vacuum control"
+      ],
+      "checks": [
+        "Check valve seats closed with engine off"
+      ]
+    },
+    "P0411": {
+      "causes": [
+        "Failed air pump",
+        "Stuck check/combination valve",
+        "Blown fuse or relay"
+      ],
+      "checks": [
+        "Listen for pump at cold start",
+        "Check valves for moisture/corrosion"
+      ]
+    },
+    "P0420": {
+      "causes": [
+        "Worn-out catalytic converter",
+        "Exhaust leak near the downstream O2",
+        "Lazy downstream O2 sensor",
+        "Engine misfire or oil burning that damaged the cat"
+      ],
+      "checks": [
+        "Fix misfires and fuel-trim problems first",
+        "Compare upstream and downstream O2: downstream should be steady, not mirroring upstream"
+      ]
+    },
+    "P0430": {
+      "causes": [
+        "Same as P0420"
+      ],
+      "checks": [
+        "Same as P0420"
+      ]
+    },
+    "P0440": {
+      "causes": [
+        "Loose or bad gas cap",
+        "Leaking EVAP hose",
+        "Failed purge or vent valve"
+      ],
+      "checks": [
+        "Check the gas cap seal",
+        "Smoke test EVAP system"
+      ]
+    },
+    "P0441": {
+      "causes": [
+        "Stuck or failed purge valve",
+        "Blocked purge line",
+        "Faulty pressure sensor"
+      ],
+      "checks": [
+        "Command purge valve and check for vacuum"
+      ]
+    },
+    "P0442": {
+      "causes": [
+        "Gas cap seal",
+        "Cracked hose at the canister or filler neck",
+        "Vent valve not sealing"
+      ],
+      "checks": [
+        "Smoke test with the system sealed"
+      ]
+    },
+    "P0443": {
+      "causes": [
+        "Open or shorted purge solenoid",
+        "Wiring fault"
+      ],
+      "checks": [
+        "Measure solenoid resistance"
+      ]
+    },
+    "P0446": {
+      "causes": [
+        "Failed or debris-clogged vent valve",
+        "Clogged canister (often from overfilling at the pump)",
+        "Wiring"
+      ],
+      "checks": [
+        "Command vent closed and check it holds"
+      ]
+    },
+    "P0449": {
+      "causes": [
+        "Failed vent solenoid",
+        "Wiring or connector corrosion near the tank"
+      ],
+      "checks": [
+        "Check power and ground at the vent solenoid"
+      ]
+    },
+    "P0455": {
+      "causes": [
+        "Gas cap off or loose",
+        "Disconnected or split hose",
+        "Purge valve stuck open",
+        "Cracked filler neck"
+      ],
+      "checks": [
+        "Smoke test; large leaks usually show quickly"
+      ]
+    },
+    "P0456": {
+      "causes": [
+        "Gas cap seal",
+        "Pinhole in hose or canister",
+        "Filler neck seal"
+      ],
+      "checks": [
+        "Smoke test, take your time"
+      ]
+    },
+    "P0500": {
+      "causes": [
+        "Failed VSS",
+        "Wiring fault",
+        "Damaged tone ring",
+        "ABS wheel speed input fault on vehicles that share it"
+      ],
+      "checks": [
+        "Compare scan-tool speed to actual while driving"
+      ]
+    },
+    "P0505": {
+      "causes": [
+        "Carbon-clogged IAC valve or throttle body",
+        "Failed IAC motor",
+        "Vacuum leak"
+      ],
+      "checks": [
+        "Clean throttle body and IAC passage"
+      ]
+    },
+    "P0506": {
+      "causes": [
+        "Dirty throttle body",
+        "Restricted IAC",
+        "Engine load from accessory"
+      ],
+      "checks": [
+        "Clean throttle body; run idle relearn if required"
+      ]
+    },
+    "P0507": {
+      "causes": [
+        "Vacuum leak",
+        "Sticking IAC",
+        "Throttle cable binding"
+      ],
+      "checks": [
+        "Smoke test; check throttle return"
+      ]
+    },
+    "P0562": {
+      "causes": [
+        "Failing alternator",
+        "Loose or corroded battery cables",
+        "Weak battery",
+        "Bad ground straps"
+      ],
+      "checks": [
+        "Charging-system test; voltage-drop test on cables"
+      ]
+    },
+    "P0563": {
+      "causes": [
+        "Failed voltage regulator/alternator",
+        "Bad PCM sense wire"
+      ],
+      "checks": [
+        "Measure charging voltage at the battery"
+      ]
+    },
+    "P0601": {
+      "causes": [
+        "Corrupt PCM programming",
+        "Failed PCM"
+      ],
+      "checks": [
+        "Check for PCM reflash updates before replacing"
+      ]
+    },
+    "P0700": {
+      "causes": [
+        "The TCM has stored its own code"
+      ],
+      "checks": [
+        "Read transmission codes with a scan tool that reaches the TCM"
+      ]
+    },
+    "P0715": {
+      "causes": [
+        "Failed input speed sensor",
+        "Wiring/connector fault",
+        "Debris on sensor"
+      ],
+      "checks": [
+        "Check sensor signal; inspect for metal debris"
+      ]
+    },
+    "P0720": {
+      "causes": [
+        "Failed output speed sensor",
+        "Wiring fault"
+      ],
+      "checks": [
+        "Check sensor signal while driving"
+      ]
+    },
+    "P0740": {
+      "causes": [
+        "Failed TCC solenoid",
+        "Wiring",
+        "Internal harness"
+      ],
+      "checks": [
+        "Measure solenoid resistance through the case connector"
+      ]
+    },
+    "P0750": {
+      "causes": [
+        "Failed solenoid",
+        "Internal harness fault",
+        "Wiring"
+      ],
+      "checks": [
+        "Measure solenoid resistance; check fluid level and condition"
+      ]
+    },
+    "P0755": {
+      "causes": [
+        "Failed solenoid",
+        "Internal harness fault",
+        "Wiring"
+      ],
+      "checks": [
+        "Measure solenoid resistance; check fluid level and condition"
+      ]
+    },
+    "U0100": {
+      "causes": [
+        "CAN bus wiring open/short",
+        "PCM not powered (fuse, relay, ground)",
+        "Failed PCM"
+      ],
+      "checks": [
+        "Check PCM powers and grounds",
+        "Measure CAN resistance at the DLC: about 60 ohms between pins 6 and 14 with the key off"
+      ]
+    },
+    "U0101": {
+      "causes": [
+        "TCM power/ground",
+        "CAN wiring",
+        "Failed TCM"
+      ],
+      "checks": [
+        "Check TCM powers and grounds"
+      ]
+    },
+    "U0121": {
+      "causes": [
+        "ABS module power/ground",
+        "CAN wiring",
+        "Failed ABS module"
+      ],
+      "checks": [
+        "Check ABS fuses and grounds"
+      ]
+    },
+    "U0140": {
+      "causes": [
+        "BCM power/ground",
+        "CAN wiring",
+        "Failed BCM"
+      ],
+      "checks": [
+        "Check BCM fuses and grounds"
+      ]
+    }
   },
   "families": [
-    { "from": 201, "to": 212, "prefix": "P0", "title": "Injector circuit open, cylinder {n}", "causes": ["Open injector coil", "Wiring or connector fault", "PCM driver"], "checks": ["Measure injector resistance; noid light test"] },
-    { "from": 301, "to": 312, "prefix": "P0", "title": "Cylinder {n} misfire detected", "causes": ["Spark plug or coil/plug wire on that cylinder", "Injector on that cylinder", "Low compression (valve, ring, head gasket)", "Vacuum leak near that runner"], "checks": ["Swap the coil to another cylinder and see if the misfire follows", "Compression or leak-down test"] },
-    { "from": 351, "to": 362, "prefix": "P0", "title": "Ignition coil {L} primary/secondary circuit (cylinder {n} on most engines)", "causes": ["Failed coil", "Wiring or connector fault", "PCM driver"], "checks": ["Check coil power and driver signal"] }
+    {
+      "from": 201,
+      "to": 212,
+      "causes": [
+        "Open injector coil",
+        "Wiring or connector fault",
+        "PCM driver"
+      ],
+      "checks": [
+        "Measure injector resistance; noid light test"
+      ]
+    },
+    {
+      "from": 301,
+      "to": 312,
+      "causes": [
+        "Spark plug or coil/plug wire on that cylinder",
+        "Injector on that cylinder",
+        "Low compression (valve, ring, head gasket)",
+        "Vacuum leak near that runner"
+      ],
+      "checks": [
+        "Swap the coil to another cylinder and see if the misfire follows",
+        "Compression or leak-down test"
+      ]
+    },
+    {
+      "from": 351,
+      "to": 362,
+      "causes": [
+        "Failed coil",
+        "Wiring or connector fault",
+        "PCM driver"
+      ],
+      "checks": [
+        "Check coil power and driver signal"
+      ]
+    }
   ]
 }

@@ -1,0 +1,174 @@
+{
+  "id": "gm-pushrod-v8-cam-lifter-afm-misfire",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "GM pushrod V6/V8: misfire or tick from worn cam lobe/lifter roller or collapsed AFM lifter",
+  "summary": "GM diagnostic tip 19-NA-219 for P0300-P0308 misfires and tick/chirp noises on 2002-2023 GM pushrod V6/V8 engines, including Active Fuel Management lifters.",
+  "applies": [
+    {
+      "make": "BUICK",
+      "years": [
+        2002,
+        2023
+      ],
+      "engine": "GM pushrod V6/V8 (AFM steps: AFM engines only)"
+    },
+    {
+      "make": "CADILLAC",
+      "years": [
+        2002,
+        2023
+      ],
+      "engine": "GM pushrod V6/V8 (AFM steps: AFM engines only)"
+    },
+    {
+      "make": "CHEVROLET",
+      "years": [
+        2002,
+        2023
+      ],
+      "engine": "GM pushrod V6/V8 (AFM steps: AFM engines only)"
+    },
+    {
+      "make": "GMC",
+      "years": [
+        2002,
+        2023
+      ],
+      "engine": "GM pushrod V6/V8 (AFM steps: AFM engines only)"
+    },
+    {
+      "make": "HUMMER",
+      "years": [
+        2002,
+        2023
+      ],
+      "engine": "GM pushrod V6/V8 (AFM steps: AFM engines only)"
+    },
+    {
+      "make": "PONTIAC",
+      "years": [
+        2002,
+        2023
+      ],
+      "engine": "GM pushrod V6/V8 (AFM steps: AFM engines only)"
+    },
+    {
+      "make": "SAAB",
+      "years": [
+        2002,
+        2023
+      ],
+      "engine": "GM pushrod V6/V8 (AFM steps: AFM engines only)"
+    }
+  ],
+  "tags": [
+    "afm",
+    "active fuel management",
+    "lifter",
+    "camshaft",
+    "cam lobe",
+    "tick",
+    "misfire",
+    "P0300",
+    "5.3",
+    "6.2",
+    "vlom"
+  ],
+  "specs": [
+    {
+      "name": "AFM cylinders (V8)",
+      "value": "1, 4, 6 and 7",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "AFM cylinders (V6)",
+      "value": "3 and 6",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Possible causes listed",
+      "value": "Worn cam lobe and/or lifter roller, sticking valve, valve leakage, broken valve spring, collapsed AFM lifter",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Start with the GM service information diagnosis. If that does not isolate the cause, work through the checks below, easiest first.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Find a noisy rocker: during the noise, press with a wooden hammer handle on the valve side, pushrod side and side of each rocker. A change when pressing the valve side points to that cylinder's lifter or cam lobe.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Disconnect the coils and injectors on one bank, run the engine with that valve cover off, back off one rocker a couple of turns and listen. If the noise stops and spring, pushrod and rocker are fine, suspect a worn lifter roller or cam lobe.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Measure lift at the pushrod side of each rocker and compare with others on the same bank. Low or no lift on an AFM cylinder (V8: 1, 4, 6, 7; V6: 3, 6) can also mean a collapsed AFM lifter.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "On AFM engines (not 2017-2018 models), command AFM on with the scan tool to unlatch those lifters. If the noise stops, it is in the valvetrain of the AFM cylinders.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Inspect lifter rollers and cam lobes through the lifter bores (a bore scope helps) for flat spots, pits, grooves, scoring, gouging, flaking or rust. A good roller does not prove a good lobe.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "An AFM lifter that unlocks at start-up gives P0300 and misfires on the AFM cylinders, usually with no noise. One that is mechanically collapsed or stuck adds a steady valvetrain tick.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "If a lobe or roller is worn: replace the camshaft and all lifters per service information, plus the plastic lifter guide for the damaged lifter (2010 model year: all guides). On AFM engines also replace the VLOM filter screen under the oil pressure sensor.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "L83, L86, LT1 and LT4 engines with an AFM lifter concern follow GM bulletin 15-06-01-002 instead.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "Oil consumption on GM engines is covered by GM's general oil consumption bulletin series 01-06-01-011, which gives the measurement procedure. The earlier draft of this entry also blamed AFM for oil consumption; that claim was removed because the cited bulletins do not state it.",
+  "sources": [
+    {
+      "title": "19-NA-219: Diagnostic tip for misfire, chirp, squeak, squeal or tick noise, MIL illuminated, DTC P0300-P0308",
+      "publisher": "General Motors, April 2023",
+      "citation": "NHTSA ID 10235802, 2023-04-24",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10235802-0001.pdf"
+    },
+    {
+      "title": "01-06-01-011Q: Engine oil consumption guidelines and diagnostic/repair information",
+      "publisher": "General Motors",
+      "citation": "NHTSA manufacturer communication 11010490, 2024-10-04 (summary record)",
+      "url": "https://api.nhtsa.gov/safetyIssues/byNhtsaId?nhtsaId=11010490&filter=issueType&filterValue=manufacturerCommunications"
+    }
+  ],
+  "author": "OpenBay",
+  "updated": "2026-10-18"
+}

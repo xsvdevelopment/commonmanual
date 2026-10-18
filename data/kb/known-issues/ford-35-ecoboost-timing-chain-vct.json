@@ -1,0 +1,159 @@
+{
+  "id": "ford-35-ecoboost-timing-chain-vct",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "Ford 3.5 EcoBoost F-150: cold-start rattle, P0016 timing chain wear, humid-weather stumble",
+  "summary": "Three Ford bulletins for the 2011-2015 F-150 3.5L EcoBoost: VCT units and primary chain for a 2-5 second cold-start rattle, primary chain for P0016, and a stumble/misfire on hard acceleration in humid weather.",
+  "applies": [
+    {
+      "make": "FORD",
+      "models": [
+        "F-150",
+        "F150"
+      ],
+      "years": [
+        2011,
+        2015
+      ],
+      "engine": "3.5L EcoBoost (GTDI) V6"
+    }
+  ],
+  "tags": [
+    "ecoboost",
+    "3.5",
+    "cam phaser",
+    "vct",
+    "timing chain",
+    "rattle",
+    "P0016",
+    "stumble",
+    "misfire",
+    "intercooler"
+  ],
+  "specs": [
+    {
+      "name": "Rattle bulletin applies to",
+      "value": "Built on or before 29-May-2015",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Rattle symptom",
+      "value": "Tick/tap/rattle from top front cover area for 2-5 seconds at start-up after a cold soak of 6+ hours",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Rattle repair",
+      "value": "Replace all four VCT units and the primary timing chain (WSM section 303-01)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Rattle labor time",
+      "value": "9.2 hr (2011-2014), 9.0 hr (2015)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "P0016 bulletin applies to",
+      "value": "2011-2014, built on or before 10-Oct-2014",
+      "src": [
+        2
+      ]
+    },
+    {
+      "name": "P0016 test",
+      "value": "VCT_INT_ACT1 PID at +6 degrees or more (KOER) points to a worn primary chain",
+      "src": [
+        2
+      ]
+    },
+    {
+      "name": "P0016 labor time",
+      "value": "8.9 hr",
+      "src": [
+        2
+      ]
+    },
+    {
+      "name": "Timing chain tensioner kit",
+      "value": "BL3Z-6D256-C (rattle bulletin) / BL3Z-6D256-B (P0016 bulletin)",
+      "src": [
+        1,
+        2
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Cold-start rattle: confirm the truck was built on or before 29-May-2015. Later builds: use normal diagnostics (WSM 303-00).",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Confirm the noise matches: a tick, tap or rattle from the top front cover area lasting 2-5 seconds on start-up after sitting 6 hours or more.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "If both match, replace all four VCT units and the primary timing chain per WSM 303-01.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "P0016 with the MIL on: confirm P0016 is stored in the PCM and the truck was built on or before 10-Oct-2014.",
+      "src": [
+        2
+      ]
+    },
+    {
+      "text": "With the engine running, watch the VCT_INT_ACT1 PID. At +6 degrees or more, replace the primary timing chain (WSM 303-01). Below +6 degrees, the bulletin does not apply.",
+      "src": [
+        2
+      ]
+    },
+    {
+      "text": "Intermittent stumble or misfire on hard acceleration after extended highway driving in humid or damp weather is a separate condition with its own Ford bulletins.",
+      "src": [
+        3,
+        4
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "TSB 18-2305: 3.5L EcoBoost - Cold Start - Ticking/Tapping or Rattle Type Noise",
+      "publisher": "Ford Motor Company, October 2018",
+      "citation": "NHTSA ID 10148706, 2018-10-25",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2018/MC-10148706-9999.pdf"
+    },
+    {
+      "title": "TSB 17-0026: 3.5L GTDI - DTC P0016 - Primary Timing Chain Wear",
+      "publisher": "Ford Motor Company, March 2017",
+      "citation": "NHTSA ID 10099001, 2017-03-08",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2017/SB-10099001-2532.pdf"
+    },
+    {
+      "title": "TSB-14-0017: Intermittent stumble/misfire on hard acceleration in high humidity, 2013-2014 F-150",
+      "publisher": "Ford Motor Company, January 2014",
+      "citation": "NHTSA ID 10054927, 2014-01-27",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2014/SB-10054927-1257.pdf"
+    },
+    {
+      "title": "ASI-32227: Intermittent stumble/misfire on hard acceleration in extreme humid or damp conditions, 2011-2013 F-150",
+      "publisher": "Ford Motor Company",
+      "citation": "NHTSA manufacturer communication 10053407, 2013-05-01 (summary record)",
+      "url": "https://api.nhtsa.gov/safetyIssues/byNhtsaId?nhtsaId=10053407&filter=issueType&filterValue=manufacturerCommunications"
+    }
+  ],
+  "author": "OpenBay",
+  "updated": "2026-10-18"
+}

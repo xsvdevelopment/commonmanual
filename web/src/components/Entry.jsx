@@ -38,11 +38,19 @@ export function SourceNote({ sources, note }) {
   );
 }
 
+const Photo = ({ p }) => (
+  <figure className="photo">
+    <a href={'/' + p.file} target="_blank" rel="noreferrer"><img src={'/' + p.file} alt={p.caption} loading="lazy" /></a>
+    <figcaption>{p.caption} <span className="muted">· Photo: {p.credit}</span></figcaption>
+  </figure>
+);
+
 export default function Entry({ id }) {
   const { data: e, error, loading } = useApi(`/kb/${encodeURIComponent(id)}`);
   if (loading) return <p className="muted">Loading…</p>;
   if (error) return <p className="warn">{error.message}</p>;
   const step = (s) => (typeof s === 'string' ? { text: s } : s);
+  const photos = e.photos || [];
 
   return (
     <article className="entry">
@@ -74,8 +82,15 @@ export default function Entry({ id }) {
       )}
 
       {e.steps?.length > 0 && (
-        <><h3>Steps</h3><ol className="steps">{e.steps.map(step).map((s, i) => <li key={i}>{s.text}<Refs src={s.src} />{s.warning && <p className="step-warn">⚠ {s.warning}</p>}</li>)}</ol></>
+        <><h3>Steps</h3><ol className="steps">{e.steps.map(step).map((s, i) => (
+          <li key={i}>
+            {s.text}<Refs src={s.src} />{s.warning && <p className="step-warn">⚠ {s.warning}</p>}
+            {photos.filter((p) => p.step === i + 1).map((p) => <Photo key={p.file} p={p} />)}
+          </li>
+        ))}</ol></>
       )}
+
+      {photos.some((p) => !p.step) && <><h3>Photos</h3><div className="photo-grid">{photos.filter((p) => !p.step).map((p) => <Photo key={p.file} p={p} />)}</div></>}
 
       {e.body && <div className="body">{e.body.split(/\n\n+/).map((p, i) => <p key={i}>{p}</p>)}</div>}
 

@@ -1,0 +1,126 @@
+{
+  "id": "dodge-318-cylinder-head-install",
+  "type": "procedure",
+  "title": "Cylinder head installation: Dodge 318 (1976-77 truck)",
+  "summary": "Head, pushrod, rocker shaft and intake manifold reassembly with torque values, following the Army depot manual for the M880.",
+  "applies": [
+    {
+      "make": "DODGE",
+      "models": [
+        "W100",
+        "W200",
+        "W300",
+        "D100",
+        "D200",
+        "D300",
+        "PICKUP",
+        "RAM",
+        "POWER WAGON",
+        "DODGE TRUCK"
+      ],
+      "years": [
+        1976,
+        1977
+      ],
+      "engine": "318 cu in (5.2L) V8"
+    }
+  ],
+  "tags": [
+    "318",
+    "cylinder head",
+    "head gasket",
+    "rocker shaft",
+    "intake manifold",
+    "mopar"
+  ],
+  "tools": [
+    "Straightedge and feeler gauge",
+    "Torque wrench"
+  ],
+  "parts": [
+    "Head gaskets",
+    "Intake manifold gaskets and end seals",
+    "Sealer strip for gasket lock tabs"
+  ],
+  "steps": [
+    {
+      "text": "Clean every head gasket surface and remove burrs.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Check each head for flatness with a straightedge. The limit is 0.009 in of warpage per foot.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Set the heads on the block and install the head bolts. Torque them to 50 ft-lb in the tightening sequence (manual fig. 3-5), then go around the same sequence again to 95 ft-lb.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Inspect the pushrods and replace any that are worn or bent. Put them back in their original locations.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Install the rocker arm and shaft assemblies with the notch toward the engine centerline: facing forward on the left bank and rearward on the right bank.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "The long stamped-steel retainers go in the number two and four positions. Torque the rocker shaft bolts to 18 ft-lb.",
+      "src": [
+        1,
+        2
+      ]
+    },
+    {
+      "text": "Cut a 3-inch strip of sealer into four equal pieces and place them under the head gasket lock tabs. Fit the rubber end seals over the block rails so they engage the dowel pins and lock into the gasket tangs.",
+      "src": [
+        1,
+        3
+      ]
+    },
+    {
+      "text": "Lay the intake gaskets bead-down, set the manifold in place, and confirm the gaskets haven't moved.",
+      "src": [
+        3
+      ]
+    },
+    {
+      "text": "Start all 12 intake screws by hand. Torque them to 25 ft-lb in the tightening sequence (manual fig. 3-3), then to 35 ft-lb in the same sequence.",
+      "src": [
+        3
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "TM 9-2320-266-34: Direct and General Support Maintenance Manual, Truck, Cargo, 1-1/4 Ton, 4x4 (M880 series)",
+      "publisher": "Headquarters, Department of the Army, January 1976 (reprint with Changes 1-7)",
+      "citation": "Paragraph 3-6b, Cylinder Heads: Installation; figure 3-5",
+      "url": "https://archive.org/details/micro_IA41152635_0460"
+    },
+    {
+      "title": "TM 9-2320-266-34: Direct and General Support Maintenance Manual, Truck, Cargo, 1-1/4 Ton, 4x4 (M880 series)",
+      "publisher": "Headquarters, Department of the Army, January 1976 (reprint with Changes 1-7)",
+      "citation": "Paragraph 3-3, Rocker Arms and Shaft Assemblies",
+      "url": "https://archive.org/details/micro_IA41152635_0460"
+    },
+    {
+      "title": "TM 9-2320-266-34: Direct and General Support Maintenance Manual, Truck, Cargo, 1-1/4 Ton, 4x4 (M880 series)",
+      "publisher": "Headquarters, Department of the Army, January 1976 (reprint with Changes 1-7)",
+      "citation": "Paragraph 3-4, Intake Manifold: Installation; figure 3-3",
+      "url": "https://archive.org/details/micro_IA41152635_0460"
+    }
+  ],
+  "status": "cited",
+  "author": "OpenBay",
+  "updated": "2026-10-18"
+}

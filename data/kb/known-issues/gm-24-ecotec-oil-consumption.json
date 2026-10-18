@@ -1,7 +1,9 @@
 {
   "id": "gm-24-ecotec-oil-consumption",
   "type": "known-issue",
-  "title": "GM 2.4 Ecotec (LEA): excessive oil consumption",
+  "status": "factory-sourced",
+  "title": "GM 2.4L (LAF/LEA): excessive oil consumption, pistons and rings",
+  "summary": "GM bulletin 13-06-01-003J: test oil consumption, and if it exceeds 1 quart per 2,000 miles, replace the pistons and rings. 2010 Equinox and Terrain also got a 10-year/120,000-mile special coverage.",
   "applies": [
     {
       "make": "CHEVROLET",
@@ -10,9 +12,9 @@
       ],
       "years": [
         2010,
-        2017
+        2013
       ],
-      "engine": "2.4L I4"
+      "engine": "2.4L I4 (RPO LAF, LEA)"
     },
     {
       "make": "GMC",
@@ -21,21 +23,151 @@
       ],
       "years": [
         2010,
-        2017
+        2013
       ],
-      "engine": "2.4L I4"
+      "engine": "2.4L I4 (RPO LAF, LEA)"
+    },
+    {
+      "make": "BUICK",
+      "models": [
+        "LACROSSE"
+      ],
+      "years": [
+        2010,
+        2013
+      ],
+      "engine": "2.4L I4 (RPO LAF, LEA)"
+    },
+    {
+      "make": "BUICK",
+      "models": [
+        "REGAL"
+      ],
+      "years": [
+        2011,
+        2013
+      ],
+      "engine": "2.4L I4 (RPO LAF, LEA)"
+    },
+    {
+      "make": "BUICK",
+      "models": [
+        "VERANO"
+      ],
+      "years": [
+        2012,
+        2013
+      ],
+      "engine": "2.4L I4 (RPO LAF, LEA)"
     }
   ],
   "tags": [
     "ecotec",
     "2.4",
+    "laf",
+    "lea",
     "oil consumption",
     "piston rings",
-    "timing chain"
+    "special coverage",
+    "equinox",
+    "terrain"
   ],
-  "body": "Rings stick from coking and the engine burns oil, sometimes a quart per 1000 miles or worse. Running low on oil then wears the timing chain (rattle, P0008/P0016). 2010-2013 are the worst. GM had a special coverage program with updated pistons/rings and a PCV update; check the VIN. Do an oil consumption test before quoting rings.",
-  "sources": [],
-  "status": "draft",
-  "author": "OpenBay seed (unsourced, needs citations)",
+  "specs": [
+    {
+      "name": "Repair threshold",
+      "value": "More than 1 quart per 2,000 miles (0.946 L per 3,200 km)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Repair",
+      "value": "Replace pistons and rings; no machining or honing of the bores",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Dipstick upper notches",
+      "value": "0.24 qt (0.227 L) each",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Dipstick lower notches",
+      "value": "0.14 qt (0.132 L) each",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Reads empty when",
+      "value": "About 1.25 qt (1.18 L) or more low: no oil shows on the stick",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Special coverage 14159D (2010 Equinox / Terrain, LAF)",
+      "value": "10 years or 120,000 miles from in-service date; dealer replaces the 4 piston assemblies",
+      "src": [
+        2
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Verify the ECM has the latest calibration, which limits the oil life monitor to a maximum of 7,500 miles (GM Customer Satisfaction Bulletin 12312).",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Inspect for oil leaks that would explain the loss and repair them first.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Run an oil consumption test per the latest version of GM bulletin 01-06-01-011. Do not overfill: let the level drop below the cross-hatched area before adding.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "When measuring, the amount of oil needed to return to the starting mark is the amount consumed. Remember the notches are not equal (0.24 qt upper, 0.14 qt lower).",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "If consumption is over 1 quart per 2,000 miles, record the rate and replace the pistons and rings.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Uneven \"zebra stripe\" bore finish is acceptable with new pistons and rings. Engine replacement and bore machining are not needed. Do not modify the PCV system.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "130601003J: Excessive oil consumption - perform oil consumption test and/or install piston and piston ring kit",
+      "publisher": "General Motors, January 2020",
+      "citation": "NHTSA ID 10172295, 2020-01-23",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2020/MC-10172295-9999.pdf"
+    },
+    {
+      "title": "GCUS-9-4003: Special Coverage Adjustment - excessive engine oil consumption, 2010 Equinox/Terrain 2.4L (LAF)",
+      "publisher": "General Motors, April 2017",
+      "citation": "NHTSA ID 10118904, 2017-04-28",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10118904-9999.pdf"
+    }
+  ],
+  "author": "OpenBay",
   "updated": "2026-10-18"
 }

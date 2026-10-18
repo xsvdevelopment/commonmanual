@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useState } from 'react';
-import { useApi, qs, vehicleHref } from '../api.js';
+import { api, useApi, qs, vehicleHref } from '../api.js';
 import { EntryCard, SourceNote } from './Entry.jsx';
 
 const TABS = [
-  ['knowledge', 'Shop knowledge'], ['problems', 'Known problems'], ['recalls', 'Recalls'],
+  ['knowledge', 'Shop knowledge'], ['bulletins', 'TSBs'], ['problems', 'Known problems'], ['recalls', 'Recalls'],
   ['specs', 'Vehicle specs'], ['factory', 'Factory info'], ['jobs', 'Job lookup'],
 ];
 const norm = (s) => String(s || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
@@ -52,6 +52,7 @@ export default function Vehicle({ year, make, model, vin, drafts }) {
       </div>
 
       {tab === 'knowledge' && <Knowledge year={year} make={make} model={model} drafts={drafts} />}
+      {tab === 'bulletins' && (model ? <Bulletins year={year} make={make} model={model} /> : <NeedModel />)}
       {tab === 'problems' && (model ? <Problems year={year} make={make} model={model} /> : <NeedModel />)}
       {tab === 'recalls' && (model ? <Recalls year={year} make={make} model={model} /> : <NeedModel />)}
       {tab === 'specs' && <Specs year={year} make={make} model={model} decoded={decoded.data} />}
@@ -119,6 +120,64 @@ function Problems({ year, make, model }) {
         })}
       </div>
       <SourceNote sources={[{ title: 'NHTSA Office of Defects Investigation, consumer complaints database', url: 'https://www.nhtsa.gov/recalls' }]} note="Owner reports, not verified diagnoses. Repeat reports show patterns." />
+    </div>
+  );
+}
+
+// Fetches a bulletin's PDF links on demand; most bulletins have one document.
+function DocLinks({ kind, id }) {
+  const [state, setState] = useState(null);
+  if (!state) return <button className="btn small" onClick={() => { setState('loading'); api(`/bulletin-docs/${kind}/${encodeURIComponent(id)}`).then(setState).catch(() => setState([])); }}>Show documents</button>;
+  if (state === 'loading') return <span className="muted">Loading…</span>;
+  if (!state.length) return <span className="muted">No documents on file.</span>;
+  return <span className="doclinks">{state.map((d) => <a key={d.url} className="btn small primary" href={d.url} target="_blank" rel="noreferrer">{d.label || 'Document'} (PDF)</a>)}</span>;
+}
+
+function Bulletins({ year, make, model }) {
+  const { data, error, loading } = useApi(`/vehicle/bulletins?${qs({ year, make, model })}`);
+  const [filter, setFilter] = useState('');
+  const [comp, setComp] = useState('');
+  const [limit, setLimit] = useState(60);
+  if (loading) return <Loading what="service bulletins" />;
+  if (error) return <Err e={error} />;
+  const f = filter.toLowerCase();
+  const comps = [...new Set(data.tsbs.flatMap((t) => t.components))].sort();
+  const shown = data.tsbs.filter((t) => (!comp || t.components.includes(comp)) && (!f || `${t.number} ${t.summary}`.toLowerCase().includes(f)));
+  return (
+    <div>
+      <p className="lede-sm"><strong>{data.tsbs.length}</strong> manufacturer bulletins (TSBs, special service messages, dealer communications) filed with NHTSA for this vehicle. Most link to the full factory document.</p>
+      <div className="row filters">
+        <input className="filter" value={filter} onChange={(e) => setFilter(e.target.value)} placeholder="Search bulletins (phaser, P0016, shudder, leak…)" />
+        <select value={comp} onChange={(e) => setComp(e.target.value)}><option value="">All components</option>{comps.map((c) => <option key={c}>{c}</option>)}</select>
+      </div>
+      <div className="recalls">
+        {shown.length > 0 && (f || comp) && <p className="muted">{shown.length} match{shown.length === 1 ? '' : 'es'}</p>}
+        {shown.slice(0, limit).map((t) => (
+          <article key={t.id} className="recall tsb">
+            <header><code>{t.number || 'Bulletin'}</code><span className="muted">{t.date}</span>{t.components.map((c) => <span key={c} className="badge">{c}</span>)}</header>
+            <p>{t.summary}</p>
+            {t.docs > 0 && <DocLinks kind="tsb" id={t.id} />}
+          </article>
+        ))}
+        {!shown.length && <p className="muted">No bulletins match.</p>}
+        {shown.length > limit && <button className="btn" onClick={() => setLimit(limit + 60)}>Show more ({shown.length - limit} left)</button>}
+      </div>
+      {data.investigations.length > 0 && (
+        <>
+          <h3 className="sect">NHTSA defect investigations</h3>
+          <div className="recalls">
+            {data.investigations.map((i) => (
+              <article key={i.id} className="recall">
+                <header><code>{i.id}</code><span className="muted">opened {i.opened}{i.closed ? ` · closed ${i.closed}` : ' · open'}</span>{i.recalls.map((r) => <span key={r} className="badge amber">Recall {r}</span>)}</header>
+                <h4>{i.subject}</h4>
+                <p>{i.summary}</p>
+                <DocLinks kind="investigation" id={i.id} />
+              </article>
+            ))}
+          </div>
+        </>
+      )}
+      <SourceNote sources={[{ title: 'NHTSA manufacturer communications and defect investigations', url: 'https://www.nhtsa.gov/recalls' }]} note="Bulletin documents are the manufacturers' own, published by NHTSA under federal law." />
     </div>
   );
 }
