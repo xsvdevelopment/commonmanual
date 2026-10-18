@@ -1,0 +1,179 @@
+{
+  "id": "ford-27-30-ecoboost-rear-main-seal-24-2331",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "Ford 2.7 / 3.0 EcoBoost: rear main seal leak, install the seal-and-plate assembly without rolling the lip",
+  "summary": "Ford TSB 24-2331 (information only): rear crankshaft seal leaks on 2.7 and 3.0 EcoBoost engines traced to incorrect workshop manual installation instructions. Replace the seal with its retaining plate as one assembly, prep both surfaces properly, lubricate the tool and seal, and check for a rolled lip.",
+  "applies": [
+    {
+      "make": "FORD",
+      "models": [
+        "F-150"
+      ],
+      "years": [
+        2018,
+        2024
+      ],
+      "engine": "2.7L or 3.0L EcoBoost"
+    },
+    {
+      "make": "FORD",
+      "models": [
+        "EDGE"
+      ],
+      "years": [
+        2018,
+        2024
+      ],
+      "engine": "2.7L or 3.0L EcoBoost"
+    },
+    {
+      "make": "FORD",
+      "models": [
+        "EXPLORER"
+      ],
+      "years": [
+        2020,
+        2025
+      ],
+      "engine": "2.7L or 3.0L EcoBoost"
+    },
+    {
+      "make": "FORD",
+      "models": [
+        "BRONCO"
+      ],
+      "exclude": [
+        "SPORT"
+      ],
+      "years": [
+        2021,
+        2024
+      ],
+      "engine": "2.7L or 3.0L EcoBoost"
+    },
+    {
+      "make": "FORD",
+      "models": [
+        "RANGER"
+      ],
+      "years": [
+        2024,
+        2024
+      ],
+      "engine": "2.7L or 3.0L EcoBoost"
+    },
+    {
+      "make": "LINCOLN",
+      "models": [
+        "AVIATOR"
+      ],
+      "years": [
+        2020,
+        2025
+      ],
+      "engine": "2.7L or 3.0L EcoBoost"
+    },
+    {
+      "make": "LINCOLN",
+      "models": [
+        "NAUTILUS"
+      ],
+      "years": [
+        2019,
+        2023
+      ],
+      "engine": "2.7L or 3.0L EcoBoost"
+    },
+    {
+      "make": "LINCOLN",
+      "models": [
+        "MKX"
+      ],
+      "years": [
+        2018,
+        2018
+      ],
+      "engine": "2.7L or 3.0L EcoBoost"
+    }
+  ],
+  "tags": [
+    "rear main seal",
+    "oil leak",
+    "crankshaft rear seal",
+    "2.7 ecoboost",
+    "3.0 ecoboost",
+    "f-150",
+    "explorer",
+    "edge",
+    "bronco",
+    "aviator",
+    "nautilus"
+  ],
+  "specs": [
+    {
+      "name": "Part",
+      "value": "Crankshaft rear seal with retaining plate assembly (service base part 6335); one-time use",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Special tool",
+      "value": "303-1250 Seal Installer, Rear Main",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Warranty status",
+      "value": "Information only",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Don't replace the seal by itself; install the rear seal and retaining plate assembly.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Clean the crankshaft sealing surface with a dust-free cloth and brake parts cleaner. No abrasives.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Clean the block sealing surface completely free of oil and debris per the WSM's RTV sealing surface preparation procedure (303-00).",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Lubricate the installer tool's outer surface, the seal's inner lip and the crankshaft sealing surface with new engine oil.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "While removing the installer tool, look closely for a rolled lip, partial or all the way around. A rolled seal will leak and can't be reused: discard the assembly and install a new one.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "The bulletin's model table pairs each vehicle with its engine in two columns that don't line up in the PDF text; its Action list names the vehicles and says \"2.7L or 3.0L EcoBoost\", which is what the applies ranges use. The Bronco Sport isn't listed and is excluded.",
+  "sources": [
+    {
+      "title": "TSB 24-2331: 2.7/3.0L EcoBoost - Engine Oil Leak From The Crankshaft Rear Seal With Retaining Plate",
+      "publisher": "Ford Motor Company, October 23, 2024",
+      "citation": "Issue, action, special tool and service procedure pp. 1-2; NHTSA ID 11009445",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-11009445-0001.pdf"
+    }
+  ],
+  "author": "OpenBay (AI-assisted)",
+  "updated": "2026-10-18"
+}
