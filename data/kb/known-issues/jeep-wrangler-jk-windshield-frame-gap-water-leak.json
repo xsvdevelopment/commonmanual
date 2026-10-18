@@ -1,0 +1,172 @@
+{
+  "id": "jeep-wrangler-jk-windshield-frame-gap-water-leak",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "2007-2016 Wrangler JK with Freedom Top: water leak from door and cowl gaps, windshield frame adjustment",
+  "summary": "FCA bulletin 23-037-16: gaps between the windshield frame and the door or cowl let water in. With the top off and the gusset bolts loosened, a ratchet strap pulls the frame back or down to set the gaps, then everything is torqued.",
+  "applies": [
+    {
+      "make": "JEEP",
+      "models": [
+        "WRANGLER"
+      ],
+      "years": [
+        2007,
+        2016
+      ],
+      "engine": "JK with Freedom Top 3-piece modular hard top (sales code VK0)"
+    }
+  ],
+  "tags": [
+    "water leak",
+    "windshield frame",
+    "door gap",
+    "cowl",
+    "freedom top",
+    "hard top",
+    "wrangler",
+    "jk",
+    "body"
+  ],
+  "specs": [
+    {
+      "name": "Built",
+      "value": "On or before July 06, 2015 (MDH 0706XX) with sales code VK0",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Adjust if windshield frame to door gap is over",
+      "value": "6.5 mm (0.25 in)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Adjust if windshield frame to cowl top gap is",
+      "value": "Over 6 mm (0.23 in) or under 4 mm (0.15 in)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Target frame-to-door gap while strapping",
+      "value": "Tight against a 5 mm (0.19 in) feeler gauge",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Final frame-to-door gap",
+      "value": "3.5-6.5 mm (0.14-0.25 in)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Final frame-to-cowl gap",
+      "value": "4-6 mm (0.15-0.24 in), both sides",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "B-pillar, under-crossbar and side-bar bolts",
+      "value": "19",
+      "unit": "N·m (14 ft-lb)",
+      "note": "The B-pillar bolt strips easily; use a ratchet and socket.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Windshield gusset bolts (T40, six per side)",
+      "value": "10",
+      "unit": "N·m (7.5 ft-lb)",
+      "note": "Tighten in the pattern shown in the bulletin.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Labor",
+      "value": "0.8-1.2 hr depending on how many gaps and sides",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Measure with a non-marring feeler gauge: frame-to-door gap, and frame-to-cowl gap on both sides. Record them. Only adjust if they're outside the limits.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Remove the Freedom Top panels and hard top. Work one side of the windshield frame at a time. Leave the gray foam in place (it has access holes).",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Pull the cross bar and side bar covers. Loosen (don't remove) the B-pillar bolt, the bolt under the cross bar and the bolt on top of the side bar.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Loosen (don't remove) the six T40 gusset bolts on that side of the windshield frame.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Door gap over 6.5 mm: run a ratchet strap from the cross bar to the windshield footman loop (not around the speaker bar). Put the 5 mm gauge in the door gap and tighten the strap until the frame is snug against it.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Tighten the B-pillar, under-crossbar and side-bar bolts to 19 N·m (14 ft-lb). Refit the sport bar and side bar covers.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Before the gussets, check the frame-to-cowl gap on both sides: 4-6 mm is the target.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Cowl gap too big (or too small on one side): strap from the side bar (opposite side if the gap is too small) to the frame hole directly below the front edge of the door, padding any contact points, and pull the frame down until the gap is 4-6 mm.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Tighten the six gusset bolts per side in the bulletin's pattern to 10 N·m (7.5 ft-lb). Repeat for the other side if needed.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Recheck: door gap 3.5-6.5 mm and cowl gaps 4-6 mm. If not, repeat the matching steps. Then reinstall the hard top and Freedom Top panels.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Service Bulletin 23-037-16: Out Of Tolerance Door And Windshield Frame Gaps Causing Water Leaks",
+      "publisher": "FCA US LLC, July 19, 2016",
+      "citation": "Diagnosis p. 2, repair procedure steps 1-29 pp. 2-11, labor p. 12; NHTSA ID 10121707",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2016/MC-10121707-9999.pdf"
+    }
+  ],
+  "author": "OpenBay (AI-assisted)",
+  "updated": "2026-10-18"
+}
