@@ -170,5 +170,15 @@
     }
   ],
   "author": "OpenBay",
-  "updated": "2026-10-18"
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "lifter",
+      "camshaft",
+      "cam lobe",
+      "afm",
+      "tick",
+      "misfire"
+    ]
+  ]
 }

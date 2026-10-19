@@ -72,7 +72,7 @@ export function concepts(text) {
 export const codesIn = (text) => [...new Set((String(text).match(CODE_RE) || []).map((c) => c.toUpperCase()))];
 
 // Same matching rule, against a document's text.
-const has = (hay, phrase) => {
+export const has = (hay, phrase) => {
   if (phrase.includes(' ') || phrase.includes('/')) return hay.includes(phrase);
   const p = stem(phrase);
   return new RegExp(`\\b${p.replace(/[^a-z0-9]/g, '')}${p.length <= 3 ? '\\b' : ''}`).test(hay);

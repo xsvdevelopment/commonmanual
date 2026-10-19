@@ -122,5 +122,19 @@
     }
   ],
   "author": "OpenBay (AI-assisted)",
-  "updated": "2026-10-18"
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "wobble",
+      "oscillat",
+      "shimmy",
+      "shake",
+      "violent"
+    ],
+    [
+      "steering",
+      "front end",
+      "wheel"
+    ]
+  ]
 }

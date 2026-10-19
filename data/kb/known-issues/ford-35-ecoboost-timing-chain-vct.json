@@ -155,5 +155,14 @@
     }
   ],
   "author": "OpenBay",
-  "updated": "2026-10-18"
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "rattle",
+      "timing chain",
+      "cam phaser",
+      "phaser",
+      "p0016"
+    ]
+  ]
 }

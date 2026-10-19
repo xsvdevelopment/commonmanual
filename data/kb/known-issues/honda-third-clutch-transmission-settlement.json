@@ -78,5 +78,20 @@
     }
   ],
   "author": "OpenBay",
-  "updated": "2026-10-18"
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "transmission"
+    ],
+    [
+      "slip",
+      "fail",
+      "flare",
+      "went out",
+      "replace",
+      "rebuil",
+      "no reverse",
+      "won't shift"
+    ]
+  ]
 }
