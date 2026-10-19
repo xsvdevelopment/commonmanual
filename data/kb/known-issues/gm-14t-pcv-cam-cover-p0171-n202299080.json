@@ -148,5 +148,16 @@
     }
   ],
   "author": "OpenBay (AI-assisted)",
-  "updated": "2026-10-18"
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "pcv",
+      "p0171",
+      "whistl",
+      "vacuum leak",
+      "valve cover",
+      "cam cover",
+      "rough idle"
+    ]
+  ]
 }

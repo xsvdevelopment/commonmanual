@@ -130,5 +130,17 @@
     }
   ],
   "author": "OpenBay (AI-assisted)",
-  "updated": "2026-10-18"
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "loss of power",
+      "power loss",
+      "hesitat",
+      "stall",
+      "smoke",
+      "p0299",
+      "boost",
+      "turbo"
+    ]
+  ]
 }
