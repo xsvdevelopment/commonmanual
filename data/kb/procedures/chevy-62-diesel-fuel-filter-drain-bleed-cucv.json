@@ -1,0 +1,36 @@
+{
+  "id": "chevy-62-diesel-fuel-filter-drain-bleed-cucv",
+  "type": "procedure",
+  "status": "cited",
+  "title": "6.2 diesel (CUCV K-series): drain water from the fuel filter, replace it, and bleed it",
+  "summary": "Army procedure (TM 9-2320-289-20, para. 3-17) for the firewall-mounted fuel filter on the 1984-87 CUCV pickup and Blazer: draining water, replacing the filter assembly, and bleeding air by cranking with the injection pump shutoff solenoid unplugged.",
+  "applies": [
+    { "make": "CHEVROLET", "models": ["K10", "K20", "K30", "BLAZER", "PICK UP", "CHEVROLET TRUCK"], "exclude": ["S10"], "years": [1984, 1987], "engine": "6.2L (379 cu in) V8 diesel" }
+  ],
+  "tools": ["Clear plastic tube for the vent port", "Drain container", "Fire extinguisher"],
+  "parts": ["Fuel filter assembly", "Two drain/vent plug seals"],
+  "warnings": ["Diesel fuel is flammable. No fire, flames or sparks nearby; keep an extinguisher in the work area.", "The CUCV fuel filter base carries military switches and a 24-volt system. Confirm a civilian truck's filter base matches before following this step for step."],
+  "tags": ["6.2 diesel", "fuel filter", "water separator", "water in fuel", "bleed", "air in fuel", "cucv", "m1008", "m1009", "k5 blazer"],
+  "steps": [
+    { "text": "Drain water: engine off, remove the fuel tank cap, put a container under the filter drain hose and open the drain plug 2-3 turns.", "src": [1] },
+    { "text": "Start the engine and let it idle 1-2 minutes, or until clear fuel comes out. Shut it off, close the drain plug and refit the tank cap.", "src": [1] },
+    { "text": "Replace: disconnect both battery negative cables, put a container under the drain hose and remove the tank cap to release tank pressure.", "src": [1] },
+    { "text": "Remove the vent plug, loosen the drain plug and let the filter assembly drain completely. Remove the drain plug and its two seals (discard the seals).", "src": [1] },
+    { "text": "Release the two filter clamps and remove the filter assembly. Install the new filter with the two clamps, two new seals, the vent plug and the drain plug. Inlet hose goes to the port marked IN, outlet to OUT.", "src": [1] },
+    { "text": "Bleed (needs a helper): reconnect the batteries, remove the tank cap, and run a plastic tube from the vent plug port into a container.", "src": [1] },
+    { "text": "Unplug the pink fuel injection pump shutoff solenoid wire so the engine can't start, and open the vent plug on top of the filter base.", "src": [1] },
+    { "text": "Crank 10-15 seconds, then wait 1 minute to let the starter cool. Repeat until clear fuel with no air comes out of the tube.", "src": [1] },
+    { "text": "Close the vent plug, remove the tube, reconnect the pink shutoff solenoid wire and refit the tank cap.", "src": [1] },
+    { "text": "Start the engine, idle 5 minutes and check the filter for leaks.", "src": [1] }
+  ],
+  "sources": [
+    {
+      "title": "TM 9-2320-289-20: Unit Maintenance Manual, Truck, Cargo, Tactical, 1-1/4 Ton, 4x4, M1008 series (CUCV)",
+      "publisher": "Headquarters, Departments of the Army, the Air Force and Headquarters Marine Corps, January 1988; approved for public release",
+      "citation": "Para. 3-17 Fuel Filter Maintenance (a. removal, b. installation, c. bleeding, d. drain water), pp. 3-52 to 3-55 (Change 2)",
+      "url": "https://archive.org/details/m-1009"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18"
+}

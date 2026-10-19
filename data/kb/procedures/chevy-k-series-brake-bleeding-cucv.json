@@ -1,0 +1,41 @@
+{
+  "id": "chevy-k-series-brake-bleeding-cucv",
+  "type": "procedure",
+  "status": "cited",
+  "title": "Chevy K-series (CUCV 1984-87): bleeding the brakes, pressure or manual, with the combination valve held",
+  "summary": "Army procedure (TM 9-2320-289-20, para. 7-6) for the military 1984-87 Chevy pickup and Blazer: hold the combination valve with a depressor tool, bleed RR, LR, RF, LF, and bench-purge the master cylinder outlets if air got into it.",
+  "applies": [
+    { "make": "CHEVROLET", "models": ["K10", "K20", "K30", "BLAZER", "PICK UP", "CHEVROLET TRUCK"], "exclude": ["S10"], "years": [1984, 1987] }
+  ],
+  "tools": ["Combination valve depressor J-23709", "Pressure bleeder (preferred)", "Clear hose and a container of clean brake fluid", "Safety goggles"],
+  "warnings": ["Wear goggles when bleeding brakes.", "Don't let the master cylinder run dry during manual bleeding; check and refill often.", "From the Army manual for the CUCV (military 1984-87 Chevy K-series). Confirm a civilian truck has the same part before using a number."],
+  "tags": ["brake bleeding", "bleed brakes", "spongy pedal", "combination valve", "proportioning valve", "pressure bleeder", "cucv", "m1008", "m1009", "k5 blazer", "square body"],
+  "specs": [
+    { "name": "Bleeding order", "value": "Right rear, left rear, right front, left front", "src": [1] },
+    { "name": "Pressure bleeder tank pressure", "value": "20-25 psi (138-172 kPa)", "src": [1] },
+    { "name": "Pressure bleeder fill", "value": "At least 1/3 full of brake fluid", "src": [1] },
+    { "name": "Wait between manual strokes", "value": "15 seconds", "src": [1] },
+    { "name": "Rear brakes, manual", "value": "May take 8-10 pedal applications before the first bubbles show", "src": [1] }
+  ],
+  "steps": [
+    { "text": "Master cylinder filled to the proper level before starting. If only the front or rear half was opened, bleeding that half is usually enough; if the pedal still isn't firm, bleed the whole system.", "src": [1] },
+    { "text": "Pressure method (preferred): loosen the combination valve mounting bolt, fit the J-23709 depressor to hold the valve, and retighten the bolt.", "src": [1] },
+    { "text": "Pressurize the bleeder tank to 20-25 psi (138-172 kPa). Remove the master cylinder cover, fit the bleeder adapter, connect the hose and open the tank valve.", "src": [1] },
+    { "text": "At each wheel in order RR, LR, RF, LF: remove the bleeder cap, run a short hose from the bleeder into a container part-full of clean fluid, open the bleeder about 3/4 turn and close it when the fluid runs free of bubbles. Tighten, remove the hose, refit the cap.", "src": [1] },
+    { "text": "When all four are done: close the tank valve, remove the adapter, refit the master cylinder cover, remove the depressor and retighten the combination valve bolt. Top up the master cylinder.", "src": [1] },
+    { "text": "Manual method, if air is suspected in the master cylinder bore: crack the front brake pipe fitting at the master, let fluid drain, snug it loosely, have a helper press the pedal slowly, tighten the fitting, then release the pedal. Wait 15 seconds and repeat until no air; then do the rear fitting.", "src": [1] },
+    { "text": "Manual method at each wheel (same RR, LR, RF, LF order, depressor fitted as above): helper presses the pedal, open the bleeder, watch for bubbles, close it, then the helper releases the pedal slowly. Wait 15 seconds and repeat until the fluid is bubble-free. Rears may need 8-10 strokes before bubbles appear.", "src": [1] },
+    { "text": "Fill the master cylinder to level. Check for a spongy pedal, check the brake warning light for an unbalanced-pressure indication, test the brakes and look for leaks.", "src": [1] }
+  ],
+  "body": "The bleeder opening is printed as \"34 turn\" in the scan's OCR; 3/4 turn is the evident reading. Check the printed page (p. 7-11).\n\nThe manual's manual-bleeding section refers back to the pressure section for the hose setup and to its initial setup for the combination valve depressor, so both methods use the depressor.",
+  "sources": [
+    {
+      "title": "TM 9-2320-289-20: Unit Maintenance Manual, Truck, Cargo, Tactical, 1-1/4 Ton, 4x4, M1008 series (CUCV)",
+      "publisher": "Headquarters, Departments of the Army, the Air Force and Headquarters Marine Corps, January 1988; approved for public release",
+      "citation": "Para. 7-6 Service Brake System Bleeding Instructions (a. pressure bleeding, b. manual bleeding), pp. 7-10 to 7-13",
+      "url": "https://archive.org/details/m-1009"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18"
+}

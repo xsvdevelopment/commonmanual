@@ -2,7 +2,7 @@
   "id": "us-army-tm-cucv",
   "type": "source",
   "title": "US Army manuals for CUCV (military 1984-87 Chevy/GMC K-series)",
-  "summary": "Full factory-level maintenance manuals for the military version of the square-body K-series pickup and Blazer. US government works, public domain.",
+  "summary": "Army unit maintenance manual for the military version of the 1984-87 Chevy K-series pickup and K5 Blazer (CUCV), with the 6.2L diesel. Approved for public release; full scan on the Internet Archive.",
   "applies": [
     {
       "make": "CHEVROLET",
@@ -20,7 +20,7 @@
         "CHEVROLET TRUCK"
       ],
       "years": [
-        1981,
+        1984,
         1987
       ]
     },
@@ -40,7 +40,7 @@
         "SUBURBAN"
       ],
       "years": [
-        1981,
+        1984,
         1987
       ]
     }
@@ -54,14 +54,16 @@
     "public domain",
     "manual"
   ],
-  "body": "CUCV (M1008 pickup, M1009 Blazer, M1010 ambulance and others) were mostly civilian 1984-87 K-series trucks with a 6.2 diesel and 24 V electrics. Engine, transmission, transfer case, axles, brakes, steering and body procedures carry over to the civilian trucks. Search the Internet Archive for \"TM 9-2320-289\" (the CUCV manual series).",
+  "body": "TM 9-2320-289-20 (January 1988, changes through No. 4, November 1995) covers the M1008, M1008A1, M1009, M1010, M1028, M1028A1, M1028A2 and M1031. It is on the Internet Archive under the item name \"m-1009\", which is why a title search for the TM number misses it.\n\nUnit-level coverage: PMCS (with torque values), troubleshooting, engine, electrical, transmission and transfer case, axles, brakes, steering and body. The CUCV uses a 24-volt starting system and military wheels; check a civilian truck has the same part before using a number.\n\nCited entries built from it: chevy-k-series-62-diesel-cucv-specs, chevy-62-diesel-fuel-filter-drain-bleed-cucv, chevy-k-series-brake-bleeding-cucv. The -10 (operator) and -34 (direct/general support) volumes are still to be found.",
   "sources": [
     {
-      "title": "Internet Archive search: TM 9-2320-289",
-      "url": "https://archive.org/search?query=%22TM+9-2320-289%22"
+      "title": "TM 9-2320-289-20: Unit Maintenance Manual, Truck, Cargo, Tactical, 1-1/4 Ton, 4x4, M1008 series (CUCV)",
+      "publisher": "Headquarters, Departments of the Army, the Air Force and Headquarters Marine Corps, January 1988; approved for public release",
+      "citation": "Title page and change pages",
+      "url": "https://archive.org/details/m-1009"
     }
   ],
-  "status": "draft",
-  "author": "Common Manual seed (unsourced, needs citations)",
+  "status": "cited",
+  "author": "Common Manual (AI-assisted)",
   "updated": "2026-10-18"
 }
