@@ -10,13 +10,16 @@ export const STATUS = {
 
 export const StatusBadge = ({ s }) => <span className={'badge ' + STATUS[s][1]}>{STATUS[s][0]}</span>;
 
+// AI-transcribed entries stay labeled until a person spot-checks them against the sources (REVIEWING.md).
+export const awaitingReview = (e) => e.status !== 'draft' && /\(AI-assisted\)/.test(e.author || '') && !e.reviewedBy;
+
 const appliesText = (a) =>
   `${a.years[0]}–${a.years[1]} ${a.make === '*' ? 'most makes' : a.make}${a.models?.length ? ' ' + a.models.join(', ') : ''}${a.exclude?.length ? ' (not ' + a.exclude.join(', ') + ')' : ''}${a.engine ? ' · ' + a.engine : ''}`;
 
 export function EntryCard({ e }) {
   return (
     <a className={'card entry-card' + (e.status === 'draft' ? ' is-draft' : '')} href={'#/entry/' + e.id}>
-      <div className="badges"><span className="badge">{TYPE_LABEL[e.type]}</span><StatusBadge s={e.status} /></div>
+      <div className="badges"><span className="badge">{TYPE_LABEL[e.type]}</span><StatusBadge s={e.status} />{awaitingReview(e) && <span className="badge">Not yet hand-checked</span>}</div>
       <h4>{e.title}</h4>
       {e.summary && <p>{e.summary}</p>}
       {e.applies.some((a) => a.engine) && <p className="muted mono small">{[...new Set(e.applies.map((a) => a.engine).filter(Boolean))].join(' / ')}</p>}
@@ -73,6 +76,11 @@ export default function Entry({ id }) {
           <strong>Unsourced draft.</strong> Nothing here is backed by a citation yet, so don't torque anything off it. Verify against a factory manual, then <a href={'#/add?id=' + e.id}>add the source</a> to promote it.
         </div>
       )}
+      {awaitingReview(e) && (
+        <div className="review-note">
+          <strong>Not yet hand-checked.</strong> An AI agent transcribed this from the documents listed under Sources, and a checker confirmed each number appears next to its label in them. No person has spot-checked it yet. Open the cited page before you rely on a number. <a href={'#/add?id=' + e.id}>Found a mistake? Fix it.</a>
+        </div>
+      )}
       {e.summary && <p className="lede-sm">{e.summary}</p>}
       <ul className="applies">{e.applies.map((a, i) => <li key={i}>{appliesText(a)}</li>)}</ul>
 
@@ -124,7 +132,7 @@ export default function Entry({ id }) {
       ) : <p className="warn">No sources yet.</p>}
 
       <p className="meta muted">
-        {e.author && <>By {e.author}. </>}{e.verifiedBy && <>Verified by {e.verifiedBy}. </>}{e.updated && <>Updated {e.updated}. </>}
+        {e.author && <>By {e.author}. </>}{e.verifiedBy && <>Verified by {e.verifiedBy}. </>}{e.reviewedBy && <>Spot-checked against the sources by {e.reviewedBy}. </>}{e.updated && <>Updated {e.updated}. </>}
         File: <code>data/kb/{e.file}</code> · <a href={'#/add?id=' + e.id}>Improve this entry</a>
       </p>
     </article>

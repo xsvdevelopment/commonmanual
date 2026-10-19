@@ -72,6 +72,7 @@ export function citationErrors(e) {
     if (typeof s !== 'object' || badRef(s.src)) errs.push(`steps[${i}]: needs src footnote(s) pointing at sources 1-${n} (end the line with [1] in the form)`);
   }
   if (e.status === 'shop-verified' && !e.verifiedBy) errs.push('verifiedBy: name the shop that confirmed it');
+  if (e.reviewedBy !== undefined && !/^.+, \d{4}-\d{2}-\d{2}$/.test(String(e.reviewedBy))) errs.push('reviewedBy: "Name, YYYY-MM-DD" of the person who spot-checked the facts against the sources');
   return errs;
 }
 

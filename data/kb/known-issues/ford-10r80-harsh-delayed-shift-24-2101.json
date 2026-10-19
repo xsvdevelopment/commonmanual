@@ -154,7 +154,7 @@
       ]
     }
   ],
-  "body": "Selective parts listed for the CDF repair include T-3 shims in 0.15 mm steps from 3.35 to 4.35 mm, and selective snap rings for the C, D and F clutches. Look them up in the bulletin's parts tables by measured clearance.\n\nThe PDF's text layer is an unreadable embedded font, so the citation checker reports it as \"check by hand\". Every value here was read from the rendered pages.",
+  "body": "Selective parts listed for the CDF repair include T-3 shims in 0.15 mm steps from 3.35 to 4.35 mm, and selective snap rings for the C, D and F clutches. Look them up in the bulletin's parts tables by measured clearance.\n\nThis bulletin's PDF has a scrambled text layer; the citation checker reads it with OCR.",
   "sources": [
     {
       "title": "TSB 24-2101: 10R80 Automatic Transmission - Harsh/Delayed Engagement And/Or Harsh/Delayed Shift - Non-Main Control Break-In Capable",
