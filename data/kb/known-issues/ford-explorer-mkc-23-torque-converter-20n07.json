@@ -5,23 +5,116 @@
   "title": "2016-2019 Explorer / 2015-2019 MKC 2.3L EcoBoost (6F35): shudder, rough idle in gear, overheated torque converter",
   "summary": "Ford programs 20B27 (PCM reprogram to protect the torque converter from overheating) and 20N07 (one-time torque converter replacement within 12 months of that reprogram): vibration or rough idle in D or R, weak launch, sluggishness and shudder while driving.",
   "applies": [
-    { "make": "FORD", "models": ["EXPLORER"], "years": [2016, 2019], "engine": "2.3L EcoBoost, 6F35 automatic" },
-    { "make": "LINCOLN", "models": ["MKC"], "years": [2015, 2019], "engine": "2.3L EcoBoost, 6F35 automatic" }
+    {
+      "make": "FORD",
+      "models": [
+        "EXPLORER"
+      ],
+      "years": [
+        2016,
+        2019
+      ],
+      "engine": "2.3L EcoBoost, 6F35 automatic"
+    },
+    {
+      "make": "LINCOLN",
+      "models": [
+        "MKC"
+      ],
+      "years": [
+        2015,
+        2019
+      ],
+      "engine": "2.3L EcoBoost, 6F35 automatic"
+    }
   ],
-  "tags": ["torque converter", "shudder", "rough idle", "vibration in drive", "vibration in reverse", "nvh", "6f35", "2.3 ecoboost", "explorer", "mkc", "pcm reprogram"],
+  "tags": [
+    "torque converter",
+    "shudder",
+    "rough idle",
+    "vibration in drive",
+    "vibration in reverse",
+    "nvh",
+    "6f35",
+    "2.3 ecoboost",
+    "explorer",
+    "mkc",
+    "pcm reprogram"
+  ],
   "specs": [
-    { "name": "Symptoms", "value": "NVH, vibration and/or rough idle in Drive or Reverse, weak launch, sluggish operation, shudder while driving", "src": [1] },
-    { "name": "Explorer covered", "value": "2016-2019, Chicago, built September 29, 2014 through March 3, 2019", "src": [1, 2] },
-    { "name": "MKC covered", "value": "2015-2019, Louisville, built August 20, 2013 through July 31, 2019", "src": [1, 2] },
-    { "name": "20N07 coverage", "value": "Torque converter, one-time repair, for 12 months from the RO date of the 20B27 PCM reflash", "src": [1, 3] },
-    { "name": "20N07 does not apply", "value": "When the vehicle still qualifies under the New Vehicle Limited or Emissions Warranty", "src": [1] },
-    { "name": "20B27 reprogram tool", "value": "IDS release 117.01 or higher, online", "src": [2] },
-    { "name": "20B27 reopened", "value": "September 2022, in effect until August 31, 2023, no mileage limit", "src": [3] }
+    {
+      "name": "Symptoms",
+      "value": "NVH, vibration and/or rough idle in Drive or Reverse, weak launch, sluggish operation, shudder while driving",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Explorer covered",
+      "value": "2016-2019, Chicago, built September 29, 2014 through March 3, 2019",
+      "src": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "MKC covered",
+      "value": "2015-2019, Louisville, built August 20, 2013 through July 31, 2019",
+      "src": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "20N07 coverage",
+      "value": "Torque converter, one-time repair, for 12 months from the RO date of the 20B27 PCM reflash",
+      "src": [
+        1,
+        3
+      ]
+    },
+    {
+      "name": "20N07 does not apply",
+      "value": "When the vehicle still qualifies under the New Vehicle Limited or Emissions Warranty",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "20B27 reprogram tool",
+      "value": "IDS release 117.01 or higher, online",
+      "src": [
+        2
+      ]
+    },
+    {
+      "name": "20B27 reopened",
+      "value": "September 2022, in effect until August 31, 2023, no mileage limit",
+      "src": [
+        3
+      ]
+    }
   ],
   "steps": [
-    { "text": "Check OASIS for 20B27. If the PCM update hasn't been done, reprogram the PCM (IDS 117.01 or later, online). The update protects the torque converter from overheating in certain driving styles.", "src": [2] },
-    { "text": "If the vehicle shows the symptoms (vibration or rough idle in D or R, weak launch, sluggishness, shudder), replace the torque converter, inspect the internal transmission components and replace as needed.", "src": [1] },
-    { "text": "Outside powertrain warranty, the converter is covered once under 20N07 if the symptoms show up within 12 months of the 20B27 reprogram.", "src": [1, 3] }
+    {
+      "text": "Check OASIS for 20B27. If the PCM update hasn't been done, reprogram the PCM (IDS 117.01 or later, online). The update protects the torque converter from overheating in certain driving styles.",
+      "src": [
+        2
+      ]
+    },
+    {
+      "text": "If the vehicle shows the symptoms (vibration or rough idle in D or R, weak launch, sluggishness, shudder), replace the torque converter, inspect the internal transmission components and replace as needed.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Outside powertrain warranty, the converter is covered once under 20N07 if the symptoms show up within 12 months of the 20B27 reprogram.",
+      "src": [
+        1,
+        3
+      ]
+    }
   ],
   "body": "Ford's explanation: the torque converter can overheat in certain driving conditions, which degrades it and leads to noise, vibration, rough idle and low performance, and eventually internal transmission repairs.\n\nThe related TSB 22-2287 was opened but its PDF doesn't extract as text, so it isn't cited here.",
   "sources": [
@@ -45,5 +138,19 @@
     }
   ],
   "author": "OpenBay (AI-assisted)",
-  "updated": "2026-10-18"
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "shudder",
+      "vibrat",
+      "rough idle",
+      "hesitat"
+    ],
+    [
+      "transmission",
+      "torque converter",
+      "drive",
+      "reverse"
+    ]
+  ]
 }

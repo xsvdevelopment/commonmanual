@@ -5,26 +5,143 @@
   "title": "2017-2019 Escape / Fusion 1.5L EcoBoost: coolant into the cylinders, low coolant, white smoke, misfire",
   "summary": "Ford Customer Satisfaction Programs 19B37 (PCM reprogram) and 21N12 (one-time short block replacement): coolant can get into a cylinder bore, causing coolant loss, white exhaust smoke and misfire codes. The dealer letter includes the pressure test and borescope check that confirm it.",
   "applies": [
-    { "make": "FORD", "models": ["ESCAPE"], "years": [2017, 2019], "engine": "1.5L EcoBoost (GTDI)" },
-    { "make": "FORD", "models": ["FUSION"], "exclude": ["ENERGI", "HEV", "HYBRID"], "years": [2017, 2019], "engine": "1.5L EcoBoost (GTDI)" }
+    {
+      "make": "FORD",
+      "models": [
+        "ESCAPE"
+      ],
+      "years": [
+        2017,
+        2019
+      ],
+      "engine": "1.5L EcoBoost (GTDI)"
+    },
+    {
+      "make": "FORD",
+      "models": [
+        "FUSION"
+      ],
+      "exclude": [
+        "ENERGI",
+        "HEV",
+        "HYBRID"
+      ],
+      "years": [
+        2017,
+        2019
+      ],
+      "engine": "1.5L EcoBoost (GTDI)"
+    }
   ],
-  "tags": ["coolant intrusion", "coolant loss", "white smoke", "misfire", "head gasket", "short block", "1.5 ecoboost", "p0300", "p0301", "p0302", "p0303", "p0304", "p0316", "p0217", "p1285", "p1299", "escape", "fusion"],
+  "tags": [
+    "coolant intrusion",
+    "coolant loss",
+    "white smoke",
+    "misfire",
+    "head gasket",
+    "short block",
+    "1.5 ecoboost",
+    "p0300",
+    "p0301",
+    "p0302",
+    "p0303",
+    "p0304",
+    "p0316",
+    "p0217",
+    "p1285",
+    "p1299",
+    "escape",
+    "fusion"
+  ],
   "specs": [
-    { "name": "DTCs", "value": "P0300, P0301-P0304, P0316, P0217, P1285, P1299", "src": [1] },
-    { "name": "Cooling system pressure test", "value": "138 kPa (20 psi), engine at operating temperature, held 2 hours", "src": [1] },
-    { "name": "Fails the pressure test", "value": "Drop of more than 27.57 kPa (4 psi) in 2 hours", "src": [1] },
-    { "name": "21N12 coverage", "value": "One-time short block replacement, 7 years or 84,000 miles from warranty start; vehicles already past that were covered through November 30, 2022", "src": [1] },
-    { "name": "Prerequisite", "value": "Program 19B37 (PCM reprogram) must be done before 21N12 applies", "src": [1] },
-    { "name": "Escape covered", "value": "2017-2019, Louisville, built September 17, 2015 through April 8, 2019", "src": [1] },
-    { "name": "Fusion covered", "value": "2017 Flat Rock (built October 1-16, 2015); 2017-2019 Hermosillo (built October 6, 2015 through June 10, 2019)", "src": [1] },
-    { "name": "Related TSB", "value": "22-2134", "src": [1] }
+    {
+      "name": "DTCs",
+      "value": "P0300, P0301-P0304, P0316, P0217, P1285, P1299",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Cooling system pressure test",
+      "value": "138 kPa (20 psi), engine at operating temperature, held 2 hours",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Fails the pressure test",
+      "value": "Drop of more than 27.57 kPa (4 psi) in 2 hours",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "21N12 coverage",
+      "value": "One-time short block replacement, 7 years or 84,000 miles from warranty start; vehicles already past that were covered through November 30, 2022",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Prerequisite",
+      "value": "Program 19B37 (PCM reprogram) must be done before 21N12 applies",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Escape covered",
+      "value": "2017-2019, Louisville, built September 17, 2015 through April 8, 2019",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Fusion covered",
+      "value": "2017 Flat Rock (built October 1-16, 2015); 2017-2019 Hermosillo (built October 6, 2015 through June 10, 2019)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Related TSB",
+      "value": "22-2134",
+      "src": [
+        1
+      ]
+    }
   ],
   "steps": [
-    { "text": "Check the PCM for P0300-P0304, P0316, P0217, P1285 and/or P1299. None of them means the program doesn't apply; diagnose normally.", "src": [1] },
-    { "text": "At operating temperature, pressurize the cooling system to 138 kPa (20 psi) for 2 hours and test the coolant for combustion gases (Workshop Manual section 303-03A).", "src": [1] },
-    { "text": "Combustion gases in the coolant: go straight to short block replacement. Pressure drop over 27.57 kPa (4 psi) with no gases: pull the spark plugs.", "src": [1] },
-    { "text": "With the plugs out, borescope the cylinders for coolant. No coolant in any cylinder means the program doesn't apply.", "src": [1] },
-    { "text": "Confirmed: remove the engine and replace the short block (WSM section 303-01). Warn the owner the exhaust may smell for a while as leftover coolant burns off.", "src": [1] }
+    {
+      "text": "Check the PCM for P0300-P0304, P0316, P0217, P1285 and/or P1299. None of them means the program doesn't apply; diagnose normally.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "At operating temperature, pressurize the cooling system to 138 kPa (20 psi) for 2 hours and test the coolant for combustion gases (Workshop Manual section 303-03A).",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Combustion gases in the coolant: go straight to short block replacement. Pressure drop over 27.57 kPa (4 psi) with no gases: pull the spark plugs.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "With the plugs out, borescope the cylinders for coolant. No coolant in any cylinder means the program doesn't apply.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Confirmed: remove the engine and replace the short block (WSM section 303-01). Warn the owner the exhaust may smell for a while as leftover coolant burns off.",
+      "src": [
+        1
+      ]
+    }
   ],
   "body": "Owners who paid for a short block or head gasket for coolant intrusion before the owner letter could be refunded until November 30, 2022. Coverage transfers to later owners, and title-branded and salvage vehicles are eligible.\n\nTSB 22-2322 on the same condition was also opened, but its PDF on NHTSA uses a font encoding that doesn't extract as text, so only the program letter is cited here.",
   "sources": [
@@ -36,5 +153,18 @@
     }
   ],
   "author": "OpenBay (AI-assisted)",
-  "updated": "2026-10-18"
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "coolant"
+    ],
+    [
+      "loss",
+      "low",
+      "leak",
+      "white smoke",
+      "misfire",
+      "head gasket"
+    ]
+  ]
 }
