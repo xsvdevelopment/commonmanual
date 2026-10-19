@@ -1,0 +1,178 @@
+{
+  "id": "nissan-sentra-versa-altima-juke-cvt-warranty-extension",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "Nissan Sentra, Versa, Versa Note, Altima, Juke CVT: judder, hesitation, flare; 84-month / 84k CVT warranty extension",
+  "summary": "Nissan's May 2020 CVT warranty extension (from class action settlements) takes CVT coverage on 2012-17 Versa, 2014-17 Versa Note, 2013-17 Sentra, 2013-16 Altima and 2013-17 Juke from 60 months / 60,000 miles to 84 / 84,000, including rental during repairs. For the Sentra, NTB19-075a lays out the judder diagnosis starting from a specific DTC list.",
+  "applies": [
+    {
+      "make": "NISSAN",
+      "models": [
+        "VERSA"
+      ],
+      "exclude": [
+        "NOTE"
+      ],
+      "years": [
+        2012,
+        2017
+      ],
+      "engine": "CVT (sedan, N17)"
+    },
+    {
+      "make": "NISSAN",
+      "models": [
+        "VERSA NOTE"
+      ],
+      "years": [
+        2014,
+        2017
+      ],
+      "engine": "CVT (E12)"
+    },
+    {
+      "make": "NISSAN",
+      "models": [
+        "SENTRA"
+      ],
+      "years": [
+        2013,
+        2017
+      ],
+      "engine": "CVT (B17)"
+    },
+    {
+      "make": "NISSAN",
+      "models": [
+        "ALTIMA"
+      ],
+      "years": [
+        2013,
+        2016
+      ],
+      "engine": "CVT (L33)"
+    },
+    {
+      "make": "NISSAN",
+      "models": [
+        "JUKE"
+      ],
+      "years": [
+        2013,
+        2017
+      ],
+      "engine": "CVT (F15)"
+    }
+  ],
+  "tags": [
+    "cvt",
+    "judder",
+    "shudder",
+    "hesitation",
+    "rpm flare",
+    "lack of power",
+    "warranty extension",
+    "class action",
+    "sentra",
+    "versa",
+    "altima",
+    "juke",
+    "p17f0",
+    "p17f1"
+  ],
+  "specs": [
+    {
+      "name": "Warranty extension",
+      "value": "From 60 months / 60,000 miles to 84 months / 84,000 miles, whichever first; activated May 11, 2020",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Extension covers",
+      "value": "CVT assembly and internals, gaskets and seals, control valve body, torque converter, cooler kit (if applicable), TCM reprogramming, and a rental while CVT repairs are done",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Sentra judder bulletin applies to",
+      "value": "2013-2017 Sentra (B17), MRA8DE non-turbo engine, CVT RE0F11A",
+      "src": [
+        2
+      ]
+    },
+    {
+      "name": "Sentra judder DTCs (start of the diagnosis)",
+      "value": "P0746, P0846, P0868, P0965, P17F0, P17F1, P17F2, P17F3, P17F4, P2857, P2858, P2859, P285A",
+      "src": [
+        2
+      ]
+    },
+    {
+      "name": "Powertrain Call Center (pre-approval for CVT replacement over DCAL)",
+      "value": "800-973-9992, option 2",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Check the VIN for the extension; owners who opted out of the class settlements aren't covered, so it's per-VIN.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Sentra complaint of judder (shake, shudder, bumps, vibration), hesitation, lack of power or RPM flare: check for the listed DTCs. None stored: NTB19-075a doesn't apply; use ASIST.",
+      "src": [
+        2
+      ]
+    },
+    {
+      "text": "If codes are stored, confirm the TCM part number and reprogram the TCM per NTB18-058 if a newer calibration is available, then follow NTB19-075a's repair overview (noise check in Park/Neutral vs. Drive/Reverse, CVT pan debris inspection, and the CVT replacement approval steps).",
+      "src": [
+        2
+      ]
+    },
+    {
+      "text": "Valve bodies and belt-and-pulley kits don't need pre-authorization under warranty; a full CVT over the dealer's authorization limit does.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "NTB19-075a is 147 pages; only its applicability, DTC list and the opening decisions of its repair overview are summarized here. Work from the bulletin itself for the full flow.",
+  "sources": [
+    {
+      "title": "Quality Action Campaign Bulletin: CVT Warranty Extension (Altima, Versa, Versa Note, Sentra and Juke)",
+      "publisher": "Nissan North America, May 11, 2020",
+      "citation": "Affected models, coverage and What Dealers Should Do pp. 1-2; NHTSA ID 10176204",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2020/MC-10176204-0001.pdf"
+    },
+    {
+      "title": "NTB19-075a: 2013-2017 Sentra; CVT Judder",
+      "publisher": "Nissan North America, February 14, 2020",
+      "citation": "Applied vehicles p. 1; repair overview pp. 2-3; NHTSA ID 10172242",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2020/MC-10172242-0001.pdf"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "judder",
+      "shudder",
+      "hesitat",
+      "slip",
+      "jerk",
+      "whine",
+      "rpm"
+    ],
+    [
+      "cvt",
+      "transmission"
+    ]
+  ]
+}
