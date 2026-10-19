@@ -125,5 +125,15 @@
     }
   ],
   "author": "OpenBay (AI-assisted)",
-  "updated": "2026-10-18"
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "clockspring",
+      "clock spring",
+      "airbag light",
+      "air bag light",
+      "steering wheel buttons",
+      "cruise control"
+    ]
+  ]
 }

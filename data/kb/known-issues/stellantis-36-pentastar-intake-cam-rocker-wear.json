@@ -262,5 +262,16 @@
     }
   ],
   "author": "OpenBay (AI-assisted)",
-  "updated": "2026-10-18"
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "tick",
+      "tap",
+      "misfire",
+      "rough idle",
+      "valvetrain",
+      "rocker",
+      "camshaft"
+    ]
+  ]
 }
