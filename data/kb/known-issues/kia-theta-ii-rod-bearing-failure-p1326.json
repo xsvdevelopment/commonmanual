@@ -1,0 +1,224 @@
+{
+  "id": "kia-theta-ii-rod-bearing-failure-p1326",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "2011-2014 Kia Optima, Sorento, Sportage Theta II: connecting rod bearing failure, P1326 limp mode (campaigns PI1803, PI1803Y/Z)",
+  "summary": "Certain 2011-2014 Optima (2.4 GDI and 2.0T), 2012-2014 Sorento (2.4 GDI) and 2011-2013 Sportage (2.0T) engines can wear their connecting rod bearings. Kia's knock sensor software (PI1803) blinks the check engine light, sets P1326 and limits the engine to about 1800-2000 rpm when it detects the wear. PI1803Y/Z is the follow-up: oil inspection, a bearing clearance test, and engine replacement on a No Pass.",
+  "applies": [
+    {
+      "make": "KIA",
+      "models": [
+        "OPTIMA"
+      ],
+      "exclude": [
+        "HYBRID"
+      ],
+      "years": [
+        2011,
+        2014
+      ],
+      "engine": "Theta II 2.4L GDI / 2.0L Turbo GDI"
+    },
+    {
+      "make": "KIA",
+      "models": [
+        "SORENTO"
+      ],
+      "years": [
+        2012,
+        2014
+      ],
+      "engine": "Theta II 2.4L GDI"
+    },
+    {
+      "make": "KIA",
+      "models": [
+        "SPORTAGE"
+      ],
+      "years": [
+        2011,
+        2013
+      ],
+      "engine": "Theta II 2.0L Turbo GDI"
+    }
+  ],
+  "tags": [
+    "theta ii",
+    "rod bearing",
+    "connecting rod",
+    "engine knock",
+    "engine seized",
+    "engine failure",
+    "p1326",
+    "ksds",
+    "knock sensor detection",
+    "limp mode",
+    "blinking check engine light",
+    "pi1803",
+    "pi1803y",
+    "pi1803z",
+    "sc147",
+    "optima",
+    "sorento",
+    "sportage"
+  ],
+  "warnings": [
+    "A continuously blinking check engine light with P1326 is the knock sensor software reporting bearing wear. Limp mode is meant only to get the car to a dealer: slow acceleration, reduced top speed, about 1800-2000 rpm.",
+    "Kia can rule 'exceptional neglect' if any gap between oil changes was more than 14 months and/or 10,500 miles. Keep oil change records; Kia accepts receipts for oil and filters if you change your own."
+  ],
+  "specs": [
+    {
+      "name": "Covered builds (Optima, 2011-2013)",
+      "value": "2.4L GDI and 2.0L T-GDI, built 8/12/10-9/27/13",
+      "src": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Covered builds (Optima, 2014)",
+      "value": "2.4L GDI and 2.0L T-GDI, built 8/28/13-5/15/14",
+      "src": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Covered builds (Sportage, 2011-2013)",
+      "value": "2.0L T-GDI, built 12/30/10-8/30/13",
+      "src": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Covered builds (Sorento, 2012-2014)",
+      "value": "2.4L GDI, built 4/19/11-2/10/14",
+      "src": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Limp home mode rpm limit",
+      "value": "About 1800-2000 rpm",
+      "src": [
+        2
+      ]
+    },
+    {
+      "name": "Oil change gap Kia counts as neglect",
+      "value": "More than 14 months and/or 10,500 miles",
+      "src": [
+        1
+      ],
+      "note": "Kia's table also says no neglect finding applies to an otherwise eligible failure in the first 15,000 miles."
+    },
+    {
+      "name": "Seized-engine documentation torque",
+      "value": "Video of trying to turn the engine past 94 lb-ft",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Knock sensor (moved to the replacement engine)",
+      "value": "13.7-17.4 lb-ft (18.6-23.5 N·m)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Drive plate bolts (A/T, replace all seven)",
+      "value": "86.8-93.9 lb-ft (117.7-125.5 N·m)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Torque converter depth when reinstalling",
+      "value": "About 9/16-5/8 in (14-16 mm) recessed into the transaxle case",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Replacement engine oil fill",
+      "value": "About 5.8 quarts of 5W-30 full synthetic (API SN/SN+/SP, ILSAC GF4/GF5 or higher)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Bearing clearance tester",
+      "value": "SST KQ231-2T110QQK",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Make sure SC147, the earlier Theta II engine campaign, has been done. Kia has dealers complete it before the PI1803 knock sensor software.",
+      "src": [
+        2
+      ]
+    },
+    {
+      "text": "With P1326 stored, abnormal noise or a no-crank, the dealer records video and photos of the dipstick reading, the inside of the oil cap and the oil filler opening, and verifies maintenance records.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Run the bearing clearance test. Pass gets the ECU software upgrade. No Pass gets the engine replaced; P1326-stored cases need no Techline pre-authorization, while engine noise and no-crank cases need a Techline authorization with video.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "On a replacement, move the components to the new block using Service Kits I and II, torque the knock sensor to 13.7-17.4 lb-ft, fit seven new drive plate bolts, and check that the torque converter is fully seated.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Install, fill with about 5.8 quarts of 5W-30 full synthetic, bleed the cooling system, pressurize the fuel system before starting, then reset engine adaptive values and calibrate the steering angle sensor.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "These Kia bulletins point to Kia Warranty Bulletin 2020-27 for coverage terms, which isn't on file here. Ask the dealer for the current coverage on your VIN.\n\nHyundai built the same Theta II engine into the Sonata, Santa Fe Sport and Tucson, under its own campaigns 953 and T3G.",
+  "sources": [
+    {
+      "title": "PI1803Y/Z (Rev 7): Engine Replacement Instructions for DTC P1326",
+      "publisher": "Kia, revised March 22, 2024",
+      "citation": "Model list and flowcharts pp. 1-6; engine replacement pp. 10-12; maintenance and neglect table, Appendix 2 pp. 19-20; NHTSA ID 10252086",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10252086-0001.pdf"
+    },
+    {
+      "title": "PI1803 (Rev 6): Knock Sensor Detection System - ECU Logic Improvement",
+      "publisher": "Kia, revised July 23, 2021",
+      "citation": "Affected vehicles and KSDS description p. 1; SC147 notice p. 2; NHTSA ID 10199451",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10199451-0001.pdf"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "engine"
+    ],
+    [
+      "knock",
+      "seiz",
+      "rod bearing",
+      "connecting rod",
+      "p1326",
+      "blew",
+      "failure",
+      "failed"
+    ]
+  ]
+}
