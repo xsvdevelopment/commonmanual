@@ -1,0 +1,332 @@
+{
+  "id": "hyundai-theta-ii-rod-bearing-failure-p1326",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "Hyundai Theta II 2.4 GDI / 2.0T (Sonata, Santa Fe Sport, Tucson): connecting rod bearing failure, P1326, engine protection mode (campaigns 953, T3G)",
+  "summary": "Connecting rod bearings in certain Theta II 2.4L GDI and 2.0L Turbo engines can wear and lead to knocking, a seized engine, or a no-crank/no-start. Hyundai's knock sensor software (campaign 953) watches for the early vibration. When it hears it, the check engine light blinks, the engine drops into a protection mode limited to about 1800-2000 rpm, and it sets P1326. The engine long block is covered for 10 years / 120,000 miles, and under the class settlement for a limited lifetime on most models, through Hyundai prior approval.",
+  "applies": [
+    {
+      "make": "HYUNDAI",
+      "models": [
+        "SONATA"
+      ],
+      "exclude": [
+        "HYBRID",
+        "PLUG-IN"
+      ],
+      "years": [
+        2011,
+        2019
+      ],
+      "engine": "Theta II 2.4L GDI / 2.0L Turbo GDI"
+    },
+    {
+      "make": "HYUNDAI",
+      "models": [
+        "SANTA FE SPORT"
+      ],
+      "years": [
+        2013,
+        2018
+      ],
+      "engine": "Theta II 2.4L GDI / 2.0L Turbo GDI"
+    },
+    {
+      "make": "HYUNDAI",
+      "models": [
+        "SANTA FE"
+      ],
+      "exclude": [
+        "XL"
+      ],
+      "years": [
+        2019,
+        2019
+      ],
+      "engine": "Theta II 2.4L GDI / 2.0L Turbo GDI"
+    },
+    {
+      "make": "HYUNDAI",
+      "models": [
+        "TUCSON"
+      ],
+      "years": [
+        2014,
+        2015
+      ],
+      "engine": "Theta II 2.4L GDI"
+    },
+    {
+      "make": "HYUNDAI",
+      "models": [
+        "TUCSON"
+      ],
+      "years": [
+        2018,
+        2019
+      ],
+      "engine": "Theta II 2.4L GDI"
+    },
+    {
+      "make": "HYUNDAI",
+      "models": [
+        "VELOSTER N"
+      ],
+      "years": [
+        2019,
+        2019
+      ],
+      "engine": "Theta II 2.0L Turbo GDI"
+    }
+  ],
+  "tags": [
+    "theta ii",
+    "theta 2",
+    "rod bearing",
+    "connecting rod",
+    "engine knock",
+    "engine seized",
+    "engine failure",
+    "p1326",
+    "p132600",
+    "ksds",
+    "knock sensor detection",
+    "engine protection mode",
+    "limp mode",
+    "blinking check engine light",
+    "953",
+    "t3g",
+    "txxi",
+    "txxc",
+    "lifetime warranty",
+    "2.4 gdi",
+    "2.0t"
+  ],
+  "warnings": [
+    "A blinking check engine light with P1326 means the knock sensor software has heard bearing wear. Hyundai's protection mode is meant only to get the car to a dealer: slower acceleration, lower top speed, about 1800-2000 rpm.",
+    "Hyundai's procedure checks oil level and maintenance, and inspects for sludge and neglect, before approving an engine. Keep oil change receipts."
+  ],
+  "specs": [
+    {
+      "name": "Extended engine warranty (TXXC)",
+      "value": "10 years or 120,000 miles from original retail delivery or first use, original and subsequent owners; engine long block for connecting rod bearing damage",
+      "src": [
+        2
+      ]
+    },
+    {
+      "name": "Limited lifetime engine warranty (TXXI)",
+      "value": "Limited lifetime, original and subsequent owners, same models except the 2019 Veloster N",
+      "src": [
+        1
+      ],
+      "note": "Part of a class action settlement. Hyundai lists conditions: campaign 953 software done, vehicle neglect, prior total-loss (branded or salvage) titles, and some commercial used-car owners."
+    },
+    {
+      "name": "Covered vehicles",
+      "value": "2011-2014 Sonata (YF) and 2015-2019 Sonata (LF) 2.0T and 2.4 GDI; 2013-2018 Santa Fe Sport 2.0T and 2.4 GDI; 2019 Santa Fe (TM) 2.0T and 2.4 GDI; 2014-2015 Tucson (LM) and 2018-2019 Tucson (TL) 2.4 GDI; 2019 Veloster N 2.0T (in the TXXC extension only)",
+      "src": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Warning code",
+      "value": "P1326 (recorded as P132600), with a continuously blinking check engine light and a chime on some models",
+      "src": [
+        3,
+        4
+      ]
+    },
+    {
+      "name": "Engine protection mode rpm limit",
+      "value": "About 1800-2000 rpm",
+      "src": [
+        4
+      ]
+    },
+    {
+      "name": "Drained oil threshold (no oil on dipstick)",
+      "value": "1.5 quarts: at or above, continue to the rotation check; below, the dealer submits for prior approval",
+      "src": [
+        3
+      ]
+    },
+    {
+      "name": "Crank rotation check torque",
+      "value": "94 lb-ft: an engine that needs more than this to turn is documented on video for prior approval",
+      "src": [
+        3
+      ]
+    },
+    {
+      "name": "Ignition coil bolts",
+      "value": "9.8-11.8 N·m (7.2-8.7 lb-ft)",
+      "src": [
+        5
+      ]
+    },
+    {
+      "name": "Spark plugs",
+      "value": "14.7-24.5 N·m (10.9-18.0 lb-ft)",
+      "src": [
+        5
+      ]
+    },
+    {
+      "name": "Knock sensor (moved to the replacement engine)",
+      "value": "21 N·m (15.5 lb-ft)",
+      "src": [
+        3
+      ],
+      "note": "Hyundai says improper torque can set codes; use a torque wrench."
+    },
+    {
+      "name": "Drive plate bolts",
+      "value": "111.7-127.5 N·m (86.8-94.1 lb-ft)",
+      "src": [
+        3
+      ],
+      "note": "On a crankshaft with drill-through bolt holes, put low/medium-strength oil-tolerant threadlocker on all seven bolts."
+    },
+    {
+      "name": "Torque converter depth when reinstalling",
+      "value": "About 8-14 mm (5/16-9/16 in) recessed into the transaxle case",
+      "src": [
+        3
+      ],
+      "note": "Hyundai warns an incompletely seated converter can damage the transmission oil pump."
+    },
+    {
+      "name": "Replacement engine initial dry oil fill",
+      "value": "5.8 quarts, then set the level near the F mark warm",
+      "src": [
+        3
+      ]
+    },
+    {
+      "name": "Oil (all but Veloster N)",
+      "value": "5W-30 full synthetic, API SN/SN+/SP, ILSAC GF4/GF5 or higher",
+      "src": [
+        3
+      ]
+    },
+    {
+      "name": "Oil (Veloster N)",
+      "value": "0W-30 full synthetic (5W-30 if not available), SN/SN+/SP, ILSAC GF4/5 or higher",
+      "src": [
+        3
+      ]
+    },
+    {
+      "name": "Coolant mix",
+      "value": "50/50 to 70/30 water/antifreeze",
+      "src": [
+        3
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Scan with GDS for P1326 and other codes and save the freeze frame data. Photograph the dipstick, the underside of the oil filler cap and inside the filler opening, with the VIN visible.",
+      "src": [
+        3
+      ]
+    },
+    {
+      "text": "Look for external lower-end damage to the block. If there is damage, photograph it and submit for prior approval.",
+      "src": [
+        3
+      ]
+    },
+    {
+      "text": "If the dipstick shows no oil, drain the oil into a container marked in quarts. At or above 1.5 quarts, go on to the rotation check; below 1.5 quarts, submit for prior approval.",
+      "src": [
+        3
+      ]
+    },
+    {
+      "text": "Try to turn the crankshaft two full turns. If it turns normally, run the bearing clearance test. If it needs more than 94 lb-ft, record a video for prior approval and follow Hyundai's seized-engine path.",
+      "src": [
+        3
+      ]
+    },
+    {
+      "text": "Run Hyundai's bearing clearance test (coils and plugs out, tester in each spark plug hole). A Pass gets the latest campaign 953 software and goes back together. A No Pass or No BCT result is submitted for engine replacement.",
+      "src": [
+        3,
+        5
+      ]
+    },
+    {
+      "text": "On a replacement engine, move the knock sensor, fuel injectors, rail and harness, and the GDI high-pressure pump to the new engine using the new seals from the service kit. 2.4 ULEV/Federal engines also need two exhaust manifold studs relocated and one transferred.",
+      "src": [
+        3
+      ]
+    },
+    {
+      "text": "Install the engine, dry-fill with 5.8 quarts, and crank with the fuel system disabled to prime the oil. Then warm it up, bleed the cooling system and set the oil near F.",
+      "src": [
+        3
+      ]
+    },
+    {
+      "text": "Update the ECM to the latest campaign 953 software and relearn the steering angle sensor. Clear P1326 with the engine running (it can come back if cleared engine-off), reset engine adaptive values, and road test.",
+      "src": [
+        3
+      ]
+    }
+  ],
+  "body": "Campaign 953 is the knock sensor software update. Hyundai told dealers to do it on every affected car that comes into the shop, for any reason. T3G is the inspection and engine-replacement campaign. Every engine replacement goes through Hyundai warranty prior approval, which reviews the photos, oil level and maintenance evidence before approving.\n\nThe bulletins cited here are the April 2022 revisions. Hyundai may have revised them since, so ask the dealer for the latest version.",
+  "sources": [
+    {
+      "title": "TSB 22-EM-001H-1: Engine Warranty Extension (TXXI)",
+      "publisher": "Hyundai Motor America, April 2022",
+      "citation": "Description, settlement background, applicable vehicles p. 1; NHTSA ID 10211673",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10211673-0001.pdf"
+    },
+    {
+      "title": "TSB 22-EM-002H-1: Engine Warranty Extension (TXXC)",
+      "publisher": "Hyundai Motor America, April 2022",
+      "citation": "Description and applicable vehicles p. 1; NHTSA ID 10211674",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10211674-0001.pdf"
+    },
+    {
+      "title": "TSB 22-01-033H: Theta GDI Engine DTC P1326, Engine Bearing Inspection / Replacement (Service Campaign T3G)",
+      "publisher": "Hyundai Motor America, April 2022",
+      "citation": "Service procedure pp. 8-16; NHTSA ID 10211669",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10211669-0001.pdf"
+    },
+    {
+      "title": "TSB 20-01-006H: Engine Monitoring Logic Product Improvement (Service Campaign 953)",
+      "publisher": "Hyundai Motor America, February 2020",
+      "citation": "Description and applicable vehicles p. 1; NHTSA ID 10172223",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2020/MC-10172223-0001.pdf"
+    },
+    {
+      "title": "TSB 21-EM-004H: Bearing Clearance Test Service Procedure",
+      "publisher": "Hyundai Motor America, March 2021",
+      "citation": "Steps 2-3 p. 4; NHTSA ID 10190044",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10190044-0001.pdf"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "engine"
+    ],
+    [
+      "knock",
+      "seiz",
+      "rod bearing",
+      "connecting rod",
+      "p1326",
+      "ticking",
+      "seized",
+      "blew",
+      "failure",
+      "failed"
+    ]
+  ]
+}
