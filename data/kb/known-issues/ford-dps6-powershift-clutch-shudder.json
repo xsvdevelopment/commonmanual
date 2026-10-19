@@ -1,0 +1,195 @@
+{
+  "id": "ford-dps6-powershift-clutch-shudder",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "2011-2016 Focus / Fiesta PowerShift (DPS6): clutch shudder on light acceleration, input shaft seal leaks (programs 14M01, 19N08)",
+  "summary": "Ford's DPS6 dual dry-clutch automatic can shudder or judder pulling away from a stop and during shifts. On earlier builds Ford blames transmission fluid leaking past the input shaft seals onto the clutch (14M01); on later builds, the clutch material itself (19N08). Both programs extend clutch coverage to 7 years / 100,000 miles. The fix is diagnosis with Ford's IDS shudder pinpoint test, then a new clutch (and seals on 14M01 cars), a PCM/TCM reflash and a TCM adaptive learn.",
+  "applies": [
+    {
+      "make": "FORD",
+      "models": [
+        "FIESTA"
+      ],
+      "years": [
+        2011,
+        2015
+      ],
+      "engine": "DPS6 PowerShift automatic"
+    },
+    {
+      "make": "FORD",
+      "models": [
+        "FOCUS"
+      ],
+      "years": [
+        2012,
+        2016
+      ],
+      "engine": "DPS6 PowerShift automatic"
+    }
+  ],
+  "tags": [
+    "powershift",
+    "dps6",
+    "dual clutch",
+    "clutch shudder",
+    "judder",
+    "shudder on acceleration",
+    "input shaft seal",
+    "transmission leak",
+    "focus",
+    "fiesta",
+    "14m01",
+    "19n08",
+    "tsb 16-0109"
+  ],
+  "warnings": [
+    "Ford's notes say the IDS service routines clear the transmission's adaptive strategy, and skipping any step of them can leave erratic shifts and driveability problems."
+  ],
+  "specs": [
+    {
+      "name": "14M01 coverage (fluid-contaminated clutch, input shaft seals, software)",
+      "value": "7 years or 100,000 miles from warranty start",
+      "src": [
+        1
+      ],
+      "note": "Builds June 6-July 8, 2013 already past the limits were covered through February 29, 2020."
+    },
+    {
+      "name": "14M01 vehicles",
+      "value": "2011-2014 Fiesta (Cuautitlan, built Nov 3, 2009-Jul 8, 2013); 2012-2014 Focus (Michigan, built Aug 1, 2010-Jul 8, 2013)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "19N08 coverage (revised clutch material)",
+      "value": "7 years or 100,000 miles from warranty start; past that, through February 10, 2020",
+      "src": [
+        2
+      ]
+    },
+    {
+      "name": "19N08 vehicles",
+      "value": "2014-2015 Fiesta (built Jul 9, 2013-Oct 15, 2014); 2014-2016 Focus (built Jul 9, 2013-Nov 5, 2015)",
+      "src": [
+        2
+      ]
+    },
+    {
+      "name": "Dual clutch kit, Focus",
+      "value": "F1FZ-7B546-B",
+      "src": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Dual clutch kit, Fiesta",
+      "value": "FA6Z-7B546-B (built on or before 1/12/2011); FA6Z-7B546-A (built on or after 1/13/2011)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Seal / hardware kit",
+      "value": "EV6Z-7052-C (Focus); EV6Z-7052-D (Fiesta)",
+      "src": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Fluid",
+      "value": "Motorcraft dual clutch transmission fluid XT-11-QDC, up to 1 quart",
+      "src": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Labor: replace clutch",
+      "value": "5.2 h Focus, 4.7 h Fiesta; clutch and input shaft seals 5.7 h Focus, 5.1 h Fiesta",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Minimum IDS release for the reflash",
+      "value": "114.04 or higher",
+      "src": [
+        2
+      ]
+    }
+  ],
+  "parts": [
+    "Differential seal plugs F1FZ-7H183-A (Ford says to fit them whenever the transmission is out)",
+    "Engine-to-transaxle separator plate AE8Z-7007-A (1.6L Fiesta, if needed)"
+  ],
+  "steps": [
+    {
+      "text": "With IDS, run Workshop Manual Diagnosis by Symptom, Pinpoint Test A, Clutch Shudder on Acceleration (Focus and 2014-15 Fiesta; 2011-13 Fiesta uses Pinpoint Test N). Shudder within expected limits gets a TCM adaptive learn only.",
+      "src": [
+        1,
+        2
+      ]
+    },
+    {
+      "text": "If the clutch is replaced, upload the IDS datalogger session; IDS generates a repair validation code (RVC) that Ford requires on the claim.",
+      "src": [
+        1,
+        2
+      ]
+    },
+    {
+      "text": "Replace the clutch (and on 14M01 cars, the input shaft seals) following Workshop Manual section 307-01 (2011-2013 Fiesta: 307-11), doing every step listed there.",
+      "src": [
+        1,
+        2
+      ]
+    },
+    {
+      "text": "Reflash the PCM/TCM to the latest calibration with IDS 114.04 or higher, then do the TCM adaptive learn and a road test.",
+      "src": [
+        1,
+        2
+      ]
+    }
+  ],
+  "body": "Ford's dealer Q&A for its TCM program says these extensions don't address the PowerShift's distinctive shift feel. They cover the module, software, clutch and seals, not how the transmission drives.\n\nIf 15B22 (the TCM reflash campaign) is open on the car, Ford's 14M01 letter says to do 15B22 first.",
+  "sources": [
+    {
+      "title": "Customer Satisfaction Program 14M01, Supplement #7: Certain 2011-2014 Fiesta and Focus with DPS6, Transmission Clutch Shudder / Input Shaft Seal Warranty Extension",
+      "publisher": "Ford Motor Company, August 26, 2019",
+      "citation": "Program terms and vehicles p. 1; Attachment II labor and parts; Attachment III service procedure; NHTSA ID 10164604",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2019/MC-10164604-0001.pdf"
+    },
+    {
+      "title": "Customer Satisfaction Program 19N08: Certain 2014-2015 Fiesta and 2014-2016 Focus with DPS6, Transmission Clutch Shudder / Clutch Warranty Extension",
+      "publisher": "Ford Motor Company, August 14, 2019",
+      "citation": "Program terms and vehicles p. 1; Attachment II parts; Attachment III steps 1-2; NHTSA ID 10164603",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2019/MC-10164603-0001.pdf"
+    },
+    {
+      "title": "Customer Satisfaction Program 14M02, Supplement #7: Certain 2011-2015 Fiesta and 2012-2016 Focus with DPS6, TCM Extended Warranty Coverage",
+      "publisher": "Ford Motor Company, May 4, 2023",
+      "citation": "Attachment IV Dealer Q&A, shift feel question; NHTSA ID 10237441",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10237441-0001.pdf"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "shudder",
+      "judder",
+      "shake",
+      "shaking",
+      "vibrat"
+    ],
+    [
+      "transmission",
+      "clutch"
+    ]
+  ]
+}
