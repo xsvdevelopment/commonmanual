@@ -81,10 +81,17 @@
   "updated": "2026-10-18",
   "complaintMatch": [
     [
-      "transmission",
+      "transmission"
+    ],
+    [
       "slip",
-      "shift",
-      "flare"
+      "fail",
+      "flare",
+      "went out",
+      "replace",
+      "rebuil",
+      "no reverse",
+      "won't shift"
     ]
   ]
 }
