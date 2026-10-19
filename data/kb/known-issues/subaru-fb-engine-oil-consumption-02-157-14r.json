@@ -1,0 +1,207 @@
+{
+  "id": "subaru-fb-engine-oil-consumption-02-157-14r",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "Subaru FB 2.0 / 2.5 oil consumption (2011-2015 Forester, Impreza, XV Crosstrek, 2013-2014 Legacy / Outback): short block replacement, bulletin 02-157-14R",
+  "summary": "Subaru extended powertrain coverage for excessive oil consumption on early FB engines to 8 years / 100,000 miles from the warranty start date. The threshold is more than 1/3 quart (10.6 fl oz) in 1,200 miles on Subaru's oil consumption test. Confirmed engines built before the redesigned piston rings get a new short block. The repair also includes an ECM reflash and a new oil level switch to stop false low-oil warnings.",
+  "applies": [
+    {
+      "make": "SUBARU",
+      "models": [
+        "FORESTER"
+      ],
+      "years": [
+        2011,
+        2015
+      ],
+      "engine": "2.5L FB (2015: manual transmission only)"
+    },
+    {
+      "make": "SUBARU",
+      "models": [
+        "LEGACY"
+      ],
+      "years": [
+        2013,
+        2014
+      ],
+      "engine": "2.5L FB"
+    },
+    {
+      "make": "SUBARU",
+      "models": [
+        "OUTBACK"
+      ],
+      "years": [
+        2013,
+        2014
+      ],
+      "engine": "2.5L FB"
+    },
+    {
+      "make": "SUBARU",
+      "models": [
+        "IMPREZA"
+      ],
+      "exclude": [
+        "WRX"
+      ],
+      "years": [
+        2012,
+        2015
+      ],
+      "engine": "2.0L FB (2014-2015: manual transmission only)"
+    },
+    {
+      "make": "SUBARU",
+      "models": [
+        "CROSSTREK"
+      ],
+      "exclude": [
+        "HYBRID"
+      ],
+      "years": [
+        2013,
+        2015
+      ],
+      "engine": "2.0L FB (2014-2015: manual transmission only)"
+    }
+  ],
+  "tags": [
+    "oil consumption",
+    "burning oil",
+    "low oil light",
+    "fb25",
+    "fb20",
+    "piston rings",
+    "short block",
+    "02-157-14r",
+    "warranty extension",
+    "forester",
+    "impreza",
+    "crosstrek",
+    "outback",
+    "legacy"
+  ],
+  "warnings": [
+    "Subaru advises not adding oil during the test unless there will be a significant delay before you can return to the retailer."
+  ],
+  "specs": [
+    {
+      "name": "Warranty extension",
+      "value": "8 years / 100,000 miles from the original warranty start date, for excessive oil consumption",
+      "src": [
+        1
+      ],
+      "note": "Before April 21, 2017, every affected vehicle was covered regardless of mileage."
+    },
+    {
+      "name": "Excessive consumption threshold",
+      "value": "More than 1/3 quart (10.6 fluid ounces) in 1,200 miles, on Subaru's oil consumption test",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Normal: no test needed (no low-oil lamp)",
+      "value": "At or below the add mark after 4,000 miles or more since the last oil change",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Normal: no test needed (with low-oil lamp)",
+      "value": "Lamp on after 5,000 miles or more since the last oil change",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Low oil lamp trigger",
+      "value": "About 1.1 quarts below full, engine off",
+      "src": [
+        1
+      ],
+      "note": "Wait at least 5 minutes after shutdown before reading the dipstick."
+    },
+    {
+      "name": "Return for the test check when",
+      "value": "At least 1,200 miles have passed, the low oil lamp comes on, or the level reaches the lower hole on the dipstick",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Short block assembly",
+      "value": "10103AC650, 10103AC760, 10103AC750 or 10103AC660 by model and year",
+      "src": [
+        1
+      ],
+      "note": "Confirm the current part number for your VIN with a Subaru parts department."
+    },
+    {
+      "name": "Low-oil lamp reflash bulletins",
+      "value": "11-145-14R (2013-14 Legacy/Outback), 11-148-14R (2014-15 Forester), 11-149-14R (2013-14 Impreza 2.0 and XV Crosstrek), 11-150-14R (2012 Impreza 2.0)",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Basic checks first: actual oil level, how much has been added and when, external leaks, and the PCV system. Oily residue in the air filter housing or throttle body can point to a sticking PCV valve.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "If no test has been done before, the retailer changes the oil and filter and starts Subaru's Oil Consumption Test form. One documented test is enough; there is no repeat testing.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Drive until 1,200 miles have passed, the low oil lamp comes on, or the level reaches the dipstick's lower hole, then return for the measurement.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Over 1/3 quart per 1,200 miles on an engine built before Subaru's piston ring change: the short block is replaced. Expect somewhat higher consumption for about the first 1,000 miles while the new rings seat.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "At the start or end of testing, whatever the result, install the ECM oil level detection reflash and the new oil level switch from the applicable bulletin to cut false low-oil warnings.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "Subaru lists normal reasons for some oil use: break-in (first 1,000 miles), lower-quality or wrong-viscosity oil, high rpm, heavy loads or towing, long idling, stop-and-go traffic, and temperature extremes. Under these conditions, Subaru says to check the oil more often and change it more frequently.\n\nThe redesigned rings came in at specific VINs and engine numbers per model. The bulletin's production change table lists them, read from the last eight characters stamped on the block next to the starter.",
+  "sources": [
+    {
+      "title": "Service Bulletin 02-157-14R: Engine Oil Consumption",
+      "publisher": "Subaru of America, revised April 13, 2021",
+      "citation": "Introduction p. 1; acceptable consumption p. 2; production changes and parts pp. 3-4; test procedure pp. 5-6; oil level lamp procedure p. 18; NHTSA ID 10191563",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10191563-0001.pdf"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "oil"
+    ],
+    [
+      "consum",
+      "burn",
+      "low oil",
+      "quart",
+      "using oil",
+      "add oil",
+      "adding oil"
+    ]
+  ]
+}
