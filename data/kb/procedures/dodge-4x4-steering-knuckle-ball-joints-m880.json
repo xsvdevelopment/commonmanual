@@ -1,0 +1,282 @@
+{
+  "id": "dodge-4x4-steering-knuckle-ball-joints-m880",
+  "type": "procedure",
+  "status": "cited",
+  "title": "4x4 front axle: steering knuckle and ball joint replacement (1976-77 Dodge W trucks)",
+  "summary": "Army procedure for pulling the front knuckle on the 4x4 axle, pressing out and in the upper and lower ball joints, and putting it back together with every torque in order.",
+  "applies": [
+    {
+      "make": "DODGE",
+      "models": [
+        "W100",
+        "W200",
+        "W300",
+        "PICKUP",
+        "RAM",
+        "POWER WAGON",
+        "DODGE TRUCK"
+      ],
+      "years": [
+        1976,
+        1977
+      ],
+      "engine": "4x4"
+    }
+  ],
+  "tools": [
+    "Puller (rotor/hub)",
+    "Brass drift",
+    "Sleeve tool C-4169",
+    "Ball joint press C-4212-L with adapter set C-4288",
+    "Seal installer C-4250",
+    "Snap ring pliers",
+    "Torque wrench"
+  ],
+  "warnings": [
+    "From the Army manual for the M880 (military 1976-77 Dodge W200). Confirm a civilian truck has the same part before using a number.",
+    "Don't let the caliper hang on its brake hose."
+  ],
+  "tags": [
+    "ball joints",
+    "steering knuckle",
+    "front axle",
+    "4x4",
+    
+    "wandering",
+    "loose front end",
+    "dodge",
+    "m880",
+    "w200"
+  ],
+  "specs": [
+    {
+      "name": "Lower ball joint nut",
+      "value": "80",
+      "unit": "ft-lb",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Upper ball joint sleeve",
+      "value": "40",
+      "unit": "ft-lb",
+      "note": "Start it with about two threads showing.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Upper ball joint nut",
+      "value": "100 ft-lb, then advance to the next cotter slot",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Steering knuckle arm nuts (left side)",
+      "value": "90",
+      "unit": "ft-lb",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Drag link to steering knuckle arm",
+      "value": "50",
+      "unit": "ft-lb",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Tie rod end to knuckle",
+      "value": "45",
+      "unit": "ft-lb",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Disc brake adapter mounting bolts",
+      "value": "85",
+      "unit": "ft-lb",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Hub retainer capscrews (crisscross)",
+      "value": "30",
+      "unit": "ft-lb",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Axle shaft nut",
+      "value": "100 ft-lb, then advance to the next cotter slot",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Caliper anti-rattle springs and retaining clips",
+      "value": "17",
+      "unit": "ft-lb",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Pull the cotter key and loosen the outer axle shaft nut. Raise the truck onto stands and remove the wheel.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Remove the caliper retainer and anti-rattle springs, slide the caliper off the disc and hang it out of the way (not by the hose). Remove the inside pad.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Through the hole in the hub flange, remove the six retainer plate capscrews. Remove the outer axle shaft nut and pull the rotor and hub with a puller.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Remove and discard the O-ring on the knuckle. Remove the splash shield screws and the disc brake adapter.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Disconnect the tie rod and the drag link from the knuckle.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Drive the inner oil seal out of the back of the knuckle with a punch, then carefully slide the inner and outer axle shaft (with U-joint) out of the housing.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Remove the steering knuckle arm nuts, tap the arm to loosen the tapered dowels, and remove the dowels and arm.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Remove the upper ball joint cotter key and both ball joint nuts. Separate the knuckle from the axle yoke with a brass drift.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "With tool C-4169, remove and discard the sleeve in the upper ball joint yoke.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Knuckle in a vise: remove the lower ball joint snap ring, then press out the lower and upper ball joints with C-4212-L and adapter set C-4288. Replace them if worn.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Clean everything in solvent, blow dry, and inspect for burrs, chips and cracks.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Knuckle right side up in the vise: press in the lower ball joint and fit the snap ring, then press in the upper ball joint. Fit boots on both.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Thread a new sleeve into the upper ball joint yoke, leaving about two threads showing.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Set the knuckle on the yoke, install the lower ball joint nut and tighten it to 80 ft-lb.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "With C-4169, tighten the upper sleeve to 40 ft-lb. Install the upper ball joint nut at 100 ft-lb, then keep going to the next cotter slot and fit the cotter key.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Left side: fit the steering knuckle arm with its tapered dowels, nuts at 90 ft-lb. Drag link to the arm at 50 ft-lb with a cotter key.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Tie rod end to the knuckle at 45 ft-lb with a cotter key.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Slide the axle shaft in and install a new knuckle seal with C-4250. Refit the splash shield and the disc brake adapter, adapter bolts 85 ft-lb.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Fit a new O-ring on the knuckle. Clean rust off the axle splines, slide the rotor, hub, retainer and bearing on and start the axle shaft nut.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Through the flange hole, line up the retainer and draw it in evenly with the capscrews in a crisscross pattern to 30 ft-lb.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Axle shaft nut 100 ft-lb, then on to the next cotter slot; fit the cotter key.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Seat the inside pad in the adapter ways, slide the caliper in over the disc without pulling the piston boot out of its grooves, and install the anti-rattle springs and retaining clips at 17 ft-lb (inside pad spring goes on top of the retainer spring plate).",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Install the wheel, grease all fittings, lower the truck and check the steering.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "TM 9-2320-266-34: Direct and General Support Maintenance Manual, Truck, Cargo, 1-1/4 Ton, 4x4 (M880 series)",
+      "publisher": "Headquarters, Department of the Army, January 1976 (reprint with Changes 1-7)",
+      "url": "https://archive.org/details/micro_IA41152635_0460",
+      "citation": "Para. 6-2, Steering Knuckle and Ball Joint (figures 6-1 to 6-8)"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18"
+}

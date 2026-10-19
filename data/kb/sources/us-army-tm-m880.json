@@ -2,7 +2,7 @@
   "id": "us-army-tm-m880",
   "type": "source",
   "title": "US Army manuals for M880 series (military 1976-77 Dodge W-series)",
-  "summary": "Maintenance manuals for the military Dodge W200/D200 pickups. US government works, public domain.",
+  "summary": "Army direct and general support manual for the M880 series: military 1976-77 Dodge W200/D200 pickups with the 318 V8 and A-727 automatic. Full scan and OCR text on the Internet Archive.",
   "applies": [
     {
       "make": "DODGE",
@@ -16,8 +16,8 @@
         "RAM"
       ],
       "years": [
-        1972,
-        1980
+        1976,
+        1977
       ]
     }
   ],
@@ -29,14 +29,16 @@
     "public domain",
     "manual"
   ],
-  "body": "The M880 family were near-stock 1976-77 Dodge W200/D200 trucks with the 318 V8 and A727 automatic. Search the Internet Archive for \"TM 9-2320-266\" (the M880 manual series).",
+  "body": "TM 9-2320-266-34 (January 1976, reprinted with Changes 1-7) covers engine rebuild, A-727 transmission, transfer case, axles, brakes, steering, suspension, body and frame for the M880 family. Full OCR text: https://archive.org/download/micro_IA41152635_0460/micro_IA41152635_0460_djvu.txt\n\nCited entries built from it: dodge-318-truck-1976-77-specs, dodge-318-cylinder-head-install, dodge-318-valve-timing-check, dodge-a727-fluid-filter-change-m880, dodge-a727-band-adjustment-m880, dodge-a727-gear-selector-linkage-m880, dodge-steering-gear-preload-mesh-m880, dodge-4x4-steering-knuckle-ball-joints-m880, dodge-transfer-case-shift-linkage-m880.",
   "sources": [
     {
-      "title": "Internet Archive search: TM 9-2320-266",
-      "url": "https://archive.org/search?query=%22TM+9-2320-266%22"
+      "title": "TM 9-2320-266-34: Direct and General Support Maintenance Manual, Truck, Cargo, 1-1/4 Ton, 4x4 (M880 series)",
+      "publisher": "Headquarters, Department of the Army, January 1976 (reprint with Changes 1-7)",
+      "citation": "Title page and table of contents",
+      "url": "https://archive.org/details/micro_IA41152635_0460"
     }
   ],
-  "status": "draft",
-  "author": "Common Manual seed (unsourced, needs citations)",
+  "status": "cited",
+  "author": "Common Manual (AI-assisted)",
   "updated": "2026-10-18"
 }
