@@ -1,0 +1,55 @@
+{
+  "id": "chevy-k-series-62-diesel-cucv-specs",
+  "type": "spec",
+  "status": "cited",
+  "title": "Chevy K-series 6.2 diesel (CUCV M1008 / M1009): torques, capacities, idle, glow plugs",
+  "summary": "Service numbers for the military 1984-87 Chevy K-series pickup and K5 Blazer (CUCV) with the 6.2L diesel, from the Army unit maintenance manual TM 9-2320-289-20: chassis and driveline torques, differential and coolant capacities, idle speeds and glow plug resistance.",
+  "applies": [
+    { "make": "CHEVROLET", "models": ["K10", "K20", "K30", "BLAZER", "PICK UP", "CHEVROLET TRUCK"], "exclude": ["S10"], "years": [1984, 1987], "engine": "6.2L (379 cu in) V8 diesel" }
+  ],
+  "tags": ["cucv", "m1008", "m1009", "k5 blazer", "k30", "square body", "6.2 diesel", "379", "glow plugs", "torque", "capacities", "military", "public domain"],
+  "warnings": ["These are the Army's numbers for the CUCV build (24-volt starting system, military wheels and axles). Check that a civilian truck has the same part before using a value."],
+  "specs": [
+    { "name": "Engine", "value": "90-degree V8 diesel, 379 cu in (6.2 L), 135 hp @ 3,600 rpm (SAE net)", "src": [1] },
+    { "name": "Glow plug resistance (terminal to ground)", "value": "1-3", "unit": "ohms", "src": [1] },
+    { "name": "Glow plugs", "value": "10", "unit": "ft-lb (14 N·m)", "src": [1] },
+    { "name": "Low idle", "value": "625 rpm (725 rpm M1010 ambulance)", "note": "Adjusted at the low idle screw on the injection pump, engine at operating temperature.", "src": [1] },
+    { "name": "Fast idle (solenoid energized)", "value": "800", "unit": "rpm", "src": [1] },
+    { "name": "Oil pan drain plug", "value": "20 ft-lb (27 N·m) at an oil change; PMCS check range 15-20 ft-lb", "src": [1] },
+    { "name": "Oil filter", "value": "Oil the seal; one full turn after the seal contacts the block. Don't overtighten.", "src": [1] },
+    { "name": "Engine mount retaining bolts", "value": "85", "unit": "ft-lb (115 N·m)", "src": [1] },
+    { "name": "Starter mounting bolts", "value": "33", "unit": "ft-lb (45 N·m)", "src": [1] },
+    { "name": "Transmission mounting bolts", "value": "80", "unit": "ft-lb (108 N·m)", "src": [1] },
+    { "name": "Transmission oil pan bolts", "value": "125-160", "unit": "in-lb (14-18 N·m)", "src": [1] },
+    { "name": "Transmission vacuum modulator mounting bolt", "value": "20", "unit": "ft-lb (27 N·m)", "src": [1] },
+    { "name": "Transfer case mounting bolts", "value": "30", "unit": "ft-lb (41 N·m)", "src": [1] },
+    { "name": "Transfer case drain plug", "value": "30-40", "unit": "ft-lb (41-54 N·m)", "src": [1] },
+    { "name": "Propeller shaft companion flange and U-joint screws", "value": "15 ft-lb (20 N·m); 25 ft-lb (34 N·m) where straps use 6-lobe bolts", "src": [1] },
+    { "name": "Differential cover bolts", "value": "35", "unit": "ft-lb (47 N·m)", "src": [1] },
+    { "name": "Spring U-bolt nuts", "value": "40 ft-lb (54 N·m) in an X pattern, then 150 ft-lb (203 N·m) front / 145 ft-lb rear in the same pattern", "src": [1] },
+    { "name": "Pitman arm nut (cotter pin missing)", "value": "95", "unit": "ft-lb", "src": [1] },
+    { "name": "Steering connecting rod nuts", "value": "75", "unit": "ft-lb", "src": [1] },
+    { "name": "Tie rod mounting nuts", "value": "40", "unit": "ft-lb", "src": [1] },
+    { "name": "Tie rod end replacement limit", "value": "Socket moves 0.015 in (0.4 mm) on the ball stud", "src": [1] },
+    { "name": "Stabilizer bar mounting bolts", "value": "55", "unit": "ft-lb (75 N·m)", "src": [1] },
+    { "name": "Cargo body mounting bolts (all except M1009)", "value": "50", "unit": "ft-lb (68 N·m)", "src": [1] },
+    { "name": "Wheel lug nuts", "value": "90 lb M1009; 140 lb all others (as printed in the PMCS table)", "src": [1] },
+    { "name": "Front differential capacity", "value": "4.5 pt (2.1 L)", "src": [1] },
+    { "name": "Rear differential capacity", "value": "5.4 pt (2.6 L)", "src": [1] },
+    { "name": "Cooling system capacity", "value": "25 qt (23.7 L), 50/50 ethylene glycol and water; 65/35 below -10 °F (-25 °C)", "src": [1] },
+    { "name": "Fuel tank", "value": "20 gal (75.7 L)", "src": [1] },
+    { "name": "Differential service interval", "value": "Drain and refill every 2 years or 24,000 miles", "src": [1] },
+    { "name": "Air filter element", "value": "Normally annually or 12,000 miles; sooner in dust", "src": [1] }
+  ],
+  "body": "Left out on purpose: the transmission and transfer case service capacities and the torque converter cover bolt torque. In the scanned text their two units don't agree with each other (for example quarts vs. liters), so they need someone to check the printed page.\n\nThe tabulated data table (Table 1-1) lists weights, axle ratings and dimensions per model in columns that the OCR scrambles; only the engine line and fuel tank, which are the same for every model, are used here.",
+  "sources": [
+    {
+      "title": "TM 9-2320-289-20: Unit Maintenance Manual for Truck, Cargo, Tactical, 1-1/4 Ton, 4x4, M1008, M1008A1, M1009, M1010, M1028, M1028A1, M1031 (CUCV)",
+      "publisher": "Headquarters, Departments of the Army, the Air Force and Headquarters Marine Corps, January 1988 (with Changes through No. 4, November 1995); approved for public release",
+      "citation": "Table 1-1 Tabulated Data p. 1-8; Table 2-1 Unit PMCS items 8, 23-30 and 12-16, pp. 2-13 to 2-24.4; lubrication intervals p. 2-24.5; para. 3-4 Engine Oil and Oil Filter Replacement; para. 3-20 Glow Plug Replacement p. 3-61; para. 3-25 Engine Idle Speed Adjustment pp. 3-71 to 3-72",
+      "url": "https://archive.org/details/m-1009"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18"
+}
