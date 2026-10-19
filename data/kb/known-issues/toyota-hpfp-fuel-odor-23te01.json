@@ -1,0 +1,180 @@
+{
+  "id": "toyota-hpfp-fuel-odor-23te01",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "Toyota 2016-2022 (Tacoma, Camry, RAV4, Highlander and more): fuel smell from the high-pressure fuel pump, program 23TE01",
+  "summary": "Toyota Customer Support Program 23TE01: fuel odor in or around the engine bay from low-pressure seepage at the high-pressure fuel pump. If verified, the pump is replaced; coverage runs 10 years from first use regardless of mileage.",
+  "applies": [
+    {
+      "make": "TOYOTA",
+      "models": [
+        "TACOMA"
+      ],
+      "years": [
+        2016,
+        2022
+      ]
+    },
+    {
+      "make": "TOYOTA",
+      "models": [
+        "CAMRY"
+      ],
+      "years": [
+        2018,
+        2022
+      ]
+    },
+    {
+      "make": "TOYOTA",
+      "models": [
+        "AVALON"
+      ],
+      "years": [
+        2019,
+        2022
+      ]
+    },
+    {
+      "make": "TOYOTA",
+      "models": [
+        "HIGHLANDER"
+      ],
+      "years": [
+        2017,
+        2022
+      ]
+    },
+    {
+      "make": "TOYOTA",
+      "models": [
+        "SIENNA"
+      ],
+      "years": [
+        2018,
+        2022
+      ]
+    },
+    {
+      "make": "TOYOTA",
+      "models": [
+        "RAV4"
+      ],
+      "years": [
+        2019,
+        2022
+      ]
+    },
+    {
+      "make": "TOYOTA",
+      "models": [
+        "VENZA"
+      ],
+      "years": [
+        2021,
+        2022
+      ]
+    }
+  ],
+  "tags": [
+    "fuel smell",
+    "fuel odor",
+    "gas smell",
+    "high-pressure fuel pump",
+    "hpfp",
+    "direct injection",
+    "d-4s",
+    "customer support program",
+    "23te01",
+    "tacoma",
+    "camry",
+    "rav4",
+    "highlander"
+  ],
+  "specs": [
+    {
+      "name": "Program",
+      "value": "Customer Support Program 23TE01, dealer letter January 26, 2023",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Coverage",
+      "value": "10 years from date of first use, regardless of mileage",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Vehicles",
+      "value": "2016-2022 Tacoma; 2018-2022 Camry; 2019-2022 Avalon; 2017-2022 Highlander; 2020-2022 Highlander Hybrid; 2018-2020 Sienna; 2021-2022 Sienna Hybrid; 2019-2022 RAV4 and RAV4 Hybrid; 2021 RAV4 Prime; 2021-2022 Venza Hybrid",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Approximate vehicles covered",
+      "value": "4,129,998",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Hybrid repair parts",
+      "value": "Fuel pump assembly (23101-), spacer gasket (23224-), throttle body gasket (22271-); confirm by VIN",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Salvage / branded title",
+      "value": "Still eligible: the program is emission related",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Complaint: fuel smell in or around the engine bay.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Verify the odor is coming from the high-pressure fuel pump; the program only covers verified cases.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Replace the high-pressure fuel pump, with the parts confirmed for that VIN in the Electronic Parts Catalog.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "The model/year column of the dealer letter is clear, but its production-period column doesn't line up with the models in the PDF text, so production dates are left out here. Check the VIN with a Toyota dealer for eligibility.\n\nModel names match by substring, so SIENNA here also matches SIENNA HYBRID (covered 2021-2022), and HIGHLANDER matches HIGHLANDER HYBRID (covered 2020-2022).",
+  "sources": [
+    {
+      "title": "Customer Support Program 23TE01: Coverage for High-Pressure Fuel Pump, Low Pressure Fuel Seepage (dealer letter)",
+      "publisher": "Toyota Motor Sales, USA, January 26, 2023",
+      "citation": "Model table and program details pp. 1-2, parts p. 3; NHTSA ID 10236191",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10236191-9999.pdf"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "fuel smell",
+      "gas smell",
+      "fuel odor",
+      "gas odor",
+      "smell gas",
+      "smell fuel",
+      "smells like gas"
+    ]
+  ]
+}

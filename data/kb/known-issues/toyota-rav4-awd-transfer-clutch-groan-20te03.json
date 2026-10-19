@@ -1,0 +1,119 @@
+{
+  "id": "toyota-rav4-awd-transfer-clutch-groan-20te03",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "2019-2020 RAV4 Adventure / Limited AWD: buzz or groan from the front transfer case, program 20TE03",
+  "summary": "Toyota Customer Support Program 20TE03: an abnormal buzz or groan from the front transfer case in Normal mode as the AWD disconnects (20-30 mph accelerating) or reconnects (20-13 mph slowing), usually after 15+ minutes of driving. Fix is a new electro-magnetic clutch kit, with an AWD ECU reflash if needed; covered 10 years / 125,000 miles.",
+  "applies": [
+    {
+      "make": "TOYOTA",
+      "models": [
+        "RAV4"
+      ],
+      "exclude": [
+        "HYBRID",
+        "PRIME"
+      ],
+      "years": [
+        2019,
+        2020
+      ],
+      "engine": "Adventure and Limited grades, AWD"
+    }
+  ],
+  "tags": [
+    "awd",
+    "transfer case",
+    "groan",
+    "buzz",
+    "noise",
+    "electro-magnetic clutch",
+    "dynamic torque vectoring",
+    "rav4",
+    "customer support program",
+    "20te03"
+  ],
+  "specs": [
+    {
+      "name": "Accelerating (AWD disconnect)",
+      "value": "20-30 mph from a stop",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Decelerating (AWD connect)",
+      "value": "20 down to 13 mph",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Typically after",
+      "value": "15 minutes or more of driving, Normal drive mode",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Coverage",
+      "value": "10 years or 125,000 miles from date of first use, whichever first",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Repair kit",
+      "value": "04000-28142 Repair Kit, Transfer (order the kit, not the parts inside it)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Vehicles",
+      "value": "About 36,900 RAV4s built early March 2018 to late October 2019",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Confirm the noise in Normal drive mode: buzz or groan from the front transfer case at 20-30 mph accelerating from a stop, and/or 20-13 mph slowing down, usually after 15+ minutes of driving.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "If verified, replace the front transfer case electro-magnetic clutch and drain plug using kit 04000-28142, and reprogram the AWD ECU if needed.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "The repair kit part number was revised on July 13, 2023; the number above is from that revision.",
+  "sources": [
+    {
+      "title": "Customer Support Program 20TE03: Coverage for Front Transfer Case Electro-Magnetic Clutch (dealer letter, updated July 13, 2023)",
+      "publisher": "Toyota Motor Sales, USA, original publication November 11, 2020",
+      "citation": "Background and program details pp. 1-2, parts p. 4; NHTSA ID 10241399",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10241399-9999.pdf"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "groan",
+      "buzz",
+      "hum",
+      "growl"
+    ],
+    [
+      "awd",
+      "transfer",
+      "accelerat",
+      "decelerat"
+    ]
+  ]
+}
