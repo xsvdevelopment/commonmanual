@@ -1,0 +1,180 @@
+{
+  "id": "ford-dps6-powershift-tcm-failure",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "2011-2016 Focus / Fiesta PowerShift (DPS6): TCM failure, no-start, loss of drive or power (programs 14M02, 15B22, 19N07)",
+  "summary": "The transmission control module on DPS6 Focus and Fiesta cars can fail internally, causing intermittent no-starts, loss of power, or the transmission dropping out of gear while driving, usually with the check engine light on. Ford extended TCM coverage to 10 years / 150,000 miles under 14M02. Diagnosis is by the listed symptoms and codes P0606, U0100, U0101 or U1013.",
+  "applies": [
+    {
+      "make": "FORD",
+      "models": [
+        "FIESTA"
+      ],
+      "years": [
+        2011,
+        2015
+      ],
+      "engine": "DPS6 PowerShift automatic"
+    },
+    {
+      "make": "FORD",
+      "models": [
+        "FOCUS"
+      ],
+      "years": [
+        2012,
+        2016
+      ],
+      "engine": "DPS6 PowerShift automatic"
+    }
+  ],
+  "tags": [
+    "powershift",
+    "dps6",
+    "tcm",
+    "transmission control module",
+    "no start",
+    "loss of power",
+    "loses drive",
+    "neutral while driving",
+    "p0606",
+    "u0100",
+    "u0101",
+    "u1013",
+    "hill start assist not available",
+    "prndl flashing",
+    "14m02",
+    "15b22",
+    "19n07",
+    "tsb 16-0129"
+  ],
+  "warnings": [
+    "Ford says the symptoms are intermittent and may become more frequent and last longer if the transmission isn't serviced."
+  ],
+  "specs": [
+    {
+      "name": "14M02 TCM coverage",
+      "value": "10 years or 150,000 miles from warranty start; vehicles already past either limit got a one-time TCM replacement through June 30, 2025",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "14M02 vehicles",
+      "value": "2011-2015 Fiesta (Cuautitlan, built Nov 3, 2009-Jun 30, 2015); 2012-2016 Focus (Michigan, built Aug 1, 2010-Nov 5, 2015)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Codes that point to the TCM",
+      "value": "P0606 (TCM internal failure), U0100 (lost communication with ECM/PCM), U0101 (lost communication with TCM), U1013 (invalid internal monitoring data from TCM)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "TCM part",
+      "value": "AE8Z-7Z369-F (includes TCM seals)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Labor: replace TCM",
+      "value": "1.0 h Focus, 1.1 h Fiesta (includes retrieving DTCs)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Minimum IDS release for reprogramming",
+      "value": "114.04 or higher",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "15B22 TCM reflash campaign",
+      "value": "2011-2015 Fiesta and 2012-2014 Focus; reopened through August 31, 2020, no mileage limit",
+      "src": [
+        2
+      ]
+    },
+    {
+      "name": "19N07 coverage after a 15B22 reflash",
+      "value": "TCM replacement for 6 months from the repair order date of the 15B22 reflash, if not covered by warranty or 14M02",
+      "src": [
+        3
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Confirm at least one symptom: intermittent no-start, intermittent loss of power, intermittent loss of engagement while driving, 'Hill Start Assist Not Available' flashing, a 'Parking Aid Malfunction' message, or the PRNDL/S indicator blinking.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Retrieve codes with IDS. P0606, U0100, U0101 or U1013 lead toward the TCM. The other transmission codes Ford lists (P0805, P087A, P090B, P090C, P0901, P0902, P2831, P2832, P2835-P2837, P285C-P285E, P2861, P2862) need Workshop Manual diagnosis first; replace the TCM only if that diagnosis calls for it.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Before removing the old TCM, download its data to IDS with the Programmable Module Installation (PMI) routine. Replace the TCM per Workshop Manual section 307-01, then upload the data with PMI.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Reprogram the PCM/TCM with IDS 114.04 or higher, run the TCM adaptive learn per section 307-01, and clear all codes.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "Out of warranty, Ford's 14M02 letter allowed a used Ford TCM, a refurbished Ford TCM, or an aftermarket TCM that completes Ford's software updates. Cars still in the 8-year / 80,000-mile emissions warranty had to get a new Ford TCM.\n\nIf diagnosis shows the TCM isn't the cause, the program pays only for the code retrieval, and Ford tells dealers to warn the owner of that before going further.",
+  "sources": [
+    {
+      "title": "Customer Satisfaction Program 14M02, Supplement #7: Certain 2011-2015 Fiesta and 2012-2016 Focus with DPS6, Transmission Control Module Extended Warranty Coverage",
+      "publisher": "Ford Motor Company, May 4, 2023",
+      "citation": "Program terms, vehicles and reason p. 1; Attachment II labor and parts; Attachment III TCM diagnosis and procedure; NHTSA ID 10237441",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10237441-0001.pdf"
+    },
+    {
+      "title": "Customer Satisfaction Program 15B22, Supplement #3: TCM Reprogramming for Overt TCM Failure Warning",
+      "publisher": "Ford Motor Company, August 14, 2019",
+      "citation": "Program terms and affected vehicles p. 1; NHTSA ID 10164612",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2019/MC-10164612-0001.pdf"
+    },
+    {
+      "title": "Customer Satisfaction Program 19N07: Certain 2011-2015 Fiesta and 2012-2014 Focus with DPS6, TCM Extended Warranty Coverage",
+      "publisher": "Ford Motor Company, August 14, 2019",
+      "citation": "Program terms and reason p. 1; NHTSA ID 10164615",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2019/MC-10164615-0001.pdf"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "transmission",
+      "tcm",
+      "control module"
+    ],
+    [
+      "no start",
+      "won't start",
+      "not start",
+      "loss of power",
+      "lost power",
+      "neutral",
+      "lost drive",
+      "loss of drive",
+      "stall",
+      "no power"
+    ]
+  ]
+}
