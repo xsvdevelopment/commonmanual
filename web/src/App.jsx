@@ -38,7 +38,7 @@ export default function App() {
         </nav>
         <label className={'draft-toggle' + (drafts ? ' on' : '')} title="Unsourced drafts are hidden unless this is on">
           <input type="checkbox" checked={drafts} onChange={(e) => setDrafts(e.target.checked)} />
-          Show unsourced drafts
+          <span className="wide-only">Show unsourced </span>drafts
         </label>
       </header>
       {config?.readOnly && (

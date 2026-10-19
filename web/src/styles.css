@@ -219,9 +219,16 @@ table.spec.makes th { width: 26%; font-family: var(--head); font-weight: 700; co
   .row { flex-wrap: wrap; }
   .row input { flex: 1 1 100%; min-width: 0; }
   .row .btn { flex: 1 1 auto; }
-  .top { position: static; padding: 10px 16px; gap: 8px 16px; }
-  .top nav { flex-basis: 100%; order: 3; gap: 4px 14px; }
-  .top nav a { font-size: 0.95rem; }
-  .draft-toggle { margin-left: auto; font-size: 0.75rem; }
+  .top { position: static; padding: 8px 16px 0; gap: 4px 12px; }
+  /* one swipeable row of full-height tap targets instead of two wrapped rows */
+  .top nav { flex-basis: 100%; order: 3; flex-wrap: nowrap; overflow-x: auto; gap: 0 18px; margin: 0 -16px; padding: 0 16px; scrollbar-width: none; }
+  .top nav::-webkit-scrollbar { display: none; }
+  .top nav a { font-size: 1rem; white-space: nowrap; min-height: 44px; display: inline-flex; align-items: center; }
+  .draft-toggle { margin-left: auto; font-size: 0.8rem; min-height: 36px; }
+  .wide-only { display: none; }
+  .btn.small { min-height: 44px; }
+  .examples .link { min-height: 40px; }
+  .queue li > a:not(.btn), .meta a { display: inline-block; padding: 10px 0; }
+  .link { min-height: 40px; }
   .hero h1 { font-size: 2.6rem; }
 }
