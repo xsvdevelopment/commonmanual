@@ -77,6 +77,8 @@ Type the vehicle and the symptom in plain words: *"2010 Chevy Equinox burning oi
 
 Government data is cached on disk, so anything you've looked up keeps working when the shop's internet doesn't.
 
+On a phone or tablet, install it from the browser menu ("Add to Home Screen" / "Install app"). Hit **Save for offline** on a vehicle and its recalls, bulletins, owner reports and shop knowledge stay on the device for when you're under a truck with no signal.
+
 ---
 
 ## Run it

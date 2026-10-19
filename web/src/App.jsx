@@ -1,4 +1,4 @@
-import { useRoute, usePref, useApi } from './api.js';
+import { useRoute, usePref, useApi, useOffline } from './api.js';
 import Home from './components/Home.jsx';
 import Vehicle from './components/Vehicle.jsx';
 import Entry from './components/Entry.jsx';
@@ -11,6 +11,7 @@ export default function App() {
   const { parts, query } = useRoute();
   const [drafts, setDrafts] = usePref('openbay.drafts', false);
   const config = useApi('/config').data;
+  const offline = useOffline();
   const [page, ...rest] = parts;
 
   let body;
@@ -41,6 +42,11 @@ export default function App() {
           Show unsourced drafts
         </label>
       </header>
+      {offline && (
+        <div className="offline-bar" role="status">
+          Offline. Showing what this device has saved; anything you haven't opened here before won't load.
+        </div>
+      )}
       {config?.readOnly && (
         <div className="preview-bar">
           Public preview. Browse everything; to add knowledge, <a href={config.repo} target="_blank" rel="noreferrer">grab it on GitHub</a> and run it yourself.

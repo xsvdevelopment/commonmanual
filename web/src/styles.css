@@ -225,3 +225,10 @@ table.spec.makes th { width: 26%; font-family: var(--head); font-weight: 700; co
   .draft-toggle { margin-left: auto; font-size: 0.75rem; }
   .hero h1 { font-size: 2.6rem; }
 }
+
+/* offline */
+.offline-bar { background: var(--red-dim); border-bottom: 1px solid var(--red); color: var(--text); text-align: center; padding: 8px 16px; font-size: 0.9rem; }
+.vactions { display: flex; flex-wrap: wrap; gap: 8px; }
+.btn.saved { border-color: var(--green); color: var(--green); }
+.saved-chip a { color: var(--text); text-decoration: none; }
+.saved-chip .link { padding: 0 2px; text-decoration: none; font-size: 1.2rem; line-height: 1; min-width: 28px; min-height: 28px; }

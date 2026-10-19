@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { api, useApi, qs, vehicleHref } from '../api.js';
+import { api, useApi, qs, vehicleHref, usePref } from '../api.js';
 
 const THIS_YEAR = new Date().getFullYear() + 1;
 const YEARS = Array.from({ length: THIS_YEAR - 1959 }, (_, i) => THIS_YEAR - i);
@@ -15,6 +15,7 @@ export default function Home() {
   const [vinErr, setVinErr] = useState('');
   const [vinBusy, setVinBusy] = useState(false);
 
+  const [saved, setSaved] = usePref('openbay.saved', []);
   const [problem, setProblem] = useState('');
   const [askErr, setAskErr] = useState('');
   const [asking, setAsking] = useState(false);
@@ -66,6 +67,20 @@ export default function Home() {
         {askErr && <p className="warn">{askErr}</p>}
         <p className="muted small examples">Try: {EXAMPLES.map((x) => <button key={x} className="link" onClick={() => setProblem(x)}>{x}</button>)}</p>
       </section>
+
+      {saved.length > 0 && (
+        <section className="panel">
+          <h2>Saved for offline</h2>
+          <div className="chips">
+            {saved.map((v) => (
+              <span key={[v.year, v.make, v.model].join('|')} className="chip saved-chip">
+                <a href={vehicleHref(v.year, v.make, v.model)}>{v.year} {v.make} {v.model || 'all models'}</a>
+                <button className="link" aria-label="Remove" title={`Saved ${v.at}. Remove from this list`} onClick={() => setSaved(saved.filter((x) => x !== v))}>×</button>
+              </span>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="panel">
         <h2>By VIN</h2>
