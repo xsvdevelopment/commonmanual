@@ -1,10 +1,10 @@
-# Contributing to OpenBay
+# Contributing to Common Manual
 
 Thank you. Every entry you add saves another mechanic an hour.
 
 ## The one rule: cite it
 
-OpenBay publishes facts, and a fact needs a source. Every published entry needs:
+Common Manual publishes facts, and a fact needs a source. Every published entry needs:
 
 - at least one entry in `sources`,
 - a footnote (`"src": [1]`) on **every** spec, pointing at the source number it came from, and

@@ -1,5 +1,5 @@
 @echo off
-title OpenBay (close this window to stop OpenBay)
+title Common Manual (close this window to stop Common Manual)
 cd /d "%~dp0"
 
 where node >nul 2>nul

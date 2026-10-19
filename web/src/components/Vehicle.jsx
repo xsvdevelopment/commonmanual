@@ -140,7 +140,7 @@ function Diagnose({ year, make, model, vin, q }) {
         <input className="big-input" value={input} onChange={(e) => setInput(e.target.value)} placeholder="What's it doing? (rattles on cold start, P0016, stalls when warm, shudders at 40…)" autoFocus={!q} />
         <button className="btn primary">Search</button>
       </form>
-      <p className="muted small">Searches every factory bulletin, recall, investigation, owner report and cited OpenBay entry for this vehicle. It finds documented records; it doesn't guess. Confirm with testing before replacing parts.</p>
+      <p className="muted small">Searches every factory bulletin, recall, investigation, owner report and cited Common Manual entry for this vehicle. It finds documented records; it doesn't guess. Confirm with testing before replacing parts.</p>
 
       {loading && <Loading what={`every record for this ${model}`} />}
       {error && <Err e={error} />}
@@ -159,7 +159,7 @@ function Diagnose({ year, make, model, vin, q }) {
             </a>
           ))}
 
-          {data.knowledge.length > 0 && <><h3 className="sect">OpenBay knowledge</h3><div className="cards">{data.knowledge.map((e) => <EntryCard key={e.id} e={e} />)}</div></>}
+          {data.knowledge.length > 0 && <><h3 className="sect">Common Manual knowledge</h3><div className="cards">{data.knowledge.map((e) => <EntryCard key={e.id} e={e} />)}</div></>}
 
           <h3 className="sect">Factory bulletins ({data.tsbs.length})</h3>
           {!data.tsbs.length && <p className="muted">No matching bulletins. Try other words for the symptom, or check the TSBs tab.</p>}
@@ -193,7 +193,7 @@ function Diagnose({ year, make, model, vin, q }) {
             <ul className="reports">{data.owners.examples.map((r) => <li key={r.id}><span className="muted mono">{r.filed} · ODI {r.id} · {r.components}</span><p>{r.summary}</p></li>)}</ul>
           ) : <p className="muted">No owner reports match.</p>}
 
-          <SourceNote sources={[{ title: 'NHTSA bulletins, recalls, investigations and complaints', url: 'https://www.nhtsa.gov/recalls' }, { title: 'OpenBay knowledge base (cited entries)' }]} note="Owner reports are unverified; a large number describing the same thing shows a pattern." />
+          <SourceNote sources={[{ title: 'NHTSA bulletins, recalls, investigations and complaints', url: 'https://www.nhtsa.gov/recalls' }, { title: 'Common Manual knowledge base (cited entries)' }]} note="Owner reports are unverified; a large number describing the same thing shows a pattern." />
         </>
       )}
     </div>

@@ -1,4 +1,4 @@
-// All OpenBay routes. Used by the local server (index.js) and the hosted preview (netlify/functions/api.mjs).
+// All Common Manual routes. Used by the local server (index.js) and the hosted preview (netlify/functions/api.mjs).
 import express from 'express';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -18,9 +18,9 @@ export function createApp({ readOnly = false } = {}) {
   app.use(express.json({ limit: '1mb' }));
 
   // The hosted public preview is read-only: contributions go through GitHub.
-  app.get('/api/config', (req, res) => res.json({ readOnly, repo: 'https://github.com/xsvdevelopment/openbay' }));
+  app.get('/api/config', (req, res) => res.json({ readOnly, repo: 'https://github.com/xsvdevelopment/commonmanual' }));
   if (readOnly) {
-    const msg = 'This is the read-only public preview. To add knowledge, run OpenBay on your own computer or open a pull request on GitHub.';
+    const msg = 'This is the read-only public preview. To add knowledge, run Common Manual on your own computer or open a pull request on GitHub.';
     app.post('/api/*', (req, res) => res.status(403).json({ error: msg, errs: [msg] }));
   }
 

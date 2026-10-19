@@ -22,4 +22,4 @@ if (DEV) {
   app.get('*', (req, res) => res.sendFile(path.join(dist, 'index.html')));
 }
 
-app.listen(PORT, () => console.log(`OpenBay running at http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Common Manual running at http://localhost:${PORT}`));

@@ -176,7 +176,7 @@
       ]
     }
   ],
-  "body": "The bulletin covers \"2025 and prior\" GM passenger cars and gasoline light-duty trucks without stating a first model year; the range here starts at 1960 only because that's where OpenBay starts. It also notes engine wear (piston scuffing, worn guides, seals and rings) as a cause once everything above is ruled out.",
+  "body": "The bulletin covers \"2025 and prior\" GM passenger cars and gasoline light-duty trucks without stating a first model year; the range here starts at 1960 only because that's where Common Manual starts. It also notes engine wear (piston scuffing, worn guides, seals and rings) as a cause once everything above is ruled out.",
   "sources": [
     {
       "title": "Service Bulletin 01-06-01-011P: Information on Engine Oil Consumption Guidelines",
@@ -185,6 +185,6 @@
       "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-11007091-0001.pdf"
     }
   ],
-  "author": "OpenBay (AI-assisted)",
+  "author": "Common Manual (AI-assisted)",
   "updated": "2026-10-18"
 }
