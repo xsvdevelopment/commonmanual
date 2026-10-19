@@ -1,0 +1,204 @@
+{
+  "id": "honda-crv-ac-compressor-shaft-seal",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "2017-21 CR-V 1.5T: A/C blows warm, compressor shaft seal leak (seal kit, not a compressor)",
+  "summary": "Honda Service Bulletin 23-015: oil and refrigerant leaking from the A/C compressor main shaft seal. Inspect the clutch area, hub, and felt washer, sniff the snout, and replace just the shaft seal with the seal kit and special press tool.",
+  "applies": [
+    {
+      "make": "HONDA",
+      "models": [
+        "CR-V"
+      ],
+      "exclude": [
+        "HYBRID"
+      ],
+      "years": [
+        2017,
+        2021
+      ],
+      "engine": "1.5L turbo I4"
+    }
+  ],
+  "tags": [
+    "a/c",
+    "ac",
+    "air conditioning",
+    "not cold",
+    "warm air",
+    "compressor",
+    "shaft seal",
+    "refrigerant leak",
+    "cr-v"
+  ],
+  "specs": [
+    {
+      "name": "Seal set assembly",
+      "value": "38918-64A-318",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Discharge hose O-ring (1/2 in)",
+      "value": "80872-SN7-003",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Suction hose O-ring (5/8 in)",
+      "value": "80871-SN7-003",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "POE compressor oil",
+      "value": "38899-RLV-A01, one can into the compressor",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Special tool",
+      "value": "6CVC Seal Replacement Kit 07AAC-5AAA1Z0",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Clutch center (hub) bolt",
+      "value": "17",
+      "unit": "N·m (13 lb-ft)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Pulley to armature plate clearance",
+      "value": "0.30-0.60 mm (0.012-0.024 in)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Clutch shim sizes",
+      "value": "0.3, 0.4, 0.5 mm",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Labor",
+      "value": "1.4 hr seal replacement incl. inspection; 0.7 hr evacuate and recharge",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Remove the right front tire, undercover, front subframe brace and drive belt.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "With the compressor still on the car, look for oil on the clutch area. Oil there means go to the seal repair.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "If it's dry, remove the center hub bolt and the hub/armature plate and check both for oil.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "If those are dry, pull the felt washer and set it on clean copier paper. Oil transferring to the paper after 10 seconds means go to the repair.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "If still nothing, sniff around the compressor snout with a calibrated leak detector for at least 5 minutes. A compressor that hasn't run recently, and a warmer vehicle, give better results.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "No leak found: reassemble the hub with its bolt at 17 N·m (13 lb-ft), check pulley-to-armature clearance is 0.30-0.60 mm and shim to suit, reinstall the belt, run 10 minutes and sniff again. Still nothing means check the rest of the A/C system the normal way.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Repair: recover refrigerant, disconnect the hoses and plug the ports right away with the kit's plugs, and remove the compressor.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Remove the clutch (keep the shims, usually 1-2), felt washer, pulley C-ring, pulley and seal C-ring. Clean the bore and shaft with a lint-free cloth, not compressed air.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Pull the old seal with the press and extractor tools from the kit, then clean the bore again and inspect it for damage.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Lube the new seal, seal guide and bore with new POE oil. The seal goes metal side up. Hand-press it about 5 mm below the bore edge, fit the seal C-ring rounded side down, then press to roughly 10 mm until the C-ring snaps into its groove.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Reinstall the pulley with a new C-ring, a new felt washer, the clutch plate with the same shim thickness, and a new hub bolt at 17 N·m (13 lb-ft). Add one can of POE oil to the compressor and reinstall it.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Charge the system, vacuum check, then run MAX COOL for 10 minutes at 1,500-2,000 rpm and sniff the seal area. A leak means replace the seal again; a leak after a second seal means replace the compressor.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "Related: Honda ServiceNews A21010D (2017-20 CR-V) says to look for insulation fibers on the O-ring section of the hose at the bulkhead before replacing a compressor or discharge hose for a leak. If found, remove the fibers, replace the O-rings and recharge.",
+  "sources": [
+    {
+      "title": "Service Bulletin 23-015: 2017-21 CR-V: A/C Compressor Shaft Seal Leak",
+      "publisher": "American Honda Motor Co., April 5, 2023",
+      "citation": "Parts, tools and warranty pp. 1-2; inspection pp. 3-8; repair pp. 9-28; NHTSA ID 10234576",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10234576-0001.pdf"
+    },
+    {
+      "title": "ServiceNews A21010D: A/C Leaks Due to Bulkhead Insulator Fibers",
+      "publisher": "American Honda Motor Co., January 2021",
+      "citation": "NHTSA ID 10186013",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10186013-0001.pdf"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "a/c",
+      "air condition",
+      "ac "
+    ],
+    [
+      "warm",
+      "not cold",
+      "leak",
+      "compressor"
+    ]
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "id": "honda-15t-oil-dilution-crv-civic",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "Honda 1.5L turbo (2016-18 Civic, 2017-18 CR-V): oil level rising, misfire codes, oil dilution",
+  "summary": "Fuel diluting the oil on short cold-weather trips can raise the oil level and set P0300-P0304 or P0172. Honda's product update is PCM (PGM-FI) and transmission software plus an A/C control unit update and an oil change; the 2017-18 CR-V also got a 6-year, unlimited-mileage powertrain extension for resulting damage.",
+  "applies": [
+    {
+      "make": "HONDA",
+      "models": [
+        "CR-V"
+      ],
+      "years": [
+        2017,
+        2018
+      ],
+      "engine": "1.5L turbo I4"
+    },
+    {
+      "make": "HONDA",
+      "models": [
+        "CIVIC"
+      ],
+      "exclude": [
+        "TYPE R"
+      ],
+      "years": [
+        2016,
+        2018
+      ],
+      "engine": "1.5L turbo I4"
+    }
+  ],
+  "tags": [
+    "oil dilution",
+    "fuel in oil",
+    "oil level high",
+    "overfull",
+    "misfire",
+    "p0300",
+    "p0301",
+    "p0302",
+    "p0303",
+    "p0304",
+    "p0172",
+    "1.5t",
+    "earth dreams",
+    "cold weather",
+    "short trips",
+    "warranty extension"
+  ],
+  "specs": [
+    {
+      "name": "DTCs",
+      "value": "P0300, P0301, P0302, P0303, P0304, P0172",
+      "src": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "name": "CR-V service bulletins",
+      "value": "18-114 (software update with A/C control unit) and 18-124 (software update only)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Civic service bulletin",
+      "value": "18-137 (software update with A/C control unit)",
+      "src": [
+        2
+      ]
+    },
+    {
+      "name": "A/C control unit, from February 1, 2019",
+      "value": "Reflash it; replacing it is no longer the procedure",
+      "src": [
+        3
+      ]
+    },
+    {
+      "name": "CR-V powertrain warranty extension (bulletin 19-037, campaign X4A)",
+      "value": "From 5 years / 60,000 miles to 6 years, unlimited miles, from original sale date",
+      "src": [
+        4
+      ]
+    },
+    {
+      "name": "Extension covers",
+      "value": "Engine parts damaged by these concerns, such as camshafts, rocker arm assemblies and spark plugs",
+      "src": [
+        4
+      ]
+    },
+    {
+      "name": "Campaign states (final scope)",
+      "value": "AK, CT, IL, IN, IA, ME, MA, MI, MN, MT, NE, NH, NJ, NY, ND, OH, PA, RI, SD, VT, WI",
+      "src": [
+        3
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Typical complaint: oil level above the full mark, MIL on, lack of power or misfire, worst on very short drives in cold weather.",
+      "src": [
+        1,
+        2
+      ]
+    },
+    {
+      "text": "Check the VIN for the open product update. Vehicles outside the campaign states get normal diagnosis, and if the problem is confirmed the update is done under normal warranty.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Product update (18-114 / 18-137, as revised): update the A/C control unit, reset the maintenance minder, change the engine oil (the filter doesn't need changing), clear DTCs, and update PGM-FI and TCU software to the latest version.",
+      "src": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "text": "Then reset the throttle position learned values and do the PCM idle learn.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "On a 2017-18 CR-V with misfire, P0172, or a whirling noise from the engine, damage to camshafts, rocker arms or spark plugs is covered under the 6-year extension.",
+      "src": [
+        4
+      ]
+    }
+  ],
+  "body": "The CR-V campaign started in five states (Maine, Minnesota, North Dakota, South Dakota, Wisconsin) in October 2018, grew to 21 cold-weather states in December 2018, and was extended to the 2016-18 Civic on December 21, 2018.\n\nThe Civic match leaves out the Type R. Not every 2016-18 Civic has the 1.5L turbo; check the engine.",
+  "sources": [
+    {
+      "title": "Dealer message: 2017-18 CR-V Engine Oil Dilution Product Update",
+      "publisher": "American Honda Motor Co., October 22, 2018",
+      "citation": "Problem, Repair and Service Bulletins sections; NHTSA ID 10147181",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2018/MC-10147181-9999.pdf"
+    },
+    {
+      "title": "Dealer message: 2016-18 Civic Engine Oil Dilution Product Update",
+      "publisher": "American Honda Motor Co., December 21, 2018",
+      "citation": "Problem, Repair and Service Bulletins sections; NHTSA ID 10152439",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2018/MC-10152439-0001.pdf"
+    },
+    {
+      "title": "Dealer message: Procedure Update, 2016-18 Civic & 2017-18 CR-V Engine Oil Dilution Product Update",
+      "publisher": "American Honda Motor Co., January 31, 2019",
+      "citation": "Background and Repair Update; NHTSA ID 10152769",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2019/MC-10152769-0001.pdf"
+    },
+    {
+      "title": "Owner letter: Warranty Extension, 2017-18 CR-V: DTC P0300, P0301, P0302, P0303, P0304, or P0172; Whirling Noise from Engine",
+      "publisher": "American Honda Motor Co., July 2019",
+      "citation": "Campaign X4A / Service Bulletin 19-037; NHTSA ID 10163174",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2019/MC-10163174-0001.pdf"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "oil dilution",
+      "fuel in oil",
+      "gas in oil",
+      "oil level rising",
+      "overfull",
+      "smells like gas",
+      "oil smells"
+    ]
+  ]
+}

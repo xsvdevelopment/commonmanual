@@ -1,0 +1,107 @@
+{
+  "id": "honda-accord-eps-torque-sensor-extension",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "2013-14 Accord: power steering assist lost, EPS DTC 53-01 / 53-02, 13-year warranty extension",
+  "summary": "Honda product update and warranty extension: the EPS torque sensor can fail and the control unit shuts off assist. A software update keeps partial assist on a sensor failure, and steering gearboxes with DTC 53-01 or 53-02 are covered for 13 years from original purchase, no mileage limit.",
+  "applies": [
+    {
+      "make": "HONDA",
+      "models": [
+        "ACCORD"
+      ],
+      "years": [
+        2013,
+        2014
+      ]
+    }
+  ],
+  "tags": [
+    "eps",
+    "electric power steering",
+    "power steering",
+    "loss of assist",
+    "heavy steering",
+    "torque sensor",
+    "53-01",
+    "53-02",
+    "warranty extension",
+    "accord"
+  ],
+  "specs": [
+    {
+      "name": "DTCs",
+      "value": "53-01 or 53-02 (EPS torque sensor)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Vehicles",
+      "value": "2013-14 Accord, 2014 Accord Plug-in Hybrid, 2014 Accord Hybrid",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Warranty extension",
+      "value": "13 years from original date of purchase, no mileage limit",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Not covered",
+      "value": "Vehicles ever declared a total loss, sold for salvage, or with a branded title",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Complaint: loss of power steering assist.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Do the EPS software update. It changes the control unit so a torque sensor failure leaves partial assist instead of none.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "During the update, check for DTC 53-01 or 53-02. If either is set, the steering gearbox is replaced under the extension.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Owners who already paid for a gearbox for these codes may be eligible for reimbursement, even if they no longer own the car.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "Honda told owners to allow about half a day for the update visit.",
+  "sources": [
+    {
+      "title": "Owner letter: Product Update, Electric Power Steering (EPS) Software Update; Warranty Extension, EPS Torque Sensor (DTC 53-01 or DTC 53-02)",
+      "publisher": "American Honda Motor Co., November 2018",
+      "citation": "NHTSA ID 10152445",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2018/MC-10152445-0001.pdf"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "power steering",
+      "steering assist",
+      "eps",
+      "hard to steer",
+      "heavy steering"
+    ]
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "id": "honda-idle-stop-no-restart-starter-valve-adjust",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "Honda Pilot / Passport / Ridgeline 9-speed: engine won't auto-restart after idle stop, starter and valve adjustment (10 years)",
+  "summary": "Honda Service Bulletin 23-009: after idle stop the engine may not restart on its own because of high cylinder pressure and/or low cranking torque. Honda covers a new starter, starter cut relays and a valve adjustment for 10 years with no mileage limit. Includes the 3.5 V6 valve clearance specs and order.",
+  "applies": [
+    {
+      "make": "HONDA",
+      "models": [
+        "PILOT"
+      ],
+      "years": [
+        2016,
+        2022
+      ],
+      "engine": "9-speed automatic with idle stop"
+    },
+    {
+      "make": "HONDA",
+      "models": [
+        "PASSPORT"
+      ],
+      "years": [
+        2019,
+        2022
+      ],
+      "engine": "9-speed automatic with idle stop"
+    },
+    {
+      "make": "HONDA",
+      "models": [
+        "RIDGELINE"
+      ],
+      "years": [
+        2020,
+        2023
+      ],
+      "engine": "9-speed automatic with idle stop"
+    }
+  ],
+  "tags": [
+    "idle stop",
+    "auto stop",
+    "won't restart",
+    "starter",
+    "starter relay",
+    "valve adjustment",
+    "valve clearance",
+    "j35",
+    "3.5 v6",
+    "pilot",
+    "passport",
+    "ridgeline",
+    "warranty extension"
+  ],
+  "specs": [
+    {
+      "name": "Warranty extension",
+      "value": "Starter assembly, starter relays and valve adjustment for this condition: 10 years from original purchase, no mileage limit",
+      "src": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Valve clearance, intake",
+      "value": "0.20-0.24 mm (0.008-0.009 in); set to 0.22 mm for this repair",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Valve clearance, exhaust",
+      "value": "0.28-0.32 mm (0.011-0.012 in); set to 0.30 mm for this repair",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Adjust with coolant below",
+      "value": "100 °F (38 °C)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Adjusting order (TDC marks on the front cam pulley)",
+      "value": "Cylinder 1, 4, 2, 5, 3, 6, rotating the crank clockwise",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Rocker adjusting screw locknuts",
+      "value": "20 N·m (15 lb-ft), intake and exhaust, oiled threads",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Starter motor",
+      "value": "31200-5J2-A53",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Starter cut relay",
+      "value": "39794-T5A-J01 (2)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Labor",
+      "value": "2.8 hr Pilot, 2.9 hr Ridgeline, 3.0 hr Passport",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "If Product Update 23-008 (idle stop PGM-FI software) applies to the VIN and is still open, do that first; it completes the repair. If it's closed or doesn't apply, verify the no-restart symptom and continue.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Replace the starter and both starter cut relays, then use HDS to run IDLE STOP STARTER COUNTER CLEAR in the adjustment menu.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Remove the throttle body (new gasket), EGR pipe B, intake manifold (bolts and nuts in three steps), ignition coils and both cylinder head covers.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "With coolant below 100 °F (38 °C), set No. 1 at TDC on the front cam pulley mark. Check each valve with a feeler gauge for a slight drag; adjust intake to 0.22 mm and exhaust to 0.30 mm, holding the screw while tightening the oiled locknut to 20 N·m (15 lb-ft), then recheck.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Turn the crank clockwise to each TDC mark in order and do cylinders 4, 2, 5, 3 and 6 the same way.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Check the spark plug tube seals, clean and seat the head cover gaskets, put new liquid gasket on the rocker arm oil control valve mating surfaces, and reassemble: intake manifold in three steps, throttle body in a cross pattern in three steps.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "Service Bulletin 23-009 lists 2016-21 Pilot, 2019-21 Passport and 2020-21 Ridgeline. Honda's owner letter for the same extension (which references bulletins 23-009 and 23-010) names 2016-22 Pilot, 2019-22 Passport and 2020-23 Ridgeline; the applies ranges follow the letter. Eligibility is by VIN.",
+  "sources": [
+    {
+      "title": "Service Bulletin 23-009: Warranty Extension: Engine Does Not Auto Restart After Entering Auto Idle Stop",
+      "publisher": "American Honda Motor Co., January 6, 2023",
+      "citation": "Background, parts and inspection pp. 1-3; repair procedure steps 1-46 pp. 4-19; NHTSA ID 10229676",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10229676-0001.pdf"
+    },
+    {
+      "title": "Owner letter: Warranty Extension: Engine Does Not Auto Restart After Entering Auto Idle Stop",
+      "publisher": "American Honda Motor Co., March 2023",
+      "citation": "Reference service bulletins 23-009 / 23-010; NHTSA ID 10232975",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10232975-0001.pdf"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "idle stop",
+      "auto stop",
+      "start stop",
+      "stop/start",
+      "restart"
+    ],
+    [
+      "restart",
+      "won't start",
+      "not start",
+      "stall",
+      "die"
+    ]
+  ]
+}
