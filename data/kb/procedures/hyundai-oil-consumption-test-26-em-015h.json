@@ -1,0 +1,148 @@
+{
+  "id": "hyundai-oil-consumption-test-26-em-015h",
+  "type": "procedure",
+  "status": "factory-sourced",
+  "title": "Hyundai oil consumption test: how the dealer measures it and what fails (TSB 26-EM-015H)",
+  "summary": "Hyundai's procedure for any gas engine (hybrids and plug-ins included) that seems to burn oil. The dealer changes the oil, seals the drain plug and filter, and sends you to drive at least 1,000 miles, then measures how much oil it took. More than 1,000 miles per quart passes. At 1,000 miles per quart or worse, four-cylinders get a combustion chamber cleaning and another 1,000-mile test, and a second fail goes to engine replacement through Hyundai prior approval.",
+  "applies": [
+    {
+      "make": "HYUNDAI",
+      "years": [
+        2010,
+        2026
+      ],
+      "engine": "All gasoline engines incl. hybrid and plug-in hybrid"
+    }
+  ],
+  "tags": [
+    "oil consumption",
+    "burning oil",
+    "low oil",
+    "oil usage test",
+    "quart per 1000 miles",
+    "combustion chamber cleaning",
+    "engine replacement",
+    "26-em-015h",
+    "26-em-016h",
+    "23-em-008h"
+  ],
+  "warnings": [
+    "Before the test, Hyundai's exception rule check requires every oil leak repaired, engine codes fixed and open engine campaigns done. It also checks for oil-change neglect, which can make the car ineligible for warranty or goodwill coverage. Keep oil change records."
+  ],
+  "specs": [
+    {
+      "name": "Pass",
+      "value": "More than 1,000 miles per quart",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Fail",
+      "value": "1,000 miles per quart or less",
+      "src": [
+        1
+      ],
+      "note": "Miles per quart = miles driven since the sealed fill / quarts added to bring it back to the F line."
+    },
+    {
+      "name": "Test drive between visits",
+      "value": "At least 1,000 miles, on fresh oil",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Minimum mileage on the engine",
+      "value": "16,000 miles since new or since a recent engine replacement",
+      "src": [
+        1
+      ],
+      "note": "Under that, Hyundai has the dealer look for cylinder wall scoring, PCV problems or large oil leaks instead."
+    },
+    {
+      "name": "Oil check method",
+      "value": "Idle about 10 minutes to operating temperature, shut off, wait 10-15 minutes, read the dipstick, fill to F",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Skip straight to cleaning if",
+      "value": "The last oil change was within 3,000 miles or 6 months (and no chamber cleaning within the last 24,000 miles)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Anti-tamper seal",
+      "value": "Steelman Security Seal 00232-19083 or equivalent, marked across the drain plug and the oil filter",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Oil",
+      "value": "Hyundai OEM-authorized synthetic engine oil, to shop manual spec",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Dealer labor, first visit with cleaning",
+      "value": "2.2 h (4-cylinder), 5.1 h (6-cylinder)",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Dealer checks warranty or goodwill eligibility and runs the exception rule check: at least 16,000 miles on the engine, no oil leaks, no abnormal internal noise, no check engine light affecting operation, all engine campaigns and TSBs done, no sign of oil-change neglect.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Visit 1: oil and filter change (customer pay), idle about 10 minutes to temperature, let it settle 10-15 minutes, fill exactly to F, then seal and mark the drain plug and filter.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Drive at least 1,000 miles. A broken seal or an oil leak means the leak gets fixed and the test restarts.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Visit 2: warm up, settle, photograph the dipstick, top off to F and note how much was added. Miles driven divided by quarts added must be more than 1,000 to pass.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Fail: with prior approval, 4-cylinder engines get the combustion chamber cleaning in TSB 26-EM-016H (Santa Fe/Santa Fe XL NC and Palisade V6 use 26-EM-017H; other V6/V8s skip cleaning and go to engine-replacement approval). Then reseal and drive another 1,000 miles.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Final visit: measure again the same way. More than 1,000 miles per quart passes; 1,000 or worse goes to engine sub-assembly replacement.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "The bulletin says all engines use some oil, depending on mileage, driving conditions, driving habits and maintenance history. Hyundai recommends checking the dipstick between changes.\n\nThe bulletin supersedes 23-EM-008H. It lists engine sub-assembly part numbers for many models; the Santa Fe and Santa Fe XL (NC) refer to warranty extension TXX8 instead.",
+  "sources": [
+    {
+      "title": "TSB 26-EM-015H: Engine Oil Consumption, Inspection & Repair Guidelines",
+      "publisher": "Hyundai Motor America, October 2026",
+      "citation": "Description and applicable vehicles p. 1; warranty notes p. 7; exception rule check and enabling period pp. 12-13; visits and consumption calculation pp. 13-17; NHTSA ID 11038456",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2026/MC-11038456-0001.pdf"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18"
+}
