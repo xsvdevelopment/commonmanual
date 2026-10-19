@@ -1,0 +1,130 @@
+{
+  "id": "honda-pilot-6at-transmission-temp-too-hot-flush",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "2016-20 Pilot 6-speed: \"Transmission Temperature Too Hot\" with no codes, PGM-FI update and 3x ATF flush",
+  "summary": "Honda Service Bulletin 23-073: worn ATF foams and thins under long high-load driving, cutting cooler flow and triggering the transmission temperature warning. Fix is a PGM-FI software update and three drain-and-fills with ATF DW-1, with the level checked hot.",
+  "applies": [
+    {
+      "make": "HONDA",
+      "models": [
+        "PILOT"
+      ],
+      "years": [
+        2016,
+        2020
+      ],
+      "engine": "6-speed automatic"
+    }
+  ],
+  "tags": [
+    "transmission temperature too hot",
+    "atf",
+    "overheat",
+    "foaming",
+    "flush",
+    "drain and fill",
+    "pilot",
+    "6at"
+  ],
+  "specs": [
+    {
+      "name": "Drain plug",
+      "value": "49 N·m (36 lb-ft)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "ATF filler bolt",
+      "value": "44 N·m (32 lb-ft)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Fill per drain",
+      "value": "3.3 US qt (3.1 L) ATF DW-1 (2WD and AWD)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Total ATF for the job",
+      "value": "12 qt (12 x 08200-9008)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Check level at",
+      "value": "80 °C (176 °F)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Washers",
+      "value": "Drain plug washer 90471-PX4-000 (18 mm), filler sealing washer 11107-PWA-300 (24 mm), new on the final fill",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Labor",
+      "value": "0.2 hr software + 1.4 hr flush",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Do an all-DTC check. Any codes: the bulletin doesn't apply. None: update the PGM-FI software (battery support connected the whole time), then clear any codes the update set.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Run the engine at 3,000 rpm in Park or Neutral until the radiator fan comes on, then let it idle. Shut it off on the lift.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Remove the filler bolt, drain the ATF, reinstall the drain plug with its washer at 49 N·m (36 lb-ft), fill 3.3 qt (3.1 L) of ATF DW-1, filler bolt at 44 N·m (32 lb-ft), and check the level.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Wheels off the ground, engine running, VSA off: from Drive, accelerate to 50 mph so it shifts through the first three gears into 4th and the converter locks up. Brake the front wheels to a stop, shift to Reverse, then Neutral. Do this five times in all.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Repeat the drain, fill and shifting routine once more, then drain a third time and refill with new washers on the drain plug and filler bolt.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Check the level hot (176 °F / 80 °C). A cold reading shows low or at the bottom dot; topping up to the top dot cold overfills it and brings the foaming back. Reset the Maintenance Minder as appropriate.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "Honda says to use only genuine ATF DW-1 and to avoid aftermarket flush machines. \"Flush\" in this bulletin means repeated drain-and-fill.",
+  "sources": [
+    {
+      "title": "Service Bulletin 23-073: 2016-20 Pilot: Transmission Temp Too Hot Message on the MID",
+      "publisher": "American Honda Motor Co., September 7, 2023",
+      "citation": "Symptom, cause and parts p. 1; warranty and software p. 2; repair procedure pp. 3-4; NHTSA ID 10242219",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10242219-0001.pdf"
+    }
+  ],
+  "author": "OpenBay (AI-assisted)",
+  "updated": "2026-10-18"
+}

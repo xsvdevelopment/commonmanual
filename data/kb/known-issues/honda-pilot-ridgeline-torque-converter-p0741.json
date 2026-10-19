@@ -1,0 +1,116 @@
+{
+  "id": "honda-pilot-ridgeline-torque-converter-p0741",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "2017-18 Pilot / 2017-19 Ridgeline 6-speed: flashing D, P0741, cracked torque converter lock-up piston (10 yr / 150k)",
+  "summary": "Honda Service Bulletin 23-078: a crack in the torque converter lock-up piston bleeds off pressure, so the lock-up clutch slips, the D indicator flashes and P0741 sets. Honda extended torque converter coverage to 10 years / 150,000 miles.",
+  "applies": [
+    {
+      "make": "HONDA",
+      "models": [
+        "PILOT"
+      ],
+      "years": [
+        2017,
+        2018
+      ],
+      "engine": "6-speed automatic"
+    },
+    {
+      "make": "HONDA",
+      "models": [
+        "RIDGELINE"
+      ],
+      "years": [
+        2017,
+        2019
+      ],
+      "engine": "6-speed automatic"
+    }
+  ],
+  "tags": [
+    "torque converter",
+    "p0741",
+    "flashing d",
+    "lock-up clutch",
+    "shudder",
+    "transmission",
+    "warranty extension",
+    "pilot",
+    "ridgeline"
+  ],
+  "specs": [
+    {
+      "name": "DTC",
+      "value": "P0741 Torque Converter Clutch Performance or Stuck OFF, with the D indicator flashing",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Warranty extension",
+      "value": "Torque converter, 10 years or 150,000 miles from original purchase",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Torque converter kit",
+      "value": "06260-R9R-000",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "ATF after converter replacement",
+      "value": "2WD 4.5 L (4.8 qt); AWD 5.2 L (5.5 qt), Honda ATF DW-1",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Check ATF level at",
+      "value": "80 °C (176 °F) or hotter",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Labor",
+      "value": "7.2 hr 2WD, 7.6 hr AWD (includes DTC clear and alignment)",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Confirm P0741 is stored and check the VIN for eligibility.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Replace the torque converter per the service manual's transmission removal and installation.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Fill with ATF DW-1 (4.8 qt 2WD / 5.5 qt AWD) and check the level only with fluid at 176 °F (80 °C) or above. A cold reading shows low; filling to the top dot cold overfills it, which increases foaming and overheating.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Service Bulletin 23-078 (version 6): Warranty Extension: 2017-19 Multi Model 6AT Torque Converter - DTC P0741 Stored",
+      "publisher": "American Honda Motor Co., May 21, 2025",
+      "citation": "Affected vehicles, background and corrective action p. 1; parts and warranty p. 2; repair procedure p. 3; NHTSA ID 11019241",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2025/MC-11019241-0001.pdf"
+    }
+  ],
+  "author": "OpenBay (AI-assisted)",
+  "updated": "2026-10-18"
+}
