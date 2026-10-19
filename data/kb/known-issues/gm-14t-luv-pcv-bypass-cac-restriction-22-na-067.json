@@ -1,0 +1,134 @@
+{
+  "id": "gm-14t-luv-pcv-bypass-cac-restriction-22-na-067",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "GM 1.4 turbo LUV: low power, smoke, stalling or P0299 from a blocked PCV passage, bypass valve or charge air cooler (worst in extreme cold)",
+  "summary": "GM bulletin 22-NA-067: on the 1.4 LUV, moisture, oil sludge or ice can block the charge air bypass valve, intake manifold vacuum ports, the PCV passage in the head, the charge air cooler or the crankcase vent tube. Symptoms include loss of power, hesitation, smoke, stalling, oil leaks from crankcase pressure and boost codes. Fix is cleaning, a redesigned intake manifold and only then other parts. Don't replace the turbo if it checks out.",
+  "applies": [
+    {
+      "make": "CHEVROLET",
+      "models": [
+        "CRUZE"
+      ],
+      "years": [
+        2011,
+        2020
+      ],
+      "engine": "1.4L turbo (RPO LUV)"
+    },
+    {
+      "make": "CHEVROLET",
+      "models": [
+        "SONIC",
+        "TRAX"
+      ],
+      "years": [
+        2011,
+        2020
+      ],
+      "engine": "1.4L turbo (RPO LUV)"
+    },
+    {
+      "make": "BUICK",
+      "models": [
+        "ENCORE"
+      ],
+      "exclude": [
+        "GX"
+      ],
+      "years": [
+        2011,
+        2020
+      ],
+      "engine": "1.4L turbo (RPO LUV)"
+    }
+  ],
+  "tags": [
+    "pcv",
+    "charge air cooler",
+    "intercooler",
+    "bypass valve",
+    "ice",
+    "cold weather",
+    "low power",
+    "smoke",
+    "stall",
+    "p0299",
+    "p0234",
+    "p0236",
+    "p2261",
+    "p2227",
+    "p00c7",
+    "1.4 turbo",
+    "cruze",
+    "sonic",
+    "trax",
+    "encore"
+  ],
+  "specs": [
+    {
+      "name": "DTCs",
+      "value": "P0299, P0234, P0236, P2227, P2261, P00C7",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Icing can occur at or below",
+      "value": "-18 °C (0 °F)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Symptoms",
+      "value": "Loss of power, smoke from the tailpipe, hesitation, stalling, burning oil smell, MIL; often improves after driving a while",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Inspect the charge air bypass valve's vacuum-side port for ice, oil, water or sludge. If found, disassemble and clean it; replace parts only if necessary.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "If desired vs. actual boost is out of limits but the wastegate actuator is fine and the turbo has no excessive play or damage, don't replace the turbocharger. Clean the bypass valve and replace the intake manifold.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Remove the intake manifold and inspect its vacuum ports, and the PCV runner into the cylinder head, for carbon, oil, water, sludge or ice.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Clean everything out of the cylinder head, cam cover and PCV pipes. If those deposits were there, replace the intake manifold with the redesigned one.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "On the new manifold, the bypass solenoid's electrical connector faces forward. If it faces the head, it's in backwards; the solenoid is keyed and won't seat in its retainers.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "The bulletin's model-year table (Encore, Cruze, Sonic, Trax, plus Opel/Vauxhall Ampera) doesn't extract cleanly from the PDF, so the year ranges here are the outer bounds it lists (2011-2020). Confirm the engine is the 1.4L LUV and check page 1 of the bulletin for the model's exact years.",
+  "sources": [
+    {
+      "title": "Service Bulletin 22-NA-067: Poor Engine Performance, PCV Bypass Hose and Charge Air Cooler (CAC) Restricted for LUV Engines - DTC P0299, P0234, P0236, P2261, P2227, P00C7",
+      "publisher": "General Motors, March 2023",
+      "citation": "Condition and cause pp. 1-2; inspection and correction pp. 2-4; NHTSA ID 10234111",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10234111-0001.pdf"
+    }
+  ],
+  "author": "OpenBay (AI-assisted)",
+  "updated": "2026-10-18"
+}

@@ -1,0 +1,152 @@
+{
+  "id": "gm-14t-pcv-cam-cover-p0171-n202299080",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "GM 1.4 turbo (Cruze, Sonic, Trax, Encore): rough idle and P0171 from a cracked PCV diaphragm in the cam cover (10 yr / 120k)",
+  "summary": "GM Special Coverage N202299080: the PCV pressure regulator diaphragm built into the camshaft cover can crack and draw in unmetered air, causing rough idle (especially at idle), a check engine light and P0171 or other airflow codes. A new cam cover is covered for 10 years / 120,000 miles; the bulletin includes a quick noise-and-tissue test.",
+  "applies": [
+    {
+      "make": "CHEVROLET",
+      "models": [
+        "CRUZE"
+      ],
+      "years": [
+        2011,
+        2014
+      ],
+      "engine": "1.4L turbo (RPO LUJ or LUV)"
+    },
+    {
+      "make": "CHEVROLET",
+      "models": [
+        "SONIC"
+      ],
+      "years": [
+        2012,
+        2014
+      ],
+      "engine": "1.4L turbo (RPO LUJ or LUV)"
+    },
+    {
+      "make": "CHEVROLET",
+      "models": [
+        "TRAX"
+      ],
+      "years": [
+        2014,
+        2014
+      ],
+      "engine": "1.4L turbo (RPO LUJ or LUV)"
+    },
+    {
+      "make": "BUICK",
+      "models": [
+        "ENCORE"
+      ],
+      "exclude": [
+        "GX"
+      ],
+      "years": [
+        2014,
+        2014
+      ],
+      "engine": "1.4L turbo (RPO LUJ or LUV)"
+    }
+  ],
+  "tags": [
+    "pcv",
+    "pcv valve",
+    "cam cover",
+    "valve cover",
+    "p0171",
+    "lean",
+    "rough idle",
+    "whistle",
+    "vacuum leak",
+    "1.4 turbo",
+    "cruze",
+    "sonic",
+    "trax",
+    "encore",
+    "special coverage"
+  ],
+  "specs": [
+    {
+      "name": "Coverage",
+      "value": "10 years or 120,000 miles (193,000 km) from original in-service date, regardless of ownership",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "DTC",
+      "value": "P0171 Fuel Trim System Lean, or other airflow-related codes",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Camshaft cover",
+      "value": "25198877 (confirm by VIN in EPC)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Labor",
+      "value": "0.4 hr Cruze / 0.6 hr Trax (other models per bulletin); diagnosis only 0.1-0.5 hr",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Vehicles involved",
+      "value": "About 810,404 in the U.S.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "A P0171 or airflow-code diagnosis may point to the PCV system as a source of extra air.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Remove the engine cover. Make sure the dipstick is fully seated and the oil fill cap is tight.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Engine running, listen at the PCV valve on the cam cover. If it's making noise, pull the dipstick and see if the noise gets quieter or stops, then reinsert it.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Hold a piece of tissue at the PCV vent on the front of the valve. If the tissue is pulled against it and held, there's vacuum there.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Noise plus vacuum at the vent: replace the camshaft cover. No noise or no vacuum leak: the special coverage doesn't apply. Only a leaking PCV valve is covered, not cam cover oil leaks.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Special Coverage Adjustment N202299080: Camshaft Cover Replacement",
+      "publisher": "General Motors, July 28, 2020",
+      "citation": "Models, condition and coverage p. 1; parts and labor pp. 1-2; service procedure pp. 2-3; NHTSA ID 10178406",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2020/MC-10178406-9999.pdf"
+    }
+  ],
+  "author": "OpenBay (AI-assisted)",
+  "updated": "2026-10-18"
+}
