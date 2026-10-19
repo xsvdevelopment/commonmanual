@@ -1,0 +1,238 @@
+{
+  "id": "vw-tsi-timing-chain-tensioner-warranty-extension",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "Volkswagen 2008-2014 TSI (GTI, Jetta, Passat, CC, Eos, Tiguan, Beetle): timing chain / tensioner failure, class settlement warranty extension (VWP-18-07)",
+  "summary": "Under a class settlement, Volkswagen extended coverage on the timing chain and tensioner of certain 2008-2014 models to 10 years / 100,000 miles from the in-service date. The chain and tensioner themselves are covered 100%. Engine damage directly caused by a chain or tensioner failure is covered on a sliding scale, 25% to 100% depending on age and mileage. Owners must show reasonable oil-change records, within 10% of the schedule.",
+  "applies": [
+    {
+      "make": "VOLKSWAGEN",
+      "models": [
+        "BEETLE"
+      ],
+      "years": [
+        2012,
+        2014
+      ],
+      "engine": "Certain 2.0T / 1.8T TSI (engine codes incl. CCTA, CBFA, CPLA, CPPA)"
+    },
+    {
+      "make": "VOLKSWAGEN",
+      "models": [
+        "CC"
+      ],
+      "years": [
+        2009,
+        2012
+      ],
+      "engine": "Certain 2.0T / 1.8T TSI (engine codes incl. CCTA, CBFA, CPLA, CPPA)"
+    },
+    {
+      "make": "VOLKSWAGEN",
+      "models": [
+        "EOS"
+      ],
+      "years": [
+        2009,
+        2012
+      ],
+      "engine": "Certain 2.0T / 1.8T TSI (engine codes incl. CCTA, CBFA, CPLA, CPPA)"
+    },
+    {
+      "make": "VOLKSWAGEN",
+      "models": [
+        "GTI"
+      ],
+      "years": [
+        2008,
+        2012
+      ],
+      "engine": "Certain 2.0T / 1.8T TSI (engine codes incl. CCTA, CBFA, CPLA, CPPA)"
+    },
+    {
+      "make": "VOLKSWAGEN",
+      "models": [
+        "JETTA"
+      ],
+      "years": [
+        2008,
+        2010
+      ],
+      "engine": "Certain 2.0T / 1.8T TSI (engine codes incl. CCTA, CBFA, CPLA, CPPA)",
+      "exclude": [
+        "SPORTWAGEN",
+        "HYBRID",
+        "GLI"
+      ]
+    },
+    {
+      "make": "VOLKSWAGEN",
+      "models": [
+        "JETTA"
+      ],
+      "years": [
+        2012,
+        2014
+      ],
+      "engine": "Certain 2.0T / 1.8T TSI (engine codes incl. CCTA, CBFA, CPLA, CPPA)",
+      "exclude": [
+        "SPORTWAGEN",
+        "HYBRID"
+      ]
+    },
+    {
+      "make": "VOLKSWAGEN",
+      "models": [
+        "JETTA SPORTWAGEN"
+      ],
+      "years": [
+        2009,
+        2009
+      ],
+      "engine": "Certain 2.0T / 1.8T TSI (engine codes incl. CCTA, CBFA, CPLA, CPPA)"
+    },
+    {
+      "make": "VOLKSWAGEN",
+      "models": [
+        "PASSAT"
+      ],
+      "years": [
+        2008,
+        2010
+      ],
+      "engine": "Certain 2.0T / 1.8T TSI (engine codes incl. CCTA, CBFA, CPLA, CPPA)"
+    },
+    {
+      "make": "VOLKSWAGEN",
+      "models": [
+        "TIGUAN"
+      ],
+      "years": [
+        2009,
+        2013
+      ],
+      "engine": "Certain 2.0T / 1.8T TSI (engine codes incl. CCTA, CBFA, CPLA, CPPA)"
+    }
+  ],
+  "tags": [
+    "timing chain",
+    "timing chain tensioner",
+    "chain jumped",
+    "engine damage",
+    "2.0t",
+    "tsi",
+    "ccta",
+    "cbfa",
+    "cpla",
+    "cppa",
+    "class action",
+    "warranty extension",
+    "vwp-18-07",
+    "gti",
+    "jetta",
+    "tiguan",
+    "passat",
+    "cc",
+    "eos",
+    "beetle"
+  ],
+  "warnings": [
+    "Volkswagen requires proof of oil changes within 10% of the scheduled time and mileage. If records can't be found, a signed sworn declaration under penalty of perjury may substitute."
+  ],
+  "specs": [
+    {
+      "name": "Timing chain / tensioner coverage",
+      "value": "10 years or 100,000 miles from the original in-service date, 100% of the chain and tensioner repair",
+      "src": [
+        1
+      ],
+      "note": "From the in-service date, so 2008-2014 vehicles have now aged out."
+    },
+    {
+      "name": "Engine damage coverage, 5 years or less",
+      "value": "100% under 60,000 mi; 70% at 60,001-75,000; 60% at 75,001-85,000; 45% at 85,001-100,000",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Engine damage coverage, 5-7 years",
+      "value": "70% under 60,000 mi; 60% at 60,001-75,000; 50% at 75,001-85,000; 35% at 85,001-100,000",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Engine damage coverage, 7-10 years",
+      "value": "60% under 60,000 mi; 50% at 60,001-75,000; 40% at 75,001-85,000; 25% at 85,001-100,000",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Credit when a replacement engine already has a new chain/tensioner",
+      "value": "Owner's share reduced by up to $2,000",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Minimum documented oil services (10% variance), by miles since you took ownership",
+      "value": "20-30k: 1; 30-40k: 2; 40-50k: 3; 50-60k: 4; 60-70k: 5; 70-80k: 6; 80-90k: 7; 90-100k: 8",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Covered vehicles (certain VINs)",
+      "value": "2012-2014 Beetle and Beetle Convertible; 2009-2012 CC; 2009-2012 Eos; 2008-2012 GTI; 2008-2010 and 2012-2014 Jetta Sedan; 2009 Jetta SportWagen; 2008-2010 Passat Sedan and Wagon; 2009-2013 Tiguan",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Dealer claim service numbers",
+      "value": "1535 (timing chain), 1536 (timing chain tensioner)",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Dealer checks the VIN in ElsaPro > Vehicle Data. Eligible vehicles show the extension under Enhanced Coverage.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Bring oil-change records for your time of ownership (invoices, receipts), or a signed sworn declaration if records can't be obtained.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "A failed chain or tensioner is repaired at 100%. Any engine damage it directly caused is prorated by the age and mileage table; Volkswagen gives dealers a proration estimating tool to quote your share.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "Volkswagen says the extension is fully transferable to later owners. Damage from abuse, modification, collision or vandalism is excluded, and the repair must be done at a Volkswagen dealer.",
+  "sources": [
+    {
+      "title": "Warranty Policies and Procedures Bulletin VWP-18-07: REVISED Timing Chain/Timing Chain Tensioner Limited Warranty Extension",
+      "publisher": "Volkswagen Group of America, January 30, 2019",
+      "citation": "Coverage and models p. 1; proration and eligibility p. 2; maintenance table and transferability p. 3; claiming p. 3; NHTSA ID 10154391",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2019/MC-10154391-9999.pdf"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-19",
+  "complaintMatch": [
+    [
+      "timing chain",
+      "tensioner"
+    ]
+  ]
+}
