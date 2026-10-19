@@ -91,7 +91,8 @@ const STOP = new Set(('with from that this then into than they their when what e
   + 'steps once same other first next both every should until install remove replace vehicle vehicles').split(' '));
 // Shop abbreviations are short but say a lot about a number.
 const SHORT = new Set('tsb dtc rpm psi atf ecm pcm tcm egr pcv vin awd 4wd 2wd abs bcm iwe mph kpa'.split(' '));
-const words = (s) => [...new Set((String(s).toLowerCase().match(/[a-z0-9][a-z0-9-]{2,}/g) || [])
+// Hyphenated names split into their parts: "frame-to-door" gives "frame" and "door".
+const words = (s) => [...new Set((String(s).toLowerCase().match(/[a-z0-9]{3,}/g) || [])
   .filter((w) => /[a-z]/.test(w) && (w.length > 3 || SHORT.has(w)) && !STOP.has(w))
   .map((w) => w.replace(/s$/, '').slice(0, 6)))];
 // Long numbers (part numbers, VIN fragments, dates) are distinctive enough on their own.
