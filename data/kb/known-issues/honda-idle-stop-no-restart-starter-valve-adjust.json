@@ -174,5 +174,21 @@
     }
   ],
   "author": "OpenBay (AI-assisted)",
-  "updated": "2026-10-18"
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "idle stop",
+      "auto stop",
+      "start stop",
+      "stop/start",
+      "restart"
+    ],
+    [
+      "restart",
+      "won't start",
+      "not start",
+      "stall",
+      "die"
+    ]
+  ]
 }

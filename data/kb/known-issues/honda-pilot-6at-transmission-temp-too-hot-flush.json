@@ -126,5 +126,16 @@
     }
   ],
   "author": "OpenBay (AI-assisted)",
-  "updated": "2026-10-18"
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "transmission"
+    ],
+    [
+      "hot",
+      "overheat",
+      "temperature",
+      "temp"
+    ]
+  ]
 }
