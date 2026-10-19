@@ -88,7 +88,7 @@ export default function Entry({ id }) {
 
   return (
     <article className="entry">
-      <p className="print-only print-head">OpenBay · {location.origin}/#/entry/{e.id} · printed {new Date().toLocaleDateString()}</p>
+      <p className="print-only print-head">Common Manual · {location.origin}/#/entry/{e.id} · printed {new Date().toLocaleDateString()}</p>
       <div className="entry-top">
         <div className="badges"><span className="badge">{TYPE_LABEL[e.type]}</span><StatusBadge s={e.status} /></div>
         <button type="button" className="btn small no-print" onClick={() => window.print()}>Print</button>
