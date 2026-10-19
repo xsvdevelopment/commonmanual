@@ -1,0 +1,168 @@
+{
+  "id": "ford-explorer-exhaust-odor-cabin-19n05-17-0044",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "2011-2017 Ford Explorer: exhaust or sulfur smell in the cabin, carbon monoxide concern (program 19N05, TSB 17-0044)",
+  "summary": "Some 2011-2017 Explorer owners smell exhaust (sometimes like sulfur) inside, especially after hard acceleration, on hills or towing, with the climate control in auto or recirculate. Ford's free program 19N05 (through July 31, 2022, no mileage limit) reprogrammed the climate control module to pull in fresh air during hard acceleration and replaced the liftgate drain valves. TSB 17-0044 goes further on 2016-2017 models: it reseals the rear body, pressure-tests the cabin, and on the 3.5L Ti-VCT fits a muffler with downturned tips.",
+  "applies": [
+    {
+      "make": "FORD",
+      "models": [
+        "EXPLORER"
+      ],
+      "exclude": [
+        "SPORT TRAC"
+      ],
+      "years": [
+        2011,
+        2017
+      ]
+    }
+  ],
+  "tags": [
+    "exhaust smell",
+    "exhaust odor",
+    "sulfur smell",
+    "rotten egg smell",
+    "carbon monoxide",
+    "co in cabin",
+    "explorer",
+    "liftgate drain valve",
+    "body sealing",
+    "19n05",
+    "17n03",
+    "17-0044",
+    "police interceptor utility"
+  ],
+  "specs": [
+    {
+      "name": "Program 19N05 terms",
+      "value": "One-time free service, no mileage limit, in effect through July 31, 2022, for 2011-2017 Explorer (Chicago); replaced 17N03",
+      "src": [
+        1
+      ],
+      "note": "Didn't apply to Police Interceptor units. Dealers did it at the owner's request."
+    },
+    {
+      "name": "19N05 service",
+      "value": "Reprogram the climate control module (IDS 107.04 or higher) and replace the liftgate drain valves",
+      "src": [
+        1
+      ],
+      "note": "Ford notes owners in very hot, humid climates may see a momentary change in max A/C output during rapid acceleration."
+    },
+    {
+      "name": "TSB 17-0044 applies to",
+      "value": "2016-2017 Explorer and Police Interceptor Utility",
+      "src": [
+        2
+      ]
+    },
+    {
+      "name": "HVAC reprogram (TSB 17-0044)",
+      "value": "IDS release 105.01 or higher",
+      "src": [
+        2
+      ]
+    },
+    {
+      "name": "Liftgate drain plugs",
+      "value": "3, all in place and seated correctly",
+      "src": [
+        2
+      ]
+    },
+    {
+      "name": "Sealer cure time before pressure test or retest",
+      "value": "30 minutes",
+      "src": [
+        2
+      ]
+    },
+    {
+      "name": "Labor, Procedure 2 muffler (3.5L Ti-VCT)",
+      "value": "0.7 h",
+      "src": [
+        2
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Police or other upfitted vehicles first: seal every added hole or fastener through the body with seam sealer or foil-backed mastic. Check the liftgate, its seal, the rear sheet metal, underbody plugs, behind the tail lamps, the spoiler fasteners, and the rear load floor bolt holes.",
+      "src": [
+        2
+      ]
+    },
+    {
+      "text": "Reprogram the HVAC module (IDS 105.01 or higher). Check the liftgate weatherstrip contact mark all the way around and reposition the liftgate if needed. Make sure all three liftgate drain plugs are in place.",
+      "src": [
+        2
+      ]
+    },
+    {
+      "text": "Remove the tail lamps, quarter panel mouldings, splash shields and rear bumper cover. Seal gaps in the wheel arches, underbody seams, boxed sections and around body plugs and grommets.",
+      "src": [
+        2
+      ]
+    },
+    {
+      "text": "Tape-wrap the right rear floor wiring harness and seat its grommet; seal the rear A/C evaporator line pass-through; seal the applique, name plate and license plate fasteners from inside; reseal the spoiler with the new clips and foam.",
+      "src": [
+        2
+      ]
+    },
+    {
+      "text": "Let the sealer dry 30 minutes. Tape the rear air extractors, run the engine with A/C on fresh air and the blower on max, doors and windows shut, and spray soapy water on seams and seals. Bubbles mark leaks; seal them, wait 30 minutes and retest.",
+      "src": [
+        2
+      ]
+    },
+    {
+      "text": "Check the left and right air extractors and replace any that are warped or whose flaps don't lie flat.",
+      "src": [
+        2
+      ]
+    },
+    {
+      "text": "If the smell comes back on a 3.5L Ti-VCT (not 3.7L, 2.3L or 3.5L EcoBoost), Ford's Procedure 2 replaces the muffler with one whose tips exhaust downward, after a guided web assessment.",
+      "src": [
+        2
+      ]
+    }
+  ],
+  "body": "Ford's program letter says the vehicles are safe and that 19N05 was offered for peace of mind.\n\nFord ties the TSB's results to body sealing, and notes that whether an occupant smells exhaust depends on driving habits, weather and individual sensitivity.",
+  "sources": [
+    {
+      "title": "Customer Satisfaction Program 19N05: Certain 2011-2017 Model Year Explorer Vehicles, Carbon Monoxide Concern",
+      "publisher": "Ford Motor Company, June 24, 2019",
+      "citation": "Program terms, vehicles, reason and service action p. 1; NHTSA ID 10162412",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2019/MC-10162412-0001.pdf"
+    },
+    {
+      "title": "TSB 17-0044: Exhaust Odor in Vehicle (2016-2017 Explorer)",
+      "publisher": "Ford Motor Company, May 15, 2017",
+      "citation": "Issue and service procedures pp. 1-14; labor; NHTSA ID 10212177",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2022/SB-10212177-1234.pdf"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-19",
+  "complaintMatch": [
+    [
+      "exhaust",
+      "carbon monoxide",
+      "sulfur",
+      "fumes"
+    ],
+    [
+      "smell",
+      "odor",
+      "cabin",
+      "inside",
+      "monoxide",
+      "headache",
+      "dizz"
+    ]
+  ]
+}
