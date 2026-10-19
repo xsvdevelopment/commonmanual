@@ -20,6 +20,10 @@ OpenBay's promise is that every fact is backed by a source. The automated checks
 5. **Clean hands:** wording is paraphrased; no pasted paragraphs, screenshots or diagrams from copyrighted manuals.
 6. **Status:** `factory-sourced` only when every source is the manufacturer's own document. Nobody marks their own work `shop-verified`.
 
+## Recording the check
+
+After your spot-check passes, add `"reviewedBy": "Your Name, YYYY-MM-DD"` to the entry. Until an AI-assisted entry has it, the app shows it as **Not yet hand-checked** with a note telling readers to open the source.
+
 ## Merging
 
 Squash-merge with a plain message. The preview site is deployed by hand: from an up-to-date `main`, run `netlify deploy --build --prod` (the folder must be linked to the `openbay` Netlify project). It does not redeploy on merge until the site is connected to this repo in Netlify.

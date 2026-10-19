@@ -19,6 +19,11 @@ jobs:
           node-version: 22
           cache: npm
       - run: sudo apt-get install -y poppler-utils
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      # OCR for PDFs whose text layer is scrambled (Ford TSBs); see scripts/ocr-pdf.py.
+      - run: pip install pymupdf rapidocr-onnxruntime
       - run: npm ci
       - name: Check cited facts against their sources
         run: |

@@ -150,7 +150,6 @@
       "url": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10189784-0001.pdf"
     }
   ],
-  "body": "The PDF's text layer is an unreadable embedded font, so the citation checker reports it as \"check by hand\". Every value here was read from the rendered pages.",
   "author": "OpenBay (AI-assisted)",
   "updated": "2026-10-18"
 }

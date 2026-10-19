@@ -127,3 +127,8 @@ test('classic catalog fills pre-1981 gaps', () => {
   assert.ok(classicModels(1968, 'chevrolet').includes('CHEVELLE'));
   assert.ok(!classicModels(1963, 'chevrolet').includes('CHEVELLE'));
 });
+
+test('reviewedBy records who spot-checked an entry, as "Name, YYYY-MM-DD"', () => {
+  assert.deepEqual(validateEntry({ ...cited, reviewedBy: 'Jane Doe, 2026-10-18' }), []);
+  assert.ok(validateEntry({ ...cited, reviewedBy: 'Jane' }).some((e) => e.startsWith('reviewedBy')));
+});
