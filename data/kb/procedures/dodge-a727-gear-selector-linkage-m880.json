@@ -1,0 +1,99 @@
+{
+  "id": "dodge-a727-gear-selector-linkage-m880",
+  "type": "procedure",
+  "status": "cited",
+  "title": "A-727 column shift: gear selector linkage adjustment (1976-77 Dodge W/D trucks)",
+  "summary": "Army procedure for setting the column shift rod so detents line up and the truck only starts in P or N.",
+  "applies": [
+    {
+      "make": "DODGE",
+      "models": [
+        "W100",
+        "W200",
+        "W300",
+        "D100",
+        "D200",
+        "D300",
+        "PICKUP",
+        "RAM",
+        "POWER WAGON",
+        "DODGE TRUCK"
+      ],
+      "years": [
+        1976,
+        1977
+      ],
+      "engine": "318 V8, A-727 3-speed automatic"
+    }
+  ],
+  "warnings": [
+    "From the Army manual for the M880 (military 1976-77 Dodge W200/D200). Confirm a civilian truck has the same part before using a number."
+  ],
+  "tags": [
+    "a727",
+    "shift linkage",
+    "column shift",
+    "neutral safety",
+    "won't start in park",
+    "dodge",
+    "m880"
+  ],
+  "specs": [
+    {
+      "name": "Swivel lock bolt",
+      "value": "125",
+      "unit": "in-lb",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Assemble all linkage parts but leave the adjustable rod end free.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Put the column selector in P.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Move the selector lever on the transmission all the way to the rear, into the P detent.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Set the adjustable rod to length and install it with no load in either direction on the linkage.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Check: the lever moves easily and every position is clearly felt; in N and D the detent is close enough to the gate stops that the lever won't stay out of detent when released against the gate; the engine only starts in P or N.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Tighten the adjustment swivel lock bolt to 125 in-lb.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "TM 9-2320-266-34: Direct and General Support Maintenance Manual, Truck, Cargo, 1-1/4 Ton, 4x4 (M880 series)",
+      "publisher": "Headquarters, Department of the Army, January 1976 (reprint with Changes 1-7)",
+      "url": "https://archive.org/details/micro_IA41152635_0460",
+      "citation": "Para. 4-10, Gear Selector Linkage Adjustment (figure 4-23)"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18"
+}

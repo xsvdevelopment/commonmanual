@@ -1,0 +1,148 @@
+{
+  "id": "dodge-a727-fluid-filter-change-m880",
+  "type": "procedure",
+  "status": "cited",
+  "title": "A-727 automatic: drain (pan and converter), new filter, refill (1976-77 Dodge W/D trucks)",
+  "summary": "Army procedure for draining the A-727 including the torque converter, fitting a new filter, and refilling and checking the level.",
+  "applies": [
+    {
+      "make": "DODGE",
+      "models": [
+        "W100",
+        "W200",
+        "W300",
+        "D100",
+        "D200",
+        "D300",
+        "PICKUP",
+        "RAM",
+        "POWER WAGON",
+        "DODGE TRUCK"
+      ],
+      "years": [
+        1976,
+        1977
+      ],
+      "engine": "318 V8, A-727 3-speed automatic"
+    }
+  ],
+  "parts": [
+    "Valve body filter",
+    "Oil pan gasket",
+    "Dexron-type ATF"
+  ],
+  "warnings": [
+    "From the Army manual for the M880 (military 1976-77 Dodge W200/D200). Confirm a civilian truck has the same part before using a number."
+  ],
+  "tags": [
+    "a727",
+    "torqueflite",
+    "transmission",
+    "fluid change",
+    "filter",
+    "torque converter drain",
+    "dodge",
+    "m880",
+    "w200",
+    "d200"
+  ],
+  "specs": [
+    {
+      "name": "Valve body filter screws",
+      "value": "35",
+      "unit": "in-lb",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Oil pan bolts",
+      "value": "150",
+      "unit": "in-lb",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Initial refill",
+      "value": "6 qt Dexron-type ATF, then top up to level",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Total transmission capacity (Table 1-1)",
+      "value": "19 pt (8.99 L)",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Put a wide drain pan under the transmission. Loosen the pan bolts, tap one corner of the pan to break it loose and let it drain, then remove the pan.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Remove the access plate in front of the torque converter and take out the converter drain plug. Let it drain, reinstall and tighten the plug, and refit the access plate.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Adjust the low-reverse band now if it needs it (the pan is already off).",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Install a new filter on the bottom of the valve body; retaining screws 35 in-lb.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Clean the pan and reinstall it with a new gasket; pan bolts 150 in-lb.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Pour 6 quarts of Dexron-type ATF through the filler tube.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Start the engine and idle at least 2 minutes. With the parking brake on, move the selector briefly through each position and finish in neutral.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Add fluid to the ADD ONE PINT mark. Recheck at operating temperature: the level should sit between FULL and ADD ONE PINT.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Seat the dipstick cap fully on the filler tube so dirt can't get in.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "The 19-pint figure is the total capacity from Table 1-1 (Tabulated Data). The drain-and-refill quantity in para. 4-9 is the 6 quarts above plus the top-up to the dipstick.",
+  "sources": [
+    {
+      "title": "TM 9-2320-266-34: Direct and General Support Maintenance Manual, Truck, Cargo, 1-1/4 Ton, 4x4 (M880 series)",
+      "publisher": "Headquarters, Department of the Army, January 1976 (reprint with Changes 1-7)",
+      "url": "https://archive.org/details/micro_IA41152635_0460",
+      "citation": "Para. 4-9, Draining and Refilling Transmission Fluid; Table 1-1, Tabulated Data"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18"
+}

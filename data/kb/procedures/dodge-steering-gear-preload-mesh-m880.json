@@ -1,0 +1,162 @@
+{
+  "id": "dodge-steering-gear-preload-mesh-m880",
+  "type": "procedure",
+  "status": "cited",
+  "title": "Recirculating-ball steering gear: worm bearing preload and sector mesh adjustment (1976-77 Dodge W/D trucks)",
+  "summary": "Army procedure for taking slop out of the steering box in the right order: worm bearing preload first (4-6 in-lb off center), then sector mesh (14 in-lb through center).",
+  "applies": [
+    {
+      "make": "DODGE",
+      "models": [
+        "W100",
+        "W200",
+        "W300",
+        "D100",
+        "D200",
+        "D300",
+        "PICKUP",
+        "RAM",
+        "POWER WAGON",
+        "DODGE TRUCK"
+      ],
+      "years": [
+        1976,
+        1977
+      ],
+      "engine": "Recirculating-ball steering gear"
+    }
+  ],
+  "tools": [
+    "Inch-pound torque wrench",
+    "Pitman arm puller"
+  ],
+  "warnings": [
+    "From the Army manual for the M880 (military 1976-77 Dodge W200/D200). Confirm a civilian truck has the same part before using a number."
+  ],
+  "tags": [
+    "steering box",
+    "steering gear",
+    "play in steering",
+    "loose steering",
+    "worm bearing preload",
+    "sector lash",
+    "pitman arm",
+    "dodge",
+    "m880"
+  ],
+  "specs": [
+    {
+      "name": "Worm bearing preload (off center)",
+      "value": "4-6",
+      "unit": "in-lb",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Torque through center (preload + mesh)",
+      "value": "14 in-lb; acceptable 13-15 in-lb",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Steering arm (pitman) nut",
+      "value": "180",
+      "unit": "ft-lb",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Worm bearing preload adjuster locknut (Table 1-2)",
+      "value": "85",
+      "unit": "ft-lb",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Sector shaft adjusting screw locknut (Table 1-2)",
+      "value": "25",
+      "unit": "ft-lb",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Steering gear side cover bolts (Table 1-2)",
+      "value": "30",
+      "unit": "ft-lb",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Wheels straight ahead. Disconnect and remove the steering gear (pitman) arm from the sector shaft.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Remove the horn pad to get at the steering shaft nut.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Turn the wheel all the way right, then back off slightly to relieve any binding.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Put an inch-pound torque wrench on the steering shaft nut and turn toward the left, reading the torque to keep it moving. Worm bearing preload should be 4-6 in-lb. Test well away from center: the sector has a high spot in the middle.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "If it's out: loosen the adjuster locknut two turns, back the adjuster plug out one turn to remove all preload, then turn it clockwise until the reading is 4-6 in-lb. Hold the plug, tighten the locknut and retest.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Only with preload correct, set the sector mesh. Count the turns stop to stop and come back exactly halfway to center.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Go about a quarter turn off center, put the inch-pound wrench on the shaft nut and turn through the center high spot. The reading (preload plus mesh) should be 14 in-lb.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "If it isn't 13-15 in-lb, loosen the lash adjuster screw locknut, adjust the screw in the side cover until the wrench reads 14 in-lb through center, tighten the locknut and recheck.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Wheels straight ahead, reinstall the steering arm and tighten its nut to 180 ft-lb.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "TM 9-2320-266-34: Direct and General Support Maintenance Manual, Truck, Cargo, 1-1/4 Ton, 4x4 (M880 series)",
+      "publisher": "Headquarters, Department of the Army, January 1976 (reprint with Changes 1-7)",
+      "url": "https://archive.org/details/micro_IA41152635_0460",
+      "citation": "Para. 7-13, Adjustments (figures 7-13 and 7-14); Table 1-2, Torque Specifications"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18"
+}
