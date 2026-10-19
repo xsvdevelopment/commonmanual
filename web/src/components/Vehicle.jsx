@@ -81,7 +81,7 @@ function Knowledge({ year, make, model, drafts }) {
           <p>Know something about it? <a href={`#/add?${qs({ year, make, model })}`}>Add it with a source</a>. {!drafts && 'Unsourced drafts are hidden; switch them on at the top to see the citation queue.'}</p>
         </div>
       )}
-      {specific.length > 0 && <><h3 className="sect">For this vehicle</h3><div className="cards">{specific.map((e) => <EntryCard key={e.id} e={e} />)}</div></>}
+      {specific.length > 0 && <><h3 className="sect">For this vehicle</h3><div className="cards">{specific.map((e) => <EntryCard key={e.id} e={e} vehicle={{ year, make, model }} />)}</div></>}
       {generic.length > 0 && <><h3 className="sect">General procedures that apply</h3><div className="cards">{generic.map((e) => <EntryCard key={e.id} e={e} />)}</div></>}
     </div>
   );

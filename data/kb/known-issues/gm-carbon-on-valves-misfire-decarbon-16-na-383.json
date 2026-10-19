@@ -174,5 +174,15 @@
     }
   ],
   "author": "OpenBay (AI-assisted)",
-  "updated": "2026-10-18"
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "misfire",
+      "rough idle",
+      "runs rough",
+      "hard start",
+      "no start",
+      "extended crank"
+    ]
+  ]
 }

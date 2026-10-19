@@ -132,3 +132,13 @@ test('reviewedBy records who spot-checked an entry, as "Name, YYYY-MM-DD"', () =
   assert.deepEqual(validateEntry({ ...cited, reviewedBy: 'Jane Doe, 2026-10-18' }), []);
   assert.ok(validateEntry({ ...cited, reviewedBy: 'Jane' }).some((e) => e.startsWith('reviewedBy')));
 });
+
+test('owner corroboration counts complaints matching every term group', async () => {
+  const { matchesAll } = await import('../server/owners.js');
+  const rule = [['judder', 'shudder'], ['cvt', 'transmission']];
+  assert.equal(matchesAll(rule, 'The CVT shudders when I pull away from a light'), true);
+  assert.equal(matchesAll(rule, 'Transmission is fine but the brakes judder'), true);
+  assert.equal(matchesAll(rule, 'Steering wheel shudders at 60 mph'), false);
+  assert.ok(validateEntry({ ...cited, complaintMatch: [['judder'], []] }).some((e) => e.startsWith('complaintMatch')));
+  assert.deepEqual(validateEntry({ ...cited, complaintMatch: rule }), []);
+});

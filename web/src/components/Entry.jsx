@@ -1,4 +1,4 @@
-import { useApi } from '../api.js';
+import { useApi, qs } from '../api.js';
 
 const TYPE_LABEL = { procedure: 'Procedure', spec: 'Specs', 'known-issue': 'Known issue', source: 'Source' };
 export const STATUS = {
@@ -16,12 +16,31 @@ export const awaitingReview = (e) => e.status !== 'draft' && /\(AI-assisted\)/.t
 const appliesText = (a) =>
   `${a.years[0]}–${a.years[1]} ${a.make === '*' ? 'most makes' : a.make}${a.models?.length ? ' ' + a.models.join(', ') : ''}${a.exclude?.length ? ' (not ' + a.exclude.join(', ') + ')' : ''}${a.engine ? ' · ' + a.engine : ''}`;
 
-export function EntryCard({ e }) {
+// "12 of 340 NHTSA owner complaints for this vehicle mention judder / shudder + cvt / transmission".
+// A keyword match: owners describing the same symptoms, not proof they had this exact fault.
+function OwnerReports({ id, vehicle }) {
+  const { data } = useApi(`/kb/${encodeURIComponent(id)}/owners?${qs(vehicle)}`);
+  if (!data || !data.total) return null;
+  const rule = data.match.map((g) => g.join(' / ')).join(' + ');
+  return (
+    <p className={'owners' + (data.count ? ' hit' : '')} title="Owners describing the same symptoms. A keyword match, not proof they had this exact fault.">
+      {data.count ? <><strong>{data.count}</strong> of {data.total}</> : <>None of {data.total}</>} NHTSA owner complaints for this vehicle mention {rule}
+    </p>
+  );
+}
+
+// Counts only make sense for entries written for this model; a broad "any GM V8" entry
+// would borrow credibility from complaints about engines the vehicle may not have.
+const squash = (x) => String(x || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+const namesModel = (e, v) => !!v?.model && e.applies.some((a) => a.models?.some((m) => squash(v.model).includes(squash(m))));
+
+export function EntryCard({ e, vehicle }) {
   return (
     <a className={'card entry-card' + (e.status === 'draft' ? ' is-draft' : '')} href={'#/entry/' + e.id}>
       <div className="badges"><span className="badge">{TYPE_LABEL[e.type]}</span><StatusBadge s={e.status} />{awaitingReview(e) && <span className="badge">Not yet hand-checked</span>}</div>
       <h4>{e.title}</h4>
       {e.summary && <p>{e.summary}</p>}
+      {e.complaintMatch && namesModel(e, vehicle) && <OwnerReports id={e.id} vehicle={vehicle} />}
       {e.applies.some((a) => a.engine) && <p className="muted mono small">{[...new Set(e.applies.map((a) => a.engine).filter(Boolean))].join(' / ')}</p>}
     </a>
   );

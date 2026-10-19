@@ -175,5 +175,17 @@
     }
   ],
   "author": "OpenBay (AI-assisted)",
-  "updated": "2026-10-18"
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "oil leak",
+      "leaking oil",
+      "leaks oil"
+    ],
+    [
+      "rear main",
+      "main seal",
+      "crankshaft seal"
+    ]
+  ]
 }

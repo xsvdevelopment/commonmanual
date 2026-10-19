@@ -9,6 +9,7 @@ import * as kb from './kb.js';
 import * as dtc from './dtc.js';
 import { classicMakes, classicModels } from './catalog.js';
 import { diagnose, parse } from './diagnose.js';
+import { ownerReports } from './owners.js';
 
 const oem = JSON.parse(fs.readFileSync(path.join(DATA, 'oem-sites.json'), 'utf8'));
 
@@ -84,6 +85,13 @@ export function createApp({ readOnly = false } = {}) {
   app.get('/api/kb/drafts', h(async (req, res) => {
     const { entries } = await kb.loadAll();
     res.json(entries.filter((e) => e.status === 'draft').map(({ id, type, title, applies }) => ({ id, type, title, applies })));
+  }));
+  // How many NHTSA owner complaints for this vehicle describe this known issue.
+  app.get('/api/kb/:id/owners', h(async (req, res) => {
+    const [year, make, model] = need(req, 'year', 'make', 'model');
+    const e = await kb.get(req.params.id);
+    if (!e?.complaintMatch) return res.status(404).json({ error: 'no complaint match rule for this entry' });
+    res.json(await ownerReports(e, { year, make, model }));
   }));
   app.get('/api/kb/:id', h(async (req, res) => {
     const e = await kb.get(req.params.id);

@@ -5,29 +5,169 @@
   "title": "Nissan Rogue / Pathfinder / Altima CVT: judder reflash and 84k-mile warranty extension",
   "summary": "Nissan bulletin NTB15-083A adds judder codes P17F0/P17F1 and a TCM reflash for 2013-2015 Altima (QR25) and 2014-2016 Rogue. A June 2022 campaign bulletin extends CVT coverage on 2014-2018 Rogue, 2015 Rogue Select and 2015-2018 Pathfinder to 84 months / 84,000 miles.",
   "applies": [
-    { "make": "NISSAN", "models": ["ROGUE"], "exclude": ["ROGUE SPORT", "HYBRID"], "years": [2014, 2018], "engine": "CVT" },
-    { "make": "NISSAN", "models": ["ROGUE SELECT"], "years": [2015, 2015], "engine": "CVT" },
-    { "make": "NISSAN", "models": ["PATHFINDER"], "exclude": ["HYBRID"], "years": [2015, 2018], "engine": "CVT" },
-    { "make": "NISSAN", "models": ["ALTIMA"], "years": [2013, 2015], "engine": "2.5L QR25 I4, CVT" }
+    {
+      "make": "NISSAN",
+      "models": [
+        "ROGUE"
+      ],
+      "exclude": [
+        "ROGUE SPORT",
+        "HYBRID"
+      ],
+      "years": [
+        2014,
+        2018
+      ],
+      "engine": "CVT"
+    },
+    {
+      "make": "NISSAN",
+      "models": [
+        "ROGUE SELECT"
+      ],
+      "years": [
+        2015,
+        2015
+      ],
+      "engine": "CVT"
+    },
+    {
+      "make": "NISSAN",
+      "models": [
+        "PATHFINDER"
+      ],
+      "exclude": [
+        "HYBRID"
+      ],
+      "years": [
+        2015,
+        2018
+      ],
+      "engine": "CVT"
+    },
+    {
+      "make": "NISSAN",
+      "models": [
+        "ALTIMA"
+      ],
+      "years": [
+        2013,
+        2015
+      ],
+      "engine": "2.5L QR25 I4, CVT"
+    }
   ],
-  "tags": ["cvt", "judder", "shudder", "transmission", "tcm", "reprogram", "warranty extension", "class action", "p17f0", "p17f1", "rogue", "pathfinder", "altima"],
+  "tags": [
+    "cvt",
+    "judder",
+    "shudder",
+    "transmission",
+    "tcm",
+    "reprogram",
+    "warranty extension",
+    "class action",
+    "p17f0",
+    "p17f1",
+    "rogue",
+    "pathfinder",
+    "altima"
+  ],
   "specs": [
-    { "name": "Judder DTCs added", "value": "P17F0 CVT_JUDDER (T/M INSPECTION), P17F1 CVT_JUDDER (C/U INSPECTION)", "src": [1] },
-    { "name": "Reflash applies to", "value": "2013-2015 Altima (L33, QR25 only) and 2014-2016 Rogue (T32), 4-cylinder CVT, when the current TCM part number is listed in the bulletin's Table A", "src": [1] },
-    { "name": "Battery voltage during reflash", "value": "Keep between 12.0 V and 15.5 V (battery maintainer in reflash mode)", "src": [1] },
-    { "name": "CVT warranty extension", "value": "From 60 months / 60,000 miles to 84 months / 84,000 miles, whichever comes first", "src": [2] },
-    { "name": "Extension covers", "value": "CVT assembly and internal parts, gaskets and seals, control valve body, torque converter, cooler kit (if applicable), TCM reprogramming", "src": [2] },
-    { "name": "Extension vehicles", "value": "2014-2018 Rogue (T32), 2015 Rogue Select (S35), 2015-2018 Pathfinder (R52); not hybrids", "src": [2, 3] },
-    { "name": "Extension activation date", "value": "June 1, 2022", "src": [2] },
-    { "name": "Replacement parts warranty after a CVT repair", "value": "12 months / 12,000 miles from replacement, if longer than what remains of the extension", "src": [2] }
+    {
+      "name": "Judder DTCs added",
+      "value": "P17F0 CVT_JUDDER (T/M INSPECTION), P17F1 CVT_JUDDER (C/U INSPECTION)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Reflash applies to",
+      "value": "2013-2015 Altima (L33, QR25 only) and 2014-2016 Rogue (T32), 4-cylinder CVT, when the current TCM part number is listed in the bulletin's Table A",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Battery voltage during reflash",
+      "value": "Keep between 12.0 V and 15.5 V (battery maintainer in reflash mode)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "CVT warranty extension",
+      "value": "From 60 months / 60,000 miles to 84 months / 84,000 miles, whichever comes first",
+      "src": [
+        2
+      ]
+    },
+    {
+      "name": "Extension covers",
+      "value": "CVT assembly and internal parts, gaskets and seals, control valve body, torque converter, cooler kit (if applicable), TCM reprogramming",
+      "src": [
+        2
+      ]
+    },
+    {
+      "name": "Extension vehicles",
+      "value": "2014-2018 Rogue (T32), 2015 Rogue Select (S35), 2015-2018 Pathfinder (R52); not hybrids",
+      "src": [
+        2,
+        3
+      ]
+    },
+    {
+      "name": "Extension activation date",
+      "value": "June 1, 2022",
+      "src": [
+        2
+      ]
+    },
+    {
+      "name": "Replacement parts warranty after a CVT repair",
+      "value": "12 months / 12,000 miles from replacement, if longer than what remains of the extension",
+      "src": [
+        2
+      ]
+    }
   ],
   "steps": [
-    { "text": "Customer reports a judder: shake, shudder, one or more bumps, or vibration from the transmission.", "src": [1] },
-    { "text": "With CONSULT-III plus, read the current TCM part number (31036-xxxxx) and compare it with Table A in NTB15-083A. Only reflash if it matches; otherwise the bulletin doesn't apply.", "src": [1] },
-    { "text": "Before reflashing: battery maintainer connected and holding 12.0-15.5 V, all electrical loads off, nearby Bluetooth devices off, CONSULT PC on its AC adapter.", "src": [1] },
-    { "text": "Reprogram the TCM, then erase all DTCs; the final confirmation report needs the DTC erase.", "src": [1] },
-    { "text": "For coverage: check the VIN for the CVT extension. Some owners opted out of the class settlement, so coverage is per-VIN, not per-model.", "src": [2] },
-    { "text": "Valve body and CVT belt-and-pulley kits don't need pre-approval under the extension; full CVT replacements over the dealer's authorization limit do.", "src": [2] }
+    {
+      "text": "Customer reports a judder: shake, shudder, one or more bumps, or vibration from the transmission.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "With CONSULT-III plus, read the current TCM part number (31036-xxxxx) and compare it with Table A in NTB15-083A. Only reflash if it matches; otherwise the bulletin doesn't apply.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Before reflashing: battery maintainer connected and holding 12.0-15.5 V, all electrical loads off, nearby Bluetooth devices off, CONSULT PC on its AC adapter.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Reprogram the TCM, then erase all DTCs; the final confirmation report needs the DTC erase.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "For coverage: check the VIN for the CVT extension. Some owners opted out of the class settlement, so coverage is per-VIN, not per-model.",
+      "src": [
+        2
+      ]
+    },
+    {
+      "text": "Valve body and CVT belt-and-pulley kits don't need pre-approval under the extension; full CVT replacements over the dealer's authorization limit do.",
+      "src": [
+        2
+      ]
+    }
   ],
   "body": "The warranty extension came out of a class action settlement that the court gave final approval on March 23, 2022 (Nissan owner notification, NHTSA ID 10211969).\n\nThe Rogue's model-name match excludes Rogue Sport and Rogue Hybrid, which the extension does not list. The judder reflash and the extension cover different year ranges; check each one against the vehicle.",
   "sources": [
@@ -51,5 +191,20 @@
     }
   ],
   "author": "OpenBay (AI-assisted)",
-  "updated": "2026-10-18"
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "judder",
+      "shudder",
+      "hesitat",
+      "slip",
+      "jerk",
+      "lurch",
+      "whine"
+    ],
+    [
+      "cvt",
+      "transmission"
+    ]
+  ]
 }

@@ -151,5 +151,21 @@
     }
   ],
   "author": "OpenBay (AI-assisted)",
-  "updated": "2026-10-18"
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "grind",
+      "grinding",
+      "growl"
+    ],
+    [
+      "4wd",
+      "4x4",
+      "iwe",
+      "hub",
+      "front end",
+      "two wheel",
+      "2wd"
+    ]
+  ]
 }

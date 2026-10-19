@@ -149,6 +149,8 @@ table.spec .note { font-family: var(--body); font-size: 0.85rem; color: var(--mu
 /* entry */
 .entry { max-width: 860px; }
 .entry h1 { margin-top: 0.3em; }
+.owners { font-size: 0.85rem; margin: 6px 0 0; color: var(--muted); }
+.owners.hit strong { color: var(--amber); font-size: 1rem; }
 .review-note { background: var(--amber-dim); border: 1px solid var(--amber); border-radius: 8px; padding: 12px 16px; margin: 12px 0 20px; }
 .draft-banner { background: var(--red-dim); border: 1px solid var(--red); border-radius: 8px; padding: 12px 16px; margin: 12px 0 20px; }
 .applies { list-style: none; padding: 0; margin: 0 0 20px; display: flex; flex-wrap: wrap; gap: 6px; }

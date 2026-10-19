@@ -5,29 +5,172 @@
   "title": "GM 2.7L turbo (L3B, L2R): ticking from the cam carrier, misfire, worn exhaust roller follower",
   "summary": "GM bulletin 25-NA-037: a tap or tick from the exhaust side of the cam carrier, sometimes with P0300-P0304 or P050D, from needle-bearing axle pin wear in an exhaust roller follower. Pull the cam carrier, check every exhaust rocker for roller play, and replace the whole set if one is bad.",
   "applies": [
-    { "make": "CHEVROLET", "models": ["SILVERADO 1500"], "years": [2019, 2025], "engine": "2.7L turbo I4 (L3B, L2R)" },
-    { "make": "GMC", "models": ["SIERRA 1500"], "years": [2019, 2025], "engine": "2.7L turbo I4 (L3B, L2R)" },
-    { "make": "CHEVROLET", "models": ["COLORADO"], "years": [2023, 2025], "engine": "2.7L turbo I4 (L3B, L2R)" },
-    { "make": "GMC", "models": ["CANYON"], "years": [2023, 2025], "engine": "2.7L turbo I4 (L3B, L2R)" },
-    { "make": "CADILLAC", "models": ["CT4"], "years": [2020, 2025], "engine": "2.7L turbo I4 (L3B)" }
+    {
+      "make": "CHEVROLET",
+      "models": [
+        "SILVERADO 1500"
+      ],
+      "years": [
+        2019,
+        2025
+      ],
+      "engine": "2.7L turbo I4 (L3B, L2R)"
+    },
+    {
+      "make": "GMC",
+      "models": [
+        "SIERRA 1500"
+      ],
+      "years": [
+        2019,
+        2025
+      ],
+      "engine": "2.7L turbo I4 (L3B, L2R)"
+    },
+    {
+      "make": "CHEVROLET",
+      "models": [
+        "COLORADO"
+      ],
+      "years": [
+        2023,
+        2025
+      ],
+      "engine": "2.7L turbo I4 (L3B, L2R)"
+    },
+    {
+      "make": "GMC",
+      "models": [
+        "CANYON"
+      ],
+      "years": [
+        2023,
+        2025
+      ],
+      "engine": "2.7L turbo I4 (L3B, L2R)"
+    },
+    {
+      "make": "CADILLAC",
+      "models": [
+        "CT4"
+      ],
+      "years": [
+        2020,
+        2025
+      ],
+      "engine": "2.7L turbo I4 (L3B)"
+    }
   ],
-  "tags": ["tick", "tap", "knock", "misfire", "rough run", "p0300", "p0301", "p0302", "p0303", "p0304", "p050d", "roller follower", "rocker arm", "lash adjuster", "2.7 turbo", "l3b", "l2r", "silverado", "sierra", "colorado", "canyon"],
+  "tags": [
+    "tick",
+    "tap",
+    "knock",
+    "misfire",
+    "rough run",
+    "p0300",
+    "p0301",
+    "p0302",
+    "p0303",
+    "p0304",
+    "p050d",
+    "roller follower",
+    "rocker arm",
+    "lash adjuster",
+    "2.7 turbo",
+    "l3b",
+    "l2r",
+    "silverado",
+    "sierra",
+    "colorado",
+    "canyon"
+  ],
   "specs": [
-    { "name": "DTCs", "value": "P0300, P0301, P0302, P0303, P0304, P050D", "src": [1] },
-    { "name": "Engines", "value": "L3B, L2R", "src": [1] },
-    { "name": "Exhaust valve rocker arm", "value": "12731971", "src": [1] },
-    { "name": "Hydraulic valve lash adjuster", "value": "12663277", "src": [1] },
-    { "name": "Roller bearings per follower", "value": "10", "src": [1] },
-    { "name": "Supersedes", "value": "PIP5847B", "src": [1] }
+    {
+      "name": "DTCs",
+      "value": "P0300, P0301, P0302, P0303, P0304, P050D",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Engines",
+      "value": "L3B, L2R",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Exhaust valve rocker arm",
+      "value": "12731971",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Hydraulic valve lash adjuster",
+      "value": "12663277",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Roller bearings per follower",
+      "value": "10",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Supersedes",
+      "value": "PIP5847B",
+      "src": [
+        1
+      ]
+    }
   ],
   "steps": [
-    { "text": "Use a stethoscope to see if the tick is on the exhaust side of the cam carrier. If it is, a worn exhaust roller follower is the suspect and the cam carrier has to come off.", "src": [1] },
-    { "text": "Remove the cam carrier, then the exhaust rockers and exhaust hydraulic lash adjusters.", "src": [1] },
-    { "text": "Hold each exhaust rocker body and try to push the roller up and down. Noticeable play in the bearing means it's worn. If unsure, compare with a known-good intake rocker.", "src": [1] },
-    { "text": "It's unusual for more than one to fail, but if any exhaust rocker is bad, replace the whole set. Note which position failed.", "src": [1] },
-    { "text": "Look for loose roller bearings in the head and remove them; each follower has 10. If any turn up in the oil pan, use GM bulletin 22-NA-074 to check for internal engine damage.", "src": [1] },
-    { "text": "Check the exhaust cam lobe under the failed rocker against its neighbors. Scoring or premature wear means replace the camshaft.", "src": [1] },
-    { "text": "Reinstall the cam carrier per service information.", "src": [1] }
+    {
+      "text": "Use a stethoscope to see if the tick is on the exhaust side of the cam carrier. If it is, a worn exhaust roller follower is the suspect and the cam carrier has to come off.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Remove the cam carrier, then the exhaust rockers and exhaust hydraulic lash adjusters.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Hold each exhaust rocker body and try to push the roller up and down. Noticeable play in the bearing means it's worn. If unsure, compare with a known-good intake rocker.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "It's unusual for more than one to fail, but if any exhaust rocker is bad, replace the whole set. Note which position failed.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Look for loose roller bearings in the head and remove them; each follower has 10. If any turn up in the oil pan, use GM bulletin 22-NA-074 to check for internal engine damage.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Check the exhaust cam lobe under the failed rocker against its neighbors. Scoring or premature wear means replace the camshaft.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Reinstall the cam carrier per service information.",
+      "src": [
+        1
+      ]
+    }
   ],
   "body": "The bulletin's model/year table doesn't extract cleanly; the ranges here follow its brand-and-model order (Colorado and Canyon from 2023, Silverado and Sierra 1500 from 2019, CT4 from 2020). Confirm the engine RPO against page 1 of the bulletin.",
   "sources": [
@@ -39,5 +182,17 @@
     }
   ],
   "author": "OpenBay (AI-assisted)",
-  "updated": "2026-10-18"
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "tick",
+      "tap",
+      "knock",
+      "misfire",
+      "rough"
+    ],
+    [
+      "engine"
+    ]
+  ]
 }
