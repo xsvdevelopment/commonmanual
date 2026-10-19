@@ -1,0 +1,118 @@
+{
+  "id": "hyundai-sonata-elantra-clockspring-15yr",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "Hyundai Sonata (2011-13) and Elantra (2011-14): airbag light, B134600 / B148100, clockspring covered 15 years",
+  "summary": "Hyundai bulletin 26-BE-022H (warranty extension TXXA): driver airbag high-resistance codes from a failing clock spring. Coverage is 15 years, unlimited miles, from original delivery; the fix is a new clock spring, 93490-3X040.",
+  "applies": [
+    {
+      "make": "HYUNDAI",
+      "models": [
+        "SONATA"
+      ],
+      "years": [
+        2011,
+        2013
+      ],
+      "engine": "YF / YF HEV"
+    },
+    {
+      "make": "HYUNDAI",
+      "models": [
+        "ELANTRA"
+      ],
+      "exclude": [
+        "GT",
+        "TOURING"
+      ],
+      "years": [
+        2011,
+        2014
+      ],
+      "engine": "MD sedan, UD, JK coupe"
+    }
+  ],
+  "tags": [
+    "clock spring",
+    "clockspring",
+    "airbag light",
+    "srs light",
+    "b134600",
+    "b148100",
+    "warranty extension",
+    "txxa",
+    "sonata",
+    "elantra"
+  ],
+  "specs": [
+    {
+      "name": "DTCs",
+      "value": "B134600 driver airbag 1st stage resistance high; B148100 driver airbag 2nd stage high",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Warranty extension",
+      "value": "15 years, unlimited miles, from original retail delivery or first use (TXXA)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Clock spring",
+      "value": "93490-3X040 (replaces 93490-3Q120)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Op time (clock spring replacement)",
+      "value": "0.9 hr",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Supersedes",
+      "value": "17-BE-004-1",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Scan with GDS for B134600 and B148100. Neither set: diagnose normally; the bulletin doesn't apply.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Either set: replace the clock spring per the shop manual with 93490-3X040. Keep a photo of the old clock spring or a screenshot of the stored code; the warranty claim needs one.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "Vehicles in the bulletin: 2011-2013 Sonata (YFA) and Sonata Hybrid (YF HEV); 2011-2014 Elantra (MD), Elantra (UD) and Elantra Coupe (JK). The production-date columns don't line up with the models in the PDF text, so they're left out; check the VIN with a Hyundai dealer. The Elantra GT and Elantra Touring aren't in the bulletin and are excluded here.",
+  "sources": [
+    {
+      "title": "Technical Service Bulletin 26-BE-022H: Clock Spring - DTC B134600 & B148100 (Warranty Extension TXXA)",
+      "publisher": "Hyundai Motor America, August 2026",
+      "citation": "Applicable vehicles and description p. 1; parts, warranty and service procedure p. 2; NHTSA ID 11037230",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2026/MC-11037230-0001.pdf"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "clockspring",
+      "clock spring",
+      "airbag light",
+      "air bag light",
+      "srs"
+    ]
+  ]
+}
