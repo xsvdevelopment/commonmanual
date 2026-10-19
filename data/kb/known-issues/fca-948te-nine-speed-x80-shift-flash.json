@@ -1,0 +1,184 @@
+{
+  "id": "fca-948te-nine-speed-x80-shift-flash",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "2014-2015 Jeep Cherokee, 2015 Chrysler 200 / Renegade / ProMaster City nine-speed (948TE): rough shifts, warranty extension X80, TCM flash 21-019-17",
+  "summary": "FCA extended the warranty on early nine-speed automatics (948TE, plus the 9HP48 in the 3.6L Chrysler 200) to 6 years / 100,000 miles for transmission replacement (X80). Its TCM software update 21-019-17 addresses a list of transmission codes, a hard-to-get 3-2 downshift on grades, and garage-shift and coast-down bumps. Before blaming the transmission for shudder or gear-ratio codes on an AWD vehicle, FCA's STAR case says to check that all four tires are within 1/8 in of the same circumference.",
+  "applies": [
+    {
+      "make": "JEEP",
+      "models": [
+        "CHEROKEE"
+      ],
+      "exclude": [
+        "GRAND"
+      ],
+      "years": [
+        2014,
+        2015
+      ],
+      "engine": "948TE nine-speed automatic"
+    },
+    {
+      "make": "CHRYSLER",
+      "models": [
+        "200"
+      ],
+      "years": [
+        2015,
+        2015
+      ],
+      "engine": "948TE or 9HP48 nine-speed automatic"
+    },
+    {
+      "make": "JEEP",
+      "models": [
+        "RENEGADE"
+      ],
+      "years": [
+        2015,
+        2015
+      ],
+      "engine": "2.4L with 948TE nine-speed automatic"
+    },
+    {
+      "make": "RAM",
+      "models": [
+        "PROMASTER CITY"
+      ],
+      "years": [
+        2015,
+        2015
+      ],
+      "engine": "2.4L with 948TE nine-speed automatic"
+    }
+  ],
+  "tags": [
+    "9 speed",
+    "nine speed",
+    "948te",
+    "9hp48",
+    "zf 9 speed",
+    "rough shift",
+    "harsh shift",
+    "lurch",
+    "won't downshift",
+    "x80",
+    "transmission warranty extension",
+    "tcm flash",
+    "p0887",
+    "p061b",
+    "p1dad",
+    "p072f",
+    "stuck in gear",
+    "cherokee",
+    "chrysler 200",
+    "renegade",
+    "promaster city"
+  ],
+  "specs": [
+    {
+      "name": "X80 warranty extension",
+      "value": "Transmission replacement covered 6 years from in-service date or 100,000 miles (U.S.)",
+      "src": [
+        1
+      ],
+      "note": "Counted from the in-service date, so 2014-2015 vehicles have aged out by now; it matters for repair history and goodwill requests."
+    },
+    {
+      "name": "X80 vehicles",
+      "value": "2014-2015 Cherokee (2.4L or 3.2L, 948TE); 2015 Chrysler 200 (2.4L 948TE, 3.6L 9HP48); 2015 Renegade (2.4L 948TE); 2015 ProMaster City (2.4L 948TE)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "TCM flash 21-019-17 Rev. A codes (2015 Cherokee)",
+      "value": "P1634-00, U1412, U0001, P0887-00, P061B-00, U0401-00, P1DAD-00, P0711-00",
+      "src": [
+        2
+      ]
+    },
+    {
+      "name": "TCM flash 21-019-17 Rev. A codes (2015 Chrysler 200)",
+      "value": "P0887-00, P072F-00 (stuck in gear 4), P061B-00, P0711-00, P0885-00, P0975-00, P0978-00, P0981-00, P0984-00 and others",
+      "src": [
+        2
+      ]
+    },
+    {
+      "name": "Tire circumference match (AWD shudder / gear ratio codes)",
+      "value": "All four within 1/8 in of each other",
+      "src": [
+        3
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Check that the TCM has the latest software. Bulletin 21-019-17 Rev. A (also rapid response transmittal 14-094) reflashes 2015 Cherokee and 200 TCMs with wiTECH for the listed codes, a hard or missing 3-2 downshift on grades, and garage-shift and coast-down bumps.",
+      "src": [
+        2
+      ]
+    },
+    {
+      "text": "For shudder, binding or gear-ratio codes, set tire pressures to the door placard first.",
+      "src": [
+        3
+      ]
+    },
+    {
+      "text": "Measure each tire's circumference with a cloth tape at the center of the tread. If they aren't within 1/8 in of each other, find the cause (alignment, worn suspension, mixed brands, missed rotations) and replace tires as needed.",
+      "src": [
+        3
+      ]
+    },
+    {
+      "text": "Road test and confirm all four wheel speed sensors read the same, and that the programmed tire size and axle ratio match what's on the vehicle.",
+      "src": [
+        3
+      ]
+    }
+  ],
+  "body": "The STAR case is a general FCA write-up covering many transmissions and years, not only the nine-speed. It's here because mismatched tires on an AWD Cherokee produce the same shudder and gear-ratio complaints. FCA states that STAR cases don't authorize warranty repairs.",
+  "sources": [
+    {
+      "title": "Service Bulletin 21-025-19: Nine-Speed Automatic Transmission (X80 Warranty Extension)",
+      "publisher": "FCA US LLC, May 9, 2019",
+      "citation": "Models, applicability and policy p. 1; NHTSA ID 10162546",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2019/MC-10162546-9999.pdf"
+    },
+    {
+      "title": "Service Bulletin 21-019-17 Rev. A: Flash: Transmission Diagnostic and Shift Enhancements",
+      "publisher": "FCA US LLC, September 9, 2017",
+      "citation": "Models p. 1; symptom/condition p. 2; NHTSA ID 10121787",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10121787-9999.pdf"
+    },
+    {
+      "title": "STAR Case S1821000001 Rev A: Gear Ratio DTCs, Transmission Shift Concerns, Does Not Shift At Times, Shudders",
+      "publisher": "FCA US LLC, April 16, 2021",
+      "citation": "Discussion and steps 1-5; NHTSA ID 10221150",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10221150-9999.pdf"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "transmission",
+      "shift"
+    ],
+    [
+      "lurch",
+      "jerk",
+      "harsh",
+      "rough",
+      "hesitat",
+      "slam",
+      "neutral",
+      "shudder",
+      "won't shift",
+      "delay"
+    ]
+  ]
+}
