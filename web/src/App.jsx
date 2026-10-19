@@ -26,8 +26,8 @@ export default function App() {
     <>
       <header className="top">
         <a className="brand" href="#/">
-          <span className="brand-mark">OB</span>
-          <span className="brand-name">OpenBay</span>
+          <span className="brand-mark">CM</span>
+          <span className="brand-name">Common Manual</span>
         </a>
         <nav>
           <a href="#/">Vehicle</a>

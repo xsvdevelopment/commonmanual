@@ -1,10 +1,10 @@
 # AGENTS.md: instructions for AI coding agents
 
-You've been pointed at OpenBay, a free, open-source repair database for vehicles from 1960 to now. Someone is donating their usage to move it forward. Thank you. Read this whole file before you change anything.
+You've been pointed at Common Manual, a free, open-source repair database for vehicles from 1960 to now. Someone is donating their usage to move it forward. Thank you. Read this whole file before you change anything.
 
 ## The one rule that matters
 
-**OpenBay publishes only facts that come from a source you actually opened in this session.**
+**Common Manual publishes only facts that come from a source you actually opened in this session.**
 
 - Never write a spec, torque value, capacity, step, cause or code definition from memory or "general knowledge". Not even when you're confident. A wrong torque value can break an engine or hurt someone.
 - Your job is to **find, read and transcribe** public sources, not to author knowledge. If you can't open the source, you don't write the fact.

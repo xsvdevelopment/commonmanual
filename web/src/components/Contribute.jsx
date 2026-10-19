@@ -122,7 +122,7 @@ function Photos({ f, setF, entryId }) {
       </div>
       {!entryId ? <p className="muted">Give the entry a title first.</p> : (
         <>
-          <label className="check"><input type="checkbox" checked={own} onChange={(e) => setOwn(e.target.checked)} /> I took these photos, and I release them under CC BY-SA 4.0 like the rest of OpenBay.</label>
+          <label className="check"><input type="checkbox" checked={own} onChange={(e) => setOwn(e.target.checked)} /> I took these photos, and I release them under CC BY-SA 4.0 like the rest of Common Manual.</label>
           <label className={'btn' + (own ? '' : ' disabled')}>
             + Add photos
             <input type="file" accept="image/*" multiple hidden disabled={!own} onChange={upload} />
@@ -165,7 +165,7 @@ export default function Contribute({ query, readOnly, repo }) {
       <h1>{id ? 'Improve entry' : 'Add knowledge'}</h1>
       {readOnly && (
         <div className="draft-banner">
-          <strong>This is the public preview, so saving is off here.</strong> You can still fill this in and use it as a guide. To actually add knowledge: download OpenBay from <a href={repo} target="_blank" rel="noreferrer">GitHub</a> and run it (Windows: double-click OpenBay.bat), or open a pull request with your entry file. Got an AI agent? Point it at the repo and say "work on OpenBay".
+          <strong>This is the public preview, so saving is off here.</strong> You can still fill this in and use it as a guide. To actually add knowledge: download Common Manual from <a href={repo} target="_blank" rel="noreferrer">GitHub</a> and run it (Windows: double-click CommonManual.bat), or open a pull request with your entry file. Got an AI agent? Point it at the repo and say "work on Common Manual".
         </div>
       )}
       <p className="lede-sm">Facts only. Every spec gets a footnote number pointing at a source below: a factory manual (with page), a public-domain manual, a TSB number, a parts maker's published spec. If you can't cite it yet, save it as a <strong>draft</strong>; it stays hidden until someone does.</p>
@@ -251,7 +251,7 @@ export default function Contribute({ query, readOnly, repo }) {
       {result?.ok && (
         <div className="ok-box">
           <strong>Saved to <code>data/kb/{result.ok.saved}</code>.</strong>
-          <p>It's live in this copy of OpenBay now. To share it with every shop, commit that file and open a pull request on GitHub (see CONTRIBUTING.md).</p>
+          <p>It's live in this copy of Common Manual now. To share it with every shop, commit that file and open a pull request on GitHub (see CONTRIBUTING.md).</p>
         </div>
       )}
     </form>

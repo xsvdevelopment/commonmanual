@@ -1,4 +1,4 @@
-# OpenBay
+# Common Manual
 
 ### The repair manual belongs to the people holding the wrench.
 
@@ -14,23 +14,23 @@ And still, the independent mechanic running a two-bay shop pays a toll every mon
 
 > *"I got tired of asking Skippy how this shit works, so I put my restless minions on the task."*
 
-OpenBay is a free, open-source repair database for every car and truck from **1960 to today**. Recalls, owner-reported pattern failures, VIN decoding, factory configurations, trouble codes, and a growing body of procedures, specs and known issues written by the mechanics who actually do the work.
+Common Manual is a free, open-source repair database for every car and truck from **1960 to today**. Recalls, owner-reported pattern failures, VIN decoding, factory configurations, trouble codes, and a growing body of procedures, specs and known issues written by the mechanics who actually do the work.
 
 It isn't for sale and it never will be.
 
-**Try it now: [openbay.netlify.app](https://openbay.netlify.app)**. Type a car and what it's doing, e.g. *"2013 Ford F-150 rattles on cold start"*.
+**Try it now: [commonmanual.netlify.app](https://commonmanual.netlify.app)**. Type a car and what it's doing, e.g. *"2013 Ford F-150 rattles on cold start"*.
 
 ---
 
 ## The Code
 
 **1. Facts only. Every one footnoted.**
-Every spec in OpenBay points to a numbered source: a factory manual with a page number, a TSB, a public-domain military manual, a government database. Anything without a citation is labeled **Draft**, hidden by default, and sent to the citation queue until somebody proves it.
+Every spec in Common Manual points to a numbered source: a factory manual with a page number, a TSB, a public-domain military manual, a government database. Anything without a citation is labeled **Draft**, hidden by default, and sent to the citation queue until somebody proves it.
 
 **2. No machines guessing.**
 > *"We're always going to need to get around. Why fuck with models that will hallucinate the correct answer when we have it all documented here?"*
 
-OpenBay contains no AI-generated answers. It shows what has been documented and nothing else. If we don't know, it says so.
+Common Manual contains no AI-generated answers. It shows what has been documented and nothing else. If we don't know, it says so.
 
 **3. Open forever.**
 The code is MIT. The data is CC BY-SA 4.0. Anyone can use it, copy it or build on it, and nobody can lock it back up.
@@ -48,7 +48,7 @@ Facts can't be owned, but someone else's exact words and diagrams can. We write 
 - **Own a factory manual?** Work through the [citation queue](#how-to-contribute). Check a draft against your book, add the page number, and it goes live.
 - **Found a public-domain manual?** Military TMs, pre-1964 publications that were never renewed, government documents. Add it as a source.
 - **Write code?** Issues are open. Offline sync, wiring diagram support, more data sources, a phone layout for under the hood.
-- **Got AI usage to spare?** Clone the repo, open it in Claude Code, Codex, Cursor, Copilot, Gemini or whatever you run, and say *"work on OpenBay."* [AGENTS.md](AGENTS.md) tells it exactly what to do: pick a task from the [agent-task queue](https://github.com/xsvdevelopment/openbay/issues?q=is%3Aopen+label%3Aagent-task), dig the facts out of public-domain manuals and factory bulletins, footnote every one, and open a pull request. Agents transcribe from documents they've opened. They never write from memory, and a human reviews every citation before it merges.
+- **Got AI usage to spare?** Clone the repo, open it in Claude Code, Codex, Cursor, Copilot, Gemini or whatever you run, and say *"work on Common Manual."* [AGENTS.md](AGENTS.md) tells it exactly what to do: pick a task from the [agent-task queue](https://github.com/xsvdevelopment/commonmanual/issues?q=is%3Aopen+label%3Aagent-task), dig the facts out of public-domain manuals and factory bulletins, footnote every one, and open a pull request. Agents transcribe from documents they've opened. They never write from memory, and a human reviews every citation before it merges.
 - **None of the above?** Star the repo and send it to a mechanic.
 
 **Put this in the consumer's hands. Help us build it.**
@@ -57,13 +57,13 @@ Facts can't be owned, but someone else's exact words and diagrams can. We write 
 
 ## Describe the problem, get the records
 
-Type the vehicle and the symptom in plain words: *"2010 Chevy Equinox burning oil"*, *"2005 F-250 no start"*, *"rattles on cold start, P0016"*. OpenBay searches every factory bulletin, recall, defect investigation, owner complaint and cited repair entry on file for that vehicle, using shop vocabulary (rattle, tick, tap and knock all match), and ranks what it finds. It's a search of documented records: it shows you the factory TSB and the PDF, not a guess.
+Type the vehicle and the symptom in plain words: *"2010 Chevy Equinox burning oil"*, *"2005 F-250 no start"*, *"rattles on cold start, P0016"*. Common Manual searches every factory bulletin, recall, defect investigation, owner complaint and cited repair entry on file for that vehicle, using shop vocabulary (rattle, tick, tap and knock all match), and ranks what it finds. It's a search of documented records: it shows you the factory TSB and the PDF, not a guess.
 
 ## What's inside
 
 | Source | What it gives you | Years |
 |---|---|---|
-| NHTSA product catalog + OpenBay classic catalog | Year / make / model picker | 1960+ |
+| NHTSA product catalog + Common Manual classic catalog | Year / make / model picker | 1960+ |
 | NHTSA vPIC | VIN decoding: engine, trans, drive, plant | 1981+ (17-digit VINs) |
 | NHTSA recalls | Every recall campaign, remedy and "park it" warning | All years on file |
 | NHTSA owner complaints | Thousands of owner reports grouped by component, so pattern failures stand out | All years on file |
@@ -73,7 +73,7 @@ Type the vehicle and the symptom in plain words: *"2010 Chevy Equinox burning oi
 | **Trouble codes** | 12,000+ codes: every generic OBD-II code plus manufacturer-specific codes for 30+ makes, each definition footnoted with how many public datasets agree | 1996+ |
 | Factory service sites | Direct links to every automaker's own repair-info site; most sell short-term passes | Current |
 | Public-domain military manuals | Factory-level specs and procedures for the military versions of civilian trucks | 1960s-1980s |
-| **The OpenBay knowledge base** | Procedures, specs, known issues and photos from mechanics, every fact footnoted | Everything we can cite |
+| **The Common Manual knowledge base** | Procedures, specs, known issues and photos from mechanics, every fact footnoted | Everything we can cite |
 
 Government data is cached on disk, so anything you've looked up keeps working when the shop's internet doesn't.
 
@@ -83,7 +83,7 @@ Government data is cached on disk, so anything you've looked up keeps working wh
 
 You need [Node.js](https://nodejs.org) 20 or newer.
 
-**Windows:** double-click `OpenBay.bat`. On first run it installs and builds, then opens OpenBay in your browser.
+**Windows:** double-click `CommonManual.bat`. On first run it installs and builds, then opens Common Manual in your browser.
 
 **Anywhere:**
 ```bash
@@ -102,7 +102,7 @@ The knowledge base is plain JSON files, one per entry, in [`data/kb/`](data/kb).
 
 1. Use **Add knowledge** in the app. It writes a correctly formatted file into `data/kb/shop/`.
 2. Fork this repo, commit that file, and open a pull request.
-3. CI checks that every spec has a footnote. A maintainer reviews it and it ships to every shop running OpenBay.
+3. CI checks that every spec has a footnote. A maintainer reviews it and it ships to every shop running Common Manual.
 
 The **Citation queue** page lists every draft waiting for a source. That's the quickest way to help.
 
@@ -112,4 +112,4 @@ The **Citation queue** page lists every draft waiting for a source. That's the q
 
 Code: [MIT](LICENSE). Data in `data/`: [CC BY-SA 4.0](data/LICENSE). Vehicle data from NHTSA and EPA is US government work in the public domain.
 
-OpenBay is not affiliated with any automaker or any commercial repair-information provider. Repair work is dangerous. Verify specs against the cited source and use proper safety equipment.
+Common Manual is not affiliated with any automaker or any commercial repair-information provider. Repair work is dangerous. Verify specs against the cited source and use proper safety equipment.

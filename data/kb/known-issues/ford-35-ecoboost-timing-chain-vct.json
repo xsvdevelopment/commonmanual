@@ -154,7 +154,7 @@
       "url": "https://api.nhtsa.gov/safetyIssues/byNhtsaId?nhtsaId=10053407&filter=issueType&filterValue=manufacturerCommunications"
     }
   ],
-  "author": "OpenBay",
+  "author": "Common Manual",
   "updated": "2026-10-18",
   "complaintMatch": [
     [

@@ -58,7 +58,7 @@ export default function Home() {
     <div className="home">
       <section className="hero">
         <h1>What's it doing?</h1>
-        <p className="lede">Type the car and the problem. OpenBay searches every factory bulletin, recall, owner report and cited repair entry on record for it. Free, open, every fact footnoted.</p>
+        <p className="lede">Type the car and the problem. Common Manual searches every factory bulletin, recall, owner report and cited repair entry on record for it. Free, open, every fact footnoted.</p>
         <form className="row ask" onSubmit={ask}>
           <input className="big-input" value={problem} onChange={(e) => setProblem(e.target.value)} placeholder="2013 Ford F-150 rattles on cold start" />
           <button className="btn primary big" disabled={asking}>{asking ? 'Looking…' : 'Diagnose'}</button>

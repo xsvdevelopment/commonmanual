@@ -1,4 +1,4 @@
-# Public read-only preview of OpenBay. The site is the built frontend; the API runs
+# Public read-only preview of Common Manual. The site is the built frontend; the API runs
 # as one serverless function wrapping the same Express app the local server uses.
 [build]
   command = "npm run build"

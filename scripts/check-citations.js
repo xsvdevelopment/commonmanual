@@ -19,7 +19,7 @@ import { execFileSync } from 'node:child_process';
 import { loadAll, KB_DIR } from '../server/kb.js';
 
 const docCache = new Map();
-const UA = { headers: { 'User-Agent': 'OpenBay citation checker (+https://github.com/xsvdevelopment/openbay)' } };
+const UA = { headers: { 'User-Agent': 'Common Manual citation checker (+https://github.com/xsvdevelopment/commonmanual)' } };
 const PDFTOTEXT = process.env.PDFTOTEXT || ['C:/Program Files/Git/mingw64/bin/pdftotext.exe'].find((p) => fs.existsSync(p)) || 'pdftotext';
 const PYTHON = process.env.PYTHON || (process.platform === 'win32' ? 'python' : 'python3');
 const OCR = path.join(path.dirname(fileURLToPath(import.meta.url)), 'ocr-pdf.py');
