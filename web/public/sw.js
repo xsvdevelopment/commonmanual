@@ -1,9 +1,9 @@
-// OpenBay service worker: keeps the app and everything you've looked at usable
+// Common Manual service worker: keeps the app and everything you've looked at usable
 // with no connection, for shops with bad Wi-Fi.
 //   app shell and hashed assets  cache first (filenames change when they change)
 //   /api GETs                    network first, fall back to the last copy seen
 //   /media photos, fonts         cache first
-// Answers served from the cache carry an "X-OpenBay-Offline: 1" header.
+// Answers served from the cache carry an "X-CommonManual-Offline: 1" header.
 const VERSION = 'v1';
 const SHELL = `openbay-shell-${VERSION}`;
 const DATA = 'openbay-data';
@@ -36,7 +36,7 @@ self.addEventListener('activate', (e) => {
 
 const offlineCopy = async (res) => {
   const headers = new Headers(res.headers);
-  headers.set('X-OpenBay-Offline', '1');
+  headers.set('X-CommonManual-Offline', '1');
   return new Response(await res.blob(), { status: res.status, statusText: res.statusText, headers });
 };
 
@@ -58,7 +58,7 @@ async function networkFirst(req) {
     const hit = await cache.match(req);
     if (hit) return offlineCopy(hit);
     return new Response(JSON.stringify({ error: 'Offline, and not saved on this device yet' }), {
-      status: 503, headers: { 'Content-Type': 'application/json', 'X-OpenBay-Offline': '1' },
+      status: 503, headers: { 'Content-Type': 'application/json', 'X-CommonManual-Offline': '1' },
     });
   }
 }

@@ -1,6 +1,6 @@
 {
-  "name": "OpenBay",
-  "short_name": "OpenBay",
+  "name": "Common Manual",
+  "short_name": "Common Manual",
   "description": "Free, open-source repair database. Recalls, factory bulletins, trouble codes and cited repair knowledge, 1960 to now.",
   "start_url": "/",
   "scope": "/",

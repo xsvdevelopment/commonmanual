@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 export async function api(path, opts) {
   const res = await fetch('/api' + path, opts);
   // The service worker marks answers it served from this device's saved copy.
-  if (res.headers.get('X-OpenBay-Offline')) dispatchEvent(new Event('openbay:offline'));
+  if (res.headers.get('X-CommonManual-Offline')) dispatchEvent(new Event('openbay:offline'));
   const body = await res.json().catch(() => ({}));
   if (!res.ok) throw Object.assign(new Error(body.error || `HTTP ${res.status}`), { body });
   return body;
