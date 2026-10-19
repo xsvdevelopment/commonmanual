@@ -1,0 +1,139 @@
+{
+  "id": "jeep-wrangler-jk-clockspring-x68",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "2011-2016 Wrangler JK: airbag or traction light, dead cruise/wheel buttons, clockspring (X68, 15-year coverage)",
+  "summary": "FCA bulletin 08-005-17 Rev. A: airbag and/or traction control lights with driver airbag squib, steering angle sensor, speed control switch or steering-wheel LIN codes trace to the clockspring / steering angle sensor. Replacement is covered for 15 years, unlimited miles.",
+  "applies": [
+    {
+      "make": "JEEP",
+      "models": [
+        "WRANGLER"
+      ],
+      "years": [
+        2011,
+        2016
+      ],
+      "engine": "JK, left-hand drive"
+    }
+  ],
+  "tags": [
+    "clockspring",
+    "airbag light",
+    "traction control light",
+    "steering angle sensor",
+    "cruise control inoperative",
+    "steering wheel buttons",
+    "b1b00",
+    "c123f",
+    "c1219",
+    "c2205",
+    "p0579",
+    "p0581",
+    "p0591",
+    "p0593",
+    "u1109",
+    "x68",
+    "warranty extension",
+    "wrangler",
+    "jk"
+  ],
+  "specs": [
+    {
+      "name": "Built",
+      "value": "On or after February 16, 2010 (MDH 0216XX) and before May 02, 2016 (MDH 0502XX), left-hand drive",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Airbag DTCs",
+      "value": "B1B00, B1B01, B1B02, B1B03, B1B04, B1B05, B1B06, B1B07 (driver airbag squib 1 and 2 circuits)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Steering angle sensor DTCs",
+      "value": "C123F, C1219, C2205",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Speed control switch DTCs",
+      "value": "P0579, P0581, P0591, P0593",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Network DTC",
+      "value": "U1109 Lost communication with LIN steering wheel controls",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Clockspring installation package",
+      "value": "CBAES402AA or CBAES404AA (clockspring assembly)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Warranty extension",
+      "value": "15 years, unlimited miles (US warranty bulletin D-17-01; extension code X68)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Labor",
+      "value": "0.6 hr (19-85-25-F9 Replace Airbag Clockspring)",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Confirm one or more of the listed DTCs and follow the normal diagnostic procedure for them first. If none are set, the bulletin doesn't apply.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Replace the clockspring along with the upper and lower steering column shrouds and the steering wheel back cover, per the restraints section of the service manual. Vehicles with Thatcham security equipment (sales code LS9) reuse the lower shroud.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Clear DTCs in every module with the scan tool. Keep the pre-repair scan report: the warranty claim requires it.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Service Bulletin 08-005-17 Rev. A: Clockspring Replacement (X68 Warranty Extension)",
+      "publisher": "FCA US LLC, March 24, 2017",
+      "citation": "Models, symptom/DTCs, parts, repair procedure and policy, pp. 1-3; NHTSA ID 10217579",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10217579-9999.pdf"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "clockspring",
+      "clock spring",
+      "airbag light",
+      "air bag light",
+      "steering wheel buttons",
+      "cruise control"
+    ]
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "id": "stellantis-30-ecodiesel-shudder-cylinder-heads",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "2014 Ram 1500 / Grand Cherokee 3.0 EcoDiesel: \"rumble strip\" shudder at cruise, both cylinder heads",
+  "summary": "FCA bulletin 09-004-17: a brief shudder at 50-70 mph and 1,600-2,000 rpm on the 3.0L diesel, no DTCs, often felt on the 6-7 upshift. Carbon from light-load driving; the fix is both cylinder heads with revised valve stem seals plus a PCM update.",
+  "applies": [
+    {
+      "make": "RAM",
+      "models": [
+        "1500"
+      ],
+      "years": [
+        2014,
+        2014
+      ],
+      "engine": "3.0L V6 Turbo Diesel (EXF)"
+    },
+    {
+      "make": "JEEP",
+      "models": [
+        "GRAND CHEROKEE"
+      ],
+      "years": [
+        2014,
+        2014
+      ],
+      "engine": "3.0L V6 Turbo Diesel (EXF)"
+    }
+  ],
+  "tags": [
+    "ecodiesel",
+    "3.0",
+    "diesel",
+    "shudder",
+    "rumble strip",
+    "carbon",
+    "cylinder head",
+    "valve stem seal",
+    "no codes"
+  ],
+  "specs": [
+    {
+      "name": "Speed when it happens",
+      "value": "Steady 50-70 mph (80-113 km/h)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Engine speed when it happens",
+      "value": "1,600-2,000 rpm",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "DTCs",
+      "value": "None set by this condition",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Right cylinder head",
+      "value": "68292424AA",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Left cylinder head",
+      "value": "68292425AA",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Cylinder head bolts",
+      "value": "68211172AA, qty 16",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Labor, replace both heads",
+      "value": "17.2 hrs (Ram DS), 17.4 hrs (Grand Cherokee WK)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Supersedes",
+      "value": "Bulletin 09-006-15 Rev. A (November 13, 2015)",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Customer describes a slight shudder that feels and sounds like driving over rumble strips; it can be mistaken for a transmission problem or a misfire.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Conditions to reproduce it: steady 50-70 mph, 1,600-2,000 rpm, warming up after a cold soak, a few seconds at a time and often on the 6-7 upshift, light acceleration or a slight grade. It goes away with hard throttle or a closed-throttle decel.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Check all engine systems with the scan tool first. Repair any other DTCs or symptoms before going further with this bulletin.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "If the test drive or the customer's description matches, replace both cylinder heads (new heads have valve stem seals designed to stop the carbon build-up from light-load driving).",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Make sure the PCM has the latest software afterwards.",
+      "src": [
+        1
+      ]
+    }
+  ],
+  "body": "If the shudder can't be reproduced and the description doesn't match the listed conditions, the bulletin says it does not apply and further diagnosis is needed.",
+  "sources": [
+    {
+      "title": "Service Bulletin 09-004-17: Intermittent Engine Shudder While Driving",
+      "publisher": "FCA US LLC, June 17, 2017",
+      "citation": "Symptom, Discussion, Parts Required and Repair Procedure, pp. 1-3; NHTSA ID 10219896",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10219896-9999.pdf"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "shudder",
+      "rumble",
+      "vibrat"
+    ]
+  ]
+}
