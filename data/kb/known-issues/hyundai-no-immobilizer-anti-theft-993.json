@@ -1,0 +1,310 @@
+{
+  "id": "hyundai-no-immobilizer-anti-theft-993",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "2011-2022 Hyundai with turn-key ignition and no immobilizer: theft method spread on social media, free anti-theft software and hardware (campaigns 993, 9A5, P32, P33)",
+  "summary": "Many 2011-2022 Hyundais with a regular key ignition were built without an engine immobilizer, and a theft method for them spread on social media. Hyundai's free fixes: an alarm and ignition-logic software upgrade with window decals (campaign 993) for most models; an ignition cylinder protector (9A5) and a steering wheel lock (P32) for older models the software can't fit; and a zinc-reinforced ignition cylinder protector (P33) for software-eligible cars, through March 31, 2027. A push-button start or an immobilizer light in the gauges means the car already has an immobilizer.",
+  "applies": [
+    {
+      "make": "HYUNDAI",
+      "models": [
+        "ACCENT"
+      ],
+      "years": [
+        2011,
+        2022
+      ],
+      "engine": "Turn-key ignition, no immobilizer"
+    },
+    {
+      "make": "HYUNDAI",
+      "models": [
+        "ELANTRA"
+      ],
+      "years": [
+        2011,
+        2022
+      ],
+      "engine": "Turn-key ignition, no immobilizer",
+      "exclude": [
+        "HYBRID"
+      ]
+    },
+    {
+      "make": "HYUNDAI",
+      "models": [
+        "GENESIS COUPE"
+      ],
+      "years": [
+        2011,
+        2014
+      ],
+      "engine": "Turn-key ignition, no immobilizer"
+    },
+    {
+      "make": "HYUNDAI",
+      "models": [
+        "KONA"
+      ],
+      "years": [
+        2018,
+        2022
+      ],
+      "engine": "Turn-key ignition, no immobilizer",
+      "exclude": [
+        "ELECTRIC"
+      ]
+    },
+    {
+      "make": "HYUNDAI",
+      "models": [
+        "PALISADE"
+      ],
+      "years": [
+        2020,
+        2021
+      ],
+      "engine": "Turn-key ignition, no immobilizer"
+    },
+    {
+      "make": "HYUNDAI",
+      "models": [
+        "SANTA FE"
+      ],
+      "years": [
+        2011,
+        2022
+      ],
+      "engine": "Turn-key ignition, no immobilizer",
+      "exclude": [
+        "HYBRID",
+        "PLUG-IN"
+      ]
+    },
+    {
+      "make": "HYUNDAI",
+      "models": [
+        "SONATA"
+      ],
+      "years": [
+        2011,
+        2019
+      ],
+      "engine": "Turn-key ignition, no immobilizer",
+      "exclude": [
+        "HYBRID",
+        "PLUG-IN"
+      ]
+    },
+    {
+      "make": "HYUNDAI",
+      "models": [
+        "TUCSON"
+      ],
+      "years": [
+        2011,
+        2022
+      ],
+      "engine": "Turn-key ignition, no immobilizer",
+      "exclude": [
+        "HYBRID",
+        "PLUG-IN"
+      ]
+    },
+    {
+      "make": "HYUNDAI",
+      "models": [
+        "VELOSTER"
+      ],
+      "years": [
+        2012,
+        2021
+      ],
+      "engine": "Turn-key ignition, no immobilizer"
+    },
+    {
+      "make": "HYUNDAI",
+      "models": [
+        "VENUE"
+      ],
+      "years": [
+        2020,
+        2021
+      ],
+      "engine": "Turn-key ignition, no immobilizer"
+    },
+    {
+      "make": "HYUNDAI",
+      "models": [
+        "VERACRUZ"
+      ],
+      "years": [
+        2011,
+        2012
+      ],
+      "engine": "Turn-key ignition, no immobilizer"
+    }
+  ],
+  "tags": [
+    "theft",
+    "stolen",
+    "kia boys",
+    "tiktok",
+    "usb theft",
+    "immobilizer",
+    "no immobilizer",
+    "anti-theft software",
+    "ignition cylinder protector",
+    "steering wheel lock",
+    "993",
+    "9a5",
+    "9a8",
+    "p32",
+    "p33",
+    "alarm",
+    "won't start after update",
+    "key fob"
+  ],
+  "warnings": [
+    "After the 993 software is installed, lock and unlock with the key fob buttons. Hyundai says locking with the mechanical key may not arm the system, and the car may not start if it wasn't unlocked with the fob. On a covered driver's key cylinder, the fob is required.",
+    "The 993 software may not work with aftermarket alarms and remote starters. Owners with those can opt out by signing Hyundai's form."
+  ],
+  "specs": [
+    {
+      "name": "How to tell if your car already has an immobilizer",
+      "value": "A push-button start, or an immobilizer lamp in the instrument cluster, means it has one and campaign 993 doesn't apply",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Immobilizer standard on all Hyundais",
+      "value": "From November 2021 production",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Campaign 993 software models (certain vehicles)",
+      "value": "2011-2019 Sonata; 2011-2022 Elantra; 2013-2020 Elantra GT; 2020-2021 Venue; 2012-2017 and 2019-2021 Veloster; 2018-2022 Kona; 2018-2022 Accent; 2011-2022 Tucson; 2013-2018 Santa Fe Sport; 2013-2018 Santa Fe and 2019 Santa Fe XL; 2019-2022 Santa Fe; 2020-2021 Palisade; 2013-2014 Genesis Coupe",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Campaigns 9A5 (ignition cylinder protector) and P32 (steering wheel lock) models (certain vehicles)",
+      "value": "2012-2017 Accent (RB); 2011 Accent (MC); 2011-2012 Santa Fe; 2013-2014 Elantra Coupe; 2011-2012 Elantra Touring; 2011-2012 Veracruz; 2011-2012 Genesis Coupe",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Campaign 9A8",
+      "value": "Revised software for certain 2018 Elantra (VIN starting KMH), including cars that already had 993",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Campaign P33 zinc-reinforced ignition cylinder protector",
+      "value": "Free on request through March 31, 2027, for vehicles without an immobilizer that were eligible for the 993 software",
+      "src": [
+        2
+      ]
+    },
+    {
+      "name": "Reimbursement for another anti-theft device",
+      "value": "Up to $300 (such as an alarm kit) for 2011-2022 vehicles without immobilizers that can't take the 993 software",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Dealer time for 993",
+      "value": "0.3 h (0.4 h on 2021-2022 Elantra CN7)",
+      "src": [
+        1
+      ],
+      "note": "Hyundai says no loaner is needed; the decals go on while the software loads."
+    },
+    {
+      "name": "Steering wheel lock part",
+      "value": "6009L",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Hyundai anti-theft phone line",
+      "value": "888-498-0390 (customer care); 1-855-371-9460 (scheduling)",
+      "src": [
+        1,
+        2
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Check for a push-button start or an immobilizer lamp in the gauge cluster. If either is there, the car has an immobilizer and nothing more is needed.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Otherwise, check the VIN at hyundaiusa.com/anti-theft or with a Hyundai dealer to see which campaign applies: 993 software, 9A8, or 9A5 and P32 for cars the software can't fit.",
+      "src": [
+        1,
+        2
+      ]
+    },
+    {
+      "text": "At the dealer, 993 updates the IBU/BCM (body control) software for the factory alarm and ignition start logic, and puts anti-theft decals on both front side windows. Aftermarket tint can be damaged if the decals are later removed.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "If the car has Hyundai's own remote start and the horn honks on remote start after the update, Hyundai's fix is TSB 23-BE-010H, a remote start module update.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "For cars eligible for the software, request the P33 ignition cylinder protector before March 31, 2027. If no dealer will schedule it by then, contacting Hyundai through its owner web portal before that date keeps you eligible.",
+      "src": [
+        2
+      ]
+    }
+  ],
+  "body": "In its dealer guide, Hyundai says there's no defect in the security features and that the cars meet federal theft-protection standards, which is why these are service campaigns rather than recalls.\n\nTwo settlements apply. One is the class settlement at HyundaiTheftSettlement.com. The other, in Hyundai's P33 letter, compensates theft or attempted theft on or after April 29, 2025, for cars that had the software or an appointment for it (HKMultistateimmobilizersettlement.com, claims by March 31, 2027). Check each site for current terms.",
+  "sources": [
+    {
+      "title": "Campaign 993 Anti-Theft Immobilizer Software, 9A5 Ignition Cylinder Protector, P32 Steering Wheel Lock, 9A8: Dealer Best Practices & Engine Immobilizer Class Action Settlement",
+      "publisher": "Hyundai Motor America, February 12, 2024",
+      "citation": "Settlement p. 1; campaigns overview pp. 2-3; 993 applicable vehicles p. 4; warranty and talk tracks p. 5; 9A5, P32, 9A8 pp. 6-8; FAQs pp. 10-12; NHTSA ID 10251282",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10251282-0001.pdf"
+    },
+    {
+      "title": "Customer Satisfaction Campaign P33: Anti-Theft Ignition Cylinder Protector (owner letter)",
+      "publisher": "Hyundai Motor America, filed with NHTSA December 19, 2025",
+      "citation": "Letter p. 1; NHTSA ID 11026704",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2025/MC-11026704-0001.pdf"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "stolen",
+      "theft",
+      "steal"
+    ],
+    [
+      "ignition",
+      "steering column",
+      "usb",
+      "immobilizer",
+      "key"
+    ]
+  ]
+}
