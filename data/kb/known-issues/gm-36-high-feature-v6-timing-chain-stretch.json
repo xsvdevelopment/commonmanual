@@ -1,0 +1,364 @@
+{
+  "id": "gm-36-high-feature-v6-timing-chain-stretch",
+  "type": "known-issue",
+  "status": "factory-sourced",
+  "title": "GM 3.6L High Feature V6 (Traverse, Acadia, Enclave, Outlook, CTS, Equinox, Malibu...): stretched timing chains, P0008 / P0009 / P0016-P0019",
+  "summary": "On GM's 2007-2012 High Feature V6 engines, stretched timing chains set two or more of P0008, P0009, P0016, P0017, P0018 and P0019. GM's repair is a timing chain kit. GM tells technicians not to replace idler sprockets, cam actuators, the crank gear, or guides that aren't worn through, and to fix the PCV and oil life monitor issues while they're in there. If the chains are fine but the codes persist, GM's preliminary information says the crankshaft sensor reluctor may have slipped on the crank.",
+  "applies": [
+    {
+      "make": "CHEVROLET",
+      "models": [
+        "TRAVERSE"
+      ],
+      "years": [
+        2009,
+        2012
+      ],
+      "engine": "3.6L V6 (LLT)"
+    },
+    {
+      "make": "GMC",
+      "models": [
+        "ACADIA"
+      ],
+      "years": [
+        2007,
+        2012
+      ],
+      "engine": "3.6L High Feature V6 (LY7/LLT)"
+    },
+    {
+      "make": "BUICK",
+      "models": [
+        "ENCLAVE"
+      ],
+      "years": [
+        2008,
+        2012
+      ],
+      "engine": "3.6L High Feature V6 (LY7/LLT)"
+    },
+    {
+      "make": "SATURN",
+      "models": [
+        "OUTLOOK"
+      ],
+      "years": [
+        2007,
+        2010
+      ],
+      "engine": "3.6L High Feature V6 (LY7/LLT)"
+    },
+    {
+      "make": "BUICK",
+      "models": [
+        "LACROSSE"
+      ],
+      "years": [
+        2007,
+        2012
+      ],
+      "engine": "3.6L / 3.0L High Feature V6 (LY7, LLT, LF1, LFX)"
+    },
+    {
+      "make": "CADILLAC",
+      "models": [
+        "CTS"
+      ],
+      "years": [
+        2008,
+        2012
+      ],
+      "engine": "3.6L / 3.0L High Feature V6 (LY7, LP1, LLT, LF1)"
+    },
+    {
+      "make": "CADILLAC",
+      "models": [
+        "SRX"
+      ],
+      "years": [
+        2007,
+        2012
+      ],
+      "engine": "High Feature V6 (LY7, LAU, LF1, LFX)"
+    },
+    {
+      "make": "CADILLAC",
+      "models": [
+        "STS"
+      ],
+      "years": [
+        2007,
+        2011
+      ],
+      "engine": "3.6L V6 (LY7, LLT)"
+    },
+    {
+      "make": "CHEVROLET",
+      "models": [
+        "EQUINOX"
+      ],
+      "years": [
+        2008,
+        2012
+      ],
+      "engine": "High Feature V6 (LY7, LF1, LFW)"
+    },
+    {
+      "make": "GMC",
+      "models": [
+        "TERRAIN"
+      ],
+      "years": [
+        2010,
+        2012
+      ],
+      "engine": "3.0L V6 (LF1, LFW)"
+    },
+    {
+      "make": "CHEVROLET",
+      "models": [
+        "MALIBU"
+      ],
+      "years": [
+        2008,
+        2012
+      ],
+      "engine": "3.6L V6 (LY7)"
+    },
+    {
+      "make": "CHEVROLET",
+      "models": [
+        "CAMARO"
+      ],
+      "years": [
+        2010,
+        2012
+      ],
+      "engine": "3.6L V6 (LLT, LFX)"
+    },
+    {
+      "make": "CHEVROLET",
+      "models": [
+        "CAPTIVA"
+      ],
+      "years": [
+        2008,
+        2012
+      ],
+      "engine": "3.6L V6 (LY7)"
+    },
+    {
+      "make": "CHEVROLET",
+      "models": [
+        "IMPALA"
+      ],
+      "years": [
+        2012,
+        2012
+      ],
+      "engine": "3.6L V6 (LFX)"
+    },
+    {
+      "make": "PONTIAC",
+      "models": [
+        "G6"
+      ],
+      "years": [
+        2007,
+        2010
+      ],
+      "engine": "3.6L V6 (LY7)"
+    },
+    {
+      "make": "PONTIAC",
+      "models": [
+        "G8"
+      ],
+      "years": [
+        2008,
+        2009
+      ],
+      "engine": "3.6L V6 (LY7)"
+    },
+    {
+      "make": "PONTIAC",
+      "models": [
+        "TORRENT"
+      ],
+      "years": [
+        2008,
+        2009
+      ],
+      "engine": "3.6L V6 (LY7)"
+    },
+    {
+      "make": "SATURN",
+      "models": [
+        "AURA"
+      ],
+      "years": [
+        2007,
+        2009
+      ],
+      "engine": "3.6L V6 (LY7)"
+    },
+    {
+      "make": "SATURN",
+      "models": [
+        "VUE"
+      ],
+      "years": [
+        2008,
+        2010
+      ],
+      "engine": "3.6L V6 (LY7)"
+    }
+  ],
+  "tags": [
+    "timing chain",
+    "stretched timing chain",
+    "timing chain stretch",
+    "p0008",
+    "p0009",
+    "p0016",
+    "p0017",
+    "p0018",
+    "p0019",
+    "3.6 v6",
+    "high feature v6",
+    "llt",
+    "ly7",
+    "crank reluctor",
+    "camshaft thrust washer",
+    "pcv",
+    "oil life monitor",
+    "traverse",
+    "acadia",
+    "enclave"
+  ],
+  "specs": [
+    {
+      "name": "Codes GM ties to stretched chains",
+      "value": "P0008, P0009, P0016, P0017, P0018 and/or P0019 (usually two or more)",
+      "src": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Timing chain kit, 2007 LY7 models",
+      "value": "12650230",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Timing chain kit, 2008-2012 LY7 models",
+      "value": "12650231",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Timing chain kit, LLT / LF1 / LFX / LFW (incl. 2009-2012 Traverse, Enclave, Acadia LLT)",
+      "value": "12651450",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Camshaft thrust washer (heads with 1st-design saddle caps, built before 06/05/2009)",
+      "value": "12630941 for Aisin 5-screw actuators; 12632859 for Delphi 4-screw actuators; one between each camshaft and actuator if missing",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Camshaft cover bolts",
+      "value": "10 N·m (89 lb-in)",
+      "src": [
+        1
+      ]
+    },
+    {
+      "name": "Crank reluctor position (good)",
+      "value": "25 to 26 mm from the end of the machined surface of the crankshaft throw to the edge of the reluctor's open space, about 3 1/2 teeth",
+      "src": [
+        2
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "With two or more of P0008, P0009, P0016-P0019 set, check for loose timing chains or tensioners per GM service information.",
+      "src": [
+        2
+      ]
+    },
+    {
+      "text": "Replace the chains with the GM timing chain kit for the engine. GM says the kits omit idler sprockets, cam actuator gears, the crank driven gear and the guides because those parts aren't worn by a stretched chain and shouldn't be replaced.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Replace a timing chain guide only if its wear block is worn down into the base friction material and shows friction witness marks; otherwise clean and reuse it.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "On engines built before 06/05/2009 with first-design camshaft saddle caps, install a camshaft thrust washer between each camshaft and its actuator wherever one is missing.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "On 2007-2011 Enclave, Acadia, Traverse, Outlook and Malibu, and 2007-2010 G6: clean the PCV orifice with low-VOC brake cleaner and replace the bank 2 camshaft cover and gasket, torquing the cover bolts to 10 N·m (89 lb-in). Through 2010 the bank 1 camshaft cover gasket is replaced too (same torque), and 2007-2008 also get the insulated PCV tube; 2011 models only have the bank 2 cover removed and replaced.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "Make sure the latest oil life monitor calibration is installed (field actions 11083, 10287C, PI0777); reprogram if not.",
+      "src": [
+        1
+      ]
+    },
+    {
+      "text": "If the chains and tensioners are good and the codes return, check whether the crankshaft sensor reluctor on the rear of the crank has moved (sometimes visible with a borescope through the crank sensor hole). It should sit 25-26 mm from the machined surface. If it has moved, GM's fix is a new crankshaft.",
+      "src": [
+        2
+      ]
+    }
+  ],
+  "body": "GM's bulletin ties the timing chain repair to the PCV and oil life monitor fixes. In practice, the PCV fix and the updated oil life calibration matter as much as the new chains.\n\nThe preliminary information (PIP3423P) covers more engines and years than the kit bulletin: the 2.8, 3.0 and 3.6 High Feature V6s through 2019. This entry's vehicle list follows the kit bulletin (2007-2012).",
+  "sources": [
+    {
+      "title": "Bulletin 12-06-01-009F: Information on High Feature V6 Timing Chain Kits and Chain Guide Replacements, DTCs P0008, P0009, P0016, P0017, P0018 and/or P0019",
+      "publisher": "General Motors, March 2015",
+      "citation": "Models p. 1; Parts A-D pp. 1-5; parts information pp. 5-6; NHTSA ID 10113723",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2015/MC-10113723-9999.pdf"
+    },
+    {
+      "title": "Preliminary Information PIP3423P: DTC P0016 P0017 P0018 P0019 P0008 P0009",
+      "publisher": "General Motors, August 9, 2018",
+      "citation": "Condition, recommendations and reluctor measurement; NHTSA ID 10144453",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2018/MC-10144453-9999.pdf"
+    }
+  ],
+  "author": "Common Manual (AI-assisted)",
+  "updated": "2026-10-18",
+  "complaintMatch": [
+    [
+      "timing chain",
+      "p0008",
+      "p0016",
+      "p0017",
+      "p0018",
+      "p0019",
+      "p0009"
+    ]
+  ]
+}
